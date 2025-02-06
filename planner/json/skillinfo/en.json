@@ -98119,7 +98119,7 @@
             },
             "Ex": {
                 "Name": "Bring it on",
-                "Desc": "Put yourself and one enemy into a Duel state for 70 seconds. When attacking an enemy in a Duel state, increase damage multiplier by 0.2. Immediately draw one EX skill. While in Duel state, EX skill changes to \"I don't care if someone gets hurt\". \n\nI don't care if someone gets hurt\nCost:4\nGain 1 \"Spirit\". (Spirit can be stacked up to a maximum of 5) Deal 773~1469% damage to one enemy. (When the skill reverts to \"Bring it on\", reset \"Spirit\" count)",
+                "Desc": "Put yourself and one enemy into a Duel state for 70 seconds. When attacking an enemy in a Duel state, increase damage multiplier by 0.2. Immediately draw one EX skill. While in Duel state, EX skill changes to \"I don't care if someone gets hurt\". <br><br>I don't care if someone gets hurt<br>Cost:4<br>Gain 1 \"Spirit\". (Spirit can be stacked up to a maximum of 5) Deal 773~1469% damage to one enemy. (When the skill reverts to \"Bring it on\", reset \"Spirit\" count)",
                 "Cost": [
                     1,
                     1,
