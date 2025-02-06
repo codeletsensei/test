@@ -97695,7 +97695,7 @@
                         "Radius": 0
                     }
                 ],
-                "Icon": "NOICON",
+                "Icon": "NOICON_EX",
                 "Effects": [
                     {
                         "Type": "Damage",
@@ -97742,7 +97742,7 @@
                         "Radius": 0
                     }
                 ],
-                "Icon": "NOICON",
+                "Icon": "NOICON_NS",
                 "Effects": [
                     {
                         "Type": "Damage",
@@ -97799,7 +97799,7 @@
                         "Radius": 0
                     }
                 ],
-                "Icon": "NOICON",
+                "Icon": "NOICON_NS",
                 "Effects": [
                     {
                         "Type": "Damage",
@@ -97848,7 +97848,7 @@
             "Passive": {
                 "Name": "Starchaser",
                 "Desc": "Increase Attack by 14~26.6%. ",
-                "Icon": "NOICON",
+                "Icon": "NOICON_PS",
                 "Effects": [
                     {
                         "Type": "Buff",
@@ -97877,7 +97877,7 @@
             "WeaponPassive": {
                 "Name": "Starchaser+",
                 "Desc": "Increase Buff Duration by 1000~1900. Increase Attack by 14~26.6%.",
-                "Icon": "NOICON",
+                "Icon": "NOICON_PS",
                 "Effects": [
                     {
                         "Type": "Buff",
@@ -97906,7 +97906,7 @@
             "ExtraPassive": {
                 "Name": "Avant-Guard",
                 "Desc": "Increase Attack of all allies by 9.1~17.3%. ",
-                "Icon": "NOICON",
+                "Icon": "NOICON_SS",
                 "Effects": [
                     {
                         "Type": "Buff",
@@ -98135,7 +98135,7 @@
                         "Radius": 0
                     }
                 ],
-                "Icon": "NOICON",
+                "Icon": "NOICON_EX",
                 "Effects": [
                     {
                         "Type": "Damage",
@@ -98182,7 +98182,7 @@
                         "Radius": 0
                     }
                 ],
-                "Icon": "NOICON",
+                "Icon": "NOICON_NS",
                 "Effects": [
                     {
                         "Type": "Damage",
@@ -98239,7 +98239,7 @@
                         "Radius": 0
                     }
                 ],
-                "Icon": "NOICON",
+                "Icon": "NOICON_NS",
                 "Effects": [
                     {
                         "Type": "Damage",
@@ -98288,7 +98288,7 @@
             "Passive": {
                 "Name": "Is it over already?",
                 "Desc": "Increase normal attack Firing Range by 100 and Attack by 11.2~21.2%. ",
-                "Icon": "NOICON",
+                "Icon": "NOICON_PS",
                 "Effects": [
                     {
                         "Type": "Buff",
@@ -98317,7 +98317,7 @@
             "WeaponPassive": {
                 "Name": "Is it over already? +",
                 "Desc": "Increase Attack by 304~577. Increase normal attack Firing Range by 100 and Attack by 11.2~21.2%.",
-                "Icon": "NOICON",
+                "Icon": "NOICON_PS",
                 "Effects": [
                     {
                         "Type": "Buff",
@@ -98346,7 +98346,7 @@
             "ExtraPassive": {
                 "Name": "I won't miss",
                 "Desc": "Increase outgoing damage by 12.7~24.2%. Each time you gain \"Spirit\", increase damage multiplier of the skill \"I don't care if someone gets hurt\" by 0.35.",
-                "Icon": "NOICON",
+                "Icon": "NOICON_SS",
                 "Effects": [
                     {
                         "Type": "Buff",
@@ -98558,30 +98558,14 @@
                 }
             },
             "Ex": {
-                "Name": "Dummy",
-                "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ],
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ]
-                ],
+                "Name": "Over here, over here!",
+                "Desc": "Increase Attack of self and Special students by 33.4~63.5% for 19 seconds. ",
                 "Cost": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
+                    3,
+                    3,
+                    3,
+                    3,
+                    3
                 ],
                 "Duration": 0,
                 "Range": 0,
@@ -98591,7 +98575,7 @@
                         "Radius": 0
                     }
                 ],
-                "Icon": "NOICON",
+                "Icon": "NOICON_EX",
                 "Effects": [
                     {
                         "Type": "Damage",
@@ -98628,34 +98612,8 @@
                 ]
             },
             "Public": {
-                "Name": "Dummy",
-                "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ],
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ]
-                ],
+                "Name": "Say cheese!",
+                "Desc": "Every 40 seconds, Heal all other allies within a circular area for 51.7~98.2% of Healing. ",
                 "Duration": 0,
                 "Range": 0,
                 "Radius": [
@@ -98664,7 +98622,7 @@
                         "Radius": 0
                     }
                 ],
-                "Icon": "NOICON",
+                "Icon": "NOICON_NS",
                 "Effects": [
                     {
                         "Type": "Damage",
@@ -98713,32 +98671,6 @@
             "GearPublic": {
                 "Name": "Dummy",
                 "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ],
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ]
-                ],
                 "Duration": 0,
                 "Range": 0,
                 "Radius": [
@@ -98747,7 +98679,7 @@
                         "Radius": 0
                     }
                 ],
-                "Icon": "NOICON",
+                "Icon": "NOICON_NS",
                 "Effects": [
                     {
                         "Type": "Damage",
@@ -98794,23 +98726,9 @@
                 ]
             },
             "Passive": {
-                "Name": "Dummy",
-                "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ]
-                ],
-                "Icon": "NOICON",
+                "Name": "Good luck!",
+                "Desc": "Increase Healing by 14~26.6%. ",
+                "Icon": "NOICON_PS",
                 "Effects": [
                     {
                         "Type": "Buff",
@@ -98837,35 +98755,9 @@
                 ]
             },
             "WeaponPassive": {
-                "Name": "Dummy",
-                "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0"
-                    ],
-                    [
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0"
-                    ]
-                ],
-                "Icon": "NOICON",
+                "Name": "Good luck! +",
+                "Desc": "Increase Buff Duration by 1000~1900. Increase Healing by 14~26.6%. ",
+                "Icon": "NOICON_PS",
                 "Effects": [
                     {
                         "Type": "Buff",
@@ -98892,23 +98784,9 @@
                 ]
             },
             "ExtraPassive": {
-                "Name": "Dummy",
-                "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0"
-                    ]
-                ],
-                "Icon": "NOICON",
+                "Name": "This way!",
+                "Desc": "Increases Attack of self and Special students by 16.1~30.6%. ",
+                "Icon": "NOICON_SS",
                 "Effects": [
                     {
                         "Type": "Buff",
@@ -99120,30 +98998,14 @@
                 }
             },
             "Ex": {
-                "Name": "Dummy",
-                "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ],
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ]
-                ],
+                "Name": "Crisis response",
+                "Desc": "Deal 521~991% damage to one enemy. (damage is multiplied x1～3 depending on target's current HP; the lower the target's HP, the greater the damage)<br>When using an EX skill, if the target's HP is 20% or less, increase own Critical Damage rate by 21.1~40.2%, increase Attack by 11.1~21.1%, and increase Defense Penetration by 396~751 for 30 seconds. ",
                 "Cost": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
+                    7,
+                    7,
+                    7,
+                    7,
+                    7
                 ],
                 "Duration": 0,
                 "Range": 0,
@@ -99153,7 +99015,7 @@
                         "Radius": 0
                     }
                 ],
-                "Icon": "NOICON",
+                "Icon": "NOICON_EX",
                 "Effects": [
                     {
                         "Type": "Damage",
@@ -99190,34 +99052,8 @@
                 ]
             },
             "Public": {
-                "Name": "Dummy",
-                "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ],
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ]
-                ],
+                "Name": "Rear support",
+                "Desc": "Every 40 seconds, deal 118~224% damage to one enemy. (damage is multiplied x1～3 depending on target's current HP; the lower the target's HP, the greater the damage) ",
                 "Duration": 0,
                 "Range": 0,
                 "Radius": [
@@ -99226,7 +99062,7 @@
                         "Radius": 0
                     }
                 ],
-                "Icon": "NOICON",
+                "Icon": "NOICON_NS",
                 "Effects": [
                     {
                         "Type": "Damage",
@@ -99275,32 +99111,6 @@
             "GearPublic": {
                 "Name": "Dummy",
                 "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ],
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ]
-                ],
                 "Duration": 0,
                 "Range": 0,
                 "Radius": [
@@ -99309,7 +99119,7 @@
                         "Radius": 0
                     }
                 ],
-                "Icon": "NOICON",
+                "Icon": "NOICON_NS",
                 "Effects": [
                     {
                         "Type": "Damage",
@@ -99356,23 +99166,9 @@
                 ]
             },
             "Passive": {
-                "Name": "Dummy",
-                "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ]
-                ],
-                "Icon": "NOICON",
+                "Name": "Watchful eye",
+                "Desc": "Increase Critical Rate by 14~26.6%. ",
+                "Icon": "NOICON_PS",
                 "Effects": [
                     {
                         "Type": "Buff",
@@ -99399,35 +99195,9 @@
                 ]
             },
             "WeaponPassive": {
-                "Name": "Dummy",
-                "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0"
-                    ],
-                    [
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0"
-                    ]
-                ],
-                "Icon": "NOICON",
+                "Name": "Watchful eye +",
+                "Desc": "Increase Attack by 382~726. Increase Critical Rate by 14~26.6%. ",
+                "Icon": "NOICON_PS",
                 "Effects": [
                     {
                         "Type": "Buff",
@@ -99454,23 +99224,9 @@
                 ]
             },
             "ExtraPassive": {
-                "Name": "Dummy",
-                "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0"
-                    ]
-                ],
-                "Icon": "NOICON",
+                "Name": "Popular guide",
+                "Desc": "Increase Attack of all allies by 9.1~17.3%. ",
+                "Icon": "NOICON_SS",
                 "Effects": [
                     {
                         "Type": "Buff",
@@ -99682,30 +99438,14 @@
                 }
             },
             "Ex": {
-                "Name": "Dummy",
-                "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ],
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ]
-                ],
+                "Name": "Garden of Slumber",
+                "Desc": "Reduce EX skill cost of one other ally by up to 50% (reduction active until EX is activated 1~2 times)<br>The discount amount is rounded down to the nearest whole number.<br>Increase own Cost Recovery by 378~718 for 15 seconds. ",
                 "Cost": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
+                    3,
+                    3,
+                    3,
+                    3,
+                    3
                 ],
                 "Duration": 0,
                 "Range": 0,
@@ -99715,7 +99455,7 @@
                         "Radius": 0
                     }
                 ],
-                "Icon": "NOICON",
+                "Icon": "NOICON_EX",
                 "Effects": [
                     {
                         "Type": "Damage",
@@ -99752,34 +99492,8 @@
                 ]
             },
             "Public": {
-                "Name": "Dummy",
-                "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ],
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ]
-                ],
+                "Name": "Wise Advice",
+                "Desc": "Every 35 seconds, increase Piercing Efficiency of self and one other ally by 26.2~49.8% for 25 seconds. ",
                 "Duration": 0,
                 "Range": 0,
                 "Radius": [
@@ -99788,7 +99502,7 @@
                         "Radius": 0
                     }
                 ],
-                "Icon": "NOICON",
+                "Icon": "NOICON_NS",
                 "Effects": [
                     {
                         "Type": "Damage",
@@ -99837,32 +99551,6 @@
             "GearPublic": {
                 "Name": "Dummy",
                 "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ],
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ]
-                ],
                 "Duration": 0,
                 "Range": 0,
                 "Radius": [
@@ -99871,7 +99559,7 @@
                         "Radius": 0
                     }
                 ],
-                "Icon": "NOICON",
+                "Icon": "NOICON_NS",
                 "Effects": [
                     {
                         "Type": "Damage",
@@ -99918,23 +99606,9 @@
                 ]
             },
             "Passive": {
-                "Name": "Dummy",
-                "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ]
-                ],
-                "Icon": "NOICON",
+                "Name": "Peace of mind",
+                "Desc": "Increase Healing by 14~26.6%. ",
+                "Icon": "NOICON_PS",
                 "Effects": [
                     {
                         "Type": "Buff",
@@ -99961,35 +99635,9 @@
                 ]
             },
             "WeaponPassive": {
-                "Name": "Dummy",
-                "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0"
-                    ],
-                    [
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0"
-                    ]
-                ],
-                "Icon": "NOICON",
+                "Name": "Peace of mind +",
+                "Desc": "Increase Buff Duration by 1000~1900. Increase Healing by 14~26.6%. ",
+                "Icon": "NOICON_PS",
                 "Effects": [
                     {
                         "Type": "Buff",
@@ -100016,8 +99664,8 @@
                 ]
             },
             "ExtraPassive": {
-                "Name": "Dummy",
-                "Desc": "Dummy",
+                "Name": "Wise Foresight",
+                "Desc": "When EX skill is used 3 times, grant a shield of 102~195% Healing to self and the target of 3rd EX for 25 seconds. ",
                 "Parameters": [
                     [
                         "0",
@@ -100032,7 +99680,7 @@
                         "0"
                     ]
                 ],
-                "Icon": "NOICON",
+                "Icon": "NOICON_SS",
                 "Effects": [
                     {
                         "Type": "Buff",
@@ -100244,30 +99892,14 @@
                 }
             },
             "Ex": {
-                "Name": "Dummy",
-                "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ],
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ]
-                ],
+                "Name": "Just a little more...!",
+                "Desc": "Deal 864~1642% damage to one enemy. (This attack penetrates enemy shields) ",
                 "Cost": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
+                    4,
+                    4,
+                    4,
+                    4,
+                    4
                 ],
                 "Duration": 0,
                 "Range": 0,
@@ -100277,7 +99909,7 @@
                         "Radius": 0
                     }
                 ],
-                "Icon": "NOICON",
+                "Icon": "NOICON_EX",
                 "Effects": [
                     {
                         "Type": "Damage",
@@ -100314,34 +99946,8 @@
                 ]
             },
             "Public": {
-                "Name": "Dummy",
-                "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ],
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ]
-                ],
+                "Name": "The glimmer of art",
+                "Desc": "Every 45 seconds, increase Explosive Efficiency by 28~53.2% for 25 seconds. ",
                 "Duration": 0,
                 "Range": 0,
                 "Radius": [
@@ -100350,7 +99956,7 @@
                         "Radius": 0
                     }
                 ],
-                "Icon": "NOICON",
+                "Icon": "NOICON_NS",
                 "Effects": [
                     {
                         "Type": "Damage",
@@ -100399,32 +100005,6 @@
             "GearPublic": {
                 "Name": "Dummy",
                 "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ],
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ]
-                ],
                 "Duration": 0,
                 "Range": 0,
                 "Radius": [
@@ -100433,7 +100013,7 @@
                         "Radius": 0
                     }
                 ],
-                "Icon": "NOICON",
+                "Icon": "NOICON_NS",
                 "Effects": [
                     {
                         "Type": "Damage",
@@ -100480,23 +100060,9 @@
                 ]
             },
             "Passive": {
-                "Name": "Dummy",
-                "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%",
-                        "0%"
-                    ]
-                ],
-                "Icon": "NOICON",
+                "Name": "Lively holidays",
+                "Desc": "Increase Attack by 14~26.6%. ",
+                "Icon": "NOICON_PS",
                 "Effects": [
                     {
                         "Type": "Buff",
@@ -100523,35 +100089,9 @@
                 ]
             },
             "WeaponPassive": {
-                "Name": "Dummy",
-                "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0"
-                    ],
-                    [
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0"
-                    ]
-                ],
-                "Icon": "NOICON",
+                "Name": "Lively holidays +",
+                "Desc": "Increase Attack by 380~721. Further increase Attack by 14~26.6%. ",
+                "Icon": "NOICON_PS",
                 "Effects": [
                     {
                         "Type": "Buff",
@@ -100578,23 +100118,9 @@
                 ]
             },
             "ExtraPassive": {
-                "Name": "Dummy",
-                "Desc": "Dummy",
-                "Parameters": [
-                    [
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0",
-                        "0"
-                    ]
-                ],
-                "Icon": "NOICON",
+                "Name": "Sunrise glow",
+                "Desc": "Increase Critical Damage of all allies by 9.1~17.3%. ",
+                "Icon": "NOICON_SS",
                 "Effects": [
                     {
                         "Type": "Buff",
