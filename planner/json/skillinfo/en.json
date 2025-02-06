@@ -19400,6 +19400,18 @@
                 6,
                 14
             ]
+        ],
+        "SkillBondGearMaterial": [
+            [
+                200,
+                201
+            ]
+        ],
+        "SkillBondGearMaterialAmount": [
+            [
+                80,
+                28
+            ]
         ]
     },
     "10040": {

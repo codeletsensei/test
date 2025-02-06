@@ -3355,6 +3355,8 @@ function saveCharChanges() {
 
         charData.current.bond = document.getElementById("input_bond_current").value;
         charData.target.bond = document.getElementById("input_bond_target").value;
+        charData.current.bondgear = document.getElementById("input_bondgear_current").value;
+        charData.target.bondgear = document.getElementById("input_bondgear_target").value;
 
         charData.current.ex = document.getElementById("input_ex_current").value;
         charData.target.ex = document.getElementById("input_ex_target").value;
@@ -3491,6 +3493,8 @@ function populateCharModal(charId) {
 
         document.getElementById("input_bond_current").value = charData.current?.bond;
         document.getElementById("input_bond_target").value = charData.target?.bond;
+        document.getElementById("input_bondgear_current").value = charData.current?.bondgear;
+        document.getElementById("input_bondgear_target").value = charData.target?.bondgear;
 
         document.getElementById("input_ex_current").value = charData.current?.ex;
         document.getElementById("input_ex_target").value = charData.target?.ex;
@@ -3903,6 +3907,8 @@ function charDataFromModal(charId) {
 
     charData.current.bond = document.getElementById("input_bond_current").value;
     charData.target.bond = document.getElementById("input_bond_target").value;
+    charData.current.bondgear = document.getElementById("input_bondgear_current").value;
+    charData.target.bondgear = document.getElementById("input_bondgear_target").value;
 
     charData.current.ex = document.getElementById("input_ex_current").value;
     charData.target.ex = document.getElementById("input_ex_target").value;
@@ -5549,6 +5555,7 @@ function calculateCharResources(charData, output) {
     calcSkillCost(charObj, "normal", charData.current?.basic, charData.target?.basic, charMatDict);
     calcSkillCost(charObj, "passive", charData.current?.passive, charData.target?.passive, charMatDict);
     calcSkillCost(charObj, "sub", charData.current?.sub, charData.target?.sub, charMatDict);
+    if (charObj.SkillBondGearMaterial) calcSkillCost(charObj, "bondgear", charData.current?.bondgear, charData.target?.bondgear, charMatDict);
     calcXpCost(charData.current?.level, charData.target?.level, charMatDict);
     calcGearCost(charObj, charData.current?.gear1, charData.target?.gear1, 1, charMatDict);
     calcGearCost(charObj, charData.current?.gear2, charData.target?.gear2, 2, charMatDict);
@@ -5632,6 +5639,11 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
         skillMaterials = characterObj.SkillExMaterial;
         skillMaterialAmounts = characterObj.SkillExMaterialAmount;
         skillType = "ex";
+    }
+    else if (skill == "bondgear") {
+        skillMaterials = characterObj.SkillBondGearMaterial;
+        skillMaterialAmounts = characterObj.SkillBondGearMaterialAmount;
+        skillType = "bondgear";
     }
     else {
         skillMaterials = characterObj.SkillMaterial;
@@ -6684,6 +6696,8 @@ function OpenBulkModal() {
 
     document.getElementById("bulk-input_bond_current").value = "";
     document.getElementById("bulk-input_bond_target").value = "";
+    document.getElementById("bulk-input_bondgear_current").value = "";
+    document.getElementById("bulk-input_bondgear_target").value = "";
 
     document.getElementById("bulk-input_ex_current").value = "";
     document.getElementById("bulk-input_ex_target").value = "";
@@ -6760,6 +6774,8 @@ function ConfirmBulkUpdate() {
 
     bulkUpdate.current.bond = document.getElementById("bulk-input_bond_current").value;
     bulkUpdate.target.bond = document.getElementById("bulk-input_bond_target").value;
+    bulkUpdate.current.bondgear = document.getElementById("bulk-input_bond_current").value;
+    bulkUpdate.target.bondgear = document.getElementById("bulk-input_bond_target").value;
 
     bulkUpdate.current.ex = document.getElementById("bulk-input_ex_current").value;
     bulkUpdate.target.ex = document.getElementById("bulk-input_ex_target").value;
