@@ -3484,7 +3484,7 @@ function populateCharModal(charId) {
 
             document.getElementById('mood-' + GetOldTerrain(terrain)).src = "icons/Mood/Mood_" + boostedMood(GetMoodFromAdaptation(charInfo[terrain + "BattleAdaptation"]), boostAmt) + ".png";
         }
-
+        console.log(charData)
         document.getElementById("input_level_current").value = charData.current?.level;
         document.getElementById("input_level_target").value = charData.target?.level;
 
