@@ -1,0 +1,1142 @@
+#events-list {
+    background-color: rgb(196, 205, 228);
+    width: 25%;
+    max-width: 400px;
+    overflow-y: auto;
+    margin-left: auto;
+    max-height: 90vh;
+    text-align: center;
+}
+
+#events-list div:hover {
+    background-color: rgb(160 169 195);
+}
+
+#events-list div.selected {
+    background-color: rgb(171 188 231);
+}
+
+#events-list:hover .event-reward-preview {
+    visibility: visible;
+}
+
+#event-content-container {
+    background-color: rgb(196, 205, 228);
+    width: 60%;
+    margin-left: 2%;
+    margin-right: auto;
+    margin-bottom: 5em;
+}
+
+#body-content-container {
+    display: flex;
+    margin-top: 2vh;
+}
+
+.event-icon {
+    width: 100%;
+    max-width: 250px;
+}
+
+.event-reward-preview {
+    max-width: 4em;
+    position: absolute;
+    visibility: hidden;
+}
+
+.preview-1 {
+    left: 0;
+}
+
+.preview-2 {
+    left: 3em;
+}
+
+.preview-3 {
+    left: 0;
+    bottom: 1em;
+}
+
+.preview-4 {
+    left: 3em;
+    bottom: 1em;
+}
+
+.preview-5 {
+    right: 3em;
+}
+
+.preview-6 {
+    right: 0;
+}
+
+.preview-7 {
+    right: 3em;
+    bottom: 1em;
+}
+
+.preview-8 {
+    right: 0;
+    bottom: 1em;
+}
+
+.preview-9 {
+    right: 6em;
+}
+
+.preview-10 {
+    right: 6em;
+    bottom: 1em;
+}
+
+.preview-11 {
+    left: 6em;
+}
+
+.preview-12 {
+    left: 6em;
+    bottom: 1em;
+}
+
+#event-tab-menu {
+    display: flex;
+    margin: 10px;
+}
+
+.event-tab-button {
+    padding: 1em;
+    cursor: pointer;
+}
+
+.event-tab-button:hover {
+    background-color: rgb(160 169 195);
+}
+
+.event-tab-button.selected {
+    background-color: rgb(171 188 231);
+}
+
+#bonus-chars-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 1em;
+}
+
+.bonus-char-box img {
+    max-width: 80px;
+    border-radius: 100%;
+    margin-right: 0.5em;
+    filter: grayscale(0.8) brightness(0.5);
+}
+
+.bonus-char-box.enabled img {
+    filter: none;
+}
+
+#currency-bonuses {
+    display: flex;
+}
+
+.currency-box {
+    position: relative;
+}
+
+.currency-box img {
+    width: 100%;
+}
+
+.currency-box p,
+.currency-shop-tab p {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-shadow: -1px -1px 0 #ffffff, 0px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 0px 1px 0 #fff, 1px 1px 0 #fff;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    color: black;
+}
+
+.event-tab {
+    display: none;
+}
+
+.energy-source {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    justify-content: center;
+}
+
+.energy-source img {
+    max-width: 100px;
+}
+
+#energy-sources-fixed-container {
+    display: flex;
+}
+
+#energy-sources-editable-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#currency-shop-tabs {
+    display: flex;
+}
+
+#currency-shop-tabs img {
+    max-width: 100px;
+}
+
+.currency-shop-tab {
+    position: relative;
+}
+
+.currency-shop-tab.selected {
+    background-color: rgb(171 188 231);
+}
+
+.currency-shop-tab:hover, .owned-currency-container:hover {
+    background-color: rgb(160 169 195);
+}
+
+#currency-shop-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shop-item {
+    position: relative;
+}
+
+.shop-item img {
+    max-width: 150px;
+}
+
+.shop-item-input-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    height: 60%;
+}
+
+.shop-item-input-container input {
+    height: 25%;
+    background-color: #ffffffd9;
+    text-align: center;
+    width: 4em;
+    font-weight: 900;
+}
+
+.shop-item-input-container p {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-shadow: -1px -1px 0 #ffffff, 0px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 0px 1px 0 #fff, 1px 1px 0 #fff;
+    color: black;
+    white-space: nowrap;
+}
+
+.shop-item-price-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0, -20%);
+}
+
+.shop-item-price-container img {
+    max-width: 60px;
+}
+
+#stages-table, #cards-table {
+    border-collapse: collapse;
+}
+
+#cards-table {
+    text-align: center;
+}
+
+#stages-table th:first-child {
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+#stages-table .alternate-row, #cards-table .alternate-row {
+    background-color: #74749347;
+}
+
+#stages-table tr td:first-child {
+    padding-left: 1em;
+}
+
+.stages-table-drops-container,
+.point-rewards-table-container {
+    display: flex;
+}
+
+.stages-table-drops-container {
+    flex-wrap: wrap;
+}
+
+.stages-table-drops-container div,
+.point-rewards-table-container div {
+    position: relative;
+}
+
+.stages-table-drops-container img,
+.point-rewards-table-container img {
+    max-width: 70px;
+}
+
+.stages-table-drops-container p,
+#rewards-container p,
+#initial-clear-display-container p,
+.box-item-amount,
+.point-rewards-table-container p,
+.energy-source-setting,
+.lesson-item-amount,
+#lesson-points-remaining,
+#lesson-points-rankup {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-shadow: -1px -1px 0 #ffffff, 0px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 0px 1px 0 #fff, 1px 1px 0 #fff;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    color: black;
+}
+
+.drop-resource {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.drop-smaller-text {
+    font-size: 16px !important;
+}
+
+#optimisation-approaches-container, #cards-tabs {
+    display: flex;
+    margin: 10px;
+}
+
+.optimise-approach-button, .cards-rarity-tab {
+    padding: 1em;
+}
+
+.optimise-approach-button:hover, .cards-rarity-tab:hover {
+    background-color: rgb(160 169 195);
+}
+
+.optimise-approach-button.selected, .cards-rarity-tab.selected {
+    background-color: rgb(171 188 231);
+}
+
+#optimisation-settings-container div {
+    display: flex;
+    margin-bottom: 0.25em;
+}
+
+#optimisation-settings-container div div {
+    filter: brightness(0.5);
+}
+
+#optimisation-settings-container div div.selected {
+    filter: none;
+}
+
+#optimisation-settings-container img {
+    max-width: 80px;
+}
+
+#rewards-container {
+    /* display: flex;
+    flex-wrap: wrap; */
+    padding-top: 1em;
+}
+
+#rewards-container div, #initial-clear-display-container div {
+    position: relative;
+}
+
+#rewards-container img, #initial-clear-display-container img {
+    max-width: 100px;
+}
+
+#currency-divs-container {
+    display: flex;
+    margin: 10px;
+}
+
+#currency-divs-container div {
+    filter: none !important;
+    padding: 1em;
+}
+
+#currency-divs-container div:hover {
+    background-color: rgb(160 169 195);
+}
+
+.stage-runs-div input {
+    width: 4em;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#currency-divs-container div:hover {
+    background-color: rgb(160 169 195);
+}
+
+#currency-divs-container div.selected {
+    background-color: rgb(171 188 231);
+}
+
+#reward-display-options-container {
+    display: flex;
+    border-top: 0.25em solid #00000073;
+    padding-top: 1em;
+}
+
+#reward-display-options-container input {
+    margin-left: 1em;
+}
+
+#reward-display-options-container label {
+    margin-left: 0.25em;
+}
+
+.reward-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#box-cycle-tabs {
+    display: flex;
+    margin-left: 10px;
+}
+
+.box-cycle-tab {
+    position: relative;
+    padding: 1em;
+}
+
+.box-cycle-tab.selected {
+    background-color: rgb(171 188 231);
+}
+
+.box-cycle-tab:hover {
+    background-color: rgb(160 169 195);
+}
+
+#box-cycle-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box-item {
+    position: relative;
+}
+
+.box-item img {
+    max-width: 150px;
+}
+
+.box-item-times-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0, -20%);
+}
+
+#box-info-text {
+    margin: 1em 0 0 1em;
+}
+
+#points-table-container {
+    display: flex;
+}
+
+#points-table-container table {
+    margin-left: 3em;
+}
+
+#points-table-container th:first-child {
+    padding-right: 20px;
+}
+
+.shop-item-amount-label {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-20%, -350%);
+    font-size: 18px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-shadow: -1px -1px 0 #ffffff, 0px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 0px 1px 0 #fff, 1px 1px 0 #fff;
+    padding-top: 1px;
+    color: black;
+}
+
+#energy-source-pack p {
+    padding-left: 0.5em;
+}
+
+#energy-sources-total {
+    background-color: #a7ffa65e;
+    border-radius: 1em;
+}
+
+.energy-editable {
+    background-color: #ffffff5e;
+    border-radius: 1em;
+}
+
+.energy-editable:hover {
+    background-color: #d7d7d75e;
+}
+
+.energy-source div {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#energy-source-pyro-refresh {
+    transform: translate(-50%, -50%);
+}
+
+#energy-source-pvp-refresh {
+    transform: translate(-50%, -50%);
+}
+
+#energy-source-cafe-level {
+    transform: translate(-60%, 0%);
+}
+
+#event-list-button {
+    display: none;
+}
+
+.listed-event {
+    margin-bottom: 1em;
+    position: relative;
+}
+
+#info-select-event {
+    text-align: center;
+    font-size: 4em;
+}
+
+.stage-quest-energy {
+    display: flex;
+    transform: translate(-5px, 0px);
+}
+
+.stage-quest-energy img {
+    width: 1em;
+}
+
+.shop-furniture-info-bubble {
+    max-width: 2em !important;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    filter: invert(52%) sepia(40%) saturate(6904%) hue-rotate(178deg) brightness(108%) contrast(98%);
+}
+
+.shop-furniture-info-bubble.limited-furniture {
+    filter: invert(84%) sepia(10%) saturate(4286%) hue-rotate(3deg) brightness(109%) contrast(98%);
+}
+
+.lesson-rewards-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lesson-rewards-container div {
+    position: relative;
+}
+
+.lesson-container {
+    margin-bottom: 1em;
+    background-color: rgb(214 221 239);
+    border-radius: 1em;
+    max-width: fit-content;
+    padding-right: 1em;
+}
+
+.lesson-buttons-container {
+    display: flex;
+}
+
+.lesson-container button {
+    font-size: 2em;
+    width: 1.25em;
+    border-radius: 20px;
+    margin-left: 0.5em;
+    margin-bottom: 0.25em;
+}
+
+.lesson-container button:hover {
+    filter: brightness(0.9);
+}
+
+.lesson-container button:last-child {
+    margin-left: 2em;
+}
+
+.lesson-text {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 1em;
+}
+
+.lesson-text p:first-child {
+    margin-right: 1em;
+}
+
+.lesson-item img {
+    max-width: 100px;
+}
+
+#lessons-header-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#lesson-points-remaining-container,
+#lesson-points-rankup-container {
+    position: relative;
+}
+
+#lesson-points-remaining-container img,
+#lesson-points-rankup-container img {
+    max-width: 100px;
+}
+
+#lesson-points-remaining-info,
+#lesson-points-rankup-info {
+    align-self: center;
+    margin-left: 1em;
+}
+
+#info-notifications {
+    margin-bottom: 1em;
+    white-space: nowrap;
+}
+
+#info-notifications div {
+    display: flex;
+    align-items: center;
+}
+
+#info-notifications div img {
+    max-width: 1.5em;
+    margin-left: 1em;
+}
+
+.notification-text {
+    margin-left: 1em;
+}
+
+.notification-button {
+    padding-left: 0.5em;
+    cursor: pointer;
+}
+
+#bonus-chars-all-button {
+    cursor: pointer;
+    margin-left: 3em;
+    margin-bottom: 1em;
+}
+
+#bonus-chars-all-button:hover {
+    background-color: rgb(160 169 195);
+}
+
+#bonus-chars-header, #points-header {
+    display: flex;
+}
+
+#artifact-toggle-info {
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+}
+
+.lesson-runs-input {
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+    width: 3em;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#disclaimer-event-energy {
+    margin: 0.75em;
+}
+
+.lesson-input-container {
+    display: flex;
+}
+
+.lesson-input-container p {
+    white-space: break-spaces;
+    font-size: 1.5em;
+    align-self: center;
+    margin-bottom: 0.5em;
+}
+
+#reset-lessons-button {
+    align-self: center;
+    padding: 1em;
+}
+
+#reset-lessons-button:hover {
+    background-color: rgb(160 169 195);
+}
+
+.disabled-event img:first-child {
+    filter: grayscale(1);
+}
+
+.point-tier-row:hover {
+    background-color: #00000033 !important;
+}
+
+.point-tier-row td:first-child {
+    text-align: center;
+}
+
+#initial-clear-display-container {
+    display: flex;
+}
+
+.gacha-card-icon img {
+    max-width: 10em;
+}
+
+#cards-sd-container, #omikuji-sd-container, #dice-sd-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 1em;
+    align-items: center;
+}
+
+#sd-slider, #omikuji-sd-slider, #dice-sd-slider {
+    margin-right: 1em;
+}
+
+#display-standard-deviation, #display-standard-deviation-omikuji, #display-standard-deviation-dice {
+    margin-right: 1em;
+}
+
+#gacha-sim-button, #omikuji-sim-button, #dice-sim-button {
+    padding: 0.5em;
+    font-size: 1em;
+    background: linear-gradient(to left, buttonface 50%, #c7ffe3 50%) right;
+    background-size: 200% 100%;
+}
+
+#gacha-sim-button.active, #omikuji-sim-button.active, #dice-sim-button.active {
+    transition: all 3.5s linear;
+    background-position: left;
+}
+
+#stage-groups-container {
+    display: flex;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#stage-groups-container input {
+    margin-left: 1em;
+}
+
+#stage-groups-container label {
+    margin-left: 0.25em;
+}
+
+#currency-owned-container {
+    display: flex;
+}
+
+#currency-owned-container img {
+    max-width: 100px;
+}
+
+.owned-currency-container {
+    padding-bottom: 1em;
+}
+
+.owned-currency-input {
+    width: 5em;
+    height: 2em;
+    display: block;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.dark-theme #events-list {
+    background-color: rgb(47 47 47);
+}
+
+.dark-theme #event-list-button img {
+    filter: invert(1);
+}
+
+.dark-theme #event-content-container {
+    background-color: rgb(47 47 47);
+}
+
+.dark-theme #body-content-container div {
+    color: #efefef;
+}
+
+.dark-theme #events-list div:hover {
+    background-color: rgb(76 76 76);
+}
+
+.dark-theme #events-list div.selected {
+    background-color: rgb(26 26 26);
+}
+
+.dark-theme .event-tab-button:hover {
+    background-color: rgb(76 76 76);
+}
+
+.dark-theme .event-tab-button.selected {
+    background-color: rgb(26 26 26);
+}
+
+.dark-theme .optimise-approach-button:hover, .dark-theme .cards-rarity-tab:hover {
+    background-color: rgb(76 76 76);
+}
+
+.dark-theme .optimise-approach-button.selected, .dark-theme .cards-rarity-tab.selected {
+    background-color: rgb(26 26 26);
+}
+
+.dark-theme #currency-divs-container div:hover {
+    background-color: rgb(76 76 76);
+}
+
+.dark-theme #currency-divs-container div.selected {
+    background-color: rgb(26 26 26);
+}
+
+.dark-theme .currency-shop-tab:hover, .dark-theme .owned-currency-container:hover {
+    background-color: rgb(76 76 76);
+}
+
+.dark-theme .currency-shop-tab.selected {
+    background-color: rgb(26 26 26);
+}
+
+.dark-theme .box-cycle-tab:hover {
+    background-color: rgb(76 76 76);
+}
+
+.dark-theme .box-cycle-tab.selected {
+    background-color: rgb(26 26 26);
+}
+
+.dark-theme .stage-runs-div input:disabled {
+    color: white;
+    background-color: rgb(44 44 44 / 30%);
+}
+
+.dark-theme .lesson-container {
+    background-color: rgb(70, 70, 70);
+}
+
+.dark-theme #bonus-chars-all-button:hover {
+    background-color: #74749347;
+}
+
+.dark-theme #reset-lessons-button:hover {
+    background-color: rgb(76 76 76);
+}
+
+@media (max-width: 800px) {
+
+    #events-list {
+
+        position: absolute;
+        width: 100%;
+        max-width: none;
+        max-height: none;
+        top: 4%;
+        height: 96%;
+        z-index: 1;
+    }
+
+    #event-content-container {
+        width: 100%;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-bottom: 5em;
+        display: none;
+    }
+
+    #event-content-container.event-selected {
+        display: block;
+    }
+
+    .event-tab-button,
+    .optimise-approach-button {
+        padding: 0.5em;
+        font-size: 0.9em;
+    }
+
+    #event-tab-menu {
+        flex-wrap: wrap;
+        padding-top: 0.5em;
+    }
+
+    #currency-divs-container div {
+        padding: 0.5em;
+        font-size: 0.9em;
+    }
+
+    .bonus-char-box img {
+        max-width: 50px;
+    }
+
+    #rewards-container img, #initial-clear-display-container img {
+        max-width: 70px;
+    }
+
+    .stages-table-drops-container p,
+    #rewards-container p,
+    #initial-clear-display-container p,
+    .box-item-amount {
+        font-size: 16px;
+    }
+
+    .drop-smaller-text {
+        font-size: 12px !important;
+    }
+
+    .shop-item img {
+        max-width: 80px;
+    }
+
+    .shop-item-input-container p {
+        font-size: 18px;
+    }
+
+    .shop-item-price-container img {
+        max-width: 40px;
+    }
+
+    #currency-shop-tabs img {
+        max-width: 80px;
+    }
+
+    .currency-shop-tab p {
+        font-size: 20px;
+    }
+
+    .box-item img {
+        max-width: 80px;
+    }
+
+    .box-item-amount {
+        transform: translate(-50%, -90%);
+    }
+
+    #events-list.event-selected {
+        display: none;
+    }
+
+    .energy-source {
+        width: 30%;
+    }
+
+    #energy-sources-fixed-container,
+    #energy-sources-editable-container {
+        flex-wrap: wrap;
+        place-content: center;
+    }
+
+    .energy-source img {
+        max-width: 50px;
+    }
+
+    #points-table-container th {
+        font-size: 0.8em;
+    }
+
+    #points-table-container img {
+        max-width: 50px;
+    }
+
+    .point-rewards-table-container p {
+        font-size: 12px;
+    }
+
+    #points-table-container tr td:first-child {
+        font-size: 0.8em;
+    }
+
+    #points-table-container table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #points-table-container th:first-child {
+        padding-right: 5px;
+    }
+
+    .shop-item-amount-label {
+        transform: translate(-25%, -290%);
+        font-size: 12px;
+        padding-bottom: 1px;
+    }
+
+    #stages-table th {
+        font-size: 0.5em;
+        padding-right: none;
+    }
+
+    #stages-table th:first-child {
+        padding-right: 2em;
+    }
+
+    .stage-runs-div input {
+        width: 3em;
+        font-size: 1em;
+    }
+
+    .stages-table-drops-container img {
+        max-width: 50px;
+    }
+
+    #stages-table tr td:first-child {
+        padding-left: 0.5em;
+    }
+
+    #optimisation-settings-container img {
+        max-width: 50px;
+    }
+
+    #optimisation-settings-container div.justify-content-center {
+        justify-content: center;
+    }
+
+    #energy-source-cafe-level {
+        transform: translate(-55%, -20%);
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    #event-content-container {
+        width: 98%;
+    }
+
+    #body-content-container {
+        display: block;
+    }
+
+    #event-list-button img {
+        max-width: 40px;
+    }
+
+    #event-list-button {
+        display: flex;
+        align-items: center;
+        margin-left: 0.5em;
+    }
+
+    #event-list-button p {
+        margin-left: 0.5em;
+    }
+
+    .shop-item-input-container input {
+        background-color: #ffffff78;
+        font-family: monospace;
+        font-size: 1.25em;
+        width: 3em;
+    }
+
+    .shop-furniture-info-bubble {
+        max-width: 1em !important;
+    }
+
+    #info-notifications {
+        font-size: 0.8em;
+    }
+
+    #info-notifications div {
+        flex-wrap: wrap;
+    }
+
+    #disclaimer-event-energy {
+        margin: 0.5em;
+        font-size: 0.9em;
+    }
+
+    .lesson-container button:last-child {
+        margin-left: auto;
+        margin-right: 0.5em;
+    }
+
+    #lessons-header-container {
+        font-size: 0.8em;
+    }
+
+    #lesson-points-remaining-container img,
+    #lesson-points-rankup-container img {
+        max-width: 80px;
+    }
+
+    #lesson-points-remaining,
+    #lesson-points-rankup {
+        font-size: 16px;
+    }
+
+    .lesson-item img {
+        max-width: 65px;
+    }
+
+    .lesson-item-amount {
+        font-size: 18px;
+    }
+
+    .gacha-card-icon img {
+        max-width: 4em;
+        padding: 0.5em;
+    }
+
+    #gacha-sim-button, #omikuji-sim-button, #dice-sim-button {
+        margin-top: 0.5em;
+        margin-left: auto;
+        margin-right: 1em;
+    }
+
+    .event-reward-preview {
+        visibility: visible;
+    }
+
+    #currency-owned-container img {
+        max-width: 80px;
+    }
+
+    #stage-groups-container {
+        font-size: 0.8em;
+    }
+
+    #reward-display-options-container {
+        font-size: 0.8em;
+    }
+}

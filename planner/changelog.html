@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function hamburgToggle() {
+            let linkWrapper = document.getElementById('mobile-links-wrapper');
+            if (linkWrapper.style.display === "block") {
+                linkWrapper.style.display = "none";
+            } else {
+                linkWrapper.style.display = "block";
+            }
+        }
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Changelog & Known-Issues</title>
+</head>
+
+<body class="background">
+    <nav class="navbar navbground">
+        <span class="logo">Justin163-let</span>
+        <img src="icons/UI/hamburger.svg" id="hamburger" onclick="hamburgToggle()">
+        <ul class="nav-list">
+            <li><a href="index.html">Resource Planner</a></li>
+            <li><a href="https://arona.ai/calc/eventfarming" target="_blank">Event Planner</a></li>
+            <!--<li><a href="raids.html" class="display-string" data-id="page-raids">Raid Videos</a></li>-->
+            <li><a class="active">Changelog</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="credit.html" class="display-string" data-id="page-credit">Credits</a></li>
+            <li><a href="https://github.com/codeletsensei/bagresourceplanner" class="display-string">Sauce</a></li>
+        </ul>
+    </nav>
+    <div id="mobile-links-wrapper">
+        <ul class="mobile-links">
+            <li><a href="index.html">Resource Planner</a></li>
+            <li><a href="https://arona.ai/calc/eventfarming" target="_blank">Event Planner</a></li>
+            <!--<li><a href="raids.html" class="display-string" data-id="page-raids">Raid Videos</a></li>-->
+            <li><a class="active">Changelog</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="credit.html" class="display-string" data-id="page-credit">Credits</a></li>
+            <li><a href="https://github.com/codeletsensei/bagresourceplanner" class="display-string">Sauce</a></li>
+        </ul>
+    </div>
+    <div class="bodyText">
+        <div class="changelog-section">
+            <h2>Version 25.02.06</h2>
+            <ul>
+                <li>Forked. Version number will be based on date (YY.MM.DD), to make it easier to know when it was last updated.</li>
+                <li><b>TO LOAD YOUR DATA FROM <a href="https://justin163.com/planner/" target="_blank">JUSTIN</a>, USE THE EXPORT FUNCTION THERE AND THEN IMPORT IT HERE</b> by clicking on the "Transfer" button at the bottom of the page.</li>
+                <li>Added CODE:BOX students and T10 gear. I can't into datamines and too lazy to code a crawler/converter, so <b>I'm not gonna bother adding skill names/descriptions/icons and individual eleph icons</b>. I'm pretty much only adding the mats and char portraits needed for the resource/gear planner to work. For anything else, check the wiki (please do so and tell me if I fucked anything up).</li>
+                <li>Tried removing analytics/cloud (or commenting them out). Only way to save is local (automatic, per device) or manually export/import the json text... Sorry, no cross-platform cloud saves.</li>
+                <li>Changed student portraits from webp to png. I can't into datamines and I'm too lazy to convert Wiki's png to webp. Sorry if the performance on your device suffers from this, it can't be helped.</li>
+                <li>Removed April fools stuff. Don't want to have trouble with someone else's art...</li>
+                <li>Disabled language selector. Shit's broken in other languages.</li>
+
+            </ul>
+                <h3>Known Issues</h3>
+                <ul>
+                <li>Don't trust the gear planner's list of farming stages. Drop rates might not have been updated yet.</li>
+                <li>Heads up that if the game adds a new mechanic in the future, I probably won't be able to implement it here. Like, tacticool Hoshino's multiple roles doesn't really change anything, but IDK what to do if it did... Bond gear never ever?</li>
+                </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Below this is the original (Justin's) changelog.</h2>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.4.11</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added 7 new students Chiaki, Satsuki, Mari (Idol), Mine (Idol), Sakurako (Idol), Noa (Pyjamas) and Yuuka (Pyjamas)</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.4.10</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added 4 new students Marina (Qipao), Tomoe (Qipao), Reijo and Kisaki</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.4.9</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added 12 new students Midori (Maid), Momoi (Maid), Serika (Swimsuit), Moe (Swimsuit), Kanna (Swimsuit), Fubuki (Swimsuit), Kirino (Swimsuit), Atsuko (Swimsuit), 
+                    Hiyori (Swimsuit), Saori (Swimsuit), Hoshino (Battle) and Shiroko Terror</li>
+                <li>Added T9 3rd slot gear, and updated gear optimiser to include T9 missions for farming</li>
+                <li>Added Hardmode nodes for missions 24-26</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.4.8</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added new students Airi (Band), Kazusa (Band), Yoshimi (Band) and Kirara </li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.4.7</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added sort options matching ingame default order (Thai ordering for student names needs to be fixed, and Simplified Chinese needs to be checked)</li>
+                <li>Added buttons in character modal to quickly navigate next</li>
+                <li>Removed animations for character modal closing / opening</li>
+                <li>Changed Save and Close button on character modal to just Save for using with the quick navigation buttons, but holding Control + clicking save will now close</li>
+            </ul>
+            <br>
+            <h3>Fixed Issues</h3>
+            <ul>
+                <li>Remove star limit on bond for editing characters to resolve issue with base 3* characters being limited to 10 bond</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.4.6</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added 5 new students, Akari (New Year), Aru (Dress), Kayoko (Dress), Tsubaki (Guide), and Umika</li>
+                <li>Updated raid videos page with JP / Global total assault raids up to current day</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.4.5</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Moved control panel to docked on the left side by default (option to pop out as floating window still)</li>
+                <li>Added keyboard shortcut for the control panel (Shift + number)</li>
+                <li>Added slider for making character boxes smaller to fit more on the screen</li>
+                <li>Added leftover gear parts -> xp calculation on the leftover tab in the gear modal</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.4.4</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added 4 new students, Ibuki, Makoto, Ako (Dress) and Hina (Dress)</li>
+                <li>Updated level cap to 90</li>
+                <li>Added T9 gear (first two slots)</li>
+                <li>Fixed rates of gear used in gear farming optimisation for lower stages</li>
+                <li>Added CN server toggle (also uses old gear rates)</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.4.3</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added bulk editing feature (finally lol)</li>
+                <li>Added floating controls box, later will remove the now unneccesary buttons like "Add Characters", there will also be keyboard 
+                    shortcuts later for the available controls</li>
+                <li>Cleaned up character page UI slightly</li>
+                <li>Activated new event</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.4.2</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added 5 new characters, Kikyou, Renge, Eimi (Swimsuit), Kotama (Camping) and Hare (Camping)</li>
+                <li>Increased T1/2 TN cap to 9999</li>
+                <li>Added 2 new artifacts</li>
+                <li>Updated global max stage to 23</li>
+                <li>Updated character global max/target button values</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.4.1</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added 7 new characters, Ichika, Kasumi, Misaka Mikoto, Saten Ruiko, Shokuhou Misaki, Shigure (Hot Spring) and Yukari</li>
+                <li>Added Simplified Chinese translation by factistel</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.4</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added Raid Videos page, can submit a raid video link and fill in the students / score etc, then it will update from submissions hourly</li>
+                <li>Comments section will be added later for each raid video submission</li>
+                <li>Optimised Resource Planner page loading speed</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.3.19</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added 9 new characters, Shiroko (Swimsuit), Hinata (Swimsuit), Ui (Swimsuit), Hanako (Swimsuit), Koharu (Swimsuit), 
+                    Mimori (Swimsuit), Kotori (Cheerleader), Meru and Momiji</li>
+                <li>Had to make some internal code changes, there could be bugs, let me know if so</li>
+                <li>Translations of Character Name / Skills are not up to date for Korean/JP like normal, will be updated soon, need to fix a bit more code</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.3.18</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added 4 new characters, Minori, Miyu (Swimsuit), Miyako (Swimsuit) and Saki (Swimsuit)</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.3.17</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Increased accuracy of event planner for Valentine Patrol rerun (now includes currency from Wakamo Invasions)</li>
+                <li>Fubuki eleph rewards should be slightly higher, and min clear energy needed should be much lower</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.3.16</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Enabled event Valentine Patrol rerun</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.3.15</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added option to set carryover energy for event planning</li>
+                <li>It will be excluded automatically when using Owned currency tab for mid-event calculations</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.3.14</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Japanese translation done by Gedanke</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.3.13</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Enabled 2 more events, NY 2 and NY 1 rerun</li>
+                <li>Updated cafe max level to 8</li>
+                <li>Updated mid event calculations to calculate energy based on remaining resets (this is based on the system clock, so if your device has the 
+                    wrong time set it will cause issues calculating energy).</li>
+                <ul>
+                        <li>This should currently slightly underestimate remaining energy, as it currently calculates based on remaining resets</li>
+                        <li>Will look at updating in future to include partial days worth of energy generation also (and input for current held energy)</li>
+                </ul>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.3.12</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added option to exclude certain stages from farming on Event Planner</li>
+                <li>Added functionality to set currently owned currency and remaining shop purchases, for recalculating needed runs during event</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.3.11</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added new students Rumi and Mina</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.3.10</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Indonesian translation done by sneK</li>
+                <li>Events list when hovered will show reward previews for the main event rewards</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.3.9</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added 3 new events, (and 5 partially complete, currently disabled)</li>
+                <li>Added new student Reisa</li>
+            </ul>
+            <br>
+            <h3>Fixed Issues</h3>
+            <ul>
+                <li>Popups for displaying characters using X artifacts / credit etc would go off the screen with too many students</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.3.8</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Thai translation done by TKRotund</li>
+                <li>Installable web applet version available</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.3.7</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Korean translation done by 레후 (leopardgekko)</li>
+                <li>Typing when in character select will autofocus to the search input (either when adding to main page or selecting for team)</li>
+                <li>Added new characters Kaho, Toki (Bunny), Aris (Maid) and Yuzu (Maid)</li>
+                <li>Raised team limit in a group to 25 (given Torment can feasibly use that many)</li>
+                <li>Added "Screenshot" button to generate an image with all the teams in a group, just right click or long press and save image</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.3.6</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added event "Get Set, Go!"</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.3.5</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added event "Bunny Chasers on Board"</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.3.4</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added new characters Koyuki, Kayoko (New Year) and Haruka (New Year)</li>
+                <li>Added 2 new artifacts, Okiku and Atlantis</li>
+                <li>Added T8 gear</li>
+                <li>Added hardmode farmables from area 21 and 22</li>
+                <li>Added students purchasable, Hanako with Raid Tokens, Koharu with Rare Raid Tokens, then S.Izuna, S.Chise and Nonomi with Expert Permits</li>
+                <li>Updated max area for Global hardmode farming to area 20</li>
+                <li>Added permanent toggle for enabling April Fools student portrait scribbles</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.3.3</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added ability to set minimum point target for event planning</li>
+                <li>Added display of initial clear rewards / energy cost underneath stages table</li>
+            </ul>
+            <br>
+            <h3>Fixed Issues</h3>
+            <ul>
+                <li>Initial clear rewards now include the non-first time rewards for each stage, as first run gives both initial rewards and non-first time rewards
+                    (this is a pretty small adjustment)</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.3.2</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added event "Hot Springs Resort Daily Logs"</li>
+                <li>Added event "A Cathedral Christmas"</li>
+                <li>Added event "Magician of the Old Bookstore"</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.3.1</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added event "On Your Mark @ Millennium"</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.3</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Released Event Planner, more events and features to come later</li>
+                <li>Added new characters Sakurako, Nagisa and Toki</li>
+                <li>Increased level cap to 85</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.27</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added new characters Mine, Mika, Kanna and Megu</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.26</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added new characters Fuuka (New Year), Haruna (New Year) and Junko (New Year)</li>
+            </ul>
+            <br>
+            <h3>Fixed Issues</h3>
+            <ul>
+                <li>Gear farming energy cost calculation was not working correctly on Global mode when T7 Watch/Necklace/Charm were set as needed on any characters</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.25</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Increased global servers max world to 19</li>
+                <li>Added server toggle on gear farming energy button, to switch between stages available on JP or Global servers</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.24</h2>
+            <br>
+            <h3>Fixed Issues</h3>
+            <ul>
+                <li>Credit required for increasing student XP level was being overcalculated by up to 2x</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.23</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added new characters Serina (Christmas) and Hanae (Christmas)</li>
+            </ul>
+            <br>
+            <h3>Fixed Issues</h3>
+            <ul>
+                <li>Couldn't click on material to see its users in one modal if the other was set to 'Owned'</li>
+                <li>Gear XP and Credit calculations were off by like less than 1% from the real value</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.22</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added new characters Himari and Shigure</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.21</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added button "Move Group" in Teams Editor, can pick a new index to move the team to</li>
+                <li>Added "Only Group" button to character list screen, clicking will switch to "Up to Group" mode, which will filter to all characters from
+                    the first group in the list up to the selected one</li>
+                <li>Updated Text Form output in teams editor to include UE info (and removed bond from it)</li>
+                <li>Added owned resource count to hover of upgrade resources displayed in character modal</li>
+            </ul>
+            <br>
+            <h3>Fixed Issues</h3>
+            <ul>
+                <li>Character might not appear to pick in teams editor under rare conditions</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.20</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added new characters Yuuka (Track), Mari (Track) and Hasumi (Track)</li>
+                <li>Level cap set in resource modal is saved now (persists page refresh)</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.19</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added new character Akane (Bunny)</li>
+                <li>Added button in resources modal to set a level cap for resource calculation, overrides individual characters target level if they are set higher</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.18</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Changed Team name max length to 35 characters</li>
+                <li>Changed max input for T2 Xp reports and gear orbs to 5 digit</li>
+                <li>Default teams can now be renamed/deleted</li>
+                <li>Ctrl+Shift+S will quicksave any changes</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.17</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added Switch to Leftover button to resources and gear modals</li>
+                <li>Updated Hard Mode farmable characters with Area 20 for JP</li>
+                <li>Updated gear farming optimisation with Area 20 gear</li>
+            </ul>
+            <br>
+            <h3>Fixed Issues</h3>
+            <ul>
+                <li>Opening any modal would reset the page's scroll to the top</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.16</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added button in character modal for setting fields to max (for Global or JP values)</li>
+                <li>Also added button in character modal for setting goal fields to max</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.15</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added new characters, Utaha (Cheerleader), Hibiki (Cheerleader) and Noa</li>
+                <li>Increased level cap to 83</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.14</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added new character Kokona</li>
+                <li>Added minimum AP required display in gear modal, clicking the AP rectangle shows a popup that 
+                    lists exactly how many runs of which stages is the most AP efficient way to farm</li>
+                <li>Can also select 1x 2x or 3x Normal Mission campaign so it calculates based on doubled / tripled drops</li>
+                <li>Tsurugi is now purchasable with JE Coins</li>
+            </ul>
+            <br>
+            <h3>Fixed Issues</h3>
+            <ul>
+                <li>Clicking too quickly outside the character modal while it is opening caused it to freeze</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.13</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Global now can farm Area 17 HM nodes</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.12</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added new characters Kazusa and Moe</li>
+                <li>Shizuko can be bought with pvp coins, S.Hoshino with Mastery Certificates</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.11</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Characters can now be added to team editor even if they aren't added to the planner</li>
+                <li>Changed the team editor character select to the same multi selection as adding characters to planner</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.10</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added new character Saori</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.9</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Adding characters is now a multi selection visual UI</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.8</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added support for other official in-game languages, Korean, Japanese, Chinese and Thai</li>
+                <li>(Only English, Korean and Japanese have translations for all characters, Chinese and Thai are only translated for characters currently on global servers)</li>
+                <li>(And I intend to translate all of the UI at some point also, if anyone that speaks one of these languages is interested in helping with that, 
+                    feel free to contact me on Discord, Justin163#7721, I can provide a google spreadsheet with all the phrases I need to translate)
+                </li>
+                <li>Updated some of the field validation behaviour to be less annoying (midokuni)</li>
+            </ul>
+            <br>
+            <h3>Fixed Issues</h3>
+            <ul>
+                <li>After deleting a character, you couldn't open another without refreshing the page</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.7</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added Midori as purchasable with rare raid tokens, Momoi with raid tokens</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.6</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added 4 new characters, Hoshino (Swimsuit), Chise (Swimsuit), Izuna (Swimsuit) and Shizuko (Swimsuit)</li>
+                <li>Updated skill descriptions for new characters</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.5</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Clicking a resource or gear part in Remaining Needed or Total Needed mode will now display a list of characters that need that mat</li>
+                <li>New Year Mutsuki and Aru eleph can be bought with Mastery Certificates</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.4</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Filter groups are now collapsible (goldcrater)</li>
+            </ul>
+            <br>
+            <h3>Fixed Issues</h3>
+            <ul>
+                <li>Team editor character options weren't updating upon adding a character to a team</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.3</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added Material filter (e.g. filter by characters that use Rohonc) (goldcrater)</li>
+            </ul>
+            <br>
+            <h3>Fixed Issues</h3>
+            <ul>
+                <li>Star displays weren't updating correctly when saving changes to character</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.2</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added cloud save functionality (may be bugs, so do take care using it until I squish a few)</li>
+                <ul>
+                    <li>First enter a username 5-20 characters long, and press "Register"</li>
+                    <li>Wait until a popup appears confirming the registration worked, and saves the Auth Key</li>
+                    <li>Now you can press "Save" to upload the save to the cloud, or "Load" to download from the cloud</li>
+                    <li>Load will replace the current data, so make sure you don't load old data instead of saving</li>
+                    <li>(Later it will warn you if the data being loaded will be older than the currently active data, but doesn't work like that yet)</li>
+                    <li>The "Login" button is for logging into the same cloud save on other devices or browsers etc, it will also currently replace active data</li>
+                    <li>(Later login button will get it's own API call and not force load data, but doesn't work like that yet)</li>
+                </ul>
+                <li>If something gets fucked up, a backup has been created first time loading the page after this update,</li>
+                <li>So if your data dissapears, contact me on Discord (Justin163#7721) for instructions on how to recover from the backup</li>
+                <li>Added white border around modals on dark mode</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.1</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added 3 new characters, Nonomi (Swimsuit), Ayane (Swimsuit) and Wakamo (Swimsuit)</li>
+                <li>Code changes in preparation for multiple language options for the site</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.2.0</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added new inputs on character modal</li>
+                <ul>
+                    <li>Owned eleph input, and character unlocked checkbox</li>
+                    <li>When character is not set as unlocked, the current stars are locked to the base, and the unlock cost in Eligma is added (for non limiteds)</li>
+                    <li>Eligma shop cost input for character's eleph</li>
+                    <li>Hard Mode sweeps input, with option to double max sweeps if pyro resetting, then can see how many days it would take to farm with average RNG</li>
+                    <li>Checkbox control of buying character shards with Eligma, or other relevant shop currency</li>
+                    <li>Displays how many shop resets will be needed based on the currency a character can be bought with</li>
+                </ul>
+                <li>Shows needed Eleph/Eligma/relevant currency needed at bottom of character modal</li>
+                <li>Displays all the needed currencies on Resource Modal, remaining needed view</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.1.7</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added owned UE parts input, displays owned xp number</li>
+                <li>Added required UE level xp shown on gear modal and character modal</li>
+                <li>Credit needed now includes UE* upgrade and UE level upgrade credit costs</li>
+                <li>Now displays boosted UE mood if current UE stars is set to 3 for a character</li>
+            </ul>
+            <br>
+            <h3>Fixed Issues</h3>
+            <ul>
+                <li>Modals could be opened before all data had finished loading</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.1.6</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added new character Atsuko</li>
+            </ul>
+            <br>
+            <h3>Fixed Issues</h3>
+            <ul>
+                <li>Casual Saya's artifacts were incorrect</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.1.5</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Revamped UI for narrow screens (e.g. mobile devices)</li>
+            </ul>
+            <br>
+            <h3>Fixed Issues</h3>
+            <ul>
+                <li>In some cases characters could be missing from list of options after importing data</li>
+                <li>Character info wouldn't update on teams view when switching back to it after editing a character</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.1.4</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added skill descriptions when hovering the skill image, shows current and target values separated by '/'</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.1.3</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>New characters Hiyori and Misaki added</li>
+                <li>T7 Equipment, lvl 80 characters implemented</li>
+                <li>Added Arius mats</li>
+                <li>Added Gear Xp display to character modal and total gear xp display to gear modal</li>
+                <li>Owned gear stones input in gear modal</li>
+            </ul>
+            <br>
+            <h3>Fixed Issues</h3>
+            <ul>
+                <li>Error was being thrown when trying to navigate in a direction that doesn't exist</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.1.2</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added many filtering options, press "Filters" button to view and use them (midokuni)</li>
+            </ul>
+            <br>
+            <h3>Fixed Issues</h3>
+            <ul>
+                <li>Javascript was erroring on page reload after deleting default group</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.1.1</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added "Text Form" button to get a text version of the group investment information</li>
+            </ul>
+            <br>
+            <h3>Fixed Issues</h3>
+            <ul>
+                <li>Setting borrowed Special unit in team editor was broken</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.1.0</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added Team Editor page, accessed from button in footer</li>
+                <ul>
+                    <li>You can select a group from the default options, or use "New Group" to create another one with a custom name</li>
+                    <li>Once selected, (and while in Add/Move mode) you can press the "Add" slots to select from a list of your owned characters</li>
+                    <li>Selected characters will display in the team with the same data as on the main page</li>
+                    <li>You can also press "Borrow" from the add character modal to select a character to set as borrowed (if not already borrowed in the group)</li>
+                    <li>Press "Add Team" to add more teams to the group (max is arbitrary 6)</li>
+                    <li>There are self explanatory "Rename" and "Delete" group buttons</li>
+                    <li>To remove characters from a team, press the "Remove" button, and now clicking characters in a group will remove them,
+                        or you can click the team name to remove the whole team</li>
+                    <li>In Add/Move mode, you can just drag characters around to swap them within or between teams</li>
+                </ul>
+                <br>
+                <li>Added filtering options, select a group and only the characters set in the team editor in that group will be displayed</li>
+                <li>Added Enable/Disable All buttons, to quickly change all the characters, (it applies only to characters found by the filter,
+                    so you can "Disable All", and then filter to a specific group and "Enable All" to enable characters from that group)</li>
+                <br>
+                <li>Made raw owned xp number visible in resource modal</li>
+                <li>Pressing 'm' while in an input field will now set it to the max value</li>
+            </ul>
+            <br>
+            <h3>Fixed Issues</h3>
+            <ul>
+                <li>Saved data alert would close open input modals</li>
+                <li>Xp inputs wouldn't clear properly when setting to 0</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.0.12</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added new character Tsukuyo</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.0.11</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Target skill/gear/bond/level will now only show on character boxes if target is different to current for each</li>
+                <li>Changed styling of displayed skill/gear etc levels on character boxes to have better contrast</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.0.10</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added display showing Raid Coins required to buy all remaining needed BDs/TNs/Secret Notes</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.0.9</h2>
+            <br>
+            <h3>Fixed Issues</h3>
+            <ul>
+                <li>Mimori and Marina didn't have any skill material data</li>
+                <li>Number inputs could be set to values like "01" instead of being parsed to just "1"</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.0.8</h2>
+            <br>
+            <h3>Fixed Issues</h3>
+            <ul>
+                <li>Skill resources wouldn't calculate if current was set to 0</li>
+                <li>Gear modal wouldn't scroll if overflowing</li>
+                <li>Website wasn't working on safari (still looks a bit weird, but at least works on Safari 13.1.3,
+                    didn't test lower than that)</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.0.7</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added new characters Michiru, Kaede and Iroha, as well as the new artifacts they use</li>
+                <li>Added button in resource and gear modal to see Total Needed resources, instead of only Remaining
+                    Needed</li>
+                <li>Terrain Moods display added to character modal</li>
+                <li>Changed UE star behaviour, now will automatically set normal star target to 5, instead of ignoring
+                    input</li>
+                <li>Inverted colour of skill icons when in light theme</li>
+                <li>Inverted colour of theme change button</li>
+                <li>Added text to resource/gear modal to display the current view mode</li>
+                <li>Optimised tabbing order for resource input</li>
+            </ul>
+            <br>
+            <h3>Fixed Issues</h3>
+            <ul>
+                <li>Some skill icons were missing</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.0.6</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added colour to info fields in the character modal</li>
+                <li>Added skill icon and gear icon images to the character modal</li>
+                <li>Added bond display to main screen character boxes</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.0.5</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added Gear modal, with needed bps calculation and owned gear input</li>
+            </ul>
+            <br>
+            <h3>Fixed Bugs</h3>
+            <ul>
+                <li>Bottom of outline on resource count texts were missing</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.0.4</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Characters can now be repositioned, either by holding shift and dragging on desktop, or cycling mode
+                    button to "Move Mode"</li>
+                <li>Added dark theme, use button on right of navbar to change theme</li>
+                <li>Changed the way disabled characters are displayed, now also dimmed instead of solely grayscaled</li>
+                <li>Modals can be closed with escape key now, and character modal by clicking outside the modal also
+                </li>
+                <li>If the character modal has unsaved fields, it will prompt before closing</li>
+                <li>Rarity backgrounds added to resources in character modal (goldcrater)</li>
+                <li>Added navigation for credit/xp/secret tech fields in resource modal</li>
+                <li>Added navigation for character modal inputs</li>
+                <li>Saved data structure was modified (midokuni)</li>
+            </ul>
+            <br>
+            <h3>Fixed Bugs</h3>
+            <ul>
+                <li>Mode button was collapsing if on line by itself</li>
+                <li>Character boxes container was too short to scroll down fully, covered by footer</li>
+                <li>Ctrl+LeftArrow navigation was not selecting text in inputs</li>
+                <li>Entering a letter/symbol into inputs would clear it on Firefox browser (perhaps also others)</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.0.3</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added total resource used display to character modal to reach target level (doesn't subtract owned
+                    amounts)</li>
+                <li>Disabled 4th and 5th UE star in character modal for now, as it's not needed yet</li>
+                <li>Changed the edit/disable mode button from being visible on mobile only to always visible (so the
+                    disable feature is more obvious)</li>
+                <li>Added update version to the save file, and notification for first time loading the site on a new
+                    version</li>
+            </ul>
+            <br>
+            <h3>Fixed Bugs</h3>
+            <ul>
+                <li>Owned xp reports weren't showing after page refresh</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.0.2</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Added input navigation for resource tables, can use either Tab/Shift+Tab/Enter/Shift+Enter or
+                    Ctrl+Arrows to navigate between inputs</li>
+                <li>Added the ability to set sections in the character modal to predefined presets, clicking on the
+                    section label brings up the choices</li>
+                <li>Adjusted order of school mats on resource modal, to match default ingame sort</li>
+                <li>Changed validation behaviour for target inputs, now sanitises the target to match current upon
+                    moving focus from the input</li>
+                <li>Changed sanitising behaviour when the value in an input is too long, now just blocks extra input
+                    instead of setting to max value</li>
+                <li>Updated the visuals of the character modal, it also expands to take full screen width on small
+                    devices now instead of 80% width</li>
+                <li>Added temporary tooltip on section labels and character boxes, to inform about ctrl+click to
+                    disable, and presets</li>
+                <li>Adjusted star colouring for displaying target star/ue on main screen, now dims target stars instead
+                    of using separate colour</li>
+            </ul>
+            <br>
+            <h3>Fixed Bugs</h3>
+            <ul>
+                <li>Displayed info on character boxes was not correctly in frame on mobile</li>
+                <li>Owned materials and disabled characters weren't updating upon data import</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1.0.1</h2>
+            <br>
+            <h3>Changes</h3>
+            <ul>
+                <li>Timing of notifications about target level being lower than current level adjusted to be less
+                    annoying</li>
+                <li>Added an extra button on mobile for disabling characters from calculation</li>
+            </ul>
+            <br>
+            <h3>Fixed Bugs</h3>
+            <ul>
+                <li>Resources weren't calculating for skills set to target 10 and current >1</li>
+                <li>Phaistos T2/3/4 couldn't be entered in owned resources</li>
+                <li>Border width of character boxes was too thin on mobile</li>
+            </ul>
+            <br>
+        </div>
+        <br><br>
+        <div class="changelog-section">
+            <h2>Version 1</h2>
+            <br>
+            <p>Initial Publish</p>
+            <br>
+        </div>
+    </div>
+</body>
+
+</html>
