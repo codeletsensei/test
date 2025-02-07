@@ -3959,12 +3959,7 @@ function charDataFromModal(charId) {
 function isCharModalDirty() {
     let charData = data.characters.find(obj => { return obj.id == modalCharID });
     let modalData = charDataFromModal();
-console.log("===========")
-console.log(modalData)
-console.log(charData.name)
-console.log("char: " + charData.current.bondgear + " > " + charData.target.bondgear)
-console.log("char: " + modalData.current.bondgear + " > " + modalData.target.bondgear)
-console.log("===========")
+
     if (compareObjects(charData.current, modalData.current) != true) {
         return true;
     }
