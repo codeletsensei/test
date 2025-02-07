@@ -3498,8 +3498,8 @@ function populateCharModal(charId) {
             if (!charData.target.bondgear) charData.target.bondgear = "1";
             document.getElementById("input_bondgear_current").value = charData.current?.bondgear;
             document.getElementById("input_bondgear_target").value = charData.target?.bondgear;
-            document.getElementById("bondgear_tablecell_header").style.display = "block"
-            document.getElementById("bondgear_tablecell_inputs").style.display = "block"
+            document.getElementById("bondgear_tablecell_header").style.display = ""
+            document.getElementById("bondgear_tablecell_inputs").style.display = ""
         }
         else {
             document.getElementById("bondgear_tablecell_header").style.display = "none"
