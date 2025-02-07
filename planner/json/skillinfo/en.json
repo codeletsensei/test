@@ -559,18 +559,6 @@
                 9,
                 16
             ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                150,
-                151
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
-            ]
         ]
     },
     "10001": {
@@ -1075,18 +1063,6 @@
                 12,
                 7,
                 15
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                130,
-                131
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -2460,18 +2436,6 @@
                 9,
                 14
             ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                180,
-                181
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
-            ]
         ]
     },
     "10005": {
@@ -2993,18 +2957,6 @@
                 12,
                 8,
                 14
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                100,
-                101
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -4552,18 +4504,6 @@
                 7,
                 13
             ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                170,
-                171
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
-            ]
         ]
     },
     "10009": {
@@ -5099,18 +5039,6 @@
                 8,
                 14
             ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                140,
-                141
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
-            ]
         ]
     },
     "10010": {
@@ -5589,18 +5517,6 @@
                 12,
                 8,
                 16
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                110,
-                111
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -6590,18 +6506,6 @@
                 8,
                 14
             ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                170,
-                171
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
-            ]
         ]
     },
     "10013": {
@@ -7146,18 +7050,6 @@
                 12,
                 9,
                 13
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                140,
-                141
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -11333,18 +11225,6 @@
                 8,
                 14
             ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                180,
-                181
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
-            ]
         ]
     },
     "10023": {
@@ -11901,18 +11781,6 @@
                 12,
                 7,
                 13
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                130,
-                131
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -12877,18 +12745,6 @@
                 12,
                 9,
                 12
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                180,
-                181
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -14359,18 +14215,6 @@
                 12,
                 9,
                 13
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                100,
-                101
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -16625,18 +16469,6 @@
                 9,
                 14
             ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                210,
-                211
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
-            ]
         ]
     },
     "10034": {
@@ -17162,18 +16994,6 @@
                 12,
                 8,
                 13
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                150,
-                151
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -18120,18 +17940,6 @@
                 12,
                 7,
                 14
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                150,
-                151
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -19111,18 +18919,6 @@
                 7,
                 14
             ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                170,
-                171
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
-            ]
         ]
     },
     "10039": {
@@ -19603,18 +19399,6 @@
                 12,
                 6,
                 14
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                200,
-                201
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -20760,18 +20544,6 @@
                 12,
                 8,
                 14
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                100,
-                101
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -23958,18 +23730,6 @@
                 12,
                 7,
                 14
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                130,
-                131
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -32253,18 +32013,6 @@
                 8,
                 15
             ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                290,
-                291
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
-            ]
         ]
     },
     "10063": {
@@ -33789,18 +33537,6 @@
                 7,
                 5
             ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                110,
-                111
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
-            ]
         ]
     },
     "10066": {
@@ -34390,18 +34126,6 @@
                 12,
                 3,
                 4
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                130,
-                131
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -55790,18 +55514,6 @@
                 7,
                 12
             ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                190,
-                191
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
-            ]
         ]
     },
     "13002": {
@@ -57148,18 +56860,6 @@
                 12,
                 7,
                 13
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                100,
-                101
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -58510,18 +58210,6 @@
                 8,
                 16
             ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                140,
-                141
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
-            ]
         ]
     },
     "13008": {
@@ -59001,18 +58689,6 @@
                 12,
                 9,
                 13
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                110,
-                111
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -59954,18 +59630,6 @@
                 12,
                 7,
                 13
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                170,
-                171
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -62700,18 +62364,6 @@
                 8,
                 16
             ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                170,
-                171
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
-            ]
         ]
     },
     "16003": {
@@ -63228,18 +62880,6 @@
                 12,
                 7,
                 15
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                160,
-                161
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -64631,18 +64271,6 @@
                 12,
                 8,
                 15
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                140,
-                141
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -69984,18 +69612,6 @@
                 7,
                 12
             ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                120,
-                121
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
-            ]
         ]
     },
     "20001": {
@@ -71326,18 +70942,6 @@
                 9,
                 13
             ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                100,
-                101
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
-            ]
         ]
     },
     "20004": {
@@ -72238,18 +71842,6 @@
                 7,
                 16
             ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                120,
-                121
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
-            ]
         ]
     },
     "20006": {
@@ -72755,18 +72347,6 @@
                 12,
                 7,
                 14
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                160,
-                161
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -74144,18 +73724,6 @@
                 12,
                 10,
                 14
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                120,
-                121
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -76725,18 +76293,6 @@
                 12,
                 8,
                 14
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                190,
-                191
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -79666,18 +79222,6 @@
                 12,
                 9,
                 14
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                110,
-                111
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -89716,18 +89260,6 @@
                 8,
                 12
             ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                120,
-                121
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
-            ]
         ]
     },
     "23004": {
@@ -90163,18 +89695,6 @@
                 12,
                 8,
                 15
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                140,
-                141
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -91116,18 +90636,6 @@
                 8,
                 15
             ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                140,
-                141
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
-            ]
         ]
     },
     "23007": {
@@ -91606,18 +91114,6 @@
                 12,
                 11,
                 17
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                170,
-                171
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -92100,18 +91596,6 @@
                 12,
                 11,
                 13
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                150,
-                151
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },
@@ -94663,18 +94147,6 @@
                 12,
                 8,
                 14
-            ]
-        ],
-        "SkillBondGearMaterial": [
-            [
-                130,
-                131
-            ]
-        ],
-        "SkillBondGearMaterialAmount": [
-            [
-                80,
-                25
             ]
         ]
     },

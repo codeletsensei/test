@@ -267,10 +267,9 @@ class ElephInfo {
 
 class StudentInvestment {
 
-    constructor(level, bond, star, ue, ue_level, ex, basic, passive, sub, gear1, gear2, gear3, bondgear) {
+    constructor(level, bond, star, ue, ue_level, ex, basic, passive, sub, gear1, gear2, gear3) {
         this.level = level;
         this.bond = bond;
-        this.bondgear = bondgear;
         this.star = star;
         this.ue = ue;
         this.ue_level = ue_level;
@@ -312,7 +311,6 @@ class StudentInvestment {
         defaultTarget.sub = inputValidation.sub_target.default;
 
         defaultTarget.bond = inputValidation.bond_target.default;
-        defaultTarget.bondgear = inputValidation.bondgear_target.default;
         defaultTarget.level = inputValidation.level_target.default;
         defaultTarget.star = characterInfo?.BaseStar ?? 1;
         defaultTarget.ue = 0;
@@ -545,41 +543,6 @@ const inputValidation = {
         "navigation": "direct",
         "Up": "input_bond_current",
         "Left": "input_bond_current",
-        "Down": "input_bondgear_current",
-        "Right": "input_ue_level_current"
-    },
-    "bondgear": {
-        id: "input_bondgear_current",
-        location: "characterModal",
-        min: "1",
-        max: "2",
-        default: "1",
-        name: "Bond Gear",
-        requisite: {},
-        "navigation": "direct",
-        "Up": "input_bond_target",
-        "Left": "input_bond_target",
-        "Down": "input_bondgear_target",
-        "Right": "input_bondgear_target"
-    },
-    "bondgear_target": {
-        id: "input_bondgear_target",
-        location: "characterModal",
-        min: "1",
-        max: "2",
-        default: "1",
-        name: "Bond Gear Target",
-        requisite: {
-            "bondgear": {
-                type: "input",
-                compare: "equal_greater",
-                mode: "direct",
-                sanitise: true
-            }
-        },
-        "navigation": "direct",
-        "Up": "input_bondgear_current",
-        "Left": "input_bondgear_current",
         "Down": "input_ex_current",
         "Right": "input_ue_level_current"
     },

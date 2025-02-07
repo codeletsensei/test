@@ -3355,8 +3355,6 @@ function saveCharChanges() {
 
         charData.current.bond = document.getElementById("input_bond_current").value;
         charData.target.bond = document.getElementById("input_bond_target").value;
-        charData.current.bondgear = document.getElementById("input_bondgear_current").value;
-        charData.target.bondgear = document.getElementById("input_bondgear_target").value;
 
         charData.current.ex = document.getElementById("input_ex_current").value;
         charData.target.ex = document.getElementById("input_ex_target").value;
@@ -3484,6 +3482,7 @@ function populateCharModal(charId) {
 
             document.getElementById('mood-' + GetOldTerrain(terrain)).src = "icons/Mood/Mood_" + boostedMood(GetMoodFromAdaptation(charInfo[terrain + "BattleAdaptation"]), boostAmt) + ".png";
         }
+
         document.getElementById("input_level_current").value = charData.current?.level;
         document.getElementById("input_level_target").value = charData.target?.level;
 
@@ -3492,27 +3491,6 @@ function populateCharModal(charId) {
 
         document.getElementById("input_bond_current").value = charData.current?.bond;
         document.getElementById("input_bond_target").value = charData.target?.bond;
-        /*let forceSave = 0
-        if (!charData.current.bondgear) { 
-            charData.current.bondgear = "1"; 
-            forceSave = 1;
-        }
-        if (!charData.target.bondgear) {
-            charData.target.bondgear = "1";
-            forceSave = 1;
-        }
-        if (forceSave == 1) saveToLocalStorage(false) //forcing to save before user is allowed to change anything, so the "unsaved changes" pop up shows up even though the user didn't change
-        */
-        if (misc_data.bondgear_characters.includes(parseInt(charId))) {
-            document.getElementById("input_bondgear_current").value = charData.current?.bondgear;
-            document.getElementById("input_bondgear_target").value = charData.target?.bondgear;
-            document.getElementById("bondgear_tablecell_header").style.display = ""
-            document.getElementById("bondgear_tablecell_inputs").style.display = ""
-        }
-        else {
-            document.getElementById("bondgear_tablecell_header").style.display = "none"
-            document.getElementById("bondgear_tablecell_inputs").style.display = "none"
-        }
 
         document.getElementById("input_ex_current").value = charData.current?.ex;
         document.getElementById("input_ex_target").value = charData.target?.ex;
@@ -3925,8 +3903,6 @@ function charDataFromModal(charId) {
 
     charData.current.bond = document.getElementById("input_bond_current").value;
     charData.target.bond = document.getElementById("input_bond_target").value;
-    charData.current.bondgear = document.getElementById("input_bondgear_current").value;
-    charData.target.bondgear = document.getElementById("input_bondgear_target").value;
 
     charData.current.ex = document.getElementById("input_ex_current").value;
     charData.target.ex = document.getElementById("input_ex_target").value;
@@ -3963,12 +3939,12 @@ function charDataFromModal(charId) {
 }
 
 function isCharModalDirty() {
+
     let charData = data.characters.find(obj => { return obj.id == modalCharID });
-console.log("===========")
-console.log(charData)
     let modalData = charDataFromModal();
+
+console.log(charData)
 console.log(modalData)
-console.log("===========")
     if (compareObjects(charData.current, modalData.current) != true) {
         return true;
     }
@@ -5575,7 +5551,6 @@ function calculateCharResources(charData, output) {
     calcSkillCost(charObj, "normal", charData.current?.basic, charData.target?.basic, charMatDict);
     calcSkillCost(charObj, "passive", charData.current?.passive, charData.target?.passive, charMatDict);
     calcSkillCost(charObj, "sub", charData.current?.sub, charData.target?.sub, charMatDict);
-    if (charObj.SkillBondGearMaterial) calcSkillCost(charObj, "bondgear", charData.current?.bondgear, charData.target?.bondgear, charMatDict);
     calcXpCost(charData.current?.level, charData.target?.level, charMatDict);
     calcGearCost(charObj, charData.current?.gear1, charData.target?.gear1, 1, charMatDict);
     calcGearCost(charObj, charData.current?.gear2, charData.target?.gear2, 2, charMatDict);
@@ -5659,11 +5634,6 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
         skillMaterials = characterObj.SkillExMaterial;
         skillMaterialAmounts = characterObj.SkillExMaterialAmount;
         skillType = "ex";
-    }
-    else if (skill == "bondgear") {
-        skillMaterials = characterObj.SkillBondGearMaterial;
-        skillMaterialAmounts = characterObj.SkillBondGearMaterialAmount;
-        skillType = "bondgear";
     }
     else {
         skillMaterials = characterObj.SkillMaterial;
@@ -6792,8 +6762,6 @@ function ConfirmBulkUpdate() {
 
     bulkUpdate.current.bond = document.getElementById("bulk-input_bond_current").value;
     bulkUpdate.target.bond = document.getElementById("bulk-input_bond_target").value;
-    bulkUpdate.current.bondgear = document.getElementById("bulk-input_bond_current").value;
-    bulkUpdate.target.bondgear = document.getElementById("bulk-input_bond_target").value;
 
     bulkUpdate.current.ex = document.getElementById("bulk-input_ex_current").value;
     bulkUpdate.target.ex = document.getElementById("bulk-input_ex_target").value;
