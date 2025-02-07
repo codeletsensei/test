@@ -3484,7 +3484,6 @@ function populateCharModal(charId) {
 
             document.getElementById('mood-' + GetOldTerrain(terrain)).src = "icons/Mood/Mood_" + boostedMood(GetMoodFromAdaptation(charInfo[terrain + "BattleAdaptation"]), boostAmt) + ".png";
         }
-        console.log(charData)
         document.getElementById("input_level_current").value = charData.current?.level;
         document.getElementById("input_level_target").value = charData.target?.level;
 
@@ -3493,7 +3492,8 @@ function populateCharModal(charId) {
 
         document.getElementById("input_bond_current").value = charData.current?.bond;
         document.getElementById("input_bond_target").value = charData.target?.bond;
-        if (charList[charId].SkillBondGearMaterial && !charData.current.bondgear) {
+        console.log(charList)
+        if (bongear_characters.includes(parseInt(charId)) && !charData.current.bondgear) {
             charData.current.bondgear = "1";
             charData.target.bondgear = "1";
             document.getElementById("input_bondgear_current").value = charData.current?.bondgear;
