@@ -298,6 +298,7 @@ class StudentInvestment {
 
             0,
             0,
+            0,
             0
         ];
 
