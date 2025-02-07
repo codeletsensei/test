@@ -3493,9 +3493,11 @@ function populateCharModal(charId) {
         document.getElementById("input_bond_current").value = charData.current?.bond;
         document.getElementById("input_bond_target").value = charData.target?.bond;
         console.log(charList)
-        if (misc_data.bondgear_characters.includes(parseInt(charId)) && !charData.current.bondgear) {
-            charData.current.bondgear = "1";
-            charData.target.bondgear = "1";
+        if (misc_data.bondgear_characters.includes(parseInt(charId))) {
+            if (!charData.current.bondgear) {
+                charData.current.bondgear = "1";
+                charData.target.bondgear = "1";
+            }
             document.getElementById("input_bondgear_current").value = charData.current?.bondgear;
             document.getElementById("input_bondgear_target").value = charData.target?.bondgear;
             document.getElementById("input_bondgear_current").style.display = "block"
