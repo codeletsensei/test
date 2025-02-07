@@ -3963,10 +3963,12 @@ function charDataFromModal(charId) {
 }
 
 function isCharModalDirty() {
-
     let charData = data.characters.find(obj => { return obj.id == modalCharID });
+console.log("===========")
+console.log(charData)
     let modalData = charDataFromModal();
-
+console.log(modalData)
+console.log("===========")
     if (compareObjects(charData.current, modalData.current) != true) {
         return true;
     }
