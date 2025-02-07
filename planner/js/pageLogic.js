@@ -6294,7 +6294,7 @@ async function getImportData() {
 
         /*gtag('event', 'action_import');*/
 
-        location.reload();
+        //location.reload();
     }
 }
 
