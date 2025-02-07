@@ -3497,15 +3497,15 @@ function populateCharModal(charId) {
         document.getElementById("input_bond_current").value = charData.current?.bond;
         document.getElementById("input_bond_target").value = charData.target?.bond;
 
+        document.getElementById("input_bondgear_current").value = charData.current?.bondgear;
+        document.getElementById("input_bondgear_target").value = charData.target?.bondgear;
         if (misc_data.bondgear_characters.includes(parseInt(charId))) {
-            document.getElementById("input_bondgear_current").value = charData.current?.bondgear;
-            document.getElementById("input_bondgear_target").value = charData.target?.bondgear;
             document.getElementById("bondgear_tablecell_header").style.display = ""
             document.getElementById("bondgear_tablecell_inputs").style.display = ""
         }
         else {
-            //document.getElementById("bondgear_tablecell_header").style.display = "none"
-            //document.getElementById("bondgear_tablecell_inputs").style.display = "none"
+            document.getElementById("bondgear_tablecell_header").style.display = "none"
+            document.getElementById("bondgear_tablecell_inputs").style.display = "none"
         }
 
         document.getElementById("input_ex_current").value = charData.current?.ex;
