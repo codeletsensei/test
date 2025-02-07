@@ -285,7 +285,6 @@ function init() {
             data.language = "EN";
         }
 
-            console.log(data.characters)
         for (let i in data.characters) {
             if (!data.characters[i].current.bondgear || data.characters[i].current.bondgear == "") data.characters[i].current.bondgear = 1
             if (!data.characters[i].target.bondgear || data.characters[i].target.bondgear == "") data.characters[i].target.bondgear = 1
@@ -3497,17 +3496,7 @@ function populateCharModal(charId) {
 
         document.getElementById("input_bond_current").value = charData.current?.bond;
         document.getElementById("input_bond_target").value = charData.target?.bond;
-        /*let forceSave = 0
-        if (!charData.current.bondgear || charData.current.bondgear == "") { 
-            charData.current.bondgear = "1"; 
-            forceSave = 1;
-        }
-        if (!charData.target.bondgear || charData.target.bondgear == "") {
-            charData.target.bondgear = "1";
-            forceSave = 1;
-        }
-        if (forceSave == 1) saveToLocalStorage(false) //forcing to save before user is allowed to change anything, so the "unsaved changes" pop up shows up even though the user didn't change
-        */
+
         if (misc_data.bondgear_characters.includes(parseInt(charId))) {
             document.getElementById("input_bondgear_current").value = charData.current?.bondgear;
             document.getElementById("input_bondgear_target").value = charData.target?.bondgear;
@@ -3515,8 +3504,8 @@ function populateCharModal(charId) {
             document.getElementById("bondgear_tablecell_inputs").style.display = ""
         }
         else {
-            document.getElementById("bondgear_tablecell_header").style.display = "none"
-            document.getElementById("bondgear_tablecell_inputs").style.display = "none"
+            //document.getElementById("bondgear_tablecell_header").style.display = "none"
+            //document.getElementById("bondgear_tablecell_inputs").style.display = "none"
         }
 
         document.getElementById("input_ex_current").value = charData.current?.ex;
