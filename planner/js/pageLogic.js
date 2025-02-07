@@ -3493,11 +3493,11 @@ function populateCharModal(charId) {
         document.getElementById("input_bond_current").value = charData.current?.bond;
         document.getElementById("input_bond_target").value = charData.target?.bond;
         /*let forceSave = 0
-        if (!charData.current.bondgear) { 
+        if (!charData.current.bondgear || charData.current.bondgear == "") { 
             charData.current.bondgear = "1"; 
             forceSave = 1;
         }
-        if (!charData.target.bondgear) {
+        if (!charData.target.bondgear || charData.target.bondgear == "") {
             charData.target.bondgear = "1";
             forceSave = 1;
         }
@@ -3967,8 +3967,8 @@ function isCharModalDirty() {
     let modalData = charDataFromModal();
 console.log("===========")
 console.log(charData.name)
-console.log(charData.current)
-console.log(modalData.current)
+console.log("char: "+ charData.current.bondgear + " > " + charData.target.bondgear)
+console.log("char: "+ modalData.current.bondgear + " > " + modalData.target.bondgear)
 console.log("===========")
     if (compareObjects(charData.current, modalData.current) != true) {
         return true;

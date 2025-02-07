@@ -76,6 +76,7 @@ function tryParseJSON(source) {
     try {
         var data = JSON.parse(source);
         if (!!!data) return null;
+                console.log(data.exportVersion)
 
         if (!!!data.exportVersion || data.exportVersion < exportDataVersion) {
             data.exportVersion = data?.exportVersion ?? 1;
@@ -97,7 +98,6 @@ function tryParseJSON(source) {
                 // not used yet
                 // codelet's using to add bondgear to chars who don't have.
                 console.log(data.characters)
-                console.log(data.exportVersion)
             }
         }
 
