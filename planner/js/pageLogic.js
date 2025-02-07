@@ -1249,7 +1249,8 @@ function deleteClicked() {
 }
 
 function deleteChar(charId) {
-
+console.log(modalCharID)
+console.log(charId)
     if (charId) {
 
         var charObject = data.characters.find(obj => { return obj.id == charId });
