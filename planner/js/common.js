@@ -75,8 +75,8 @@ function switchStylesheets(theme) {
 function tryParseJSON(source) {
     try {
         var data = JSON.parse(source);
+        if (data.exportVersion) console.log(data.exportVersion)
         if (!!!data) return null;
-                console.log(data.exportVersion)
 
         if (!!!data.exportVersion || data.exportVersion < exportDataVersion) {
             data.exportVersion = data?.exportVersion ?? 1;
