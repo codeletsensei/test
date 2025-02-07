@@ -285,6 +285,10 @@ function init() {
             data.language = "EN";
         }
 
+        for (let i in data.characters) {
+            if (!data.characters[i].current.bondgear || data.characters[i].current.bondgear == "") data.characters[i].current.bondgear = 1
+            if (!data.characters[i].target.bondgear || data.characters[i].target.bondgear == "") data.characters[i].target.bondgear = 1
+        }
         // if (!data.level_cap) {
         //     data.level_cap = 90;
         // }
