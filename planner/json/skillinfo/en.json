@@ -558,6 +558,18 @@
                 12,
                 9,
                 16
+            ],
+        ],
+        "SkillBondGearMaterial": [
+            [
+                150,
+                151
+            ]
+        ],
+        "SkillBondGearMaterialAmount": [
+            [
+                80,
+                25
             ]
         ]
     },
@@ -14215,6 +14227,18 @@
                 12,
                 9,
                 13
+            ]
+        ],
+        "SkillBondGearMaterial": [
+            [
+                100,
+                101
+            ]
+        ],
+        "SkillBondGearMaterialAmount": [
+            [
+                80,
+                25
             ]
         ]
     },
@@ -34138,6 +34162,18 @@
                 12,
                 3,
                 4
+            ]
+        ],
+        "SkillBondGearMaterial": [
+            [
+                130,
+                131
+            ]
+        ],
+        "SkillBondGearMaterialAmount": [
+            [
+                80,
+                25
             ]
         ]
     },
