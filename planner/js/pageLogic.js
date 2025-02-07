@@ -1249,7 +1249,6 @@ function deleteClicked() {
 }
 
 function deleteChar(charId) {
-
     if (charId) {
 
         var charObject = data.characters.find(obj => { return obj.id == charId });
@@ -1509,7 +1508,7 @@ function openModal(e) {
         }
 
         var displayImg = document.getElementById("displayImg");
-        displayImg.src = "icons/Portrait/Icon_" + charId + ".png";
+        displayImg.src = "https://schaledb.com/images/student/collection/" + charId + ".webp"//"icons/Portrait/Icon_" + charId + ".png";
         if (aprilFools) {
             displayImg.src = "icons/Portrait/April/Icon_" + charId + ".png";
         }
@@ -1782,7 +1781,7 @@ function createMultiSelectChar(charId, container, mode) {
     newCharDiv.id = "multi_" + charId;
 
     const newImg = document.createElement("img");
-    newImg.src = "icons/Portrait/Icon_" + charId + ".png";
+    newImg.src = "https://schaledb.com/images/student/collection/" + charId + ".webp" //"icons/Portrait/Icon_" + charId + ".png";
     if (aprilFools) {
         newImg.src = "icons/Portrait/April/Icon_" + charId + ".png";
     }
@@ -3543,10 +3542,10 @@ function populateCharModal(charId) {
             document.getElementById("gear3-img").src = "icons/Gear/T1_" + charInfo.Equipment[2] + "_small.webp";
         }
 
-        document.getElementById("ex-img").src = "icons/SkillIcon/" + GetSkillObject(charId, "Ex").Icon + ".png";
-        document.getElementById("basic-img").src = "icons/SkillIcon/" + GetSkillObject(charId, "Public").Icon + ".png";
-        document.getElementById("enhanced-img").src = "icons/SkillIcon/" + GetSkillObject(charId, "Passive").Icon + ".png";
-        document.getElementById("sub-img").src = "icons/SkillIcon/" + GetSkillObject(charId, "ExtraPassive").Icon + ".png";
+        document.getElementById("ex-img").src = "https://schaledb.com/images/skill/" + GetSkillObject(charId, "Ex").Icon + ".webp" //"icons/SkillIcon/" + GetSkillObject(charId, "Ex").Icon + ".png";
+        document.getElementById("basic-img").src = "https://schaledb.com/images/skill/" + GetSkillObject(charId, "Public").Icon + ".webp" //"icons/SkillIcon/" + GetSkillObject(charId, "Public").Icon + ".png";
+        document.getElementById("enhanced-img").src = "https://schaledb.com/images/skill/" + GetSkillObject(charId, "Passive").Icon + ".webp" //"icons/SkillIcon/" + GetSkillObject(charId, "Passive").Icon + ".png";
+        document.getElementById("sub-img").src = "https://schaledb.com/images/skill/" + GetSkillObject(charId, "ExtraPassive").Icon + ".webp" //"icons/SkillIcon/" + GetSkillObject(charId, "ExtraPassive").Icon + ".png";
 
 
         modalStars.star = charData.current?.star;
@@ -5197,7 +5196,7 @@ function DisplayMatUsers(mat) {
         charDiv.className = "char-row-mats";
 
         let charImg = document.createElement('img');
-        charImg.src = "icons/Portrait/Icon_" + matUsers[i].charId + ".png";
+        charImg.src = "https://schaledb.com/images/student/collection/" matUsers[i].charId + ".webp";+ //"icons/Portrait/Icon_" + matUsers[i].charId + ".png";
         if (aprilFools) {
             charImg.src = "icons/Portrait/April/Icon_" + matUsers[i].charId + ".png";
         }
