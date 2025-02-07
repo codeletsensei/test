@@ -3501,7 +3501,7 @@ function populateCharModal(charId) {
             charData.target.bondgear = "1";
             forceSave = 1;
         }
-        if (forceSave == 1) saveToLocalStorage(false)
+        if (forceSave == 1) saveToLocalStorage(false) //forcing to save before user is allowed to change anything, so the "unsaved changes" pop up shows up even though the user didn't change anything.
         if (misc_data.bondgear_characters.includes(parseInt(charId))) {
             document.getElementById("input_bondgear_current").value = charData.current?.bondgear;
             document.getElementById("input_bondgear_target").value = charData.target?.bondgear;
