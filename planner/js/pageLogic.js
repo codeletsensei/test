@@ -3959,12 +3959,7 @@ function charDataFromModal(charId) {
 function isCharModalDirty() {
     let charData = data.characters.find(obj => { return obj.id == modalCharID });
     let modalData = charDataFromModal();
-console.log("===========")
-console.log(modalData)
-console.log(charData.name)
-console.log("char: " + charData.current.bondgear + " > " + charData.target.bondgear)
-console.log("char: " + modalData.current.bondgear + " > " + modalData.target.bondgear)
-console.log("===========")
+
     if (compareObjects(charData.current, modalData.current) != true) {
         return true;
     }
@@ -5571,7 +5566,6 @@ function calculateCharResources(charData, output) {
     calcSkillCost(charObj, "normal", charData.current?.basic, charData.target?.basic, charMatDict);
     calcSkillCost(charObj, "passive", charData.current?.passive, charData.target?.passive, charMatDict);
     calcSkillCost(charObj, "sub", charData.current?.sub, charData.target?.sub, charMatDict);
-    //if (charObj.SkillBondGearMaterial) 
     calcSkillCost(charObj, "bondgear", charData.current?.bondgear, charData.target?.bondgear, charMatDict);
     calcXpCost(charData.current?.level, charData.target?.level, charMatDict);
     calcGearCost(charObj, charData.current?.gear1, charData.target?.gear1, 1, charMatDict);
