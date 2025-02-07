@@ -6788,8 +6788,6 @@ function ConfirmBulkUpdate() {
 
     bulkUpdate.current.bond = document.getElementById("bulk-input_bond_current").value;
     bulkUpdate.target.bond = document.getElementById("bulk-input_bond_target").value;
-    bulkUpdate.current.bondgear = document.getElementById("bulk-input_bond_current").value;
-    bulkUpdate.target.bondgear = document.getElementById("bulk-input_bond_target").value;
 
     bulkUpdate.current.ex = document.getElementById("bulk-input_ex_current").value;
     bulkUpdate.target.ex = document.getElementById("bulk-input_ex_target").value;
