@@ -5196,7 +5196,7 @@ function DisplayMatUsers(mat) {
         charDiv.className = "char-row-mats";
 
         let charImg = document.createElement('img');
-        charImg.src = "https://schaledb.com/images/student/collection/" matUsers[i].charId + ".webp"; //"icons/Portrait/Icon_" + matUsers[i].charId + ".png";
+        charImg.src = "https://schaledb.com/images/student/collection/" + matUsers[i].charId + ".webp"; //"icons/Portrait/Icon_" + matUsers[i].charId + ".png";
         if (aprilFools) {
             charImg.src = "icons/Portrait/April/Icon_" + matUsers[i].charId + ".png";
         }
