@@ -3493,12 +3493,20 @@ function populateCharModal(charId) {
 
         document.getElementById("input_bond_current").value = charData.current?.bond;
         document.getElementById("input_bond_target").value = charData.target?.bond;
-        if (!charData.current.bondgear) {
+        if (charList[charId].SkillBondGearMaterial && !charData.current.bondgear) {
             charData.current.bondgear = "1";
             charData.target.bondgear = "1";
+            document.getElementById("input_bondgear_current").value = charData.current?.bondgear;
+            document.getElementById("input_bondgear_target").value = charData.target?.bondgear;
+            document.getElementById("input_bondgear_current").style.display = "block"
+            document.getElementById("input_bondgear_target").style.display = "block"
+            document.getElementById("bondgear_tablecell_text").style.display = "block"
         }
-        document.getElementById("input_bondgear_current").value = charData.current?.bondgear;
-        document.getElementById("input_bondgear_target").value = charData.target?.bondgear;
+        else {
+            document.getElementById("input_bondgear_current").style.display = "none"
+            document.getElementById("input_bondgear_target").style.display = "none"
+            document.getElementById("bondgear_tablecell_text").style.display = "none"
+        }
 
         document.getElementById("input_ex_current").value = charData.current?.ex;
         document.getElementById("input_ex_target").value = charData.target?.ex;
@@ -6700,8 +6708,6 @@ function OpenBulkModal() {
 
     document.getElementById("bulk-input_bond_current").value = "";
     document.getElementById("bulk-input_bond_target").value = "";
-    document.getElementById("bulk-input_bondgear_current").value = "";
-    document.getElementById("bulk-input_bondgear_target").value = "";
 
     document.getElementById("bulk-input_ex_current").value = "";
     document.getElementById("bulk-input_ex_target").value = "";
