@@ -95,6 +95,8 @@ function tryParseJSON(source) {
             if (data.exportVersion < 3) {
                 // convert version 2 to version 3
                 // not used yet
+                // codelet's using to add bondgear to chars who don't have.
+                console.log(data.characters)
             }
         }
 
