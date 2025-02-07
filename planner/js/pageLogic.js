@@ -285,6 +285,7 @@ function init() {
             data.language = "EN";
         }
 
+            console.log(data.characters)
         for (let i in data.characters) {
             if (!data.characters[i].current.bondgear || data.characters[i].current.bondgear == "") data.characters[i].current.bondgear = 1
             if (!data.characters[i].target.bondgear || data.characters[i].target.bondgear == "") data.characters[i].target.bondgear = 1
