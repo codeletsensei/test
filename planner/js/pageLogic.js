@@ -3966,8 +3966,8 @@ function isCharModalDirty() {
     let charData = data.characters.find(obj => { return obj.id == modalCharID });
     let modalData = charDataFromModal();
 console.log("===========")
-console.log("charData: " + charData)
-console.log("modalData: " + modalData)
+console.log(charData)
+console.log(modalData)
 console.log("===========")
     if (compareObjects(charData.current, modalData.current) != true) {
         return true;
