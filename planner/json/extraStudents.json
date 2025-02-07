@@ -1,0 +1,449 @@
+{
+    "20042": {
+        "Name": "Maki (Camping)",
+        "Id": 20042,
+        "School": "Millennium",
+        "StarGrade": 3,
+        "SquadType": "Support",
+        "TacticRole": "DamageDealer",
+        "Position": "Back",
+        "BulletType": "Explosion",
+        "ArmorType": "HeavyArmor",
+        "StreetBattleAdaptation": 0,
+        "OutdoorBattleAdaptation": 4,
+        "IndoorBattleAdaptation": 2,
+        "WeaponType": "MG",
+        "Equipment": [
+            "Hat",
+            "Hairpin",
+            "Watch"
+        ],
+        "SkillExMaterial": [
+            [
+                3050,
+                250
+            ],
+            [
+                3051,
+                3050,
+                251,
+                150
+            ],
+            [
+                3052,
+                3051,
+                252,
+                151
+            ],
+            [
+                3053,
+                3052,
+                253,
+                152
+            ]
+        ],
+        "SkillExMaterialAmount": [
+            [
+                12,
+                14
+            ],
+            [
+                12,
+                18,
+                13,
+                32
+            ],
+            [
+                12,
+                18,
+                9,
+                26
+            ],
+            [
+                8,
+                18,
+                10,
+                13
+            ]
+        ],
+        "SkillMaterial": [
+            [
+                4050
+            ],
+            [
+                4050
+            ],
+            [
+                4051,
+                4050,
+                250
+            ],
+            [
+                4051,
+                291,
+                150
+            ],
+            [
+                4052,
+                4051,
+                251,
+                150
+            ],
+            [
+                4052,
+                252,
+                151
+            ],
+            [
+                4053,
+                4052,
+                253,
+                152
+            ],
+            [
+                4053,
+                253,
+                152
+            ]
+        ],
+        "SkillMaterialAmount": [
+            [
+                5
+            ],
+            [
+                8
+            ],
+            [
+                5,
+                12,
+                6
+            ],
+            [
+                8,
+                7,
+                13
+            ],
+            [
+                5,
+                12,
+                7,
+                17
+            ],
+            [
+                8,
+                3,
+                18
+            ],
+            [
+                8,
+                12,
+                5,
+                12
+            ],
+            [
+                12,
+                6,
+                13
+            ]
+        ],
+        "Skills": {
+            "Normal": {
+                "Effects": [
+                    {
+                        "Type": "Damage",
+                        "Hits": [
+                            0
+                        ],
+                        "Scale": [
+                            0
+                        ],
+                        "Block": 0
+                    }
+                ],
+                "Frames": {
+                    "AttackEnterDuration": 0,
+                    "AttackStartDuration": 0,
+                    "AttackEndDuration": 0,
+                    "AttackBurstRoundOverDelay": 0,
+                    "AttackIngDuration": 0,
+                    "AttackReloadDuration": 0
+                }
+            },
+            "Ex": {
+                "Name": "Just a little more...!",
+                "Desc": "Deal 864~1642% damage to one enemy. (This attack penetrates enemy shields) ",
+                "Cost": [
+                    4,
+                    4,
+                    4,
+                    4,
+                    4
+                ],
+                "Duration": 0,
+                "Range": 0,
+                "Radius": [
+                    {
+                        "Type": "Circle",
+                        "Radius": 0
+                    }
+                ],
+                "Icon": "NOICON_EX",
+                "Effects": [
+                    {
+                        "Type": "Damage",
+                        "Block": 1,
+                        "CriticalCheck": "Check",
+                        "Hits": [
+                            0
+                        ],
+                        "DescParamId": 1,
+                        "Scale": [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "Type": "Damage",
+                        "Block": 0,
+                        "CriticalCheck": "Check",
+                        "Hits": [
+                            0
+                        ],
+                        "DescParamId": 2,
+                        "Scale": [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            "Public": {
+                "Name": "The glimmer of art",
+                "Desc": "Every 45 seconds, increase Explosive Efficiency by 28~53.2% for 25 seconds. ",
+                "Duration": 0,
+                "Range": 0,
+                "Radius": [
+                    {
+                        "Type": "Circle",
+                        "Radius": 0
+                    }
+                ],
+                "Icon": "NOICON_NS",
+                "Effects": [
+                    {
+                        "Type": "Damage",
+                        "Block": 0,
+                        "CriticalCheck": "Check",
+                        "Hits": [
+                            0
+                        ],
+                        "DescParamId": 1,
+                        "Scale": [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "Type": "Damage",
+                        "Block": 0,
+                        "CriticalCheck": "Check",
+                        "Hits": [
+                            0
+                        ],
+                        "DescParamId": 2,
+                        "Scale": [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            "GearPublic": {
+                "Name": "Dummy",
+                "Desc": "Dummy",
+                "Duration": 0,
+                "Range": 0,
+                "Radius": [
+                    {
+                        "Type": "Circle",
+                        "Radius": 0
+                    }
+                ],
+                "Icon": "NOICON_NS",
+                "Effects": [
+                    {
+                        "Type": "Damage",
+                        "Block": 1,
+                        "CriticalCheck": "Check",
+                        "Hits": [
+                            0
+                        ],
+                        "DescParamId": 1,
+                        "Scale": [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "Type": "Damage",
+                        "Block": 0,
+                        "CriticalCheck": "Check",
+                        "Hits": [
+                            0
+                        ],
+                        "DescParamId": 2,
+                        "Scale": [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            "Passive": {
+                "Name": "Lively holidays",
+                "Desc": "Increase Attack by 14~26.6%. ",
+                "Icon": "NOICON_PS",
+                "Effects": [
+                    {
+                        "Type": "Buff",
+                        "Target": [
+                            "Self"
+                        ],
+                        "Stat": "CriticalDamageRate_Coefficient",
+                        "Channel": 11,
+                        "Value": [
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
+                        ]
+                    }
+                ]
+            },
+            "WeaponPassive": {
+                "Name": "Lively holidays +",
+                "Desc": "Increase Attack by 380~721. Further increase Attack by 14~26.6%. ",
+                "Icon": "NOICON_PS",
+                "Effects": [
+                    {
+                        "Type": "Buff",
+                        "Target": [
+                            "Self"
+                        ],
+                        "Stat": "CriticalDamageRate_Base",
+                        "Channel": 1711,
+                        "Value": [
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
+                        ]
+                    }
+                ]
+            },
+            "ExtraPassive": {
+                "Name": "Sunrise glow",
+                "Desc": "Increase Critical Damage of all allies by 9.1~17.3%. ",
+                "Icon": "NOICON_SS",
+                "Effects": [
+                    {
+                        "Type": "Buff",
+                        "Target": [
+                            "Self"
+                        ],
+                        "Value": [
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
+                        ],
+                        "Stat": "CriticalPoint_Coefficient",
+                        "Channel": 9
+                    }
+                ]
+            }
+        },
+        "Weapon": {
+            "Name": "Dummy",
+            "Desc": "Dummy",
+            "AdaptationType": "Street",
+            "AdaptationValue": 1,
+            "AttackPower1": 0,
+            "AttackPower100": 0,
+            "MaxHP1": 0,
+            "MaxHP100": 0,
+            "HealPower1": 0,
+            "HealPower100": 0,
+            "StatLevelUpType": "Standard"
+        }
+    }
+
+
+
+
+
+
+
+}

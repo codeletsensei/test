@@ -27,9 +27,15 @@ let charBoxSize = localStorage.getItem("character_box_size") ?? "5";
 
 fetch('https://schaledb.com/data/en/students.min.json?9').then((response) => response.json()).then((json) => {
     charlist = json;
-    if (nameReady && (data.language == "EN" || data.language == "Id")) {
-        ShowNames(charlist);
-    }
+}).then(()=>{
+    fetch("json/extraStudents.json").then(r=>r.json()).then((sex)=>{
+        for (let i in sex) {
+            charlist[i] = sex[i];
+        }
+        if (nameReady && (data.language == "EN" || data.language == "Id")) {
+            ShowNames(charlist);
+        }
+    })
 });
 
 fetch('json/strings.json?25').then((response) => response.json()).then((json) => {
