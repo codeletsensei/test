@@ -285,10 +285,10 @@ function init() {
             data.language = "EN";
         }
 
-        /*for (let i in data.characters) {
+        for (let i in data.characters) {
             if (!data.characters[i].current.bondgear || data.characters[i].current.bondgear == "") data.characters[i].current.bondgear = 1
             if (!data.characters[i].target.bondgear || data.characters[i].target.bondgear == "") data.characters[i].target.bondgear = 1
-        }*/
+        }
         // if (!data.level_cap) {
         //     data.level_cap = 90;
         // }
@@ -3959,7 +3959,12 @@ function charDataFromModal(charId) {
 function isCharModalDirty() {
     let charData = data.characters.find(obj => { return obj.id == modalCharID });
     let modalData = charDataFromModal();
-
+console.log("===========")
+console.log(modalData)
+console.log(charData.name)
+console.log("char: " + charData.current.bondgear + " > " + charData.target.bondgear)
+console.log("char: " + modalData.current.bondgear + " > " + modalData.target.bondgear)
+console.log("===========")
     if (compareObjects(charData.current, modalData.current) != true) {
         return true;
     }
@@ -6285,7 +6290,7 @@ async function getImportData() {
 
         /*gtag('event', 'action_import');*/
 
-        location.reload();
+        //location.reload();
     }
 }
 
