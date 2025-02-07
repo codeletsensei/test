@@ -299,7 +299,7 @@ class StudentInvestment {
             0,
             0,
             0,
-            0
+            1
         ];
 
         return new StudentInvestment(...data);
