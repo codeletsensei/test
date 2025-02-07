@@ -321,7 +321,7 @@ class StudentInvestment {
         defaultTarget.gear1 = inputValidation.gear1_target.default;
         defaultTarget.gear2 = inputValidation.gear2_target.default;
         defaultTarget.gear2 = inputValidation.gear2_target.default;
-        
+
         defaultTarget.bondgear = inputValidation.bondgear_target.default;
 
         return defaultTarget
@@ -556,7 +556,7 @@ const inputValidation = {
         min: "1",
         max: "2",
         default: "1",
-        name: "Bond Gear",
+        name: "Bondgear",
         requisite: {},
         "navigation": "direct",
         "Up": "input_bond_target",
@@ -570,7 +570,7 @@ const inputValidation = {
         min: "1",
         max: "2",
         default: "1",
-        name: "Bond Gear Target",
+        name: "Bondgear Target",
         requisite: {
             "bondgear": {
                 type: "input",
