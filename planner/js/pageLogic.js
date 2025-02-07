@@ -5652,8 +5652,8 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
         skillType = "ex";
     }
     else if (skill == "bondgear") {
-        skillMaterials = characterObj.SkillBondGearMaterial;
-        skillMaterialAmounts = characterObj.SkillBondGearMaterialAmount;
+        skillMaterials = characterObj.Gear.TierUpMaterial;
+        skillMaterialAmounts = misc_data.bondgearMaterialAmount;
         skillType = "bondgear";
     }
     else {
