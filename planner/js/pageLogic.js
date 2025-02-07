@@ -5652,8 +5652,6 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
         skillType = "ex";
     }
     else if (skill == "bondgear") {
-        console.log(characterObj)
-
         if (characterObj.Gear) skillMaterials = characterObj.Gear.TierUpMaterial;
         else { skillMaterials = [] }
         skillMaterialAmounts = misc_data.bondgearMaterialAmount;
