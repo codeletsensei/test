@@ -3498,14 +3498,12 @@ function populateCharModal(charId) {
             if (!charData.target.bondgear) charData.target.bondgear = "1";
             document.getElementById("input_bondgear_current").value = charData.current?.bondgear;
             document.getElementById("input_bondgear_target").value = charData.target?.bondgear;
-            document.getElementById("input_bondgear_current").style.display = "block"
-            document.getElementById("input_bondgear_target").style.display = "block"
-            document.getElementById("bondgear_tablecell_text").style.display = "block"
+            document.getElementById("bondgear_tablecell_header").style.display = "block"
+            document.getElementById("bondgear_tablecell_inputs").style.display = "block"
         }
         else {
-            document.getElementById("input_bondgear_current").style.display = "none"
-            document.getElementById("input_bondgear_target").style.display = "none"
-            document.getElementById("bondgear_tablecell_text").style.display = "none"
+            document.getElementById("bondgear_tablecell_header").style.display = "none"
+            document.getElementById("bondgear_tablecell_inputs").style.display = "none"
         }
 
         document.getElementById("input_ex_current").value = charData.current?.ex;
