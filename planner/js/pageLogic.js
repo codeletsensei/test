@@ -3493,10 +3493,10 @@ function populateCharModal(charId) {
 
         document.getElementById("input_bond_current").value = charData.current?.bond;
         document.getElementById("input_bond_target").value = charData.target?.bond;
-        /*if (!charData.current.bondgear) {
+        if (!charData.current.bondgear) {
             charData.current.bondgear = "1";
             charData.target.bondgear = "1";
-        }*/
+        }
         document.getElementById("input_bondgear_current").value = charData.current?.bondgear;
         document.getElementById("input_bondgear_target").value = charData.target?.bondgear;
 
