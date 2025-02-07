@@ -221,7 +221,7 @@ class Student {
         });
         student.enabled = version1.enabled;
 
-        const props = ['level', 'bond', 'star', 'ue', 'ue_level', 'ex', 'basic', 'passive', 'sub', 'gear1', 'gear2', 'gear3']
+        const props = ['level', 'bond', 'star', 'ue', 'ue_level', 'ex', 'basic', 'passive', 'sub', 'gear1', 'gear2', 'gear3', "bondgear"]
         var cur = [];
         var tar = [];
         for (var prop of props) {
