@@ -97,6 +97,7 @@ function tryParseJSON(source) {
                 // not used yet
                 // codelet's using to add bondgear to chars who don't have.
                 console.log(data.characters)
+                console.log(data.exportVersion)
             }
         }
 
