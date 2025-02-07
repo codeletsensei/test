@@ -1249,7 +1249,7 @@ function deleteClicked() {
 }
 
 function deleteChar(charId) {
-    console.log(data)
+
     if (charId) {
 
         var charObject = data.characters.find(obj => { return obj.id == charId });
