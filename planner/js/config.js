@@ -270,7 +270,6 @@ class StudentInvestment {
     constructor(level, bond, star, ue, ue_level, ex, basic, passive, sub, gear1, gear2, gear3, bondgear) {
         this.level = level;
         this.bond = bond;
-        this.bondgear = bondgear;
         this.star = star;
         this.ue = ue;
         this.ue_level = ue_level;
@@ -281,6 +280,7 @@ class StudentInvestment {
         this.gear1 = gear1;
         this.gear2 = gear2;
         this.gear3 = gear3;
+        this.bondgear = bondgear;
     }
 
     static Default(characterInfo) {
@@ -313,7 +313,6 @@ class StudentInvestment {
         defaultTarget.sub = inputValidation.sub_target.default;
 
         defaultTarget.bond = inputValidation.bond_target.default;
-        defaultTarget.bondgear = inputValidation.bondgear_target.default;
         defaultTarget.level = inputValidation.level_target.default;
         defaultTarget.star = characterInfo?.BaseStar ?? 1;
         defaultTarget.ue = 0;
@@ -322,6 +321,8 @@ class StudentInvestment {
         defaultTarget.gear1 = inputValidation.gear1_target.default;
         defaultTarget.gear2 = inputValidation.gear2_target.default;
         defaultTarget.gear2 = inputValidation.gear2_target.default;
+        
+        defaultTarget.bondgear = inputValidation.bondgear_target.default;
 
         return defaultTarget
     }
