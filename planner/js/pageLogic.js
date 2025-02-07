@@ -286,8 +286,8 @@ function init() {
         }
 
         for (let i in data.characters) {
-            if (!data.characters[i].current.bondgear || data.characters[i].current.bondgear == "") data.characters[i].current.bondgear = 1
-            if (!data.characters[i].target.bondgear || data.characters[i].target.bondgear == "") data.characters[i].target.bondgear = 1
+            if (!data.characters[i].current.bondgear) data.characters[i].current.bondgear = 1
+            if (!data.characters[i].target.bondgear) data.characters[i].target.bondgear = 1
         }
         // if (!data.level_cap) {
         //     data.level_cap = 90;
@@ -5571,7 +5571,8 @@ function calculateCharResources(charData, output) {
     calcSkillCost(charObj, "normal", charData.current?.basic, charData.target?.basic, charMatDict);
     calcSkillCost(charObj, "passive", charData.current?.passive, charData.target?.passive, charMatDict);
     calcSkillCost(charObj, "sub", charData.current?.sub, charData.target?.sub, charMatDict);
-    if (charObj.SkillBondGearMaterial) calcSkillCost(charObj, "bondgear", charData.current?.bondgear, charData.target?.bondgear, charMatDict);
+    //if (charObj.SkillBondGearMaterial) 
+    calcSkillCost(charObj, "bondgear", charData.current?.bondgear, charData.target?.bondgear, charMatDict);
     calcXpCost(charData.current?.level, charData.target?.level, charMatDict);
     calcGearCost(charObj, charData.current?.gear1, charData.target?.gear1, 1, charMatDict);
     calcGearCost(charObj, charData.current?.gear2, charData.target?.gear2, 2, charMatDict);
