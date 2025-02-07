@@ -561,7 +561,7 @@
             ]
         ],
         "Gear": {
-            "BondGearMaterial": [
+            "TierUpMaterial": [
                 [
                     150,
                     151
@@ -1074,7 +1074,7 @@
             ]
         ],
         "Gear": {
-            "BondGearMaterial": [
+            "TierUpMaterial": [
                 [
                     130,
                     131
@@ -2454,7 +2454,7 @@
             ]
         ],
         "Gear": {
-            "BondGearMaterial": [
+            "TierUpMaterial": [
                 [
                     180,
                     181
@@ -2984,7 +2984,7 @@
             ]
         ],
         "Gear": {
-            "BondGearMaterial": [
+            "TierUpMaterial": [
                 [
                     100,
                     101
@@ -4537,12 +4537,14 @@
                 13
             ]
         ],
-        "BondGearMaterial": [
-            [
-                170,
-                171
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    170,
+                    171
+                ]
             ]
-        ]
+        }
     },
     "10009": {
         "Name": "Izumi",
@@ -5078,12 +5080,14 @@
                 14
             ]
         ],
-        "BondGearMaterial": [
-            [
-                140,
-                141
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    140,
+                    141
+                ]
             ]
-        ]
+        }
     },
     "10010": {
         "Name": "Shiroko",
@@ -5563,12 +5567,14 @@
                 16
             ]
         ],
-        "BondGearMaterial": [
-            [
-                110,
-                111
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    110,
+                    111
+                ]
             ]
-        ]
+        }
     },
     "10011": {
         "Name": "Shun",
@@ -6557,12 +6563,14 @@
                 14
             ]
         ],
-        "BondGearMaterial": [
-            [
-                170,
-                171
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    170,
+                    171
+                ]
             ]
-        ]
+        }
     },
     "10013": {
         "Name": "Tsurugi",
@@ -7108,12 +7116,14 @@
                 13
             ]
         ],
-        "BondGearMaterial": [
-            [
-                140,
-                141
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    140,
+                    141
+                ]
             ]
-        ]
+        }
     },
     "10014": {
         "Name": "Izuna",
@@ -11288,12 +11298,14 @@
                 14
             ]
         ],
-        "BondGearMaterial": [
-            [
-                180,
-                181
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    180,
+                    181
+                ]
             ]
-        ]
+        }
     },
     "10023": {
         "Name": "Iori (Swimsuit)",
@@ -11851,12 +11863,14 @@
                 13
             ]
         ],
-        "BondGearMaterial": [
-            [
-                130,
-                131
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    130,
+                    131
+                ]
             ]
-        ]
+        }
     },
     "10024": {
         "Name": "Shiroko (Cycling)",
@@ -12821,12 +12835,14 @@
                 12
             ]
         ],
-        "BondGearMaterial": [
-            [
-                180,
-                181
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    180,
+                    181
+                ]
             ]
-        ]
+        }
     },
     "10026": {
         "Name": "Neru (Bunny)",
@@ -14297,12 +14313,14 @@
                 13
             ]
         ],
-        "BondGearMaterial": [
-            [
-                100,
-                101
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    100,
+                    101
+                ]
             ]
-        ]
+        }
     },
     "10029": {
         "Name": "Natsu",
@@ -16556,12 +16574,14 @@
                 14
             ]
         ],
-        "BondGearMaterial": [
-            [
-                210,
-                211
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    210,
+                    211
+                ]
             ]
-        ]
+        }
     },
     "10034": {
         "Name": "Mimori",
@@ -17088,12 +17108,14 @@
                 13
             ]
         ],
-        "BondGearMaterial": [
-            [
-                150,
-                151
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    150,
+                    151
+                ]
             ]
-        ]
+        }
     },
     "10035": {
         "Name": "Ui",
@@ -18040,12 +18062,14 @@
                 14
             ]
         ],
-        "BondGearMaterial": [
-            [
-                150,
-                151
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    150,
+                    151
+                ]
             ]
-        ]
+        }
     },
     "10037": {
         "Name": "Marina",
@@ -19024,12 +19048,14 @@
                 14
             ]
         ],
-        "BondGearMaterial": [
-            [
-                170,
-                171
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    170,
+                    171
+                ]
             ]
-        ]
+        }
     },
     "10039": {
         "Name": "Miyu",
@@ -19511,12 +19537,14 @@
                 14
             ]
         ],
-        "BondGearMaterial": [
-            [
-                200,
-                201
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    200,
+                    201
+                ]
             ]
-        ]
+        }
     },
     "10040": {
         "Name": "Tsukuyo",
@@ -20662,12 +20690,14 @@
                 14
             ]
         ],
-        "BondGearMaterial": [
-            [
-                100,
-                101
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    100,
+                    101
+                ]
             ]
-        ]
+        }
     },
     "10042": {
         "Name": "Atsuko",
@@ -23854,12 +23884,14 @@
                 14
             ]
         ],
-        "BondGearMaterial": [
-            [
-                130,
-                131
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    130,
+                    131
+                ]
             ]
-        ]
+        }
     },
     "10048": {
         "Name": "Saori",
@@ -32142,12 +32174,14 @@
                 15
             ]
         ],
-        "BondGearMaterial": [
-            [
-                290,
-                291
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    290,
+                    291
+                ]
             ]
-        ]
+        }
     },
     "10063": {
         "Name": "Koyuki",
@@ -33672,12 +33706,14 @@
                 5
             ]
         ],
-        "BondGearMaterial": [
-            [
-                110,
-                111
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    110,
+                    111
+                ]
             ]
-        ]
+        }
     },
     "10066": {
         "Name": "Aris (Maid)",
@@ -34268,12 +34304,14 @@
                 4
             ]
         ],
-        "BondGearMaterial": [
-            [
-                130,
-                131
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    130,
+                    131
+                ]
             ]
-        ]
+        }
     },
     "10067": {
         "Name": "Toki (Bunny)",
@@ -55661,12 +55699,14 @@
                 12
             ]
         ],
-        "BondGearMaterial": [
-            [
-                190,
-                191
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    190,
+                    191
+                ]
             ]
-        ]
+        }
     },
     "13002": {
         "Name": "Akari",
@@ -57014,12 +57054,14 @@
                 13
             ]
         ],
-        "BondGearMaterial": [
-            [
-                100,
-                101
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    100,
+                    101
+                ]
             ]
-        ]
+        }
     },
     "13005": {
         "Name": "Kayoko",
@@ -58369,12 +58411,14 @@
                 16
             ]
         ],
-        "BondGearMaterial": [
-            [
-                140,
-                141
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    140,
+                    141
+                ]
             ]
-        ]
+        }
     },
     "13008": {
         "Name": "Serika",
@@ -58855,12 +58899,14 @@
                 13
             ]
         ],
-        "BondGearMaterial": [
-            [
-                110,
-                111
+        "Gear": {
+            "TierUpMaterial": [
+                [
+                    110,
+                    111
+                ]
             ]
-        ]
+        }
     },
     "13009": {
         "Name": "Tsubaki",
@@ -59803,7 +59849,7 @@
             ]
         ],
         "Gear": {
-            "BondGearMaterial": [
+            "TierUpMaterial": [
                 [
                     170,
                     171
@@ -62544,7 +62590,7 @@
             ]
         ],
         "Gear": {
-            "BondGearMaterial": [
+            "TierUpMaterial": [
                 [
                     170,
                     171
@@ -63069,7 +63115,7 @@
             ]
         ],
         "Gear": {
-            "BondGearMaterial": [
+            "TierUpMaterial": [
                 [
                     160,
                     161
@@ -64468,7 +64514,7 @@
             ]
         ],
         "Gear": {
-            "BondGearMaterial": [
+            "TierUpMaterial": [
                 [
                     140,
                     141
@@ -69816,7 +69862,7 @@
             ]
         ],
         "Gear": {
-            "BondGearMaterial": [
+            "TierUpMaterial": [
                 [
                     120,
                     121
@@ -71154,7 +71200,7 @@
             ]
         ],
         "Gear": {
-            "BondGearMaterial": [
+            "TierUpMaterial": [
                 [
                     100,
                     101
@@ -72062,7 +72108,7 @@
             ]
         ],
         "Gear": {
-            "BondGearMaterial": [
+            "TierUpMaterial": [
                 [
                     120,
                     121
@@ -72576,7 +72622,7 @@
             ]
         ],
         "Gear": {
-            "BondGearMaterial": [
+            "TierUpMaterial": [
                 [
                     160,
                     161
@@ -73961,7 +74007,7 @@
             ]
         ],
         "Gear": {
-            "BondGearMaterial": [
+            "TierUpMaterial": [
                 [
                     120,
                     121
@@ -76538,7 +76584,7 @@
             ]
         ],
         "Gear": {
-            "BondGearMaterial": [
+            "TierUpMaterial": [
                 [
                     190,
                     191
@@ -79475,7 +79521,7 @@
             ]
         ],
         "Gear": {
-            "BondGearMaterial": [
+            "TierUpMaterial": [
                 [
                     110,
                     111
@@ -89520,7 +89566,7 @@
             ]
         ],
         "Gear": {
-            "BondGearMaterial": [
+            "TierUpMaterial": [
                 [
                     120,
                     121
@@ -89964,7 +90010,7 @@
             ]
         ],
         "Gear": {
-            "BondGearMaterial": [
+            "TierUpMaterial": [
                 [
                     140,
                     141
@@ -90912,7 +90958,7 @@
             ]
         ],
         "Gear": {
-            "BondGearMaterial": [
+            "TierUpMaterial": [
                 [
                     140,
                     141
@@ -91399,7 +91445,7 @@
             ]
         ],
         "Gear": {
-            "BondGearMaterial": [
+            "TierUpMaterial": [
                 [
                     170,
                     171
@@ -91889,7 +91935,7 @@
             ]
         ],
         "Gear": {
-            "BondGearMaterial": [
+            "TierUpMaterial": [
                 [
                     150,
                     151
@@ -94448,7 +94494,7 @@
             ]
         ],
         "Gear": {
-            "BondGearMaterial": [
+            "TierUpMaterial": [
                 [
                     130,
                     131
