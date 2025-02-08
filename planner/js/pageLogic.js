@@ -218,10 +218,6 @@ function init() {
         language = fastLanguage;
     }
 
-    if (fastAprilFools) {
-        aprilFools = fastAprilFools;
-    }
-
     buildLanguages();
     document.getElementById('languages').value = language;
 
@@ -1509,12 +1505,7 @@ function openModal(e) {
 
         var displayImg = document.getElementById("displayImg");
 
-        if (extraStudentsObj[charId]) displayImg.src = "icons/Portrait/Icon_" + charId + ".png"; 
-        else displayImg.src = "https://schaledb.com/images/student/collection/" + charId + ".webp"
-
-        if (aprilFools) {
-            displayImg.src = "icons/Portrait/April/Icon_" + charId + ".png";
-        }
+        displayImg.src = "icons/Portrait/Icon_" + charId + ".png"; 
 
         var displayName = document.getElementById("displayName");
         displayName.innerText = charSelected
@@ -1788,11 +1779,8 @@ function createMultiSelectChar(charId, container, mode) {
     newCharDiv.id = "multi_" + charId;
 
     const newImg = document.createElement("img");
-    if (extraStudentsObj[charId]) newImg.src = "icons/Portrait/Icon_" + charId + ".png"; 
-    else newImg.src = "https://schaledb.com/images/student/collection/" + charId + ".webp"
-    if (aprilFools) {
-        newImg.src = "icons/Portrait/April/Icon_" + charId + ".png";
-    }
+    newImg.src = "icons/Portrait/Icon_" + charId + ".png"; 
+    
     newImg.draggable = false;
     newImg.className = "multi-char-img";
 
@@ -5205,11 +5193,7 @@ function DisplayMatUsers(mat) {
 
         let charImg = document.createElement('img');
 
-        if (extraStudentsObj[matUsers[i].charId]) charImg.src = "icons/Portrait/Icon_" + matUsers[i].charId + ".png"; 
-        else charImg.src = "https://schaledb.com/images/student/collection/" + matUsers[i].charId + ".webp"
-        if (aprilFools) {
-            charImg.src = "icons/Portrait/April/Icon_" + matUsers[i].charId + ".png";
-        }
+        charImg.src = "icons/Portrait/Icon_" + matUsers[i].charId + ".png"; 
 
         let matAmount = document.createElement('p');
         matAmount.innerText = commafy(matUsers[i].matCount);
@@ -7060,124 +7044,8 @@ let chars1Star = [], chars2Star = [], chars3Star = [];
 let charStars = [];
 let aprilPyro = 0;
 let allCharsPulled = [];
-function InitAprilFools() {
 
-    let charKeys = Object.keys(charlist);
-    for (let i = 0; i < charKeys.length; i++) {
-        let aprilStar = charlist[charKeys[i]].StarGrade;
-
-        if (aprilStar == 1) {
-            chars1Star.push(charKeys[i]);
-        }
-        else if (aprilStar == 2) {
-            chars2Star.push(charKeys[i]);
-        }
-        else if (aprilStar == 3) {
-            chars3Star.push(charKeys[i]);
-        }
-    }
-
-    charStars = [chars1Star, chars2Star, chars3Star];
-
-    let aprilTemp = localStorage.getItem("april-ids-unlocked");
-    if (aprilTemp) {
-        aprilIds = JSON.parse(aprilTemp);
-    }
-
-    let aprilTemp2 = localStorage.getItem("april-ids-chars");
-    if (aprilTemp2) {
-        allCharsPulled = JSON.parse(aprilTemp2);
-    }
-
-    let charBoxes = document.getElementsByClassName("main-display-char");
-
-    for (let i = 0; i < charBoxes.length; i++) {
-
-        let newDiv = document.createElement("div");
-
-        let coverDiv = document.createElement("div");
-        coverDiv.className = "april-fools-char-cover";
-
-        let lockImg = document.createElement("img");
-        lockImg.src = "icons/UI/unlock-solid.svg";
-        lockImg.className = "april-fools-main-display-char";
-
-        newDiv.appendChild(coverDiv);
-        newDiv.appendChild(lockImg);
-
-        charBoxes[i].appendChild(newDiv);
-
-        charBoxes[i].addEventListener("click", (event) => {
-            AprilLockClicked(event.currentTarget, "char");
-        })
-    }
-
-    let buttonsList = document.getElementsByClassName("charEditorButton");
-
-    for (let i = 0; i < buttonsList.length; i++) {
-        buttonsList[i].classList.add("april-fools-button");
-        buttonsList[i].addEventListener("click", (event) => {
-            AprilLockClicked(event.currentTarget);
-        })
-    }
-
-    buttonsList = document.getElementsByClassName("control-panel-button-wrapper");
-
-    for (let i = 0; i < buttonsList.length; i++) {
-        buttonsList[i].classList.add("april-fools-button");
-        buttonsList[i].addEventListener("click", (event) => {
-            AprilLockClicked(event.currentTarget);
-        })
-    }
-
-    buttonsList = document.getElementsByClassName("footer-button");
-
-    for (let i = 0; i < buttonsList.length; i++) {
-        buttonsList[i].classList.add("april-fools-button");
-        buttonsList[i].addEventListener("click", (event) => {
-            AprilLockClicked(event.currentTarget);
-        })
-    }
-
-    buttonsList = document.getElementsByClassName("button-switch-display");
-
-    for (let i = 0; i < buttonsList.length; i++) {
-        buttonsList[i].classList.add("april-fools-button");
-        buttonsList[i].addEventListener("click", (event) => {
-            AprilLockClicked(event.currentTarget);
-        })
-    }
-
-    for (let i = 0; i < aprilIds.length; i++) {
-        document.getElementById(aprilIds[i]).classList.remove("april-fools-button");
-    }
-
-    let aprilTempPyro = localStorage.getItem("april-pyro");
-    if (aprilTempPyro) {
-        aprilPyro = JSON.parse(aprilTempPyro);
-    }
-
-    UnlockStudents();
-    RefreshPyro();
-}
-
-let aprilIds = [];
 let currentLocked = "";
-function AprilLockClicked(target, type) {
-
-    if (type == "char") {
-        // APRIL FOOLS
-        if (!allCharsPulled.includes(target.id.substring(5))) {
-            AprilPullScreen();
-        }
-    }
-    else {
-        if (target.classList.contains("april-fools-button")) {
-            AprilBuyScreen();
-        }
-    }
-    currentLocked = target.id;
-}
 
 function BuyFeature() {
 
