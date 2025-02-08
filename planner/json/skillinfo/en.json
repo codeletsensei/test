@@ -100511,7 +100511,8 @@
             "HealPower1": 0,
             "HealPower100": 0,
             "StatLevelUpType": "Standard"
-        }
+        },
+        "PotentialMaterial":250
     }
 
 
