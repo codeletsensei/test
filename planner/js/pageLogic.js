@@ -399,8 +399,8 @@ function init() {
         ["Totem", "Baghdad", "Fleece", "Okiku", "Colgante", "Atlantis", "RomanDice", "Quimbaya", "Rocket", "Mystery"], 9,
         tableNavigation, document.getElementById("table-parent-3"), true, "resource", "icons/Artifact/", [], "artifact-");
     
-    createTable("workbook-table", ["potentialhealpower_3","potentialattack_3","potentialmaxhp_3"] , 4,
-        ["Workbook"], 1, tableNavigation, document.getElementById("table-parent-7"), true, "resource", "icons/LimitBreak/", [], "workbook-");
+    createTable("workbook-table", ["potentialhealpower_3","potentialattack_3","potentialmaxhp_3"] , 3,
+        ["Workbook"], 0, tableNavigation, document.getElementById("table-parent-7"), true, "resource", "icons/LimitBreak/", [], "workbook-");
 
     let gearNavigation = [];
     createTable("gear-table", ["T10", "T9", "T8", "T7", "T6", "T5", "T4", "T3", "T2"], 0, ["Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"],
@@ -5111,7 +5111,7 @@ function createTable(id, columns, colOffset, rows, rowOffset, tableNavigation, p
 
                 //cellId++;
             }
-            if (stringLangPrefix.includes("orkbook")) console.log(stringLangPrefix + rows[row].toLowerCase().replace(/ /g, ''))
+
             newRow.appendChild(newCell);
         }
 
