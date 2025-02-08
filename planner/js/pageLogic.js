@@ -4078,6 +4078,9 @@ function populateCharResources(charId) {
                 if (matName.includes("BD") || matName.includes("TN")) {
                     resourceImg.src = "icons/SchoolMat/" + matName + ".webp";
                 }
+                else if (matName.includes("Workbook")) {
+                    resourceImg.src = "icons/LimitBreak/" + matName + ".webp";
+                }
                 else {
                     resourceImg.src = "icons/Artifact/" + matName + ".webp";
                 }
