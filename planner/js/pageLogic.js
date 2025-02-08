@@ -5706,7 +5706,7 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
         skillMaterialAmounts = characterObj.SkillMaterialAmount;
         skillType = "other";
     }
-    if (skillMaterials == undefined || skillMaterialAmounts == undefined) { console.log(skillMaterials);return null; }
+    if (skillMaterials == undefined || skillMaterialAmounts == undefined) { console.log(skillMaterials);console.log(skillMaterialAmounts);return null; }
     let curLevel = parseInt(current);
     let tarLevel = parseInt(target);
     if (curLevel == 0 && tarLevel > 0) {
