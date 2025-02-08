@@ -429,6 +429,7 @@ function init() {
     colourTableRows("school-mat-table");
     colourTableRows("artifact-table-1");
     colourTableRows("artifact-table-2");
+    colourTableRows("workbook-table");
 
     colourTableRows("gear-table");
 
@@ -4931,10 +4932,12 @@ function hideEmpty() {
     var resourceTable = document.getElementById("school-mat-table");
     var artifactTable1 = document.getElementById("artifact-table-1");
     var artifactTable2 = document.getElementById("artifact-table-2");
+    var workbookTable = document.getElementById("workbook-table");
 
     hideEmptyCells(resourceTable);
     hideEmptyCells(artifactTable1);
     hideEmptyCells(artifactTable2);
+    hideEmptyCells(workbookTable);
 
     hideEmptyCell("XP_1");
     hideEmptyCell("XP_2");
