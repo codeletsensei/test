@@ -5692,7 +5692,7 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
             skillMaterials.push([ workbookType, characterObj.PotentialMaterial ]);
             skillMaterialAmounts.push(misc_data.potentialMaterialAmount[s]);
         }
-        for (let s = 16; s <= 25 ; s++) {
+        for (let s = 16; s <= 26 ; s++) {
             skillMaterials.push([ workbookType, parseInt(characterObj.PotentialMaterial) + 1 ]);
             skillMaterialAmounts.push(misc_data.potentialMaterialAmount[s]);
         }
@@ -5737,7 +5737,6 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
         else if (skillType == "potential") s +=1
 
         let costObj = skillMaterials[s - 1];  // skillObj["Level" + s];
-        if (skillType == "potential") console.log(costObj)
         if (costObj == undefined) {
             // console.log("Error: Skill Level data missing") // expand error later
             return null;
@@ -5758,7 +5757,6 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
                 matDict[item] += skillMaterialAmounts[s - 1][i];
             }
         }
-        if (skillType == "potential") console.log(costObj)
     }
 }
 
