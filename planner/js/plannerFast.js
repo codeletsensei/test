@@ -25,6 +25,40 @@ if (data == null) {
 
 let charBoxSize = localStorage.getItem("character_box_size") ?? "5";
 
+
+
+
+async function fetchStudentList(){
+    let urlArray = [
+        fetch("https://schaledb.com/data/en/students.min.json?9"),
+        fetch("https://codeletsensei.github.io/test/planner/json/students.min.jsona?9"),
+        fetch("https://codeletsensei.github.io/test/planner/json/extraStudents.json?9")
+    ];
+    try {
+        var res = await Promise.allSettled(urlArray);
+        successArray = [];
+        res.map(o => {
+            if (o.status === "fulfilled") {
+                successArray.push(o.value);
+            }
+        })
+        data = await Promise.all(successArray.filter(p=>{return p.ok}).map((i)=>{
+            return i.json();
+        }))
+        charlist = {}
+        for (let i in data) {
+            for (let j in data[i]) charlist[j] = data[i][j]
+        }
+        console.log(charlist)
+    } 
+    catch(e) {
+        window.alert("Failed to retrieve the students list")
+    }
+}
+
+fetchStudentList()
+
+/*
 fetch('json/students.min.json?9').then((response) => response.json()).then((json) => {
     charlist = json;
 }).then(()=>{
@@ -37,7 +71,7 @@ fetch('json/students.min.json?9').then((response) => response.json()).then((json
             ShowNames(charlist);
         }
     })
-});
+});*/
 
 fetch('json/strings.json?25').then((response) => response.json()).then((json) => {
     language_strings = json;
