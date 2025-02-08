@@ -3494,7 +3494,7 @@ function populateCharModal(charId) {
 
         document.getElementById("input_bondgear_current").value = charData.current?.bondgear;
         document.getElementById("input_bondgear_target").value = charData.target?.bondgear;
-        if (misc_data.bondgear_characters.includes(parseInt(charId))) {
+        if (charInfo.Gear) {
             document.getElementById("bondgear_tablecell_header").style.display = ""
             document.getElementById("bondgear_tablecell_inputs").style.display = ""
         }
