@@ -5692,7 +5692,7 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
             skillMaterials[s] = [ workbookType, characterObj.PotentialMaterial ];
             skillMaterialAmounts[s] = misc_data.potentialMaterialAmount[s];
         }
-        for (let s = 16; s <= 26 ; s++) {
+        for (let s = 16; s <= misc_data.potentialMaterialAmount.length ; s++) {
             skillMaterials[s] = [ workbookType, parseInt(characterObj.PotentialMaterial) + 1 ];
             skillMaterialAmounts[s] = misc_data.potentialMaterialAmount[s];
         }
@@ -5705,10 +5705,10 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
     }
     if (skillMaterials == undefined || skillMaterialAmounts == undefined) { return null; }
 
-    if (skillType == "other") {
+    if (skillType == "potential") {
         console.log(skill)
-            console.log(skillMaterials)
-            console.log(skillMaterialAmounts)
+        console.log(skillMaterials)
+        console.log(skillMaterialAmounts)
     }
 
     let curLevel = parseInt(current);
