@@ -5681,6 +5681,7 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
         skillType = "bondgear";
     }
     else if (skill.includes("potential")) {
+        console.log("calc!")
         let workbookType = 2000
         if (skill == "potentialattack") workbookType = 2001
         else if (skill == "potentialhealpower") workbookType = 2002
