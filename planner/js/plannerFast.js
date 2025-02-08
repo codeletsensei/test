@@ -75,10 +75,10 @@ fetch('json/students.min.json?9').then((response) => response.json()).then((json
 });*/
 
 function doTheRest() {
-    if (nameReady && (data.language == "EN" || data.language == "Id")) {
+    //if (nameReady && (data.language == "EN" || data.language == "Id")) {
         ShowNames(charlist);
-    }
-    
+    //}
+
     fetch('json/strings.json?25').then((response) => response.json()).then((json) => {
         language_strings = json;
         if (uiReady) {
