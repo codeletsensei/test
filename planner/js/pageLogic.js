@@ -5741,7 +5741,7 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
 }
 
 function calcPotentialCost(characterObj, skill, current, target, matDict) {
-
+//Basically a tweaked calcSkillCost(). I'm too dumb to merge them.
     let curLevel = parseInt(current);
     let tarLevel = parseInt(target);
     if (curLevel == 0 && tarLevel == 0) {
