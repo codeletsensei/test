@@ -5709,6 +5709,7 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
         console.log(skill)
         console.log(skillMaterials)
         console.log(skillMaterialAmounts)
+        console.log(matDict)
     }
 
     let curLevel = parseInt(current);
