@@ -5692,7 +5692,7 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
             skillMaterials[s] = [ workbookType, characterObj.PotentialMaterial ];
             skillMaterialAmounts[s] = misc_data.potentialMaterialAmount[s];
         }
-        for (let s = 16; s <= misc_data.potentialMaterialAmount.length ; s++) {
+        for (let s = 16; s <= 25 ; s++) {
             skillMaterials[s] = [ workbookType, parseInt(characterObj.PotentialMaterial) + 1 ];
             skillMaterialAmounts[s] = misc_data.potentialMaterialAmount[s];
         }
@@ -5711,19 +5711,21 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
         console.log(skillMaterialAmounts)
     }
 
-    let curLevel = parseInt(current);
-    let tarLevel = parseInt(target);
+    if (!["bondgear","potential"].includes(skillType)){
+        let curLevel = parseInt(current);
+        let tarLevel = parseInt(target);
 
-    if (skillType != "potential" && curLevel == 0 && tarLevel > 0) {
-        curLevel = 1;
-    }
-
-    if (tarLevel == 10 && curLevel < 10) {
-        if (!matDict["9999"]) {
-            matDict["9999"] = 0;
+        if (curLevel == 0 && tarLevel > 0) {
+            curLevel = 1;
         }
 
-        matDict["9999"] += 1;
+        if (tarLevel == 10 && curLevel < 10) {
+            if (!matDict["9999"]) {
+                matDict["9999"] = 0;
+            }
+
+            matDict["9999"] += 1;
+        }
     }
     for (let s = curLevel; s < tarLevel; s++) {
 
