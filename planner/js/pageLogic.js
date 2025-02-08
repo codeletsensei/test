@@ -5576,8 +5576,6 @@ function calculateCharResources(charData, output) {
 
     let charId = charData.id.toString();
     let charObj = charlist[charId];
-    console.log(charData.current)
-    console.log(charData.target)
     calcSkillCost(charObj, "ex", charData.current?.ex, charData.target?.ex, charMatDict);
     calcSkillCost(charObj, "normal", charData.current?.basic, charData.target?.basic, charMatDict);
     calcSkillCost(charObj, "passive", charData.current?.passive, charData.target?.passive, charMatDict);

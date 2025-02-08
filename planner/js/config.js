@@ -169,6 +169,10 @@ const matLookup = new TwoWayMap({
     4082: "TN_3_Valkyrie",
     4083: "TN_4_Valkyrie",
 
+    2000: "WB_HP",
+    2001: "WB_ATK",
+    2002: "WB_HEAL",
+
     9999: "Secret"
 });
 
@@ -302,7 +306,10 @@ class StudentInvestment {
             0,
             0,
             0,
-            1
+            1,
+            0,
+            0,
+            0
         ];
 
         return new StudentInvestment(...data);
