@@ -31,7 +31,7 @@ fetch('https://schaledb.com/data/en/students.min.json?9').then((response) => res
     fetch("json/extraStudents.json?9").then(r=>r.json()).then((sex)=>{
         extraStudentsObj = sex
         for (let i in sex) {
-            charlist[i] = sex[i];
+            if (!charlist[i]) charlist[i] = sex[i];
         }
         if (nameReady && (data.language == "EN" || data.language == "Id")) {
             ShowNames(charlist);
