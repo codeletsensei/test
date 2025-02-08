@@ -5582,10 +5582,10 @@ function calculateCharResources(charData, output) {
     calcSkillCost(charObj, "passive", charData.current?.passive, charData.target?.passive, charMatDict);
     calcSkillCost(charObj, "sub", charData.current?.sub, charData.target?.sub, charMatDict);
 
-    calcSkillCost(charObj, "bondgear", charData.current?.bondgear, charData.target?.bondgear, charMatDict);
-    calcSkillCost(charObj, "potentialmaxhp", charData.current?.potentialmaxhp, charData.target?.potentialmaxhp, charMatDict);
-    calcSkillCost(charObj, "potentialattack", charData.current?.potentialattack, charData.target?.potentialattack, charMatDict);
-    calcSkillCost(charObj, "potentialhealpower", charData.current?.potentialhealpower, charData.target?.potentialhealpower, charMatDict);
+    calcPotentialCost(charObj, "bondgear", charData.current?.bondgear, charData.target?.bondgear, charMatDict);
+    calcPotentialCost(charObj, "potentialmaxhp", charData.current?.potentialmaxhp, charData.target?.potentialmaxhp, charMatDict);
+    calcPotentialCost(charObj, "potentialattack", charData.current?.potentialattack, charData.target?.potentialattack, charMatDict);
+    calcPotentialCost(charObj, "potentialhealpower", charData.current?.potentialhealpower, charData.target?.potentialhealpower, charMatDict);
 
     calcXpCost(charData.current?.level, charData.target?.level, charMatDict);
     calcGearCost(charObj, charData.current?.gear1, charData.target?.gear1, 1, charMatDict);
@@ -5737,7 +5737,6 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
             }
             if (skillType == "potential") {
                 s += 1
-
             }
 
             matDict["Credit"] += misc_data.skill_credit_cost[skillType][s - 1];
@@ -5767,6 +5766,57 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
         }
     }
 }
+
+function calcPotentialCost(characterObj, skill, current, target, matDict) {
+    let workbookType = 2000;
+    if (skill == "potentialattack") workbookType = 2001;
+    else if (skill == "potentialhealpower") workbookType = 2002;
+    let skillMaterials = [];
+    let skillMaterialAmounts = [];
+    for (let s = 0; s <= 15 ; s++) {
+        skillMaterials.push([ workbookType, characterObj.PotentialMaterial ]);
+        skillMaterialAmounts.push(misc_data.potentialMaterialAmount[s]);
+    }
+    for (let s = 16; s <= 25 ; s++) {
+        skillMaterials.push([ workbookType, parseInt(characterObj.PotentialMaterial) + 1 ]);
+        skillMaterialAmounts.push(misc_data.potentialMaterialAmount[s]);
+    }
+    if (skillMaterials == undefined || skillMaterialAmounts == undefined) { return null; }
+
+    let curLevel = parseInt(current);
+    let tarLevel = parseInt(target);
+
+    console.log(skill)
+    console.log(skillMaterials)
+    console.log(skillMaterialAmounts)
+    console.log(curLevel,tarLevel)
+
+    for (let s = curLevel; s < tarLevel; s++) {
+        if (!matDict["Credit"]) {
+            matDict["Credit"] = 0;
+        }
+        matDict["Credit"] += misc_data.skill_credit_cost[skillType][s];
+
+        let costObj = skillMaterials[s];
+        if (costObj == undefined) return null;
+
+        for (let i = 0; i < costObj.length; i++) {
+            let item = costObj[i];
+            if (item != undefined && skillMaterialAmounts[s][i] != undefined) {
+                if (!matDict[item]) {
+                    matDict[item] = 0;
+                }
+                matDict[item] += skillMaterialAmounts[s][i];
+            }
+        }
+    }
+}
+
+
+
+
+
+
 
 function calcXpCost(level, levelTarget, matDict) {
 
