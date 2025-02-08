@@ -913,14 +913,8 @@
     "artifact-quimbaya": {
         "EN": "Quimbaya"
     },
-    "workbook-potentialmaxhp": {
-        "EN": "WBHP"
-    },
-    "workbook-potentialattack": {
-        "EN": "WBATK"
-    },
-    "workbook-potentialhealpower": {
-        "EN": "WBHEAL"
+    "workbook-workbook": {
+        "EN": "LimitBreak"
     },
     "gearxp-spring": {
         "EN": "Spring",

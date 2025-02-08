@@ -5043,7 +5043,6 @@ function createTable(id, columns, colOffset, rows, rowOffset, tableNavigation, p
                 }
                 newCell.style.paddingLeft = "8px";
             }
-            if (stringLangPrefix.includes("orkbook")) console.log(stringLangPrefix + rows[row].toLowerCase().replace(/ /g, ''))
             else if (!(skip && skip.includes(cellCombination))) {
                 const newImg = document.createElement("img");
                 newImg.draggable = false;
@@ -5112,7 +5111,7 @@ function createTable(id, columns, colOffset, rows, rowOffset, tableNavigation, p
 
                 //cellId++;
             }
-
+            if (stringLangPrefix.includes("orkbook")) console.log(stringLangPrefix + rows[row].toLowerCase().replace(/ /g, ''))
             newRow.appendChild(newCell);
         }
 
