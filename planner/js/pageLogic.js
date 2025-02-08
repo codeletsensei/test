@@ -4445,6 +4445,7 @@ function openResourceModal() {
         document.getElementById("table-parent-1").style.display = "none";
         document.getElementById("table-parent-2").style.display = "none";
         document.getElementById("table-parent-3").style.display = "none";
+        document.getElementById("table-parent-7").style.display = "none";
         document.getElementById("other-resource-wrapper").style.display = "none";
 
         openDelay = 2500;
@@ -4473,6 +4474,9 @@ function openResourceModal() {
                 document.getElementById("other-resource-wrapper").style.display = "";
                 hideEmpty();
             }, 4000);
+            setTimeout(() => {
+                document.getElementById("table-parent-7").style.display = "";
+            }, 5000);
         }
 
         updateAggregateCount();
