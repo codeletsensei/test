@@ -5709,7 +5709,7 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
     if (skillType == "potential") {
         console.log(skill)
             console.log(skillMaterials)
-            console.log(s,skillMaterials[s],skillMaterialAmounts[s])
+            console.log(skillMaterialAmounts)
     }
     let curLevel = parseInt(current);
     let tarLevel = parseInt(target);
