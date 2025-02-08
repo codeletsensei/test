@@ -31,7 +31,7 @@ let charBoxSize = localStorage.getItem("character_box_size") ?? "5";
 async function fetchStudentsList(){
     let urlArray = [
         fetch("https://schaledb.com/data/en/students.min.json?9"),
-        fetch("https://codeletsensei.github.io/test/planner/json/students.min.jsona?9"),
+        fetch("https://codeletsensei.github.io/test/planner/json/students.min.json?9"),
         fetch("https://codeletsensei.github.io/test/planner/json/extraStudents.json?9")
     ];
     try {
