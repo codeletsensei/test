@@ -5577,7 +5577,7 @@ function calculateCharResources(charData, output) {
     let charId = charData.id.toString();
     let charObj = charlist[charId];
 
-    console.log(charlist[charId].name)
+    console.log(charlist[charId].Name)
     calcSkillCost(charObj, "ex", charData.current?.ex, charData.target?.ex, charMatDict);
     calcSkillCost(charObj, "normal", charData.current?.basic, charData.target?.basic, charMatDict);
     calcSkillCost(charObj, "passive", charData.current?.passive, charData.target?.passive, charMatDict);
@@ -5596,6 +5596,7 @@ function calculateCharResources(charData, output) {
     calcMysticCost(charData.current?.star, charData.target?.star, charMatDict);
 
     calcUECost(charObj, charData.current?.ue, charData.target?.ue, charData.current?.ue_level, charData.target?.ue_level, charMatDict);
+    console.log("=======")
 
     let purchaseData = misc_data.shop_characters[charId];
     let currency, amount, cost, times;
@@ -5667,6 +5668,7 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
 
     let skillMaterials, skillMaterialAmounts, skillType;
 
+    console.log(skill)
     if (skill == "ex") {
         skillMaterials = characterObj.SkillExMaterial;
         skillMaterialAmounts = characterObj.SkillExMaterialAmount;
@@ -5692,6 +5694,8 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
         for (let i = 16; i <= 25 ; i++) skillMaterials[i] = [workbookType, parseInt(characterObj.PotentialMaterial) + 1]
         skillMaterialAmounts = misc_data.potentialMaterialAmount;
         skillType = "potential";
+        console.log(skillMaterialAmounts)
+        console.log(skillMaterials)
     }
     else {
         skillMaterials = characterObj.SkillMaterial;
@@ -5700,7 +5704,6 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
     }
 
     if (skillMaterials == undefined || skillMaterialAmounts == undefined) { return null; }
-    console.log(skill)
     let curLevel = parseInt(current);
     let tarLevel = parseInt(target);
     if (curLevel == 0 && tarLevel > 0) {
