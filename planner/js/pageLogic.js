@@ -5711,10 +5711,10 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
         console.log(skillMaterialAmounts)
     }
 
-    if (!["bondgear","potential"].includes(skillType)){
-        let curLevel = parseInt(current);
-        let tarLevel = parseInt(target);
+    let curLevel = parseInt(current);
+    let tarLevel = parseInt(target);
 
+    if (!["bondgear","potential"].includes(skillType)){
         if (curLevel == 0 && tarLevel > 0) {
             curLevel = 1;
         }
