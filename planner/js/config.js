@@ -95,9 +95,9 @@ const matLookup = new TwoWayMap({
     292: "Mystery_3",
     293: "Mystery_4",
 
-    2000: "Workbook_potentialmaxhp_3",
-    2001: "Workbook_potentialattack_3",
-    2002: "Workbook_potentialhealpower_3",
+    2000: "Workbook_3_potentialmaxhp",
+    2001: "Workbook_3_potentialattack",
+    2002: "Workbook_3_potentialhealpower",
 
     3000: "BD_1_Hyakkiyako",
     3001: "BD_2_Hyakkiyako",
