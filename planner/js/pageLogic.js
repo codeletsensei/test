@@ -399,7 +399,7 @@ function init() {
         ["Totem", "Baghdad", "Fleece", "Okiku", "Colgante", "Atlantis", "RomanDice", "Quimbaya", "Rocket", "Mystery"], 9,
         tableNavigation, document.getElementById("table-parent-3"), true, "resource", "icons/Artifact/", [], "artifact-");
     
-    createTable("workbook-table", ["3_potentialhealpower","3_potentialattack","3_potentialmaxhp"] , 4,
+    createTable("workbook-table", ["potentialhealpower_3","potentialattack_3","potentialmaxhp_3"] , 4,
         ["Workbook"], 1, tableNavigation, document.getElementById("table-parent-7"), true, "resource", "icons/LimitBreak/", [], "workbook-");
 
     let gearNavigation = [];
@@ -4064,9 +4064,6 @@ function populateCharResources(charId) {
 
                 if (matName[2] === "_") {
                     extraClassName = " char-resource-rarity-" + matName[3];
-                }
-                else if (matName.toLowerCase() === "workbook") {
-                    extraClassName = " char-resource-rarity-3";
                 }
                 else {
                     extraClassName = " char-resource-rarity-" + matName.substring(matName.length - 1);
