@@ -5713,8 +5713,8 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
 
     let curLevel = parseInt(current);
     let tarLevel = parseInt(target);
-    
-    if (skilltype != "potential" && curLevel == 0 && tarLevel > 0) {
+
+    if (skillType != "potential" && curLevel == 0 && tarLevel > 0) {
         curLevel = 1;
     }
 
