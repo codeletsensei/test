@@ -27,13 +27,8 @@ let charBoxSize = localStorage.getItem("character_box_size") ?? "5";
 
 fetch('https://schaledb.com/data/en/students.min.json?9').then((response) => response.json()).then((json) => {
     charlist = json;
-    console.log("=====")
-    console.log(charlist)
 }).then(()=>{
     fetch("json/extraStudents.json?9").then(r=>r.json()).then((sex)=>{
-        console.log("=====")
-        console.log(sex)
-        console.log("=====")
         for (let i in sex) {
             charlist[i] = sex[i];
         }
