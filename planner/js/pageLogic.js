@@ -399,7 +399,7 @@ function init() {
         ["Totem", "Baghdad", "Fleece", "Okiku", "Colgante", "Atlantis", "RomanDice", "Quimbaya", "Rocket", "Mystery"], 9,
         tableNavigation, document.getElementById("table-parent-3"), true, "resource", "icons/Artifact/", [], "artifact-");
     
-    createTable("workbook-table", ["potentialhealpower","potentialattack","potentialmaxhp"] , 0,
+    createTable("workbook-table", ["3_potentialhealpower","3_potentialattack","3_potentialmaxhp"] , 0,
         ["Workbook"], 0,
         tableNavigation, document.getElementById("table-parent-7"), true, "resource", "icons/LimitBreak/", [], "workbook-");
 
