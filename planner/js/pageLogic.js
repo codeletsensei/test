@@ -5761,6 +5761,7 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
             }
         }
     }
+    console.log(matDict)
 }
 
 function calcXpCost(level, levelTarget, matDict) {
