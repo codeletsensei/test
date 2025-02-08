@@ -284,6 +284,12 @@ function init() {
         for (let i in data.characters) {
             if (!data.characters[i].current.bondgear) data.characters[i].current.bondgear = 1
             if (!data.characters[i].target.bondgear) data.characters[i].target.bondgear = 1
+            if (!data.characters[i].current.potentialmaxhp) data.characters[i].current.potentialmaxhp = 0
+            if (!data.characters[i].target.potentialmaxhp) data.characters[i].target.potentialmaxhp = 0
+            if (!data.characters[i].current.potentialattack) data.characters[i].current.potentialattack = 0
+            if (!data.characters[i].target.potentialattack) data.characters[i].target.potentialattack = 0
+            if (!data.characters[i].current.potentialhealpower) data.characters[i].current.potentialhealpower = 0
+            if (!data.characters[i].target.potentialhealpower) data.characters[i].target.potentialhealpower = 0
         }
         // if (!data.level_cap) {
         //     data.level_cap = 90;
@@ -3352,6 +3358,13 @@ function saveCharChanges() {
         charData.current.bondgear = document.getElementById("input_bondgear_current").value;
         charData.target.bondgear = document.getElementById("input_bondgear_target").value;
 
+        charData.current.potentialmaxhp = document.getElementById("input_potentialmaxhp_current").value;
+        charData.target.potentialmaxhp = document.getElementById("input_potentialmaxhp_target").value;
+        charData.current.potentialattack = document.getElementById("input_potentialattack_current").value;
+        charData.target.potentialattack = document.getElementById("input_potentialattack_target").value;
+        charData.current.potentialhealpower = document.getElementById("input_potentialhealpower_current").value;
+        charData.target.potentialhealpower = document.getElementById("input_potentialhealpower_target").value;
+
         charData.current.ex = document.getElementById("input_ex_current").value;
         charData.target.ex = document.getElementById("input_ex_target").value;
         charData.current.basic = document.getElementById("input_basic_current").value;
@@ -3497,6 +3510,13 @@ function populateCharModal(charId) {
             document.getElementById("bondgear_tablecell_header").style.display = "none"
             document.getElementById("bondgear_tablecell_inputs").style.display = "none"
         }
+
+        document.getElementById("input_potentialmaxhp_current").value = charData.current?.potentialmaxhp;
+        document.getElementById("input_potentialmaxhp_target").value = charData.target?.potentialmaxhp;
+        document.getElementById("input_potentialattack_current").value = charData.current?.potentialattack;
+        document.getElementById("input_potentialattack_target").value = charData.target?.potentialattack;
+        document.getElementById("input_potentialhealpower_current").value = charData.current?.potentialhealpower;
+        document.getElementById("input_potentialhealpower_target").value = charData.target?.potentialhealpower;
 
         document.getElementById("input_ex_current").value = charData.current?.ex;
         document.getElementById("input_ex_target").value = charData.target?.ex;
@@ -3911,6 +3931,13 @@ function charDataFromModal(charId) {
     charData.target.bond = document.getElementById("input_bond_target").value;
     charData.current.bondgear = document.getElementById("input_bondgear_current").value;
     charData.target.bondgear = document.getElementById("input_bondgear_target").value;
+
+    charData.current.potentialmaxhp = document.getElementById("input_potentialmaxhp_current").value;
+    charData.target.potentialmaxhp = document.getElementById("input_potentialmaxhp_target").value;
+    charData.current.potentialattack = document.getElementById("input_potentialattack_current").value;
+    charData.target.potentialattack = document.getElementById("input_potentialattack_target").value;
+    charData.current.potentialhealpower = document.getElementById("input_potentialhealpower_current").value;
+    charData.target.potentialhealpower = document.getElementById("input_potentialhealpower_target").value;
 
     charData.current.ex = document.getElementById("input_ex_current").value;
     charData.target.ex = document.getElementById("input_ex_target").value;
@@ -5555,6 +5582,9 @@ function calculateCharResources(charData, output) {
     calcSkillCost(charObj, "passive", charData.current?.passive, charData.target?.passive, charMatDict);
     calcSkillCost(charObj, "sub", charData.current?.sub, charData.target?.sub, charMatDict);
     calcSkillCost(charObj, "bondgear", charData.current?.bondgear, charData.target?.bondgear, charMatDict);
+    calcSkillCost(charObj, "potentialmaxhp", charData.current?.potentialmaxhp, charData.target?.potentialmaxhp, charMatDict);
+    calcSkillCost(charObj, "potentialattack", charData.current?.potentialattack, charData.target?.potentialattack, charMatDict);
+    calcSkillCost(charObj, "potentialhealpower", charData.current?.potentialhealpower, charData.target?.potentialhealpower, charMatDict);
     calcXpCost(charData.current?.level, charData.target?.level, charMatDict);
     calcGearCost(charObj, charData.current?.gear1, charData.target?.gear1, 1, charMatDict);
     calcGearCost(charObj, charData.current?.gear2, charData.target?.gear2, 2, charMatDict);
@@ -5649,6 +5679,17 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
             skillMaterialAmounts = []
         }
         skillType = "bondgear";
+    }
+    else if (skill.includes("potential")) {
+        let workbookType = 2000
+        if (skill == potentialattack) workbookType = 2001
+        else if (skill == potentialhealpower) workbookType = 2002
+        let potMat = characterObj.PotentialMaterial
+        let skillMaterials = [[]]
+        for (let i = 1; i <= 15 ; i++) potMats[i] = [workbookType, characterObj.PotentialMaterial]
+        for (let i = 16; i <= 25 ; i++) potMats[i] = [workbookType, parseInt(characterObj.PotentialMaterial) + 1]
+        skillMaterialAmounts = misc_data.PotentialMaterialAmount;
+        skillType = "potential";
     }
     else {
         skillMaterials = characterObj.SkillMaterial;
