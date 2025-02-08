@@ -5707,6 +5707,7 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
     }
     if (skillMaterials == undefined || skillMaterialAmounts == undefined) { return null; }
     if (skillType == "potential") {
+        console.log(skill)
             console.log(skillMaterials)
             console.log(s,skillMaterials[s],skillMaterialAmounts[s])
     }
