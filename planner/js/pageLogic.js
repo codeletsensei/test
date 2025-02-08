@@ -5769,21 +5769,23 @@ function calcPotentialCost(characterObj, skill, current, target, matDict) {
     if (skillMaterials == undefined || skillMaterialAmounts == undefined) { return null; }
 
     for (let s = curLevel; s < tarLevel; s++) {
+        console.log(skillMaterials[s],skillMaterialAmounts[s],misc_data.potentialCost[s])
+
         if (!matDict["Credit"]) {
             matDict["Credit"] = 0;
         }
         matDict["Credit"] += misc_data.potentialCost[s];
 
-        let costObj = skillMaterials[s];
-        if (costObj == undefined) return null;
+        let costObj = skillMaterials[s+1];
+        if (costObj == undefined) { return null; }
 
         for (let i = 0; i < costObj.length; i++) {
             let item = costObj[i];
-            if (item != undefined && skillMaterialAmounts[s][i] != undefined) {
+            if (item != undefined && skillMaterialAmounts[s+1][i] != undefined) {
                 if (!matDict[item]) {
                     matDict[item] = 0;
                 }
-                matDict[item] += skillMaterialAmounts[s][i];
+                matDict[item] += skillMaterialAmounts[s+1][i];
             }
         }
     }
