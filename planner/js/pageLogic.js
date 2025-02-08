@@ -5667,7 +5667,7 @@ function calculateCharResources(charData, output) {
 function calcSkillCost(characterObj, skill, current, target, matDict) {
 
     let skillMaterials, skillMaterialAmounts, skillType;
-
+    let potentialMat = characterObj.PotentialMaterial
     console.log(skill)
     if (skill == "ex") {
         skillMaterials = characterObj.SkillExMaterial;
@@ -5689,15 +5689,15 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
         let workbookType = 2000
         if (skill == "potentialattack") workbookType = 2001
         else if (skill == "potentialhealpower") workbookType = 2002
-        let skillMaterials = [ [ workbookType, characterObj.PotentialMaterial ] ]
+        let skillMaterials = [ [ workbookType, potentialMat ] ]
         let skillMaterialAmounts = []
         for (let s = 1; s <= 15 ; s++) {
-            console.log(workbookType,characterObj.PotentialMaterial )
-            skillMaterials[s] = [ workbookType, characterObj.PotentialMaterial ]
+            console.log( workbookType, potentialMat )
+            skillMaterials[s] = [ workbookType, potentialMat ]
             skillMaterialAmounts[s] = misc_data.potentialMaterialAmount[s];
         }
         for (let s = 16; s <= 25 ; s++) {
-            skillMaterials[s] = [ workbookType, parseInt(characterObj.PotentialMaterial) + 1 ]
+            skillMaterials[s] = [ workbookType, parseInt(potentialMat) + 1 ]
             skillMaterialAmounts[s] = misc_data.potentialMaterialAmount[s];
         }
         skillType = "potential";
