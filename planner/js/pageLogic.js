@@ -5690,7 +5690,7 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
         if (skill == "potentialattack") workbookType = 2001
         else if (skill == "potentialhealpower") workbookType = 2002
         let skillMaterials = [ [ workbookType, potentialMat ] ]
-        let skillMaterialAmounts = []
+        let skillMaterialAmounts = [0]
         for (let s = 1; s <= 15 ; s++) {
             console.log( workbookType, potentialMat )
             skillMaterials[s] = [ workbookType, potentialMat ]
