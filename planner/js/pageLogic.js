@@ -4065,6 +4065,9 @@ function populateCharResources(charId) {
                 if (matName[2] === "_") {
                     extraClassName = " char-resource-rarity-" + matName[3];
                 }
+                else if (matName.toLowerCase() === "workbook") {
+                    extraClassName = " char-resource-rarity-3";
+                }
                 else {
                     extraClassName = " char-resource-rarity-" + matName.substring(matName.length - 1);
                 }
