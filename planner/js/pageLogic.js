@@ -401,7 +401,7 @@ function init() {
     
     createTable("workbook-table", ["potentialhealpower","potentialattack","potentialmaxhp"] , 0,
         ["Workbook_3"], 0,
-        tableNavigation, document.getElementById("table-parent-7"), true, "resource", "icons/Artifact/", [], "workbook-");
+        tableNavigation, document.getElementById("table-parent-7"), true, "resource", "icons/LimitBreak/", [], "workbook-");
 
     let gearNavigation = [];
     createTable("gear-table", ["T10", "T9", "T8", "T7", "T6", "T5", "T4", "T3", "T2"], 0, ["Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"],
