@@ -5688,13 +5688,13 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
         else if (skill == "potentialhealpower") workbookType = 2002;
         skillMaterials = [ ];
         skillMaterialAmounts = [ ];
-        for (let s = 0; s <= 15 ; s++) {
-            skillMaterials[s] = [ workbookType, characterObj.PotentialMaterial ];
-            skillMaterialAmounts[s] = misc_data.potentialMaterialAmount[s];
+        for (let s = 1; s <= 15 ; s++) {
+            skillMaterials.push([ workbookType, characterObj.PotentialMaterial ]);
+            skillMaterialAmounts.push(misc_data.potentialMaterialAmount[s]);
         }
         for (let s = 16; s <= 25 ; s++) {
-            skillMaterials[s] = [ workbookType, parseInt(characterObj.PotentialMaterial) + 1 ];
-            skillMaterialAmounts[s] = misc_data.potentialMaterialAmount[s];
+            skillMaterials.push([ workbookType, parseInt(characterObj.PotentialMaterial) + 1 ]);
+            skillMaterialAmounts.push(misc_data.potentialMaterialAmount[s]);
         }
         skillType = "potential";
     }
@@ -5761,7 +5761,6 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
             }
         }
     }
-    console.log(matDict)
 }
 
 function calcXpCost(level, levelTarget, matDict) {
