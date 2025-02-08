@@ -5744,8 +5744,11 @@ function calcPotentialCost(characterObj, skill, current, target, matDict) {
 //Basically a tweaked calcSkillCost(). I'm too dumb to merge them.
     let curLevel = parseInt(current);
     let tarLevel = parseInt(target);
-    if (curLevel == 0 && tarLevel == 0) {
+    if (curLevel == tarLevel) {
         return null;
+    }
+    else if (curLevel > tarLevel) {
+        curLevel = tarLevel
     }
 
     let workbookType = 2000;
