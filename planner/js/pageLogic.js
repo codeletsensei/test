@@ -5728,6 +5728,7 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
             matDict["9999"] += 1;
         }
     //}
+    console.log(curLevel,tarLevel)
     for (let s = curLevel; s < tarLevel; s++) {
 
         if (skillType != undefined) {
