@@ -5706,11 +5706,13 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
         skillType = "other";
     }
     if (skillMaterials == undefined || skillMaterialAmounts == undefined) { return null; }
-    if (skillType == "potential") {
+
+    if (skillType == "other") {
         console.log(skill)
             console.log(skillMaterials)
             console.log(skillMaterialAmounts)
     }
+
     let curLevel = parseInt(current);
     let tarLevel = parseInt(target);
     if (curLevel == 0 && tarLevel > 0) {
