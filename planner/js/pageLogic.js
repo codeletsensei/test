@@ -5576,14 +5576,18 @@ function calculateCharResources(charData, output) {
 
     let charId = charData.id.toString();
     let charObj = charlist[charId];
+
+    console.log(charlist[charId].name)
     calcSkillCost(charObj, "ex", charData.current?.ex, charData.target?.ex, charMatDict);
     calcSkillCost(charObj, "normal", charData.current?.basic, charData.target?.basic, charMatDict);
     calcSkillCost(charObj, "passive", charData.current?.passive, charData.target?.passive, charMatDict);
     calcSkillCost(charObj, "sub", charData.current?.sub, charData.target?.sub, charMatDict);
+
     calcSkillCost(charObj, "bondgear", charData.current?.bondgear, charData.target?.bondgear, charMatDict);
     calcSkillCost(charObj, "potentialmaxhp", charData.current?.potentialmaxhp, charData.target?.potentialmaxhp, charMatDict);
     calcSkillCost(charObj, "potentialattack", charData.current?.potentialattack, charData.target?.potentialattack, charMatDict);
     calcSkillCost(charObj, "potentialhealpower", charData.current?.potentialhealpower, charData.target?.potentialhealpower, charMatDict);
+
     calcXpCost(charData.current?.level, charData.target?.level, charMatDict);
     calcGearCost(charObj, charData.current?.gear1, charData.target?.gear1, 1, charMatDict);
     calcGearCost(charObj, charData.current?.gear2, charData.target?.gear2, 2, charMatDict);
