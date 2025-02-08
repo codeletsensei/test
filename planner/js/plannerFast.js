@@ -29,6 +29,7 @@ fetch('https://schaledb.com/data/en/students.min.json?9').then((response) => res
     charlist = json;
 }).then(()=>{
     fetch("json/extraStudents.json?9").then(r=>r.json()).then((sex)=>{
+        extraStudentsObj = sex
         for (let i in sex) {
             charlist[i] = sex[i];
         }

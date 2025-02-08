@@ -1785,7 +1785,8 @@ function createMultiSelectChar(charId, container, mode) {
     newCharDiv.id = "multi_" + charId;
 
     const newImg = document.createElement("img");
-    newImg.src = "https://schaledb.com/images/student/collection/" + charId + ".webp"; //"icons/Portrait/Icon_" + charId + ".png";
+    if (extraStudentsObj[charId]) newImg.src = "icons/Portrait/Icon_" + charId + ".png"; 
+    else newImg.src = "https://schaledb.com/images/student/collection/" + charId + ".webp"
     if (aprilFools) {
         newImg.src = "icons/Portrait/April/Icon_" + charId + ".png";
     }
