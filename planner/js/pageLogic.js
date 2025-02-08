@@ -398,6 +398,10 @@ function init() {
     createTable("artifact-table-2", ["4", "3", "2", "1"], 4,
         ["Totem", "Baghdad", "Fleece", "Okiku", "Colgante", "Atlantis", "RomanDice", "Quimbaya", "Rocket", "Mystery"], 9,
         tableNavigation, document.getElementById("table-parent-3"), true, "resource", "icons/Artifact/", [], "artifact-");
+    
+    createTable("workbook-table", ["potentialhealpower","potentialattack","potentialmaxhp"] , 0,
+        ["WB_3"], 0,
+        tableNavigation, document.getElementById("table-parent-7"), true, "resource", "icons/Artifact/", [], "workbook-");
 
     let gearNavigation = [];
     createTable("gear-table", ["T10", "T9", "T8", "T7", "T6", "T5", "T4", "T3", "T2"], 0, ["Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"],
