@@ -5771,7 +5771,8 @@ function calcPotentialCost(characterObj, skill, current, target, matDict) {
     let workbookType = 2000;
     if (skill == "potentialattack") workbookType = 2001;
     else if (skill == "potentialhealpower") workbookType = 2002;
-
+    
+    let skillType = "potential"
     let skillMaterials = [];
     let skillMaterialAmounts = [];
     for (let s = 0; s <= 15 ; s++) {
