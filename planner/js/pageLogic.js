@@ -5714,16 +5714,18 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
     let curLevel = parseInt(current);
     let tarLevel = parseInt(target);
     console.log(curLevel,tarLevel)
-        if (curLevel == 0 && tarLevel > 0) {
-            curLevel = 1;
-        }
-        if (tarLevel == 10 && curLevel < 10) {
-            if (!matDict["9999"]) {
-                matDict["9999"] = 0;
-            }
 
-            matDict["9999"] += 1;
+    if (curLevel == 0 && tarLevel > 0) {
+        curLevel = 1;
+    }
+
+    if (tarLevel == 10 && curLevel < 10) {
+        if (!matDict["9999"]) {
+            matDict["9999"] = 0;
         }
+
+        matDict["9999"] += 1;
+    }
 
     console.log(curLevel,tarLevel)
     for (let s = curLevel; s < tarLevel; s++) {
@@ -5736,6 +5738,7 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
 
             matDict["Credit"] += misc_data.skill_credit_cost[skillType][s - 1];
         }
+        else if (skillType == "potential") s +=1
 
         let costObj = skillMaterials[s - 1];  // skillObj["Level" + s];
         if (skillType == "potential") console.log(costObj)
