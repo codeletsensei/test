@@ -5577,7 +5577,6 @@ function calculateCharResources(charData, output) {
     let charId = charData.id.toString();
     let charObj = charlist[charId];
 
-    console.log(charlist[charId].Name)
     calcSkillCost(charObj, "ex", charData.current?.ex, charData.target?.ex, charMatDict);
     calcSkillCost(charObj, "normal", charData.current?.basic, charData.target?.basic, charMatDict);
     calcSkillCost(charObj, "passive", charData.current?.passive, charData.target?.passive, charMatDict);
@@ -5596,7 +5595,6 @@ function calculateCharResources(charData, output) {
     calcMysticCost(charData.current?.star, charData.target?.star, charMatDict);
 
     calcUECost(charObj, charData.current?.ue, charData.target?.ue, charData.current?.ue_level, charData.target?.ue_level, charMatDict);
-    console.log("=======")
 
     let purchaseData = misc_data.shop_characters[charId];
     let currency, amount, cost, times;
@@ -5688,10 +5686,9 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
         let workbookType = 2000
         if (skill == "potentialattack") workbookType = 2001
         else if (skill == "potentialhealpower") workbookType = 2002
-        skillMaterials = [ [ workbookType, characterObj.PotentialMaterial ] ]
-        skillMaterialAmounts = [ [0,0] ]
-        for (let s = 1; s <= 15 ; s++) {
-            console.log( workbookType, characterObj.PotentialMaterial )
+        skillMaterials = []
+        skillMaterialAmounts = []
+        for (let s = 0; s <= 15 ; s++) {
             skillMaterials[s] = [ workbookType, characterObj.PotentialMaterial ]
             skillMaterialAmounts[s] = misc_data.potentialMaterialAmount[s];
         }
@@ -5700,8 +5697,6 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
             skillMaterialAmounts[s] = misc_data.potentialMaterialAmount[s];
         }
         skillType = "potential";
-        console.log(skillMaterials)
-        console.log(skillMaterialAmounts)
     }
     else {
         skillMaterials = characterObj.SkillMaterial;
@@ -5722,7 +5717,6 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
 
         matDict["9999"] += 1;
     }
-    if (skillType == "potential") console.log(matDict)
     for (let s = curLevel; s < tarLevel; s++) {
 
         if (skillType != undefined) {
@@ -5756,7 +5750,6 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
             }
         }
     }
-    if (skillType == "potential") console.log(matDict)
 }
 
 function calcXpCost(level, levelTarget, matDict) {
