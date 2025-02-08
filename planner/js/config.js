@@ -95,6 +95,10 @@ const matLookup = new TwoWayMap({
     292: "Mystery_3",
     293: "Mystery_4",
 
+    2000: "WB_potentialmaxhp",
+    2001: "WB_potentialattack",
+    2002: "WB_potentialhealpower",
+
     3000: "BD_1_Hyakkiyako",
     3001: "BD_2_Hyakkiyako",
     3002: "BD_3_Hyakkiyako",
@@ -168,10 +172,6 @@ const matLookup = new TwoWayMap({
     4081: "TN_2_Valkyrie",
     4082: "TN_3_Valkyrie",
     4083: "TN_4_Valkyrie",
-
-    2000: "WB_potentialmaxhp",
-    2001: "WB_potentialattack",
-    2002: "WB_potentialhealpower",
 
     9999: "Secret"
 });
