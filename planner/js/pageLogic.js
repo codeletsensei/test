@@ -400,7 +400,7 @@ function init() {
         tableNavigation, document.getElementById("table-parent-3"), true, "resource", "icons/Artifact/", [], "artifact-");
     
     createTable("workbook-table", ["potentialhealpower","potentialattack","potentialmaxhp"] , 0,
-        ["Workbook_3"], 0,
+        ["Workbook"], 0,
         tableNavigation, document.getElementById("table-parent-7"), true, "resource", "icons/LimitBreak/", [], "workbook-");
 
     let gearNavigation = [];
