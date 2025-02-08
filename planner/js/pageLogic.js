@@ -5774,7 +5774,7 @@ function calcPotentialCost(characterObj, skill, current, target, matDict) {
         if (!matDict["Credit"]) {
             matDict["Credit"] = 0;
         }
-        matDict["Credit"] += misc_data.potentialCost[s];
+        matDict["Credit"] += misc_data.potentialCost[s+1];
 
         let costObj = skillMaterials[s+1];
         if (costObj == undefined) { return null; }
