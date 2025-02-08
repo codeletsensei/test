@@ -5700,7 +5700,6 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
         skillMaterialAmounts = characterObj.SkillMaterialAmount;
         skillType = "other";
     }
-    console.log(skillType)
     if (skillMaterials == undefined || skillMaterialAmounts == undefined) { return null; }
     let curLevel = parseInt(current);
     let tarLevel = parseInt(target);
@@ -5715,7 +5714,7 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
 
         matDict["9999"] += 1;
     }
-
+    if (skillType == "potential") console.log(matDict)
     for (let s = curLevel; s < tarLevel; s++) {
 
         if (skillType != undefined) {
@@ -5749,6 +5748,7 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
             }
         }
     }
+    if (skillType == "potential") console.log(matDict)
 }
 
 function calcXpCost(level, levelTarget, matDict) {
