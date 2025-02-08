@@ -5684,10 +5684,9 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
         let workbookType = 2000
         if (skill == "potentialattack") workbookType = 2001
         else if (skill == "potentialhealpower") workbookType = 2002
-        let potMat = characterObj.PotentialMaterial
         let skillMaterials = [[]]
-        for (let i = 1; i <= 15 ; i++) potMats[i] = [workbookType, characterObj.PotentialMaterial]
-        for (let i = 16; i <= 25 ; i++) potMats[i] = [workbookType, parseInt(characterObj.PotentialMaterial) + 1]
+        for (let i = 1; i <= 15 ; i++) skillMaterials[i] = [workbookType, characterObj.PotentialMaterial]
+        for (let i = 16; i <= 25 ; i++) skillMaterials[i] = [workbookType, parseInt(characterObj.PotentialMaterial) + 1]
         skillMaterialAmounts = misc_data.PotentialMaterialAmount;
         skillType = "potential";
     }
