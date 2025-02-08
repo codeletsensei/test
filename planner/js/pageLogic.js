@@ -5677,25 +5677,20 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
             skillMaterialAmounts = characterObj.Gear.TierUpMaterialAmount;
         }
         else { 
-            skillMaterials = [] 
-            skillMaterialAmounts = []
+            skillMaterials = [];
+            skillMaterialAmounts = [];
         }
         skillType = "bondgear";
     }
     else if (skill.includes("potential")) {
-        let workbookType = 2000
-        if (skill == "potentialattack") workbookType = 2001
-        else if (skill == "potentialhealpower") workbookType = 2002
-        skillMaterials = []
-        skillMaterialAmounts = []
-        for (let s = 0; s <= 15 ; s++) {
-            skillMaterials[s] = [ workbookType, characterObj.PotentialMaterial ]
-            skillMaterialAmounts[s] = misc_data.potentialMaterialAmount[s];
-        }
-        for (let s = 16; s <= 25 ; s++) {
-            skillMaterials[s] = [ workbookType, parseInt(characterObj.PotentialMaterial) + 1 ]
-            skillMaterialAmounts[s] = misc_data.potentialMaterialAmount[s];
-        }
+        let workbookType = 2000;
+        if (skill == "potentialattack") workbookType = 2001;
+        else if (skill == "potentialhealpower") workbookType = 2002;
+        skillMaterials = [];
+        skillMaterialAmounts = [];
+        for (let s = 0; s <= 15 ; s++) skillMaterials[s] = [ workbookType, characterObj.PotentialMaterial ];
+        for (let s = 16; s <= 25 ; s++) skillMaterials[s] = [ workbookType, parseInt(characterObj.PotentialMaterial) + 1 ];
+        skillMaterialAmounts = misc_data.potentialMaterialAmount;
         skillType = "potential";
     }
     else {
