@@ -1508,7 +1508,6 @@ function openModal(e) {
         }
 
         var displayImg = document.getElementById("displayImg");
-        //displayImg.src = "https://schaledb.com/images/student/collection/" + charId + ".webp";//"icons/Portrait/Icon_" + charId + ".png";
 
         if (extraStudentsObj[charId]) displayImg.src = "icons/Portrait/Icon_" + charId + ".png"; 
         else displayImg.src = "https://schaledb.com/images/student/collection/" + charId + ".webp"
@@ -5205,7 +5204,7 @@ function DisplayMatUsers(mat) {
         charDiv.className = "char-row-mats";
 
         let charImg = document.createElement('img');
-        //charImg.src = "https://schaledb.com/images/student/collection/" + matUsers[i].charId + ".webp"; //"icons/Portrait/Icon_" + matUsers[i].charId + ".png";
+
         if (extraStudentsObj[matUsers[i].charId]) charImg.src = "icons/Portrait/Icon_" + matUsers[i].charId + ".png"; 
         else charImg.src = "https://schaledb.com/images/student/collection/" + matUsers[i].charId + ".webp"
         if (aprilFools) {

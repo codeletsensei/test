@@ -25,7 +25,7 @@ if (data == null) {
 
 let charBoxSize = localStorage.getItem("character_box_size") ?? "5";
 
-fetch('https://schaledb.com/data/en/students.min.json?9').then((response) => response.json()).then((json) => {
+fetch('json/students.min.json?9').then((response) => response.json()).then((json) => {
     charlist = json;
 }).then(()=>{
     fetch("json/extraStudents.json?9").then(r=>r.json()).then((sex)=>{
@@ -299,7 +299,10 @@ function createCharBox(charId, container, location, lazy) {
     }
 
     const newImg = document.createElement("img");
-    newImg.src = "icons/Portrait/Icon_" + charId + ".png";
+
+
+    if (extraStudentsObj[charId]) newImg.src = "icons/Portrait/Icon_" + charId + ".png"; 
+    else newImg.src = "https://schaledb.com/images/student/collection/" + charId + ".webp"
     if (fastAprilFools) {
         newImg.src = "icons/Portrait/April/Icon_" + charId + ".png";
     }
