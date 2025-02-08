@@ -1759,12 +1759,7 @@ function showMultiSelect(source) {
 function generateMultiSelectChars(newCharOptions, mode) {
 
     let multiCharsContainer = document.getElementById("charsSelectContainer");
-    console.log("---------------")
-    console.log(newCharOptions)
     for (let i = 0; i < newCharOptions.length; i++) {
-    console.log("---------------")
-        console.log(newCharOptions[i])
-        console.log(charMap.get(newCharOptions[i]))
         createMultiSelectChar(charMap.get(newCharOptions[i]), multiCharsContainer, mode);
     }
 
