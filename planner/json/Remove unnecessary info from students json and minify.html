@@ -41,7 +41,7 @@ function main(data){
     for (let i in data) { 
     	students[i] = {}
     	for (let j in keepProperties) {
-    		students[i][j] = data[i][keepProperties[j]]
+    		students[i][keepProperties[j]] = data[i][keepProperties[j]]
     	} 
     }
     console.log(students)
