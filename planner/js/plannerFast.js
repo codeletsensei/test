@@ -27,7 +27,7 @@ let charBoxSize = localStorage.getItem("character_box_size") ?? "5";
 
 
 
-/*
+
 async function fetchStudentsList(){
     let urlArray = [
         fetch("https://schaledb.com/data/en/students.min.json?9"),
@@ -57,9 +57,9 @@ async function fetchStudentsList(){
 
 fetchStudentsList().then(()=>{
     doTheRest()
-})*/
+})
 
-
+/*
 fetch('json/students.min.json?9').then((response) => response.json()).then((json) => {
     charlist = json;
 }).then(()=>{
@@ -72,9 +72,13 @@ fetch('json/students.min.json?9').then((response) => response.json()).then((json
             ShowNames(charlist);
         }
     })
-});
-doTheRest()
+});*/
+
 function doTheRest() {
+    if (nameReady && (data.language == "EN" || data.language == "Id")) {
+        ShowNames(charlist);
+    }
+    
     fetch('json/strings.json?25').then((response) => response.json()).then((json) => {
         language_strings = json;
         if (uiReady) {
