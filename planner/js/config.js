@@ -170,8 +170,8 @@ const matLookup = new TwoWayMap({
     4083: "TN_4_Valkyrie",
 
     2000: "WB_potentialmaxhp",
-    2001: "WB_WB_potentialattack",
-    2002: "WB_WB_potentialhealpower",
+    2001: "WB_potentialattack",
+    2002: "WB_potentialhealpower",
 
     9999: "Secret"
 });
