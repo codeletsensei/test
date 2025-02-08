@@ -28,7 +28,7 @@ let charBoxSize = localStorage.getItem("character_box_size") ?? "5";
 
 
 
-async function fetchStudentList(){
+async function fetchStudentsList(){
     let urlArray = [
         fetch("https://schaledb.com/data/en/students.min.json?9"),
         fetch("https://codeletsensei.github.io/test/planner/json/students.min.jsona?9"),
@@ -49,14 +49,15 @@ async function fetchStudentList(){
         for (let i in data) {
             for (let j in data[i]) charlist[j] = data[i][j]
         }
-        doTheRest()
     } 
     catch(e) {
         window.alert("Failed to retrieve the students list")
     }
 }
 
-fetchStudentList()
+fetchStudentsList().then(()=>{
+    doTheRest()
+})
 
 /*
 fetch('json/students.min.json?9').then((response) => response.json()).then((json) => {
