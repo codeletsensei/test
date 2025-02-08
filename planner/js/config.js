@@ -95,9 +95,9 @@ const matLookup = new TwoWayMap({
     292: "Mystery_3",
     293: "Mystery_4",
 
-    2000: "WB_potentialmaxhp",
-    2001: "WB_potentialattack",
-    2002: "WB_potentialhealpower",
+    2000: "WB_3_potentialmaxhp",
+    2001: "WB_3_potentialattack",
+    2002: "WB_3_potentialhealpower",
 
     3000: "BD_1_Hyakkiyako",
     3001: "BD_2_Hyakkiyako",

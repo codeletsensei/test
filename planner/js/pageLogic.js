@@ -5747,7 +5747,7 @@ function calcPotentialCost(characterObj, skill, current, target, matDict) {
     if (curLevel == 0 && tarLevel == 0) {
         return null;
     }
-    
+
     let workbookType = 2000;
     if (skill == "potentialattack") workbookType = 2001;
     else if (skill == "potentialhealpower") workbookType = 2002;
@@ -5764,11 +5764,6 @@ function calcPotentialCost(characterObj, skill, current, target, matDict) {
         skillMaterialAmounts.push(misc_data.potentialMaterialAmount[s]);
     }
     if (skillMaterials == undefined || skillMaterialAmounts == undefined) { return null; }
-
-    console.log(skill)
-    console.log(skillMaterials)
-    console.log(skillMaterialAmounts)
-    console.log(curLevel,tarLevel)
 
     for (let s = curLevel; s <= tarLevel; s++) {
         if (!matDict["Credit"]) {
