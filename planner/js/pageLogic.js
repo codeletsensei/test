@@ -5684,13 +5684,10 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
         let workbookType = 2000
         if (skill == "potentialattack") workbookType = 2001
         else if (skill == "potentialhealpower") workbookType = 2002
-            console.log(workbookType)
         let skillMaterials = [[]]
         for (let i = 1; i <= 15 ; i++) skillMaterials[i] = [workbookType, characterObj.PotentialMaterial]
         for (let i = 16; i <= 25 ; i++) skillMaterials[i] = [workbookType, parseInt(characterObj.PotentialMaterial) + 1]
-            console.log(skillMaterials)
         skillMaterialAmounts = misc_data.potentialMaterialAmount;
-        console.log(skillMaterialAmounts)
         skillType = "potential";
     }
     else {
@@ -5700,7 +5697,8 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
     }
 
     if (skillMaterials == undefined || skillMaterialAmounts == undefined) { return null; }
-
+    console.log(skillMaterials)
+    console.log(skillMaterialAmounts)
     let curLevel = parseInt(current);
     let tarLevel = parseInt(target);
     if (curLevel == 0 && tarLevel > 0) {
