@@ -5692,6 +5692,8 @@ function calcSkillCost(characterObj, skill, current, target, matDict) {
         for (let s = 16; s <= 25 ; s++) skillMaterials[s] = [ workbookType, parseInt(characterObj.PotentialMaterial) + 1 ];
         skillMaterialAmounts = misc_data.potentialMaterialAmount;
         skillType = "potential";
+        console.log(skillMaterials)
+        console.log(skillMaterialAmounts)
     }
     else {
         skillMaterials = characterObj.SkillMaterial;
