@@ -4665,8 +4665,8 @@ function dropImportFile(e) {
         document.getElementById("swal2-textarea").value = JSON.stringify(data)
     }
     e.preventDefault()
+    console.log(e.target.files || e.dataTransfer.files)
     if (e.dataTransfer.files.length > 0) {
-        console.log(e.target.files || e.dataTransfer.files)
         var reader = new FileReader();
         reader.addEventListener('load', function() {
           var result = JSON.parse(reader.result);
