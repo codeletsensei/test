@@ -4665,9 +4665,9 @@ function dropImportFile(e,method) {
         document.getElementById("swal2-textarea").value = JSON.stringify(data)
     }
     e.preventDefault()
-    let files = null
-    if (method == "selected") files = e.target
-    else files = e.dataTransfer.files
+    let files = null;
+    if (method == "selected") files = e.target;
+    else files = e.dataTransfer.files;
     console.log(files)
     if (files.length > 0) {
         var reader = new FileReader();
@@ -4679,13 +4679,13 @@ function dropImportFile(e,method) {
     }
 }
 document.getElementById('inputImportFile').addEventListener("change", e=>{
-    dropImportFile(e,"selected")
+    dropImportFile(e,"selected");
 })
 
 function openTransferModal() {
     document.addEventListener('dragover', ignoreDrag );
     document.addEventListener('dragenter', ignoreDrag );
-    document.addEventListener('drop', dropImportFile(e,"dropped") );
+    document.addEventListener('drop', function(e){ dropImportFile(e,"dropped") });
 
     if (document.getElementById("characterMultiSelectContainer").style.display != "none") {
         return;
