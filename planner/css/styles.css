@@ -277,10 +277,10 @@ label {
 
 .limitbreak-bar {
     top: 5%;
-    right: 15%;
     width: fit-content;
-    display: flex;
-    position: absolute;
+    right: 15%;
+    padding-right: 2%;
+    padding-left: 1%;
 }
 
 .skill-bar {
