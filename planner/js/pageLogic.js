@@ -7532,19 +7532,19 @@ function SortStudents(students, sortType) {
         else if (sortType == "weapon") {
             sortparam = weaponOrder[charlist[students[i].id].WeaponType];
         }
+        else if (sortType == "bondgear") {
+            if (charlist[students[i].id].Gear) if (charlist[students[i].id].Gear.TierUpMaterial) sortparam = 1;
+            else sortparam = 0
+        }
         else {
             sortparam = students[i].current[sortType];
         }
-        console.log("sortparam")
-        console.log(sortparam)
         if (!sorting[sortparam]) {
             sorting[sortparam] = [students[i]];
         }
         else {
             sorting[sortparam].push(students[i]);
         }
-        console.log("sorting")
-        console.log(sorting)
     }
 
     let sortingKeys;
