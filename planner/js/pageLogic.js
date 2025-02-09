@@ -404,13 +404,13 @@ function init() {
     
     let giftsList = []
     let giftsRows = 0
-    giftsList[0] = []
+    //giftsList[0] = []
     for (let i = 5000 ; i <= 5034; i++) {
-        giftsList[giftsRows].push(matLookup.get(i))
-        if ( i != 5000 && i%10 == 0) {
+        giftsList.push(matLookup.get(i))
+        /*if ( i != 5000 && i%10 == 0) {
             giftsRows += 1
             giftsList[giftsRows] = []
-        }
+        }*/
     }
     console.log(giftsList)
     for (let i = 0 ; i <= giftsRows+1 ; i++){
