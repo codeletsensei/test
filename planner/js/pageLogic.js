@@ -423,7 +423,6 @@ function init() {
             giftsList[giftsRows] = []
         }
     }
-    console.log(giftsList)
     for (let i = 0 ; i < giftsList.length ; i++) { 
         createTable( ("gifts-table"+i), giftsList[i] , 50, ["favor"] , 0, tableNavigation, document.getElementById("table-parent-8"), true, "resource", "icons/Gifts/", [], "gifts-");
     }
