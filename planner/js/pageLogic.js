@@ -7629,7 +7629,7 @@ function AddOrderDisplay(order) {
 
             orderDisplay.appendChild(orderDiv);
         }
-        else if (["name", "ex"].includes(sortingOperations[order][i])) {
+        else if (["bondgear"].includes(sortingOperations[order][i])) {
             let orderDiv = document.createElement("div");
             orderDiv.innerText = "Bond Gear";
             orderDisplay.appendChild(orderDiv);
