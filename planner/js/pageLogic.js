@@ -401,6 +401,18 @@ function init() {
     
     createTable("workbook-table", ["potentialhealpower_3","potentialattack_3","potentialmaxhp_3"] , 0,
         ["Workbook"], 10, tableNavigation, document.getElementById("table-parent-7"), true, "resource", "icons/LimitBreak/", [], "workbook-");
+    
+    let giftsList = []
+    let giftsRows = 0
+    giftsRows[0] = []
+    for (let i = 5000 ; i <= 5034; i++) {
+        giftsList[giftsRows].push(matLookup.get(i))
+        if (i%10==0) {
+            giftsRows += 1
+            giftsList[giftsRows] = []
+        }
+    }
+    console.log(giftsList)
 
     let gearNavigation = [];
     createTable("gear-table", ["T10", "T9", "T8", "T7", "T6", "T5", "T4", "T3", "T2"], 0, ["Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"],
@@ -429,6 +441,7 @@ function init() {
     colourTableRows("artifact-table-1");
     colourTableRows("artifact-table-2");
     colourTableRows("workbook-table");
+    colourTableRows("gifts-table");
 
     colourTableRows("gear-table");
 
@@ -3506,9 +3519,12 @@ function populateCharModal(charId) {
 
         document.getElementById("input_bondgear_current").value = charData.current?.bondgear;
         document.getElementById("input_bondgear_target").value = charData.target?.bondgear;
+        console.log()
         if (charInfo.Gear) {
-            document.getElementById("bondgear_tablecell_header").style.display = ""
-            document.getElementById("bondgear_tablecell_inputs").style.display = ""
+            if (charInfo.Gear.TierUpMaterial) {
+                document.getElementById("bondgear_tablecell_header").style.display = ""
+                document.getElementById("bondgear_tablecell_inputs").style.display = ""
+            }
         }
         else {
             document.getElementById("bondgear_tablecell_header").style.display = "none"
@@ -4079,6 +4095,9 @@ function populateCharResources(charId) {
                 }
                 else if (matName.includes("Workbook")) {
                     resourceImg.src = "icons/LimitBreak/" + matName + ".webp";
+                }
+                else if (matName.includes("favor")) {
+                    resourceImg.src = "icons/Gifts/" + matName + ".webp";
                 }
                 else {
                     resourceImg.src = "icons/Artifact/" + matName + ".webp";
@@ -4939,11 +4958,13 @@ function hideEmpty() {
     var artifactTable1 = document.getElementById("artifact-table-1");
     var artifactTable2 = document.getElementById("artifact-table-2");
     var workbookTable = document.getElementById("workbook-table");
+    var giftsTable = document.getElementById("gifts-table");
 
     hideEmptyCells(resourceTable);
     hideEmptyCells(artifactTable1);
     hideEmptyCells(artifactTable2);
     hideEmptyCells(workbookTable);
+    hideEmptyCells(giftsTable);
 
     hideEmptyCell("XP_1");
     hideEmptyCell("XP_2");
