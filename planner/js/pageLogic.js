@@ -456,7 +456,7 @@ function init() {
     colourTableRows("workbook-table");
     colourTableRows("gear-table");
 
-    for (let i = 0 ; i < giftsRows ; i++) colourTableRows("gifts-table"+i);
+    for (let i = 0 ; i <= giftsRows ; i++) colourTableRows("gifts-table"+i);
 
 /*
     let currentVer = "25.02.06"
@@ -4974,7 +4974,7 @@ function hideEmpty() {
     hideEmptyCells(artifactTable2);
     hideEmptyCells(workbookTable);
 
-    for (let i = 0 ; i < giftsRows ; i++) hideEmptyCells(document.getElementById("gifts-table"+i));
+    for (let i = 0 ; i <= giftsRows ; i++) hideEmptyCells(document.getElementById("gifts-table"+i));
 
     hideEmptyCell("XP_1");
     hideEmptyCell("XP_2");
