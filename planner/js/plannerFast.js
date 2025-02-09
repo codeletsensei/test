@@ -220,6 +220,7 @@ function createCharBox(charId, container, location, lazy) {
     let newStarContainer;
     let newUEContainer;
     let newBondContainer;
+    let newBondContainerBG;
 
     let char = data.characters[dataCharIndex[charId]]; //.find(obj => { return obj.id == charId });
 
@@ -249,6 +250,10 @@ function createCharBox(charId, container, location, lazy) {
         newBondContainer.appendChild(newBondP);
         newBondContainer.appendChild(newBondP2);
 
+        const newBondgearImg = document.createElement("img");
+        newBondgearImg.src = "icons/Misc/bondheart.png";
+        newBondgearImg.draggable = false;
+
         newBondContainerBG = document.createElement("div");
         newBondContainerBG.className = "char-heart-container2";
         const newBondgearP = document.createElement("p");
@@ -259,6 +264,7 @@ function createCharBox(charId, container, location, lazy) {
         newBondgearP2.id = charId + idInject + "-bondgear-target";
         newBondgearP2.style = "transform: translate(-50%, -25%)";
 
+        newBondContainerBG.appendChild(newBondgearImg);
         newBondContainerBG.appendChild(newBondgearP);
         newBondContainerBG.appendChild(newBondgearP2);
 

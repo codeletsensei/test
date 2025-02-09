@@ -931,12 +931,6 @@ div.char-resource-wrapper .resource-display-text {
     left: -6%;
     width: 30%;
 }
-.char-heart-container2 {
-    position: absolute;
-    top: 20%;
-    right: -6%;
-    width: 30%;
-}
 
 .char-heart-container img {
     width: 100%;
@@ -955,6 +949,32 @@ div.char-resource-wrapper .resource-display-text {
         0px 1px 0 #fff,
         1px 1px 0 #fff;
 }
+
+.char-heart-container2 {
+    position: absolute;
+    top: 20%;
+    right: -6%;
+    width: 30%;
+}
+
+.char-heart-container2 img {
+    width: 100%;
+}
+
+.char-heart-container2 p {
+    position: absolute;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    top: 50%;
+    left: 50%;
+    text-shadow: -1px -1px 0 #ffffff,
+        0px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        0px 1px 0 #fff,
+        1px 1px 0 #fff;
+}
+
 
 #charsContainerActions {
     min-height: 6vh;
