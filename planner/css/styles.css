@@ -1108,9 +1108,9 @@ label.char-action-label.toggle-closed::before {
 }
 
 .transfer-modal-button {
-    max-width: 150px;
-    width: 40%;
-    min-height: 50px;
+    max-width: 300px;
+    width: 50%;
+    min-height: 500px;
     position: absolute;
     font-size: 1.5em;
 }
