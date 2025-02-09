@@ -668,7 +668,7 @@
         "CN": "加载"
     },
     "saving-exportbutton": {
-        "EN": "Export",
+        "EN": "Export/Download",
         "KR": "내보내기",
         "TH": "ส่งออก",
         "ID": "Export",
@@ -677,6 +677,9 @@
     },
     "saving-exportbutton-justin": {
         "EN": "Export file compatible with Justin. No bondgear/LB/datamined data."
+    },
+    "saving-importFileInput": {
+        "EN": "Click to select the Import file...<br>Or Drag & Drop the json file to import."
     },
     "saving-importbutton": {
         "EN": "Import",
