@@ -6402,7 +6402,6 @@ function switchGearDisplay(displayType) {
 // }
 
 function displayExportData(option) {
-    option = "justin"
     var saveData = localStorage.getItem('save-data')
     if (option == "justin") {
         let extraChars = ["20042"]
