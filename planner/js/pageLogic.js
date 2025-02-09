@@ -7468,6 +7468,7 @@ function HELP() {
 }
 
 function SortStudents(students, sortType) {
+    console.log(sortType)
     if (sortType == "bondgear") console.log("students")
     if (sortType == "bondgear") console.log(students)
     let academyOrder = {
