@@ -235,6 +235,9 @@
         "JP": "非選択",
         "CN": "未启用学生"
     },
+    "label-bondgear": {
+        "EN": "Bond Gear"
+    },
     "label-basestars": {
         "EN": "Base Stars",
         "KR": "기본 성급",

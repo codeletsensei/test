@@ -7468,7 +7468,8 @@ function HELP() {
 }
 
 function SortStudents(students, sortType) {
-
+    if (sortType == "bondgear") console.log("students")
+    if (sortType == "bondgear") console.log(students)
     let academyOrder = {
         "Hyakkiyako": 11, "RedWinter": 10, "Trinity": 9, "Gehenna": 8, "Abydos": 7,
         "Millennium": 6, "Arius": 5, "Shanhaijing": 4, "Valkyrie": 3, "SRT": 2, "ETC": 1, "Tokiwadai": 0
@@ -7533,13 +7534,16 @@ function SortStudents(students, sortType) {
         else {
             sortparam = students[i].current[sortType];
         }
-
+        console.log("sortparam")
+        console.log(sortparam)
         if (!sorting[sortparam]) {
             sorting[sortparam] = [students[i]];
         }
         else {
             sorting[sortparam].push(students[i]);
         }
+        console.log("sorting")
+        console.log(sorting)
     }
 
     let sortingKeys;
@@ -7566,7 +7570,6 @@ function SortStudents(students, sortType) {
 function FullSort(order) {
 
     let operations = sortingOperations[order];
-
 
     let sorted = SortStudents(data.characters, operations[0]);
 
