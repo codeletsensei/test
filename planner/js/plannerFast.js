@@ -415,13 +415,13 @@ function updateInfoDisplay(charId, idInject, charData) {
     if (charData.current?.bond != charData.target?.bond) {
         document.getElementById(charId + idInject + "-bond-both").innerText += "/" + charData.target?.bond;
     }
-
+/*
     if (charlist[charId].Gear.TierUpMaterial) {    
         document.getElementById(charId + idInject + "-bondgear-both").innerText = "T" + charData.current?.bondgear;
         if (charData.current?.bondgear != charData.target?.bondgear) {
             document.getElementById(charId + idInject + "-bondgear-both").innerText += "+"+charData.target?.bondgear;
         }
-    }
+    }*/
 }
 
 function updateStarDisplay(id, charId, type, fromTemp, charData) {
