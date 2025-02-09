@@ -4657,20 +4657,20 @@ function ignoreDrag(e) {
     e.stopPropagation();
 }
 function dropImportFile(e) {
+    function shit2Import(data){
+        getImportData();
+        document.getElementById("swal2-textarea").value = JSON.stringify(data)
+    }
     document.getElementById('inputImportFile').files = e.dataTransfer.files;
     e.preventDefault()
     if (e.dataTransfer.files.length > 0) {
         var reader = new FileReader();
         reader.addEventListener('load', function() {
           var result = JSON.parse(reader.result);
-          console.log(result);
-          console.log(result.name);
-          console.log(result.age);
-          console.log(result.occupation);
+          shit2Import(result);
         });
-        reader.readAsText(e.dataTransfer.files[0]); // Read the uploaded file
+        reader.readAsText(e.dataTransfer.files[0]);
     }
-
 
 }
 function openTransferModal() {
