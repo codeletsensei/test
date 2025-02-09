@@ -6414,6 +6414,20 @@ function displayExportData(option) {
 }
 
 async function getImportData() {
+    function ignoreDrag(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    function dropImportFile(e) => {
+        document.getElementById('inputImportFile').files = e.dataTransfer.files;
+        e.preventDefault()
+        console.log(e.dataTransfer.files)
+        console.log(e.originalEvent.dataTransfer.files)
+    }
+    document.addEventListener('dragover', ignoreDrag );
+    document.addEventListener('dragenter', ignoreDrag );
+    document.addEventListener('drop', dropImportFile );
+
     const { value: importData } = await Swal.fire({
         input: 'textarea',
         inputLabel: GetLanguageString("text-importdata"),
