@@ -458,9 +458,9 @@ function init() {
     colourTableRows("artifact-table-1");
     colourTableRows("artifact-table-2");
     colourTableRows("workbook-table");
-    colourTableRows("gifts-table");
+    colourTableRows("gear-table");
 
-    for (let i in giftsList) colourTableRows("gear-table"+i);
+    for (let i in giftsList) colourTableRows("gifts-table"+i);
 
 /*
     let currentVer = "25.02.06"
