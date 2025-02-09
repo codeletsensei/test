@@ -432,7 +432,7 @@ function init() {
         let val = (i+8)
         let parentElementId = ("table-parent-" + val)
         console.log(parentElementId)
-        createTable( ("gifts-table"+i), giftsList[i] , 0, giftsCols , 0, tableNavigation, document.getElementById(parentElementId), true, "resource", "icons/Gifts/", [], "gifts-");
+        createTable( ("gifts-table"+i), giftsList[i] , 0, ["favor"] , 0, tableNavigation, document.getElementById(parentElementId), true, "resource", "icons/Gifts/", [], "gifts-");
     }
     let gearNavigation = [];
     createTable("gear-table", ["T10", "T9", "T8", "T7", "T6", "T5", "T4", "T3", "T2"], 0, ["Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"],
