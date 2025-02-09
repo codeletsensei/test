@@ -425,7 +425,7 @@ function init() {
     }
     console.log(giftsList)
     for (let i = 0 ; i < giftsList.length ; i++) { 
-        createTable( ("gifts-table"+i), giftsList[i] , 0, ["favor"] , 0, tableNavigation, document.getElementById("table-parent-" + (i+8)), true, "resource", "icons/Gifts/", [], "gifts-");
+        createTable( ("gifts-table"+i), giftsList[i] , 0, ["favor"] , 0, tableNavigation, document.getElementById("table-parent-8", true, "resource", "icons/Gifts/", [], "gifts-");
     }
     let gearNavigation = [];
     createTable("gear-table", ["T10", "T9", "T8", "T7", "T6", "T5", "T4", "T3", "T2"], 0, ["Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"],
