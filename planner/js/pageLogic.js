@@ -412,6 +412,7 @@ function init() {
             }
         }
     }
+    usedGifts = usedGifts.sort((a,b)=>{return parseInt(a)-parseInt(b)})
     let giftsList = []
     let giftsRows = 0
     giftsList[0] = []
