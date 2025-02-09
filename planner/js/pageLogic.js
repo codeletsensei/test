@@ -7468,9 +7468,6 @@ function HELP() {
 }
 
 function SortStudents(students, sortType) {
-    console.log(sortType)
-    if (sortType == "bondgear") console.log("students")
-    if (sortType == "bondgear") console.log(students)
     let academyOrder = {
         "Hyakkiyako": 11, "RedWinter": 10, "Trinity": 9, "Gehenna": 8, "Abydos": 7,
         "Millennium": 6, "Arius": 5, "Shanhaijing": 4, "Valkyrie": 3, "SRT": 2, "ETC": 1, "Tokiwadai": 0
@@ -7697,7 +7694,7 @@ function InitSortingOrder() {
     sortingOperations["armour"] = ["armour", "star", "level", "bond", "academy", "name"]; // armour type
     sortingOperations["role"] = ["role", "star", "level", "bond", "academy", "name"]; // role
     sortingOperations["weapon"] = ["weapon", "star", "level", "bond", "academy", "name"]; // weapon
-    sortingOperations["bondgear"] = ["bondgear"];
+    sortingOperations["bondgear"] = ["bondgear","name"];
 
     let orderKeys = Object.keys(sortingOperations);
 
