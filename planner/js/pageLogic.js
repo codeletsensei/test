@@ -7626,6 +7626,11 @@ function AddOrderDisplay(order) {
 
             orderDisplay.appendChild(orderDiv);
         }
+        else if (["name", "ex"].includes(sortingOperations[order][i])) {
+            let orderDiv = document.createElement("div");
+            orderDiv.innerText = "Bond Gear";
+            orderDisplay.appendChild(orderDiv);
+        }
         else {
 
             let orderImg = document.createElement("img");
@@ -7688,6 +7693,7 @@ function InitSortingOrder() {
     sortingOperations["armour"] = ["armour", "star", "level", "bond", "academy", "name"]; // armour type
     sortingOperations["role"] = ["role", "star", "level", "bond", "academy", "name"]; // role
     sortingOperations["weapon"] = ["weapon", "star", "level", "bond", "academy", "name"]; // weapon
+    sortingOperations["bondgear"] = ["bondgear"];
 
     let orderKeys = Object.keys(sortingOperations);
 
