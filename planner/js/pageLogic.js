@@ -6421,7 +6421,7 @@ async function getImportData() {
     function dropImportFile(e) {
         document.getElementById('inputImportFile').files = e.dataTransfer.files;
         e.preventDefault()
-        console.log()
+        console.log(e.dataTransfer.files)
         console.log(e.originalEvent.dataTransfer.files)
     }
     document.addEventListener('dragover', ignoreDrag );
