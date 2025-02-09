@@ -4659,23 +4659,15 @@ function ignoreDrag(e) {
 
 
 
-function dropImportFile(e) {
+function dropImportFile(e,method) {
     function shit2Import(data){
         getImportData();
         document.getElementById("swal2-textarea").value = JSON.stringify(data)
     }
     e.preventDefault()
     let files = null
-    if (e.target) {
-        console.log("e.target")
-        console.log(e.target)
-        files = e.target.files
-    }
-    else {
-        console.log("dttransfer")
-        console.log(e.dataTransfer)
-        files = e.dataTransfer.files
-    }
+    if (method == "selected") files = e.target
+    else files = e.dataTransfer.files
     console.log(files)
     if (files.length > 0) {
         var reader = new FileReader();
@@ -4687,13 +4679,13 @@ function dropImportFile(e) {
     }
 }
 document.getElementById('inputImportFile').addEventListener("change", e=>{
-    dropImportFile(e)
+    dropImportFile(e,"selected")
 })
 
 function openTransferModal() {
     document.addEventListener('dragover', ignoreDrag );
     document.addEventListener('dragenter', ignoreDrag );
-    document.addEventListener('drop', dropImportFile );
+    document.addEventListener('drop', dropImportFile(e,"dropped") );
 
     if (document.getElementById("characterMultiSelectContainer").style.display != "none") {
         return;
