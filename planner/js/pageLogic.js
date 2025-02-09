@@ -4656,6 +4656,9 @@ function ignoreDrag(e) {
     e.preventDefault();
     e.stopPropagation();
 }
+
+
+
 function dropImportFile(e) {
     function shit2Import(data){
         getImportData();
@@ -4664,6 +4667,7 @@ function dropImportFile(e) {
     document.getElementById('inputImportFile').files = e.dataTransfer.files;
     e.preventDefault()
     if (e.dataTransfer.files.length > 0) {
+        console.log(e.dataTransfer.files)
         var reader = new FileReader();
         reader.addEventListener('load', function() {
           var result = JSON.parse(reader.result);
@@ -4671,8 +4675,9 @@ function dropImportFile(e) {
         });
         reader.readAsText(e.dataTransfer.files[0]);
     }
-
 }
+document.getElementById('inputImportFile').addEventListener()
+
 function openTransferModal() {
     document.addEventListener('dragover', ignoreDrag );
     document.addEventListener('dragenter', ignoreDrag );
