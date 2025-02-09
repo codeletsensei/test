@@ -457,7 +457,7 @@ function init() {
 
     for (let i = 0 ; i <= giftsRows ; i++) colourTableRows("gifts-table"+i);
 
-/
+
     let currentVer = "25.02.10.1"
     if (currentVer.localeCompare(data.site_version ?? "0.0.0", undefined, { numeric: true, sensitivity: 'base' }) == 1) {
         Swal.fire({
