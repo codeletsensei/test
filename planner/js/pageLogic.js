@@ -5059,7 +5059,6 @@ function createTable(id, columns, colOffset, rows, rowOffset, tableNavigation, p
                     }
                 }
                 else {
-                    console.log(stringLangPrefix + rows[row].toLowerCase().replace(/ /g, ''))
                     newCell.innerText = GetLanguageString(stringLangPrefix + rows[row].toLowerCase().replace(/ /g, ''));
                 }
                 newCell.style.paddingLeft = "8px";
