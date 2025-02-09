@@ -1612,7 +1612,7 @@
         "CN": "网站已更新完成 版本号"
     },
     "text-updatemessage": {
-        "EN": "If you find any issues, contact me on /bag/",
+        "EN": "Added bondgear to portraits.\nSort by bondgear\nExport/Import Options\n\nBUT I fucked up last time and the default bondgear tier was set to 1 instead of 0,\nso if you used this tool before this patch, all your chars with BG will have theirs at T1",
         "KR": "",
         "TH": "",
         "ID": "",

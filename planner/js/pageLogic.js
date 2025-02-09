@@ -457,8 +457,8 @@ function init() {
 
     for (let i = 0 ; i <= giftsRows ; i++) colourTableRows("gifts-table"+i);
 
-/*
-    let currentVer = "25.02.06"
+/
+    let currentVer = "25.02.10.1"
     if (currentVer.localeCompare(data.site_version ?? "0.0.0", undefined, { numeric: true, sensitivity: 'base' }) == 1) {
         Swal.fire({
             title: GetLanguageString("text-updatedversionprefix") + currentVer,
@@ -466,10 +466,10 @@ function init() {
             html: GetLanguageString("text-updatemessage")
         })
 
-        data.site_version = "1.4.11";
+        data.site_version = "25.2.10.1";
         // saveToLocalStorage(false);
     }
-*/
+
 
     document.body.addEventListener('click', (event) => {
         if (closableAfter != 0 && Date.now() > closableAfter) {
