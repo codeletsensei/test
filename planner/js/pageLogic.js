@@ -1301,8 +1301,7 @@ function deleteChar(charId) {
 function colourTableRows(tableId) {
 
     var table = document.getElementById(tableId);
-    console.log(tableId)
-    console.log(table)
+
     for (r = 0; r < table.children[0].children.length; r++) {
         var rowId = table.children[0].children[r].id.substring(4);
 
@@ -5060,6 +5059,7 @@ function createTable(id, columns, colOffset, rows, rowOffset, tableNavigation, p
                     }
                 }
                 else {
+                    console.log(stringLangPrefix + rows[row].toLowerCase().replace(/ /g, ''))
                     newCell.innerText = GetLanguageString(stringLangPrefix + rows[row].toLowerCase().replace(/ /g, ''));
                 }
                 newCell.style.paddingLeft = "8px";
