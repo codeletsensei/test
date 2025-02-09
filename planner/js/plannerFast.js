@@ -244,9 +244,19 @@ function createCharBox(charId, container, location, lazy) {
         newBondP2.id = charId + idInject + "-bond-target";
         newBondP2.style = "transform: translate(-50%, -25%)";
 
+        const newBondP3 = document.createElement("p");
+        newBondP3.id = charId + idInject + "-bondgear-current";
+        newBondP3.style = "transform: translate(-50%, -25%)";
+
+        const newBondP4 = document.createElement("p");
+        newBondP4.id = charId + idInject + "-bondgear-target";
+        newBondP4.style = "transform: translate(-50%, -25%)";
+
         newBondContainer.appendChild(newBondImg);
         newBondContainer.appendChild(newBondP);
         newBondContainer.appendChild(newBondP2);
+        newBondContainer.appendChild(newBondP3);
+        newBondContainer.appendChild(newBondP4);
 
         for (i = 0; i < 5; i++) {
             const newStar = document.createElement("img");
@@ -418,6 +428,19 @@ function updateInfoDisplay(charId, idInject, charData) {
     else {
         document.getElementById(charId + idInject + "-bond-target").innerText = "";
     }
+    
+    if (charlist[charId].Gear.TierUpMaterial) {    
+        document.getElementById(charId + idInject + "-bondgear-current").innerText = charData.current?.bondgear;
+        if (charData.current?.bondgear != charData.target?.bondgear) {
+            document.getElementById(charId + idInject + "-bondgear-target").innerText = charData.target?.bondgear;
+        }
+        else {
+            document.getElementById(charId + idInject + "-bondgear-target").innerText = "";
+        }
+    }
+
+
+
 }
 
 function updateStarDisplay(id, charId, type, fromTemp, charData) {
