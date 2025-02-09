@@ -410,7 +410,9 @@ function init() {
         console.log(charlist[i])
         if (charlist[i].Gear) {
             if (charlist[i].Gear.TierUpMaterial) {
-                usedGifts.push(charlist[i].Gear.TierUpMaterial[0])
+                for (let j in charlist[i].Gear.TierUpMaterial) {
+                    usedGifts.push(charlist[i].Gear.TierUpMaterial[j][0])
+                }
             }
         }
     }
