@@ -404,7 +404,7 @@ function init() {
     
     let giftsList = []
     let giftsRows = 0
-    giftsRows[0] = []
+    giftsList[0] = []
     for (let i = 5000 ; i <= 5034; i++) {
         giftsList[giftsRows].push(matLookup.get(i))
         if (i%10==0) {
