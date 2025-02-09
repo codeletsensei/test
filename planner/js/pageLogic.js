@@ -6373,25 +6373,26 @@ function switchGearDisplay(displayType) {
 // }
 
 function displayExportData(option) {
+    option = "justin"
     var saveData = localStorage.getItem('save-data')
     if (option == "justin") {
         let extraChars = ["20042"]
+        let extraProps = ["bondgear", "potentialmaxhp", "potentialattack", "potentialhealpower"]
         saveData = JSON.parse(saveData)
         for (let i in extraChars) {
-            if (saveData.characters[i]) saveData.characters.splice(i, 1)
-            saveData.disabled_characters = saveData.disabled_characters.filter((a)=>{
-                return a != extraChars[i]
-            })
+            saveData.characters = saveData.characters.filter((a)=>{ return a.id != extraChars[i] })
+            saveData.disabled_characters = saveData.disabled_characters.filter((a)=>{ return a != extraChars[i] })
         }
         for (let i in saveData.characters) {
             for (let j in saveData.characters[i].current) {
-                if (["bondgear", "potentialmaxhp", "potentialattack", "potentialhealpower"].includes(j)) {
+                if (extraProps.includes(j)) {
                     saveData.characters[i].current = Object.fromEntries(Object.entries(saveData.characters[i].current).filter(([k, v]) => k != j));
                     saveData.characters[i].target = Object.fromEntries(Object.entries(saveData.characters[i].target).filter(([k, v]) => k != j));
                 }
             }
         }
-        saveData = JSON.stringify(saveData)
+        console.log(saveData)
+        //saveData = JSON.stringify(saveData)
         //if (document.getElementById("importDataTextarea")) document.getElementById("importDataTextarea").innerText = saveData
     }
     Swal.fire({
