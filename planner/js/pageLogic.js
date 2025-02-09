@@ -417,11 +417,12 @@ function init() {
     //giftsList[0] = []
     for (let i = 0 ; i < usedGifts.length ; i++) {
         giftsList.push(matLookup.get(usedGifts[i]).replace("favor_","")) //If it works, it works desu...
-        /*if ( i != 5000 && i%10 == 0) {
+        if ( i != 5000 && i%10 == 0) {
             giftsRows += 1
             giftsList[giftsRows] = []
-        }*/
+        }
     }
+    console.log(giftsList)
     createTable( ("gifts-table"), giftsList , 0, ["favor"], 0, tableNavigation, document.getElementById("table-parent-8"), true, "resource", "icons/Gifts/", [], "gifts-");
 
     let gearNavigation = [];
