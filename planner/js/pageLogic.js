@@ -415,7 +415,7 @@ function init() {
     console.log(matLookup.get(5000))
     console.log(giftsList)
     for (let i = 0 ; i <= giftsRows+1 ; i++){
-        createTable( ("gifts-table"+i), giftsList[i] , 0,
+        createTable( ("gifts-table"), giftsList , 0,
             ["Gifts"], 0, tableNavigation, document.getElementById("table-parent-"+(8+i)), true, "resource", "icons/Gifts/", [], "gifts-");
     }
 
