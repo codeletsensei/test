@@ -4668,6 +4668,7 @@ function dropImportFile(e) {
     let files = null
     if (e.target) files = e.target.files
     else files = e.dataTransfer.files
+    console.log(files)
     if (files.length > 0) {
         var reader = new FileReader();
         reader.addEventListener('load', function() {
@@ -4678,7 +4679,6 @@ function dropImportFile(e) {
     }
 }
 document.getElementById('inputImportFile').addEventListener("change", e=>{
-    console.log(e)
     dropImportFile(e)
 })
 
