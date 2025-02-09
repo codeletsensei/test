@@ -237,16 +237,26 @@ function createCharBox(charId, container, location, lazy) {
         newBondImg.draggable = false;
 
         const newBondP = document.createElement("p");
-        newBondP.id = charId + idInject + "-bond-both";
+        newBondP.id = charId + idInject + "-bond-current";
         newBondP.style = "transform: translate(-50%, -95%)";
 
         const newBondP2 = document.createElement("p");
-        newBondP2.id = charId + idInject + "-bondgear-both";
+        newBondP2.id = charId + idInject + "-bond-target";
         newBondP2.style = "transform: translate(-50%, -25%)";
+
+        const newBondP3 = document.createElement("p");
+        newBondP3.id = charId + idInject + "-bondgear-current";
+        newBondP3.style = "transform: translate(-95%, -50%)";
+
+        const newBondP4 = document.createElement("p");
+        newBondP4.id = charId + idInject + "-bondgear-target";
+        newBondP4.style = "transform: translate(-25%, -50%)";
 
         newBondContainer.appendChild(newBondImg);
         newBondContainer.appendChild(newBondP);
         newBondContainer.appendChild(newBondP2);
+        newBondContainer.appendChild(newBondP3);
+        newBondContainer.appendChild(newBondP4);
 
         for (i = 0; i < 5; i++) {
             const newStar = document.createElement("img");
@@ -411,17 +421,25 @@ function updateInfoDisplay(charId, idInject, charData) {
         document.getElementById(charId + idInject + "-level-target").innerText = "";
     }
 
-    document.getElementById(charId + idInject + "-bond-both").innerText = charData.current?.bond;
+    document.getElementById(charId + idInject + "-bond-current").innerText = charData.current?.bond;
     if (charData.current?.bond != charData.target?.bond) {
-        document.getElementById(charId + idInject + "-bond-both").innerText += "/" + charData.target?.bond;
+        document.getElementById(charId + idInject + "-bond-target").innerText = charData.target?.bond;
     }
-/*
-    if (charlist[charId].Gear.TierUpMaterial) {    
-        document.getElementById(charId + idInject + "-bondgear-both").innerText = "T" + charData.current?.bondgear;
+    else {
+        document.getElementById(charId + idInject + "-bond-target").innerText = "";
+    }
+    
+    if (charData.current?.bondgear>0) {
+        document.getElementById(charId + idInject + "-bondgear-current").innerText = charData.current?.bondgear;
         if (charData.current?.bondgear != charData.target?.bondgear) {
-            document.getElementById(charId + idInject + "-bondgear-both").innerText += "+"+charData.target?.bondgear;
+            document.getElementById(charId + idInject + "-bondgear-target").innerText = charData.target?.bondgear;
         }
-    }*/
+        else {
+            document.getElementById(charId + idInject + "-bondgear-target").innerText = "";
+        }
+    }
+
+    
 }
 
 function updateStarDisplay(id, charId, type, fromTemp, charData) {
