@@ -438,9 +438,6 @@ function updateInfoDisplay(charId, idInject, charData) {
             document.getElementById(charId + idInject + "-bondgear-target").innerText = "";
         }
     }
-
-
-
 }
 
 function updateStarDisplay(id, charId, type, fromTemp, charData) {
