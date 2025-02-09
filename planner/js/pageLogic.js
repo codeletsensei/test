@@ -4657,7 +4657,7 @@ function ignoreDrag(e) {
     e.stopPropagation();
 }
 function dropImportFile(e,method) {
-    function shit2Import(data){
+    function data2Import(data){
         getImportData();
         document.getElementById("swal2-textarea").value = JSON.stringify(data)
     }
@@ -4670,7 +4670,7 @@ function dropImportFile(e,method) {
         var reader = new FileReader();
         reader.addEventListener('load', function() {
           var result = JSON.parse(reader.result);
-          shit2Import(result);
+          data2Import(result);
         });
         reader.readAsText(files[0]);
     }
