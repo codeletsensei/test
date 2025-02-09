@@ -467,7 +467,7 @@ function init() {
         })
 
         data.site_version = "1.4.11.25.2.10.1";
-        // saveToLocalStorage(false);
+        saveToLocalStorage(false);
     }
 
 
