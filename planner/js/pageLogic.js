@@ -7629,7 +7629,7 @@ function AddOrderDisplay(order) {
         }
         else if (["bondgear"].includes(sortingOperations[order][i])) {
             let orderDiv = document.createElement("div");
-            orderDiv.innerText = "Bond Gear";
+            orderDiv.innerText = "Bond Gear > Name";
             orderDisplay.appendChild(orderDiv);
         }
         else {
