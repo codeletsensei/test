@@ -6414,14 +6414,14 @@ function displayExportData(option) {
 }
 
 async function getImportData() {
-    function ignoreDrag(e) => {
+    function ignoreDrag(e) {
         e.preventDefault();
         e.stopPropagation();
     }
-    function dropImportFile(e) => {
+    function dropImportFile(e) {
         document.getElementById('inputImportFile').files = e.dataTransfer.files;
         e.preventDefault()
-        console.log(e.dataTransfer.files)
+        console.log()
         console.log(e.originalEvent.dataTransfer.files)
     }
     document.addEventListener('dragover', ignoreDrag );
