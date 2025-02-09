@@ -6424,7 +6424,7 @@ async function getImportData() {
 
     if (importData) {
         const { value: confirmation } = await Swal.fire({
-            title: "Are you sure? This will replace your current data!" 
+            title: "Are you sure? This will replace your current data!",
             color: alertColour,
             showCancelButton: true
         })
