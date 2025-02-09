@@ -412,7 +412,6 @@ function init() {
             giftsList[giftsRows] = []
         }*/
     }
-    console.log(matLookup.get(5000))
     console.log(giftsList)
     for (let i = 0 ; i <= giftsRows+1 ; i++){
         createTable( ("gifts-table"), giftsList , 0,
