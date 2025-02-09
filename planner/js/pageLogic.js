@@ -428,7 +428,9 @@ function init() {
         giftsCols.push("favor")
     }
     for (let i in giftsList) { 
-        createTable( ("gifts-table"+i), giftsCols[i] , 0, giftsList[i] , 0, tableNavigation, document.getElementById("table-parent-"+(8+i)), true, "resource", "icons/Gifts/", [], "gifts-");
+        let parentElementId = "table-parent-" + (8+i)
+        console.log(parentElementId)
+        createTable( ("gifts-table"+i), giftsCols[i] , 0, giftsList[i] , 0, tableNavigation, document.getElementById(parentElementId), true, "resource", "icons/Gifts/", [], "gifts-");
     }
     let gearNavigation = [];
     createTable("gear-table", ["T10", "T9", "T8", "T7", "T6", "T5", "T4", "T3", "T2"], 0, ["Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"],
