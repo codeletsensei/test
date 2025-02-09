@@ -250,7 +250,7 @@ function createCharBox(charId, container, location, lazy) {
         newBondContainer.appendChild(newBondP2);
 
         newBondContainerBG = document.createElement("div");
-        newBondContainerBG.className = "char-heart-container";
+        newBondContainerBG.className = "char-heart-container2";
         const newBondgearP = document.createElement("p");
         newBondgearP.id = charId + idInject + "-bondgear-current";
         newBondgearP.style = "transform: translate(-50%, -95%)";
