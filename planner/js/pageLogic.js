@@ -4458,11 +4458,6 @@ function ReloadStudentImgs() {
 
 function openResourceModal() {
 
-    // APRIL FOOLS
-    // if (document.getElementById("button-resources").classList.contains("april-fools-button")) {
-    //     return;
-    // }
-
     if (!loaded) {
         return;
     }
