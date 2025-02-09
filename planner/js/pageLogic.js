@@ -6391,9 +6391,7 @@ function displayExportData(option) {
                 }
             }
         }
-        console.log(saveData)
         saveData = JSON.stringify(saveData)
-        //if (document.getElementById("importDataTextarea")) document.getElementById("importDataTextarea").innerText = saveData
     }
     Swal.fire({
         title: GetLanguageString("text-exporteddata"),
