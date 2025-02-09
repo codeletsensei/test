@@ -4653,6 +4653,20 @@ function openGearModal() {
 }
 
 function openTransferModal() {
+
+    function ignoreDrag(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    function dropImportFile(e) {
+        document.getElementById('inputImportFile').files = e.dataTransfer.files;
+        e.preventDefault()
+        console.log(e.dataTransfer.files)
+    }
+    document.addEventListener('dragover', ignoreDrag );
+    document.addEventListener('dragenter', ignoreDrag );
+    document.addEventListener('drop', dropImportFile );
+
     if (document.getElementById("characterMultiSelectContainer").style.display != "none") {
         return;
     }
@@ -4674,6 +4688,20 @@ function openTransferModal() {
     };
 
 }
+document.getElementById('inputImportFile').addEventListener('change', function() {
+  if (upload.files.length > 0) {
+    var reader = new FileReader();
+    reader.addEventListener('load', function() {
+      var result = JSON.parse(reader.result);
+      console.log(result);
+      console.log(result.name);
+      console.log(result.age);
+      console.log(result.occupation);
+    });
+    
+    reader.readAsText(upload.files[0]); // Read the uploaded file
+  }
+});
 
 function updateCells(dict, editable, cellClass, miscClass) {
 
@@ -6414,19 +6442,6 @@ function displayExportData(option) {
 }
 
 async function getImportData() {
-    function ignoreDrag(e) {
-        e.preventDefault();
-        e.stopPropagation();
-    }
-    function dropImportFile(e) {
-        document.getElementById('inputImportFile').files = e.dataTransfer.files;
-        e.preventDefault()
-        console.log(e.dataTransfer.files)
-        console.log(e.originalEvent.dataTransfer.files)
-    }
-    document.addEventListener('dragover', ignoreDrag );
-    document.addEventListener('dragenter', ignoreDrag );
-    document.addEventListener('drop', dropImportFile );
 
     const { value: importData } = await Swal.fire({
         input: 'textarea',
