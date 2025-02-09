@@ -276,8 +276,8 @@ label {
 }
 
 .limitbreak-bar {
-    top: -7%;
-    right: 10%;
+    top: 5%;
+    right: 15%;
     width: fit-content;
     display: flex;
     position: absolute;
