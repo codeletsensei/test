@@ -6372,13 +6372,33 @@ function switchGearDisplay(displayType) {
 
 // }
 
-function displayExportData() {
+function displayExportData(options) {
+    var saveData = localStorage.getItem('save-data')
+    if (option == "justin") {
+        let extraChars = ["20042"]
+        saveData = JSON.parse( saveData)
+        for (let i in extraChars) {
+            if (saveData.characters[i]) saveData.characters.splice(i, 1)
+            saveData.disabled_characters = saveData.disabled_characters.filter((a)=>{
+                return a != extraChars[i]
+            })
+        }
+        for (let i in saveData.characters) {
+            for (let j in saveData.characters[i].current) {
+                if (["bondgear", "potentialmaxhp", "potentialattack", "potentialhealpower"].includes(j)) {
+                    saveData.characters[i].current = Object.fromEntries(Object.entries(saveData.characters[i].current).filter(([k, v]) => k != j));
+                    saveData.characters[i].target = Object.fromEntries(Object.entries(saveData.characters[i].target).filter(([k, v]) => k != j));
+                }
+            }
+        }
+        saveData = JSON.stringify(saveData)
+    }
     Swal.fire({
         title: GetLanguageString("text-exporteddata"),
-        html: '<textarea style="width: 400px; height: 250px; resize: none;" readonly>' + localStorage.getItem('save-data') + '</textarea>'
+        html: '<textarea style="width: 400px; height: 250px; resize: none;" readonly>' + saveData + '</textarea>'
     })
     function downloadObjectAsJson(exportObj, exportName){
-        var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
+        var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(exportObj);
         var downloadAnchorNode = document.createElement('a');
         downloadAnchorNode.setAttribute("href",     dataStr);
         downloadAnchorNode.setAttribute("download", exportName + ".json");
@@ -6387,8 +6407,10 @@ function displayExportData() {
         downloadAnchorNode.remove();
     }
     let date = new Date().getFullYear() + "." + ("0"+(parseInt(new Date().getMonth())+1)).slice(-2) + "." + ("0" + new Date().getDate()).slice(-2) + "." + ("0" + new Date().getHours()).slice(-2) + "" + ("0" + new Date().getMinutes()).slice(-2)
-    downloadObjectAsJson(JSON.parse(localStorage.getItem('save-data')),"bag_planner_saveFile_" + date)
-
+    let filename = "bag_planner"
+    if (option == "justin") filename += "2justin"
+    filename += "_saveFile_" + date
+    downloadObjectAsJson( saveData , filename )
 }
 
 async function getImportData() {

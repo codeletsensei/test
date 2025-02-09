@@ -675,6 +675,9 @@
         "JP": "エキスポート",
         "CN": "导出"
     },
+    "saving-exportbutton-justin": {
+        "EN": "Export (compatible with Justin)",
+    },
     "saving-importbutton": {
         "EN": "Import",
         "KR": "가져오기",
