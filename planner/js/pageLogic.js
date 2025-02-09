@@ -1316,6 +1316,8 @@ function colourTableRows(tableId) {
 
     var table = document.getElementById(tableId);
 
+    console.log(tableId)
+    console.log(table)
     for (r = 0; r < table.children[0].children.length; r++) {
         var rowId = table.children[0].children[r].id.substring(4);
 
