@@ -294,9 +294,9 @@ function createCharBox(charId, container, location, lazy) {
             newUEContainer.appendChild(newStar);
         }
 
-        var classes = ["skill-bar", "gear-bar", "level-bar"];
+        var classes = ["skill-bar", "gear-bar", "level-bar", "limitbreak-bar"];
 
-        for (i = 0; i < 3; i++) {
+        for (i = 0; i < classes.length; i++) {
             const newBar = document.createElement("div");
             newBar.className = classes[i] + " info-bar";
 
@@ -457,6 +457,17 @@ function updateInfoDisplay(charId, idInject, charData) {
     else {
         document.getElementById("bondgearPortraitHeart"+ charId).style.display = "none"
     }
+
+    var limitbreakCurrent = formatLevel("LB", charData.current?.potentialmaxhp) + formatLevel("LB", charData.current?.potentialattack) + formatLevel("LB", charData.current?.potentialhealpower);
+    var limitbreakTarget = formatLevel("LB", charData.target?.potentialmaxhp) + formatLevel("LB", charData.target?.potentialattack) + formatLevel("LB", charData.target?.potentialhealpower);
+    document.getElementById(charId + idInject + "-limitbreak-current").innerText = limitbreakCurrent;
+    if (limitbreakCurrent != limitbreakTarget) {
+        document.getElementById(charId + idInject + "-limitbreak-target").innerText = limitbreakTarget;
+    }
+    else {
+        document.getElementById(charId + idInject + "-limitbreak-target").innerText = "";
+    }
+
 
     
 }
