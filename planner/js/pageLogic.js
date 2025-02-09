@@ -6376,7 +6376,7 @@ function displayExportData(option) {
     var saveData = localStorage.getItem('save-data')
     if (option == "justin") {
         let extraChars = ["20042"]
-        saveData = JSON.parse( saveData)
+        saveData = JSON.parse(saveData)
         for (let i in extraChars) {
             if (saveData.characters[i]) saveData.characters.splice(i, 1)
             saveData.disabled_characters = saveData.disabled_characters.filter((a)=>{
@@ -6392,10 +6392,11 @@ function displayExportData(option) {
             }
         }
         saveData = JSON.stringify(saveData)
+        document.getElementById("importDataTextarea").innerText = saveData
     }
     Swal.fire({
         title: GetLanguageString("text-exporteddata"),
-        html: '<textarea style="width: 400px; height: 250px; resize: none;" readonly>' + saveData + '</textarea>'
+        html: '<textarea id="importDataTextarea" style="width: 400px; height: 250px; resize: none;" readonly>' + saveData + '</textarea>'
     })
     function downloadObjectAsJson(exportObj, exportName){
         var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(exportObj);
