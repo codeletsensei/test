@@ -4666,7 +4666,7 @@ function dropImportFile(e) {
     }
     e.preventDefault()
     if (e.dataTransfer.files.length > 0) {
-        console.log(e.dataTransfer.files)
+        console.log(e.originalEvent.dataTransfer.files || e.dataTransfer.files)
         var reader = new FileReader();
         reader.addEventListener('load', function() {
           var result = JSON.parse(reader.result);
