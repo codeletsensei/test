@@ -427,6 +427,7 @@ function init() {
     for (let i in giftsList) { 
         giftsCols.push("favor")
     }
+    console.log(giftsCols)
     for (let i = 0 ; i < giftsList.length ; i++) { 
         let val = (i+8)
         let parentElementId = ("table-parent-" + val)
