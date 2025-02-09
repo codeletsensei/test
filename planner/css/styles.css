@@ -935,7 +935,7 @@ div.char-resource-wrapper .resource-display-text {
 
 .char-heart-container {
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: -6%;
     width: 30%;
 }
@@ -960,8 +960,8 @@ div.char-resource-wrapper .resource-display-text {
 
 .char-heart-container2 {
     position: absolute;
-    top: 20%;
-    right: -6%;
+    top: 35%;
+    left: -6%;
     width: 30%;
 }
 
