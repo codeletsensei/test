@@ -414,7 +414,7 @@ function init() {
     }
     usedGifts = usedGifts.sort((a,b)=>{return parseInt(a)-parseInt(b)})
     let giftsList = []
-    let giftsRows = 0
+    giftsRows = 0
     giftsList[0] = []
     for (let i = 1 ; i < usedGifts.length ; i++) {
         giftsList[giftsRows].push(matLookup.get(usedGifts[i-1]).replace("favor_","")) //If it works, it works desu...
@@ -423,16 +423,9 @@ function init() {
             giftsList[giftsRows] = []
         }
     }
-    let giftsCols = []
+    console.log(giftsList)
     for (let i = 0 ; i < giftsList.length ; i++) { 
-        giftsCols.push("favor")
-    }
-    console.log(giftsCols)
-    for (let i = 0 ; i < giftsList.length ; i++) { 
-        let val = (i+8)
-        let parentElementId = ("table-parent-" + val)
-        console.log(parentElementId)
-        createTable( ("gifts-table"+i), giftsList[i] , 0, ["favor"] , 0, tableNavigation, document.getElementById(parentElementId), true, "resource", "icons/Gifts/", [], "gifts-");
+        createTable( ("gifts-table"+i), giftsList[i] , 0, ["favor"] , 0, tableNavigation, document.getElementById("table-parent-" + (i+8)), true, "resource", "icons/Gifts/", [], "gifts-");
     }
     let gearNavigation = [];
     createTable("gear-table", ["T10", "T9", "T8", "T7", "T6", "T5", "T4", "T3", "T2"], 0, ["Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"],
@@ -1320,8 +1313,6 @@ function colourTableRows(tableId) {
 
     var table = document.getElementById(tableId);
 
-    console.log(tableId)
-    console.log(table)
     for (r = 0; r < table.children[0].children.length; r++) {
         var rowId = table.children[0].children[r].id.substring(4);
 
