@@ -4652,17 +4652,16 @@ function openGearModal() {
 
 }
 
+function ignoreDrag(e) {
+    e.preventDefault();
+    e.stopPropagation();
+}
+function dropImportFile(e) {
+    document.getElementById('inputImportFile').files = e.dataTransfer.files;
+    e.preventDefault()
+    console.log(e.dataTransfer.files)
+}
 function openTransferModal() {
-
-    function ignoreDrag(e) {
-        e.preventDefault();
-        e.stopPropagation();
-    }
-    function dropImportFile(e) {
-        document.getElementById('inputImportFile').files = e.dataTransfer.files;
-        e.preventDefault()
-        console.log(e.dataTransfer.files)
-    }
     document.addEventListener('dragover', ignoreDrag );
     document.addEventListener('dragenter', ignoreDrag );
     document.addEventListener('drop', dropImportFile );
@@ -4819,6 +4818,10 @@ function closeGearModal() {
 }
 
 function closeTransferModal() {
+
+    document.removeEventListener('dragover', ignoreDrag );
+    document.removeEventListener('dragenter', ignoreDrag );
+    document.removeEventListener('drop', dropImportFile );
 
     freezeBody(false);
 
