@@ -402,12 +402,8 @@ function init() {
     createTable("workbook-table", ["potentialhealpower_3","potentialattack_3","potentialmaxhp_3"] , 0,
         ["Workbook"], 10, tableNavigation, document.getElementById("table-parent-7"), true, "resource", "icons/LimitBreak/", [], "workbook-");
     
-    let giftsList = []
-    let giftsRows = 0
-    //giftsList[0] = []
     let usedGifts = []
     for (let i in charlist) {
-        console.log(charlist[i])
         if (charlist[i].Gear) {
             if (charlist[i].Gear.TierUpMaterial) {
                 for (let j in charlist[i].Gear.TierUpMaterial) {
@@ -416,14 +412,17 @@ function init() {
             }
         }
     }
-    for (let i = 0 ; i < usedGifts.lenght ; i++) {
-        usedGifts.push(matLookup.get(i).replace("favor_","")) //If it works, it works.
+    let giftsList = []
+    let giftsRows = 0
+    //giftsList[0] = []
+    for (let i = 0 ; i < usedGifts.length ; i++) {
+        giftsList.push(matLookup.get(i).replace("favor_","")) //If it works, it works.
         /*if ( i != 5000 && i%10 == 0) {
             giftsRows += 1
             giftsList[giftsRows] = []
         }*/
     }
-    createTable( ("gifts-table"), usedGifts , 0, ["favor"], 0, tableNavigation, document.getElementById("table-parent-8"), true, "resource", "icons/Gifts/", [], "gifts-");
+    createTable( ("gifts-table"), giftsList , 0, ["favor"], 0, tableNavigation, document.getElementById("table-parent-8"), true, "resource", "icons/Gifts/", [], "gifts-");
 
     let gearNavigation = [];
     createTable("gear-table", ["T10", "T9", "T8", "T7", "T6", "T5", "T4", "T3", "T2"], 0, ["Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"],
