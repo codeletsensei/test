@@ -4666,8 +4666,16 @@ function dropImportFile(e) {
     }
     e.preventDefault()
     let files = null
-    if (e.target) files = e.target.files
-    else files = e.dataTransfer.files
+    if (e.target) {
+        console.log("e.target")
+        console.log(e.target)
+        files = e.target.files
+    }
+    else {
+        console.log("dttransfer")
+        console.log(e.dataTransfer)
+        files = e.dataTransfer.files
+    }
     console.log(files)
     if (files.length > 0) {
         var reader = new FileReader();
