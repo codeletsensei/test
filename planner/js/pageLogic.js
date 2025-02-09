@@ -4675,6 +4675,10 @@ function dropImportFile(e) {
         reader.readAsText(e.dataTransfer.files[0]);
     }
 }
+document.getElementById('inputImportFile').addEventListener("change", e=>{
+    console.log(e)
+    dropImportFile(e)
+})
 
 function openTransferModal() {
     document.addEventListener('dragover', ignoreDrag );
