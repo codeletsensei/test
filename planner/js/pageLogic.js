@@ -4973,13 +4973,13 @@ function hideEmpty() {
     var artifactTable1 = document.getElementById("artifact-table-1");
     var artifactTable2 = document.getElementById("artifact-table-2");
     var workbookTable = document.getElementById("workbook-table");
-    var giftsTable = document.getElementById("gifts-table");
 
     hideEmptyCells(resourceTable);
     hideEmptyCells(artifactTable1);
     hideEmptyCells(artifactTable2);
     hideEmptyCells(workbookTable);
-    hideEmptyCells(giftsTable);
+
+    for (let i in giftsList.length) hideEmptyCells(document.getElementById("gifts-table"+i));
 
     hideEmptyCell("XP_1");
     hideEmptyCell("XP_2");
