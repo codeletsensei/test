@@ -246,11 +246,11 @@ function createCharBox(charId, container, location, lazy) {
 
         const newBondP3 = document.createElement("p");
         newBondP3.id = charId + idInject + "-bondgear-current";
-        newBondP3.style = "transform: translate(-95%, -50%)";
+        newBondP3.style = "transform: translate(-50%, 0%)";
 
         const newBondP4 = document.createElement("p");
         newBondP4.id = charId + idInject + "-bondgear-target";
-        newBondP4.style = "transform: translate(-25%, -50%)";
+        newBondP4.style = "transform: translate(0%, -50%)";
 
         newBondContainer.appendChild(newBondImg);
         newBondContainer.appendChild(newBondP);
@@ -430,9 +430,9 @@ function updateInfoDisplay(charId, idInject, charData) {
     }
     
     if (charData.current?.bondgear>0) {
-        document.getElementById(charId + idInject + "-bondgear-current").innerText = charData.current?.bondgear;
+        document.getElementById(charId + idInject + "-bondgear-current").innerText = "T"+ charData.current?.bondgear;
         if (charData.current?.bondgear != charData.target?.bondgear) {
-            document.getElementById(charId + idInject + "-bondgear-target").innerText = charData.target?.bondgear;
+            document.getElementById(charId + idInject + "-bondgear-target").innerText = "T"+ charData.target?.bondgear;
         }
         else {
             document.getElementById(charId + idInject + "-bondgear-target").innerText = "";
