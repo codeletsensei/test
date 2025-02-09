@@ -4660,6 +4660,23 @@ function dropImportFile(e) {
     document.getElementById('inputImportFile').files = e.dataTransfer.files;
     e.preventDefault()
     console.log(e.dataTransfer.files)
+
+
+document.getElementById('inputImportFile').addEventListener('change', function() {
+  if (e.dataTransfer.files.length > 0) {
+    var reader = new FileReader();
+    reader.addEventListener('load', function() {
+      var result = JSON.parse(reader.result);
+      console.log(result);
+      console.log(result.name);
+      console.log(result.age);
+      console.log(result.occupation);
+    });
+    reader.readAsText(e.dataTransfer.files[0]); // Read the uploaded file
+  }
+});
+
+
 }
 function openTransferModal() {
     document.addEventListener('dragover', ignoreDrag );
@@ -4687,20 +4704,6 @@ function openTransferModal() {
     };
 
 }
-document.getElementById('inputImportFile').addEventListener('change', function() {
-  if (upload.files.length > 0) {
-    var reader = new FileReader();
-    reader.addEventListener('load', function() {
-      var result = JSON.parse(reader.result);
-      console.log(result);
-      console.log(result.name);
-      console.log(result.age);
-      console.log(result.occupation);
-    });
-    
-    reader.readAsText(upload.files[0]); // Read the uploaded file
-  }
-});
 
 function updateCells(dict, editable, cellClass, miscClass) {
 
