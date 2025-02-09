@@ -415,9 +415,9 @@ function init() {
     let giftsList = []
     let giftsRows = 0
     giftsList[0] = []
-    for (let i = 0 ; i < usedGifts.length ; i++) {
-        giftsList[giftsRows].push(matLookup.get(usedGifts[i]).replace("favor_","")) //If it works, it works desu...
-        if ( i != 0 && i%9 == 0) {
+    for (let i = 1 ; i < usedGifts.length ; i++) {
+        giftsList[giftsRows].push(matLookup.get(usedGifts[i-1]).replace("favor_","")) //If it works, it works desu...
+        if ( i != 0 && i%10 == 0) {
             giftsRows += 1
             giftsList[giftsRows] = []
         }
