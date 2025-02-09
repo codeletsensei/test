@@ -460,7 +460,7 @@ function init() {
     colourTableRows("workbook-table");
     colourTableRows("gifts-table");
 
-    colourTableRows("gear-table");
+    for (let i in giftsList) colourTableRows("gear-table"+i);
 
 /*
     let currentVer = "25.02.06"
