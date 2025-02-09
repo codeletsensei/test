@@ -4656,9 +4656,6 @@ function ignoreDrag(e) {
     e.preventDefault();
     e.stopPropagation();
 }
-
-
-
 function dropImportFile(e,method) {
     function shit2Import(data){
         getImportData();
@@ -4666,7 +4663,7 @@ function dropImportFile(e,method) {
     }
     e.preventDefault()
     let files = null;
-    if (method == "selected") files = e.target;
+    if (method == "selected") files = e.target.files;
     else files = e.dataTransfer.files;
     console.log(files)
     if (files.length > 0) {
@@ -4675,7 +4672,7 @@ function dropImportFile(e,method) {
           var result = JSON.parse(reader.result);
           shit2Import(result);
         });
-        reader.readAsText(files.files[0]);
+        reader.readAsText(files[0]);
     }
 }
 document.getElementById('inputImportFile').addEventListener("change", e=>{
@@ -4828,7 +4825,7 @@ function closeTransferModal() {
 
     document.removeEventListener('dragover', ignoreDrag );
     document.removeEventListener('dragenter', ignoreDrag );
-    document.removeEventListener('drop', dropImportFile );
+    document.removeEventListener('drop', function(e){ dropImportFile(e,"dropped") });
 
     freezeBody(false);
 
