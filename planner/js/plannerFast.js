@@ -252,7 +252,7 @@ function createCharBox(charId, container, location, lazy) {
 
         const newBondgearImg = document.createElement("img");
         newBondgearImg.src = "icons/Misc/bondheart.png";
-        newBondgearImg.id = "bondgearPortrait" + charId;
+        newBondgearImg.id = "bondgearPortraitHeart" + charId;
         newBondgearImg.draggable = false;
 
         newBondContainerBG = document.createElement("div");
@@ -455,7 +455,7 @@ function updateInfoDisplay(charId, idInject, charData) {
         }
     }
     else {
-
+        document.getElementById("bondgearPortraitHeart"+ charId).style.display = "none"
     }
 
     
