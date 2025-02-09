@@ -406,7 +406,7 @@ function init() {
     let giftsRows = 0
     //giftsList[0] = []
     for (let i = 5000 ; i <= 5034; i++) {
-        giftsList.push(matLookup.get(i))
+        giftsList.push(matLookup.get(i).replace("favor_",""))
         /*if ( i != 5000 && i%10 == 0) {
             giftsRows += 1
             giftsList[giftsRows] = []
@@ -3522,12 +3522,9 @@ function populateCharModal(charId) {
 
         document.getElementById("input_bondgear_current").value = charData.current?.bondgear;
         document.getElementById("input_bondgear_target").value = charData.target?.bondgear;
-        console.log()
-        if (charInfo.Gear) {
-            if (charInfo.Gear.TierUpMaterial) {
-                document.getElementById("bondgear_tablecell_header").style.display = ""
-                document.getElementById("bondgear_tablecell_inputs").style.display = ""
-            }
+        if (charInfo.Gear.TierUpMaterial) {
+            document.getElementById("bondgear_tablecell_header").style.display = ""
+            document.getElementById("bondgear_tablecell_inputs").style.display = ""
         }
         else {
             document.getElementById("bondgear_tablecell_header").style.display = "none"
