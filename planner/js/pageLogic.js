@@ -412,7 +412,7 @@ function init() {
             }
         }
     }
-    usedGifts = usedGifts.sort((a,b)=>{return parseInt(a)-parseInt(b)})
+    usedGifts = [...new Set(usedGifts)].sort((a,b)=>{return parseInt(a)-parseInt(b)})
     let giftsList = []
     giftsRows = 0
     giftsList[0] = []
@@ -5031,7 +5031,6 @@ function hideEmptyCell(id) {
 }
 
 function createTable(id, columns, colOffset, rows, rowOffset, tableNavigation, parent, reorder, type, imgLoc, skip, stringLangPrefix) {
-console.log(parent)
     const newTable = document.createElement("table");
     newTable.className = "resource-table";
     newTable.id = id;
