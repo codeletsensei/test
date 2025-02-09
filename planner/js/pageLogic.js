@@ -428,7 +428,7 @@ function init() {
         giftsCols.push("favor")
     }
     for (let i in giftsList) { 
-        let parentElementId = "table-parent-" + (8+parseInt(i))
+        let parentElementId = "table-parent-" + (i+8)
         console.log(parentElementId)
         createTable( ("gifts-table"+i), giftsCols[i] , 0, giftsList[i] , 0, tableNavigation, document.getElementById(parentElementId), true, "resource", "icons/Gifts/", [], "gifts-");
     }
