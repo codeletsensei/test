@@ -6377,6 +6377,18 @@ function displayExportData() {
         title: GetLanguageString("text-exporteddata"),
         html: '<textarea style="width: 400px; height: 250px; resize: none;" readonly>' + localStorage.getItem('save-data') + '</textarea>'
     })
+    function downloadObjectAsJson(exportObj, exportName){
+        var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
+        var downloadAnchorNode = document.createElement('a');
+        downloadAnchorNode.setAttribute("href",     dataStr);
+        downloadAnchorNode.setAttribute("download", exportName + ".json");
+        document.body.appendChild(downloadAnchorNode); // required for firefox
+        downloadAnchorNode.click();
+        downloadAnchorNode.remove();
+    }
+    let date = new Date().getFullYear() + "." + ("0"+(parseInt(new Date().getMonth())+1)).slice(-2) + "." + ("0" + new Date().getDate()).slice(-2) + "." + ("0" + new Date().getHours()).slice(-2) + "" + ("0" + new Date().getMinutes()).slice(-2)
+    downloadObjectAsJson(JSON.parse(localStorage.getItem('save-data')),"bag_planner_saveFile_" + date)
+
 }
 
 async function getImportData() {
