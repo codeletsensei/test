@@ -423,12 +423,11 @@ function init() {
             giftsList[giftsRows] = []
         }
     }
-    console.log(giftsList)
     let giftsCols = []
-    for (let i in giftsRows) { 
+    for (let i in giftsList) { 
         giftsCols.push("favor")
     }
-    for (let i in giftsRows) { 
+    for (let i in giftsList) { 
         createTable( ("gifts-table"+i), giftCols[i] , 0, giftsList[i] , 0, tableNavigation, document.getElementById("table-parent-"+(8+i)), true, "resource", "icons/Gifts/", [], "gifts-");
     }
     let gearNavigation = [];
