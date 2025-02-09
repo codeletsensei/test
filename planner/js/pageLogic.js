@@ -4665,14 +4665,16 @@ function dropImportFile(e) {
         document.getElementById("swal2-textarea").value = JSON.stringify(data)
     }
     e.preventDefault()
-    console.log(e.target.files || e.dataTransfer.files)
-    if (e.dataTransfer.files.length > 0) {
+    let files = null
+    if (e.target) files = e.target.files
+    else files = e.dataTransfer.files
+    if (files.length > 0) {
         var reader = new FileReader();
         reader.addEventListener('load', function() {
           var result = JSON.parse(reader.result);
           shit2Import(result);
         });
-        reader.readAsText(e.dataTransfer.files[0]);
+        reader.readAsText(files.files[0]);
     }
 }
 document.getElementById('inputImportFile').addEventListener("change", e=>{
