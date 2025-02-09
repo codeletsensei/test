@@ -414,10 +414,7 @@ function init() {
     }
     console.log(matLookup.get(5000))
     console.log(giftsList)
-    for (let i = 0 ; i <= giftsRows+1 ; i++){
-        createTable( ("gifts-table"), giftsList , 0,
-            [""], 0, tableNavigation, document.getElementById("table-parent-"+(8+i)), true, "resource", "icons/Gifts/", [], "gifts-");
-    }
+    createTable( ("gifts-table"), giftsList , 0, ["favor"], 0, tableNavigation, document.getElementById("table-parent-8"), true, "resource", "icons/Gifts/", [], "gifts-");
 
     let gearNavigation = [];
     createTable("gear-table", ["T10", "T9", "T8", "T7", "T6", "T5", "T4", "T3", "T2"], 0, ["Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"],
