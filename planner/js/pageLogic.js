@@ -5036,7 +5036,7 @@ function hideEmptyCell(id) {
 }
 
 function createTable(id, columns, colOffset, rows, rowOffset, tableNavigation, parent, reorder, type, imgLoc, skip, stringLangPrefix) {
-
+console.log(parent)
     const newTable = document.createElement("table");
     newTable.className = "resource-table";
     newTable.id = id;
