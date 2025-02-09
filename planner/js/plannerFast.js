@@ -442,7 +442,7 @@ function updateInfoDisplay(charId, idInject, charData) {
         document.getElementById(charId + idInject + "-bond-target").innerText = "";
     }
     
-    let bondgear_characters = [ 10066, 10000, 10028, 20009, 13001, 10047, 10001, 20021, 23007, 23003, 20000, 20005, 10004, 10022, 10036, 10005, 10023, 10009, 16006, 13007, 20015, 10065, 16002, 23008, 20003, 10034, 10041, 10038, 10039, 10008, 13004, 20006, 13008, 10010, 23006, 10025, 10012, 16003, 10062, 10013, 23004, 10033, 26005, 13010 ],
+    let bondgear_characters = [ 10066, 10000, 10028, 20009, 13001, 10047, 10001, 20021, 23007, 23003, 20000, 20005, 10004, 10022, 10036, 10005, 10023, 10009, 16006, 13007, 20015, 10065, 16002, 23008, 20003, 10034, 10041, 10038, 10039, 10008, 13004, 20006, 13008, 10010, 23006, 10025, 10012, 16003, 10062, 10013, 23004, 10033, 26005, 13010 ]
 
     if ( bondgear_characters.includes(charId) && charData.current?.bondgear>0) {
         document.getElementById(charId + idInject + "-bondgear-current").innerText = "T"+ charData.current?.bondgear;
