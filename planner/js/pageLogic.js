@@ -6425,24 +6425,32 @@ async function getImportData() {
     })
 
     if (importData) {
-        let tempData = tryParseJSON(importData);
+        const { value: confirmation } = await Swal.fire({
+            title: "Are you sure? This will replace your current data!" 
+            color: alertColour,
+            showCancelButton: true
+        })
 
-        if (!!!tempData) {
-            Swal.fire({
-                icon: 'error',
-                title: GetLanguageString("text-oops"),
-                text: GetLanguageString("text-invalidjson"),
-                color: alertColour
-            })
+        if (confirmation) {
+            let tempData = tryParseJSON(importData);
 
-            return false;
+            if (!!!tempData) {
+                Swal.fire({
+                    icon: 'error',
+                    title: GetLanguageString("text-oops"),
+                    text: GetLanguageString("text-invalidjson"),
+                    color: alertColour
+                })
+
+                return false;
+            }
+
+            localStorage.setItem("save-data", JSON.stringify(tempData));
+
+            /*gtag('event', 'action_import');*/
+
+            location.reload();
         }
-
-        localStorage.setItem("save-data", JSON.stringify(tempData));
-
-        /*gtag('event', 'action_import');*/
-
-        location.reload();
     }
 }
 
