@@ -4980,7 +4980,7 @@ function hideEmpty() {
     hideEmptyCells(artifactTable2);
     hideEmptyCells(workbookTable);
 
-    for (let i in giftsList.length) hideEmptyCells(document.getElementById("gifts-table"+i));
+    for (let i in giftsList) hideEmptyCells(document.getElementById("gifts-table"+i));
 
     hideEmptyCell("XP_1");
     hideEmptyCell("XP_2");
