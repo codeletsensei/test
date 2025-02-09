@@ -4664,7 +4664,6 @@ function dropImportFile(e) {
         getImportData();
         document.getElementById("swal2-textarea").value = JSON.stringify(data)
     }
-    document.getElementById('inputImportFile').files = e.dataTransfer.files;
     e.preventDefault()
     if (e.dataTransfer.files.length > 0) {
         console.log(e.dataTransfer.files)
