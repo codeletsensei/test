@@ -244,19 +244,25 @@ function createCharBox(charId, container, location, lazy) {
         newBondP2.id = charId + idInject + "-bond-target";
         newBondP2.style = "transform: translate(-50%, -25%)";
 
-        const newBondP3 = document.createElement("p");
-        newBondP3.id = charId + idInject + "-bondgear-current";
-        newBondP3.style = "transform: translate(-50%, 0%)";
-
-        const newBondP4 = document.createElement("p");
-        newBondP4.id = charId + idInject + "-bondgear-target";
-        newBondP4.style = "transform: translate(0%, -50%)";
 
         newBondContainer.appendChild(newBondImg);
         newBondContainer.appendChild(newBondP);
         newBondContainer.appendChild(newBondP2);
-        newBondContainer.appendChild(newBondP3);
-        newBondContainer.appendChild(newBondP4);
+
+        newBondContainerBG = document.createElement("div");
+        newBondContainerBG.className = "char-heart-container";
+        const newBondgearP = document.createElement("p");
+        newBondgearP.id = charId + idInject + "-bondgear-current";
+        newBondgearP.style = "transform: translate(-50%, -95%)";
+
+        const newBondgearP2 = document.createElement("p");
+        newBondgearP2.id = charId + idInject + "-bondgear-target";
+        newBondgearP2.style = "transform: translate(-50%, -25%)";
+
+        newBondContainerBG.appendChild(newBondgearP);
+        newBondContainerBG.appendChild(newBondgearP2);
+
+
 
         for (i = 0; i < 5; i++) {
             const newStar = document.createElement("img");
@@ -360,6 +366,7 @@ function createCharBox(charId, container, location, lazy) {
         newDiv.appendChild(newStarContainer);
         newDiv.appendChild(newUEContainer);
         newDiv.appendChild(newBondContainer);
+        newDiv.appendChild(newBondContainerBG);
     }
     if (location == "main") {
         newDiv.onclick = openModal

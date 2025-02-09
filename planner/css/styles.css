@@ -931,6 +931,12 @@ div.char-resource-wrapper .resource-display-text {
     left: -6%;
     width: 30%;
 }
+.char-heart-container {
+    position: absolute;
+    top: 20%;
+    right: -6%;
+    width: 30%;
+}
 
 .char-heart-container img {
     width: 100%;
