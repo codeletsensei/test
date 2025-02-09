@@ -6423,7 +6423,7 @@ function displayExportData(option) {
     }
     Swal.fire({
         title: GetLanguageString("text-exporteddata"),
-        html: '<textarea id="importDataTextarea" style="width: 400px; height: 250px; resize: none;" readonly>' + saveData + '</textarea>'
+        html: '<textarea style="width: 400px; height: 250px; resize: none;" readonly>' + saveData + '</textarea>'
     })
     function downloadObjectAsJson(exportObj, exportName){
         var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(exportObj);
@@ -6453,7 +6453,7 @@ async function getImportData() {
 
     if (importData) {
         const { value: confirmation } = await Swal.fire({
-            title: "Are you sure? This will replace your current data!",
+            title: "Are you sure you want to IMPORT this?<br>It will replace your current data!",
             color: alertColour,
             showCancelButton: true
         })
