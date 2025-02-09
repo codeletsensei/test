@@ -282,8 +282,8 @@ function init() {
         }
 
         for (let i in data.characters) {
-            if (!data.characters[i].current.bondgear) data.characters[i].current.bondgear = 1
-            if (!data.characters[i].target.bondgear) data.characters[i].target.bondgear = 1
+            if (!data.characters[i].current.bondgear) data.characters[i].current.bondgear = 0
+            if (!data.characters[i].target.bondgear) data.characters[i].target.bondgear = 0
             if (!data.characters[i].current.potentialmaxhp) data.characters[i].current.potentialmaxhp = 0
             if (!data.characters[i].target.potentialmaxhp) data.characters[i].target.potentialmaxhp = 0
             if (!data.characters[i].current.potentialattack) data.characters[i].current.potentialattack = 0
