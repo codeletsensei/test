@@ -407,7 +407,10 @@ function init() {
     //giftsList[0] = []
     let usedGifts = []
     for (let i in charlist) {
-        if (charlist[i].Gear.TierUpMaterial) usedGifts.push(charlist[i].Gear.TierUpMaterial[0])
+        console.log(charlist[i])
+        if (charlist[i].Gear.TierUpMaterial) {
+            usedGifts.push(charlist[i].Gear.TierUpMaterial[0])
+        }
     }
     for (let i = 0 ; i < usedGifts.lenght ; i++) {
         usedGifts.push(matLookup.get(i).replace("favor_","")) //If it works, it works.
