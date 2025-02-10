@@ -7644,7 +7644,6 @@ function AddOrderDisplay(order) {
             orderDisplay.appendChild(orderDiv);
         }
         else {
-
             let orderImg = document.createElement("img");
             orderImg.draggable = false;
 
