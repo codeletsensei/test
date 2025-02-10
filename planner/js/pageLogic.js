@@ -7483,7 +7483,7 @@ function SortStudents(students, sortType) {
     let sorted = [];
 
     let sorting = {};
-
+    console.log(students)
     for (let i = 0; i < students.length; i++) {
         let sortparam;
 
