@@ -5828,7 +5828,7 @@ function calcPotentialCost(characterObj, skill, current, target, matDict) {
     let skillType = "potential"
     let skillMaterials = [];
     let skillMaterialAmounts = [];
-    for (let s = 0; s < 15 ; s++) {
+    for (let s = 0; s <= 15 ; s++) {
         skillMaterials.push([ workbookType, characterObj.PotentialMaterial ]);
         skillMaterialAmounts.push(misc_data.potentialMaterialAmount[s]);
     }
