@@ -7630,12 +7630,17 @@ function AddOrderDisplay(order) {
         }
         else if (["bondgear"].includes(sortingOperations[order][i])) {
             let orderDiv = document.createElement("div");
-            orderDiv.innerText = "Bond Gear";
+            orderDiv.innerText = "Has Bond Gear";
             orderDisplay.appendChild(orderDiv);
         }
-        else if (["potentialCurrent","potentialTarget"].includes(sortingOperations[order][i])) {
+        else if (sortingOperations[order][i] == "potentialCurrent") {
             let orderDiv = document.createElement("div");
-            orderDiv.innerText = sortingOperations[order][i];
+            orderDiv.innerText = "LB atm"
+            orderDisplay.appendChild(orderDiv);
+        }
+        else if (sortingOperations[order][i] == "potentialTarget") {
+            let orderDiv = document.createElement("div");
+            orderDiv.innerText = "LB tgt"
             orderDisplay.appendChild(orderDiv);
         }
         else {
