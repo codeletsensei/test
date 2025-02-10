@@ -7525,7 +7525,7 @@ function SortStudents(students, sortType) {
             sortparam = weaponOrder[charlist[students[i].id].WeaponType];
         }
         else if (sortType == "bondgear") {
-            if (charlist[students[i].id].Gear) if (charlist[students[i].id].Gear.TierUpMaterial) sortparam = 1;
+            if (charlist[students[i].id].Gear) if (charlist[students[i].id].Gear.TierUpMaterial) charlist[students[i].id].Gear.TierUpMaterial = 1;
             else sortparam = 0
         }
         else {
