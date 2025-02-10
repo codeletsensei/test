@@ -5832,7 +5832,7 @@ function calcPotentialCost(characterObj, skill, current, target, matDict) {
         skillMaterials.push([ workbookType, characterObj.PotentialMaterial ]);
         skillMaterialAmounts.push(misc_data.potentialMaterialAmount[s]);
     }
-    for (let s = 16; s < 25 ; s++) {
+    for (let s = 16; s <= 25 ; s++) {
         skillMaterials.push([ workbookType, parseInt(characterObj.PotentialMaterial) + 1 ]);
         skillMaterialAmounts.push(misc_data.potentialMaterialAmount[s]);
     }
@@ -5842,18 +5842,18 @@ function calcPotentialCost(characterObj, skill, current, target, matDict) {
         if (!matDict["Credit"]) {
             matDict["Credit"] = 0;
         }
-        matDict["Credit"] += misc_data.potentialCost[s];
+        matDict["Credit"] += misc_data.potentialCost[s+1];
 
-        let costObj = skillMaterials[s];
+        let costObj = skillMaterials[s+1];
         if (costObj == undefined) { return null; }
 
         for (let i = 0; i < costObj.length; i++) {
             let item = costObj[i];
-            if (item != undefined && skillMaterialAmounts[s][i] != undefined) {
+            if (item != undefined && skillMaterialAmounts[s+1][i] != undefined) {
                 if (!matDict[item]) {
                     matDict[item] = 0;
                 }
-                matDict[item] += skillMaterialAmounts[s][i];
+                matDict[item] += skillMaterialAmounts[s+1][i];
             }
         }
     }
