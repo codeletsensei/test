@@ -7532,7 +7532,7 @@ function SortStudents(students, sortType) {
             sortparam = (students[i].current.potentialattack + students[i].current.potentialmaxhp + students[i].current.potentialhealpower);
         }
         else if (sortType == "potentialTarget") {
-            sortparam = (students[i].current.potentialattack + students[i].current.potentialmaxhp + students[i].current.potentialhealpower);
+            sortparam = (students[i].target.potentialattack + students[i].target.potentialmaxhp + students[i].target.potentialhealpower);
         }
         else {
             sortparam = students[i].current[sortType];
