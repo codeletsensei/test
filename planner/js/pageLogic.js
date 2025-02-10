@@ -86,8 +86,6 @@ let cancelHidingOverlay = false;
 
 let bodyFrozen = false;
 
-var ignoreLB = false
-
 const strNullImage = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
 
 const platform = navigator.userAgentData?.platform || navigator.platform;
@@ -5642,10 +5640,6 @@ function updateLeftoverMat(mat) {
     leftoverMatDict[mat] = Math.max((ownedMatDict[mat] ?? 0) - (requiredMatDict[mat] ?? 0), 0);
 }
 
-function changeIgnoreLB(){
-    ignoreLB = document.getElementById('checkboxIgnoreLB').checked
-}
-
 function calculateCharResources(charData, output) {
 
     let charMatDict = {};
@@ -5659,13 +5653,10 @@ function calculateCharResources(charData, output) {
     calcSkillCost(charObj, "sub", charData.current?.sub, charData.target?.sub, charMatDict);
 
     calcSkillCost(charObj, "bondgear", charData.current?.bondgear, charData.target?.bondgear, charMatDict);
+    calcPotentialCost(charObj, "potentialmaxhp", charData.current?.potentialmaxhp, charData.target?.potentialmaxhp, charMatDict);
+    calcPotentialCost(charObj, "potentialattack", charData.current?.potentialattack, charData.target?.potentialattack, charMatDict);
+    calcPotentialCost(charObj, "potentialhealpower", charData.current?.potentialhealpower, charData.target?.potentialhealpower, charMatDict);
 
-    if (!ignoreLB) { 
-        calcPotentialCost(charObj, "potentialmaxhp", charData.current?.potentialmaxhp, charData.target?.potentialmaxhp, charMatDict);
-        calcPotentialCost(charObj, "potentialattack", charData.current?.potentialattack, charData.target?.potentialattack, charMatDict);
-        calcPotentialCost(charObj, "potentialhealpower", charData.current?.potentialhealpower, charData.target?.potentialhealpower, charMatDict);
-    }
-    
     calcXpCost(charData.current?.level, charData.target?.level, charMatDict);
     calcGearCost(charObj, charData.current?.gear1, charData.target?.gear1, 1, charMatDict);
     calcGearCost(charObj, charData.current?.gear2, charData.target?.gear2, 2, charMatDict);
