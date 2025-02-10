@@ -238,6 +238,12 @@
     "label-bondgear": {
         "EN": "Bond Gear"
     },
+    "label-potentialCurrent": {
+        "EN": "Current LB"
+    },
+    "label-potentialTarget": {
+        "EN": "Target LB"
+    },
     "label-basestars": {
         "EN": "Base Stars",
         "KR": "기본 성급",

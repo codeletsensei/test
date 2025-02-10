@@ -7483,7 +7483,7 @@ function SortStudents(students, sortType) {
     let sorted = [];
 
     let sorting = {};
-    console.log(students)
+
     for (let i = 0; i < students.length; i++) {
         let sortparam;
 
@@ -7525,8 +7525,14 @@ function SortStudents(students, sortType) {
             sortparam = weaponOrder[charlist[students[i].id].WeaponType];
         }
         else if (sortType == "bondgear") {
-            if (charlist[students[i].id].Gear) if (charlist[students[i].id].Gear.TierUpMaterial) sortparam = charlist[students[i].id].Gear.TierUpMaterial;
+            if (charlist[students[i].id].Gear) if (charlist[students[i].id].Gear.TierUpMaterial) sortparam = 1;
             else sortparam = 0
+        }
+        else if (sortType == "potentialCurrent") {
+            sortparam = (students[i].current.potentialattack + students[i].current.potentialmaxhp + students[i].current.potentialhealpower);
+        }
+        else if (sortType == "potentialTarget") {
+            sortparam = (students[i].current.potentialattack + students[i].current.potentialmaxhp + students[i].current.potentialhealpower);
         }
         else {
             sortparam = students[i].current[sortType];
@@ -7627,6 +7633,11 @@ function AddOrderDisplay(order) {
             orderDiv.innerText = "Bond Gear";
             orderDisplay.appendChild(orderDiv);
         }
+        else if (["potentialCurrent","potentialTarget"].includes(sortingOperations[order][i])) {
+            let orderDiv = document.createElement("div");
+            orderDiv.innerText = sortingOperations[order][i];
+            orderDisplay.appendChild(orderDiv);
+        }
         else {
 
             let orderImg = document.createElement("img");
@@ -7689,7 +7700,9 @@ function InitSortingOrder() {
     sortingOperations["armour"] = ["armour", "star", "level", "bond", "academy", "name"]; // armour type
     sortingOperations["role"] = ["role", "star", "level", "bond", "academy", "name"]; // role
     sortingOperations["weapon"] = ["weapon", "star", "level", "bond", "academy", "name"]; // weapon
-    sortingOperations["bondgear"] = ["bondgear","name"];
+    sortingOperations["bondgear"] = ["bondgear","bond","name"];
+    sortingOperations["potentialCurrent"] = ["potentialCurrent","potentialTarget","name"];
+    sortingOperations["potentialTarget"] = ["potentialTarget","potentialCurrent","name"];
 
     let orderKeys = Object.keys(sortingOperations);
 
