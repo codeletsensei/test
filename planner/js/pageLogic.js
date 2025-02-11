@@ -7552,7 +7552,7 @@ function SortStudents(students, sortType) {
             else sortparam = 0
         }
         else if (sortType == "bondgearT") {
-            if (charlist[students[i].id].Gear) if (charlist[students[i].id].Gear.TierUpMaterial) sortparam = 1;
+            if (charlist[students[i].id].Gear) if (charlist[students[i].id].Gear.TierUpMaterial) sortparam = students[i].current.bondgear;
             else sortparam = -1
         }
         else if (sortType == "potentialCurrent") {
