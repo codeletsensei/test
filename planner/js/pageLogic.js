@@ -7659,6 +7659,11 @@ function AddOrderDisplay(order) {
             orderDiv.innerText = "Has Bond Gear";
             orderDisplay.appendChild(orderDiv);
         }
+        else if (["bondgearT"].includes(sortingOperations[order][i])) {
+            let orderDiv = document.createElement("div");
+            orderDiv.innerText = "Tier";
+            orderDisplay.appendChild(orderDiv);
+        }
         else if (sortingOperations[order][i] == "potentialCurrent") {
             let orderDiv = document.createElement("div");
             orderDiv.innerText = "LB atm"
