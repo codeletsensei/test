@@ -1977,9 +1977,7 @@ function multiCharSelectAll(){
     multiCharCancel();
     showMultiSelect('AddNewChars');
     let charSelectionBox = document.getElementsByClassName("multiSelectChar");
-    for (let i = 0; i < charSelectionBox.length ; i++) {
-        if (!charSelectionBox[i].id.includes("10099")) toggleMultiSelection(charSelectionBox[i].id)
-    }
+    for (let i = 0; i < charSelectionBox.length ; i++) toggleMultiSelection(charSelectionBox[i].id)
 }
 
 function teamsToggle() {
