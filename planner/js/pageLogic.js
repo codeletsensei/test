@@ -4009,10 +4009,10 @@ function isCharModalDirty() {
         Swal.fire({
             icon: 'error',
             title: GetLanguageString("text-oops"),
-            text: "There's something wrong with the student's data. Try deleting the current student (X button near her portrait) and adding her again... Sorry.",
+            text: "There's something wrong with the student's data. Try deleting " + charlist[charData].Name + " (X button near her portrait) and adding her again... Sorry.",
             color: alertColour
         })
-        return true
+        return false
     }
     if (compareObjects(charData.current, modalData.current) != true) {
         return true;
@@ -5648,7 +5648,15 @@ function updateLeftoverMat(mat) {
 }
 
 function calculateCharResources(charData, output) {
-
+    if (!charData) {
+        Swal.fire({
+            icon: 'error',
+            title: GetLanguageString("text-oops"),
+            text: "There's something wrong with the student's data. Try deleting " + charlist[charData].Name + " (X button near her portrait) and adding her again... Sorry.",
+            color: alertColour
+        })
+        return false
+    }
     let charMatDict = {};
 
     let charId = charData.id.toString();
