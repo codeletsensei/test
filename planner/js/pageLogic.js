@@ -1962,7 +1962,9 @@ function multiCharAdd() {
         data.characters.push(newCharObj);
 
     }
-
+    if (currentSort == "custom") {
+        data.character_order = getOrder();
+    }
     saveToLocalStorage(false);
 
     location.reload();
