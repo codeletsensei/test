@@ -7509,7 +7509,6 @@ function SortStudents(students, sortType) {
 
     for (let i = 0; i < students.length; i++) {
         let sortparam;
-        console.log(students[i])
         if (sortType == "academy") {
             sortparam = academyOrder[charlist[students[i].id].School];
         }
