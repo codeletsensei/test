@@ -4012,7 +4012,7 @@ function isCharModalDirty() {
             text: "There's something wrong with the student's data. Try deleting the current student (X button near her portrait) and adding her again... Sorry.",
             color: alertColour
         })
-        return false
+        return true
     }
     if (compareObjects(charData.current, modalData.current) != true) {
         return true;
