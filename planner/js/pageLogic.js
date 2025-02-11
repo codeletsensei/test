@@ -1974,10 +1974,12 @@ function multiCharAdd() {
 
 }
 function multiCharSelectAll(){
-    multiCharCancel()
-    showMultiSelect('AddNewChars')
-    let charSelectionBox = document.getElementsByClassName("multiSelectChar")
-    for (let i = 0; i < asdf.length ; i++) if ( !charSelectionBox[i].id.includes("10099")) toggleMultiSelection(charSelectionBox[i].id)
+    multiCharCancel();
+    showMultiSelect('AddNewChars');
+    let charSelectionBox = document.getElementsByClassName("multiSelectChar");
+    for (let i = 0; i < asdf.length ; i++) {
+        if (!charSelectionBox[i].id.includes("10099")) toggleMultiSelection(charSelectionBox[i].id)
+    }
 }
 
 function teamsToggle() {
