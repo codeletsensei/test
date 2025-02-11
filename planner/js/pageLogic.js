@@ -4003,9 +4003,11 @@ function charDataFromModal(charId) {
 }
 
 function isCharModalDirty() {
+    console.log(data)
+    console.log(modalCharID)
     let charData = data.characters.find(obj => { return obj.id == modalCharID });
     let modalData = charDataFromModal();
-
+    console.log(charData)
     if (compareObjects(charData.current, modalData.current) != true) {
         return true;
     }
