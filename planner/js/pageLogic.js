@@ -4003,11 +4003,17 @@ function charDataFromModal(charId) {
 }
 
 function isCharModalDirty() {
-    console.log(data)
-    console.log(modalCharID)
     let charData = data.characters.find(obj => { return obj.id == modalCharID });
     let modalData = charDataFromModal();
-    console.log(charData)
+    if (!charData) {
+        Swal.fire({
+            icon: 'error',
+            title: GetLanguageString("text-oops"),
+            text: "There's something wrong with the student's data. Try deleting the current student (X button near her portrait) and adding her again... Sorry.",
+            color: alertColour
+        })
+        return false
+    }
     if (compareObjects(charData.current, modalData.current) != true) {
         return true;
     }
