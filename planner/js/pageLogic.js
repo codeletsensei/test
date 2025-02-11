@@ -1540,7 +1540,7 @@ function openModal(e) {
 
         var displayImg = document.getElementById("displayImg");
 
-        displayImg.src = "icons/Portrait/Icon_" + charId + ".png"; 
+        displayImg.src = "icons/Portrait/Icon_" + charId + ".webp"; 
 
         var displayName = document.getElementById("displayName");
         displayName.innerText = charSelected
@@ -1809,7 +1809,7 @@ function createMultiSelectChar(charId, container, mode) {
     newCharDiv.id = "multi_" + charId;
 
     const newImg = document.createElement("img");
-    newImg.src = "icons/Portrait/Icon_" + charId + ".png"; 
+    newImg.src = "icons/Portrait/Icon_" + charId + ".webp"; 
     
     newImg.draggable = false;
     newImg.className = "multi-char-img";
@@ -5297,7 +5297,7 @@ function DisplayMatUsers(mat) {
 
         let charImg = document.createElement('img');
 
-        charImg.src = "icons/Portrait/Icon_" + matUsers[i].charId + ".png"; 
+        charImg.src = "icons/Portrait/Icon_" + matUsers[i].charId + ".webp"; 
 
         let matAmount = document.createElement('p');
         matAmount.innerText = commafy(matUsers[i].matCount);
@@ -7372,7 +7372,7 @@ function RollClicked(num) {
 
     for (let i = 0; i < 10; i++) {
         if (charsPulled[i]) {
-            document.getElementById("char-pull-" + (i + 1)).src = "icons/Portrait/Icon_" + charsPulled[i] + ".png";
+            document.getElementById("char-pull-" + (i + 1)).src = "icons/Portrait/Icon_" + charsPulled[i] + ".webp";
         }
         else {
             document.getElementById("char-pull-" + (i + 1)).src = "";
