@@ -7509,7 +7509,7 @@ function SortStudents(students, sortType) {
 
     for (let i = 0; i < students.length; i++) {
         let sortparam;
-
+        console.log(students[i])
         if (sortType == "academy") {
             sortparam = academyOrder[charlist[students[i].id].School];
         }
@@ -7550,6 +7550,10 @@ function SortStudents(students, sortType) {
         else if (sortType == "bondgear") {
             if (charlist[students[i].id].Gear) if (charlist[students[i].id].Gear.TierUpMaterial) sortparam = 1;
             else sortparam = 0
+        }
+        else if (sortType == "bondgearT") {
+            if (charlist[students[i].id].Gear) if (charlist[students[i].id].Gear.TierUpMaterial) sortparam = 1;
+            else sortparam = -1
         }
         else if (sortType == "potentialCurrent") {
             sortparam = (students[i].current.potentialattack + students[i].current.potentialmaxhp + students[i].current.potentialhealpower);
@@ -7727,9 +7731,9 @@ function InitSortingOrder() {
     sortingOperations["armour"] = ["armour", "star", "level", "bond", "academy", "name"]; // armour type
     sortingOperations["role"] = ["role", "star", "level", "bond", "academy", "name"]; // role
     sortingOperations["weapon"] = ["weapon", "star", "level", "bond", "academy", "name"]; // weapon
-    sortingOperations["bondgear"] = ["bondgear","bond","name"];
-    sortingOperations["potentialCurrent"] = ["potentialCurrent","potentialTarget","name"];
-    sortingOperations["potentialTarget"] = ["potentialTarget","potentialCurrent","name"];
+    sortingOperations["bondgear"] = ["bondgear", "bondgearT", "bond", "name"];
+    sortingOperations["potentialCurrent"] = ["potentialCurrent", "potentialTarget", "name"];
+    sortingOperations["potentialTarget"] = ["potentialTarget", "potentialCurrent", "name"];
 
     let orderKeys = Object.keys(sortingOperations);
 

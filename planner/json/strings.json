@@ -241,6 +241,9 @@
     "label-bondgear": {
         "EN": "Bond Gear"
     },
+    "label-bondgearT": {
+        "EN": "Tier"
+    },
     "label-potentialCurrent": {
         "EN": "Current LB"
     },
