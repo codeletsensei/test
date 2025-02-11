@@ -4013,7 +4013,7 @@ function isCharModalDirty() {
         Swal.fire({
             icon: 'error',
             title: GetLanguageString("text-oops"),
-            text: "There's something wrong with the student's data. Try deleting " + charlist[modalCharID].Name + " (X button near her portrait) and adding her again... Sorry.",
+            text: "There's something wrong with that student's data. Try deleting <b>" + charlist[modalCharID].Name + "</b> (X button near her portrait) and adding her again... Sorry.",
             color: alertColour
         })
         return false
