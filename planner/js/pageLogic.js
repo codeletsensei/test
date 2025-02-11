@@ -1729,6 +1729,7 @@ function showMultiSelect(source) {
     let editorContainer = document.getElementById('teamsEditorContainer');
     let multiSelectContainer = document.getElementById('characterMultiSelectContainer');
     let multiCharAdd = document.getElementById('multi-char-add');
+    let multiCharSelectAll = document.getElementById('multi-char-selectAll');
     let multiCharCancel = document.getElementById('multi-char-cancel');
     let multiCharBorrow = document.getElementById('multi-char-borrow');
 
@@ -1782,9 +1783,11 @@ function showMultiSelect(source) {
 
     if (mode == "Multi") {
         multiCharAdd.style.display = "";
+        multiCharSelectAll.style.display = "";
     }
     else if (mode == "Single") {
         multiCharAdd.style.display = "none";
+        multiCharSelectAll.style.display = "none";
     }
 
     generateMultiSelectChars(visualCharOptions, mode);
@@ -1969,6 +1972,12 @@ function multiCharAdd() {
 
     location.reload();
 
+}
+function multiCharSelectAll(){
+    multiCharCancel()
+    showMultiSelect('AddNewChars')
+    let charSelectionBox = document.getElementsByClassName("multiSelectChar")
+    for (let i = 0; i < asdf.length ; i++) toggleMultiSelection(charSelectionBox[i].id)
 }
 
 function teamsToggle() {
