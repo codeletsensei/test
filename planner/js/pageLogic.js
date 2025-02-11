@@ -3372,6 +3372,7 @@ function saveCharChanges() {
 
     if (!charData) {
         closeModal(true)
+        return false
     }
 
     if (charData != undefined) {
@@ -4016,6 +4017,7 @@ function isCharModalDirty() {
             html: "There's something wrong with that student's data. Try deleting <b>" + charlist[modalCharID].Name.toUpperCase() + "</b> (X button near her portrait) and adding her again... Sorry.",
             color: alertColour
         })
+        closeModal(true)
         return false
     }
     if (compareObjects(charData.current, modalData.current) != true) {
