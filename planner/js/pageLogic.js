@@ -3369,6 +3369,16 @@ function saveCharChanges() {
     charId = modalCharID;
 
     var charData = data.characters.find(obj => { return obj.id == charId });
+    
+    if (!charData) {
+        Swal.fire({
+            icon: 'error',
+            title: GetLanguageString("text-oops"),
+            text: "There's something wrong with the student's data. Try deleting " + charlist[charId].Name + " (X button near her portrait) and adding her again... Sorry.",
+            color: alertColour
+        })
+        return false
+    }
 
     if (charData != undefined) {
 
@@ -4009,7 +4019,7 @@ function isCharModalDirty() {
         Swal.fire({
             icon: 'error',
             title: GetLanguageString("text-oops"),
-            text: "There's something wrong with the student's data. Try deleting " + charlist[charData].Name + " (X button near her portrait) and adding her again... Sorry.",
+            text: "There's something wrong with the student's data. Try deleting " + charlist[modalCharID].Name + " (X button near her portrait) and adding her again... Sorry.",
             color: alertColour
         })
         return false
@@ -5648,15 +5658,7 @@ function updateLeftoverMat(mat) {
 }
 
 function calculateCharResources(charData, output) {
-    if (!charData) {
-        Swal.fire({
-            icon: 'error',
-            title: GetLanguageString("text-oops"),
-            text: "There's something wrong with the student's data. Try deleting " + charlist[charData].Name + " (X button near her portrait) and adding her again... Sorry.",
-            color: alertColour
-        })
-        return false
-    }
+
     let charMatDict = {};
 
     let charId = charData.id.toString();
