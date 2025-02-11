@@ -3369,15 +3369,9 @@ function saveCharChanges() {
     charId = modalCharID;
 
     var charData = data.characters.find(obj => { return obj.id == charId });
-    
+
     if (!charData) {
-        Swal.fire({
-            icon: 'error',
-            title: GetLanguageString("text-oops"),
-            text: "There's something wrong with the student's data. Try deleting " + charlist[charId].Name + " (X button near her portrait) and adding her again... Sorry.",
-            color: alertColour
-        })
-        return false
+        closeModal(true)
     }
 
     if (charData != undefined) {
