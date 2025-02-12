@@ -5208,8 +5208,12 @@ function createTable(id, columns, colOffset, rows, rowOffset, tableNavigation, p
 
 function updatedResource(el) {
     if (!el) el = this
+    console.log(el)
+    console.log(el.value)
+    console.log(el.id)
     var newCount = el.value;
     var matName = el.id.substring(6);
+    console.log(matName)
     var textElement = document.getElementById(matName);
 
     var nonCentred = false;
