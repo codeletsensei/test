@@ -428,7 +428,7 @@ function init() {
     for (let i = 0 ; i < giftsList.length ; i++) { 
         createTable( ("gifts-table"+i), giftsList[i] , 50, ["favor"] , 0, tableNavigation, document.getElementById("table-parent-8"), true, "resource", "icons/Gifts/", [], "gifts-");
     }
-
+    
     let gearNavigation = [];
     createTable("gear-table", ["T10", "T9", "T8", "T7", "T6", "T5", "T4", "T3", "T2"], 0, ["Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"],
         0, gearNavigation, document.getElementById('table-parent-4'), false, "gear", "icons/Gear/", [], "gear-");
@@ -5206,14 +5206,10 @@ function createTable(id, columns, colOffset, rows, rowOffset, tableNavigation, p
 
 }
 
-function updatedResource(el) {
-    if (!el) el = this
-    console.log(el)
-    console.log(el.value)
-    console.log(el.id)
-    var newCount = el.value;
-    var matName = el.id.substring(6);
-    console.log(matName)
+function updatedResource() {
+
+    var newCount = this.value;
+    var matName = this.id.substring(6);
     var textElement = document.getElementById(matName);
 
     var nonCentred = false;
@@ -5227,20 +5223,20 @@ function updatedResource(el) {
     }
 
     if (newCount == 0 && (!nonCentred)) {
-        el.value = 0;
-        el.parentElement.classList.add("empty-resource");
+        this.value = 0;
+        this.parentElement.classList.add("empty-resource");
         if (textElement != null) {
             textElement.innerText = '';
         }
         newCount = 0;
     }
     else if (newCount == 0 && nonCentred) {
-        el.value = 0;
+        this.value = 0;
         textElement.innerText = '0';
         newCount = 0;
     }
     else if (newCount) {
-        el.parentElement.classList.remove("empty-resource");
+        this.parentElement.classList.remove("empty-resource");
         if (textElement != null) {
             if (nonCentred) {
                 textElement.innerText = commafy(newCount);
@@ -5895,7 +5891,6 @@ function toggleIgnoreLB(){
     for (var i = 0; i < data.characters.length; i++) {
         calculateCharResources(data.characters[i], false);
     }
-    updatedResource(document.getElementById("input_potentialattack_target"))
 }
 
 
