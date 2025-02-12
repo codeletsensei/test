@@ -2496,77 +2496,79 @@ const inputValidation = {
         "navigation": "resourceTable",
         "Right": "input-favor_0_3"
     },
-    "favor_0_3": {
+
+
+"input-favor_0_3": {
         "id": "input-favor_0_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_1_3": {
+    "input-favor_1_3": {
         "id": "input-favor_1_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_2_3": {
+    "input-favor_2_3": {
         "id": "input-favor_2_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_3_3": {
+    "input-favor_3_3": {
         "id": "input-favor_3_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_4_3": {
+    "input-favor_4_3": {
         "id": "input-favor_4_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_5_3": {
+    "input-favor_5_3": {
         "id": "input-favor_5_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_6_3": {
+    "input-favor_6_3": {
         "id": "input-favor_6_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_7_3": {
+    "input-favor_7_3": {
         "id": "input-favor_7_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_8_3": {
+    "input-favor_8_3": {
         "id": "input-favor_8_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_9_3": {
+    "input-favor_9_3": {
         "id": "input-favor_9_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_10_3": {
+    "input-favor_10_3": {
         "id": "input-favor_10_3",
         "location": "resourceModal",
         "min": "0",
@@ -2574,70 +2576,70 @@ const inputValidation = {
         "navigation": "resourceTable",
         "Right": "input-favor_11_3"
     },
-    "favor_11_3": {
+    "input-favor_11_3": {
         "id": "input-favor_11_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_12_3": {
+    "input-favor_12_3": {
         "id": "input-favor_12_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_13_3": {
+    "input-favor_13_3": {
         "id": "input-favor_13_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_14_3": {
+    "input-favor_14_3": {
         "id": "input-favor_14_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_15_3": {
+    "input-favor_15_3": {
         "id": "input-favor_15_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_16_3": {
+    "input-favor_16_3": {
         "id": "input-favor_16_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_17_3": {
+    "input-favor_17_3": {
         "id": "input-favor_17_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_18_3": {
+    "input-favor_18_3": {
         "id": "input-favor_18_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_19_3": {
+    "input-favor_19_3": {
         "id": "input-favor_19_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_20_3": {
+    "input-favor_20_3": {
         "id": "input-favor_20_3",
         "location": "resourceModal",
         "min": "0",
@@ -2645,70 +2647,70 @@ const inputValidation = {
         "navigation": "resourceTable",
         "Right": "input-favor_21_3"
     },
-    "favor_21_3": {
+    "input-favor_21_3": {
         "id": "input-favor_21_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_22_3": {
+    "input-favor_22_3": {
         "id": "input-favor_22_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_23_3": {
+    "input-favor_23_3": {
         "id": "input-favor_23_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_24_3": {
+    "input-favor_24_3": {
         "id": "input-favor_24_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_25_3": {
+    "input-favor_25_3": {
         "id": "input-favor_25_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_26_3": {
+    "input-favor_26_3": {
         "id": "input-favor_26_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_27_3": {
+    "input-favor_27_3": {
         "id": "input-favor_27_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_28_3": {
+    "input-favor_28_3": {
         "id": "input-favor_28_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_29_3": {
+    "input-favor_29_3": {
         "id": "input-favor_29_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_30_3": {
+    "input-favor_30_3": {
         "id": "input-favor_30_3",
         "location": "resourceModal",
         "min": "0",
@@ -2716,34 +2718,38 @@ const inputValidation = {
         "navigation": "resourceTable",
         "Right": "input-favor_31_3"
     },
-    "favor_31_3": {
+    "input-favor_31_3": {
         "id": "input-favor_31_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_32_3": {
+    "input-favor_32_3": {
         "id": "input-favor_32_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_33_3": {
+    "input-favor_33_3": {
         "id": "input-favor_33_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "favor_34_3": {
+    "input-favor_34_3": {
         "id": "input-favor_34_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
+        "Right": "input-favor_0_3"
     },
+
+
+
     "Credit": {
         "id": "input-Credit",
         "location": "resourceModal",
