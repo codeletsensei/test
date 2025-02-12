@@ -2386,7 +2386,7 @@ const inputValidation = {
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
-        "navigation": "resourceTable"
+        "navigation": "resourceTable",
         "Right": "input-Rocket_4"
     },
     "Quimbaya_2": {
