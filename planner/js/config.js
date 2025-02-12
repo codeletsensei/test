@@ -2744,7 +2744,7 @@ const inputValidation = {
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
-        "navigation": "resourceTable"
+        "navigation": "resourceTable",
         "Right": "input-favor_0_3"
     },
 
