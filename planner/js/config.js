@@ -2572,7 +2572,7 @@ const inputValidation = {
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable",
-        "Right": "favor_11_3"
+        "Right": "input-favor_11_3"
     },
     "favor_11_3": {
         "id": "input-favor_11_3",
@@ -2643,7 +2643,7 @@ const inputValidation = {
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable",
-        "Right": "favor_21_3"
+        "Right": "input-favor_21_3"
     },
     "favor_21_3": {
         "id": "input-favor_21_3",
@@ -2714,7 +2714,7 @@ const inputValidation = {
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable",
-        "Right": "favor_31_3"
+        "Right": "input-favor_31_3"
     },
     "favor_31_3": {
         "id": "input-favor_31_3",
