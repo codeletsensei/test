@@ -391,7 +391,7 @@ function init() {
     let tableNavigation = [];
 
     // generate resource modal tables
-    createTable("school-mat-table", ["BD_4", "BD_3", "BD_2", "BD_1", "TN_4", "TN_3", "TN_2", "TN_1"], 0,
+    createTable("school-mat-table", , 0,
         ["Hyakkiyako", "Red Winter", "Trinity", "Gehenna", "Abydos", "Millennium", "Arius", "Shanhaijing", "Valkyrie"], 0,
         tableNavigation, document.getElementById("table-parent-1"), false, "resource", "icons/SchoolMat/", [], "school-");
     createTable("artifact-table-1", ["4", "3", "2", "1"], 0,
@@ -416,9 +416,15 @@ function init() {
     for (let i = 0 ; i < giftsList.length ; i++) { 
         createTable( ("gifts-table"+i), giftsList[i] , 50, ["favor"] , 0, tableNavigation, document.getElementById("table-parent-8"), true, "resource", "icons/Gifts/", [], "gifts-");
     }
-
+    let tierOrder = {}
+    if (!ingameTierOrder) {
+        tierOrder["gear"] = ["T2", "T3", "T4", "T5", "T6", "T7", "T8", "T9", "T10"]
+    }
+    else {
+        tierOrder["gear"] = ["T10", "T9", "T8", "T7", "T6", "T5", "T4", "T3", "T2"]
+    }
     let gearNavigation = [];
-    createTable("gear-table", ["T2", "T3", "T4", "T5", "T6", "T7", "T8", "T9", "T10", ], 0, ["Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"],
+    createTable("gear-table", tierOrder.gear, 0, ["Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"],
         0, gearNavigation, document.getElementById('table-parent-4'), false, "gear", "icons/Gear/", [], "gear-");
 
     let navObj = {};
