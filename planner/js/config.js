@@ -2474,31 +2474,31 @@ const inputValidation = {
         "navigation": "resourceTable",
         "Left": "input-Colgante_1"
     },
-    "potentialhealpower_3": {
-        "id": "input-potentialhealpower_3",
+    "Workbook_potentialhealpower_3": {
+        "id": "input-Workbook_potentialhealpower_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable",
+        "Right": "input-Workbook_potentialattack_3"
     },
-    "potentialattack_3": {
-        "id": "input-potentialattack_3",
+    "Workbook_potentialattack_3": {
+        "id": "input-Workbook_potentialattack_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable",
+        "Right": "input-Workbook_potentialmaxhp_3"
     },
-    "potentialmaxhp_3": {
-        "id": "input-potentialmaxhp_3",
+    "Workbook_potentialmaxhp_3": {
+        "id": "input-Workbook_potentialmaxhp_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable",
-        "Right": "input-favor_0_3"
+        "Right": "input-favor_0_3",
     },
-
-
-"favor_0_3": {
+    "favor_0_3": {
         "id": "input-favor_0_3",
         "location": "resourceModal",
         "min": "0",
@@ -2778,9 +2778,6 @@ const inputValidation = {
         "navigation": "resourceTable",
         "Right": "input-favor_0_3"
     },
-
-
-
     "Credit": {
         "id": "input-Credit",
         "location": "resourceModal",
