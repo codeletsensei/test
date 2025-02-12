@@ -2501,8 +2501,7 @@ const inputValidation = {
         "navigation": "resourceTable",
         "Right": "input-favor_0_3",
     },
-    
-"favor_0_3": {
+    "favor_0_3": {
         "id": "input-favor_0_3",
         "location": "resourceModal",
         "min": "0",
@@ -2817,8 +2816,6 @@ const inputValidation = {
         "Right": "input-BD_4_Hyakkiyako",
         "Left": "input-favor_33_3"
     },
-
-
     "Credit": {
         "id": "input-Credit",
         "location": "resourceModal",
