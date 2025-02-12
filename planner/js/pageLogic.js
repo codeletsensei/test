@@ -5892,11 +5892,15 @@ function toggleIgnoreLB(){
         calculateCharResources(data.characters[i], false);
     }
     populateCharResources(modalCharID)
+    let imgEl = document.getElementById("row-Workbook").getElementsByTagName("img")
+    for (let i = 0 ; i < imgEl.length ; i++) {
+        if (ignoreLB == 1) imgEl.src = "icons/Misc/Koharu_censor_small.webp"
+        else {
+            let id = parseInt(imgEl[i].parentElement.id)
+            imgEl.src = "icons/LimitBreak/" + matLookup.get(id) + ".webp"
+        }
+    }
 }
-
-
-
-
 
 function calcXpCost(level, levelTarget, matDict) {
 
