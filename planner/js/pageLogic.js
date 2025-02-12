@@ -88,6 +88,8 @@ let bodyFrozen = false;
 
 let ignoreLB = false
 
+let ingameTierOrder = 0
+
 const strNullImage = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
 
 const platform = navigator.userAgentData?.platform || navigator.platform;
