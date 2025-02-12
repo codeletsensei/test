@@ -86,6 +86,8 @@ let cancelHidingOverlay = false;
 
 let bodyFrozen = false;
 
+let ignoreLB = false
+
 const strNullImage = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
 
 const platform = navigator.userAgentData?.platform || navigator.platform;
@@ -5676,10 +5678,11 @@ function calculateCharResources(charData, output) {
     calcSkillCost(charObj, "sub", charData.current?.sub, charData.target?.sub, charMatDict);
 
     calcSkillCost(charObj, "bondgear", charData.current?.bondgear, charData.target?.bondgear, charMatDict);
-    calcPotentialCost(charObj, "potentialmaxhp", charData.current?.potentialmaxhp, charData.target?.potentialmaxhp, charMatDict);
-    calcPotentialCost(charObj, "potentialattack", charData.current?.potentialattack, charData.target?.potentialattack, charMatDict);
-    calcPotentialCost(charObj, "potentialhealpower", charData.current?.potentialhealpower, charData.target?.potentialhealpower, charMatDict);
-
+    if (ignoreLB == 0) {
+        calcPotentialCost(charObj, "potentialmaxhp", charData.current?.potentialmaxhp, charData.target?.potentialmaxhp, charMatDict);
+        calcPotentialCost(charObj, "potentialattack", charData.current?.potentialattack, charData.target?.potentialattack, charMatDict);
+        calcPotentialCost(charObj, "potentialhealpower", charData.current?.potentialhealpower, charData.target?.potentialhealpower, charMatDict);
+    }
     calcXpCost(charData.current?.level, charData.target?.level, charMatDict);
     calcGearCost(charObj, charData.current?.gear1, charData.target?.gear1, 1, charMatDict);
     calcGearCost(charObj, charData.current?.gear2, charData.target?.gear2, 2, charMatDict);
@@ -5882,7 +5885,12 @@ function calcPotentialCost(characterObj, skill, current, target, matDict) {
     }
 }
 
-
+function toggleIgnoreLB(){
+    ignoreLB = document.getElementById("checkboxIgnoreLB").checked
+    for (var i = 0; i < data.characters.length; i++) {
+        calculateCharResources(data.characters[i], false);
+    }
+}
 
 
 
