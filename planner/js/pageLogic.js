@@ -88,8 +88,6 @@ let bodyFrozen = false;
 
 let ignoreLB = false
 
-let useIngameTierOrder = 1
-
 const strNullImage = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
 
 const platform = navigator.userAgentData?.platform || navigator.platform;
@@ -419,15 +417,8 @@ function init() {
         createTable( ("gifts-table"+i), giftsList[i] , 50, ["favor"] , 0, tableNavigation, document.getElementById("table-parent-8"), true, "resource", "icons/Gifts/", [], "gifts-");
     }
 
-    let tierOrder = {}
-    if (useIngameTierOrder) {
-        tierOrder["gear"] = ["T2", "T3", "T4", "T5", "T6", "T7", "T8", "T9", "T10"]
-    }
-    else {
-        tierOrder["gear"] = ["T10", "T9", "T8", "T7", "T6", "T5", "T4", "T3", "T2"]
-    }
     let gearNavigation = [];
-    createTable("gear-table", tierOrder.gear, 0, ["Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"],
+    createTable("gear-table", ["T10", "T9", "T8", "T7", "T6", "T5", "T4", "T3", "T2"], 0, ["Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"],
         0, gearNavigation, document.getElementById('table-parent-4'), false, "gear", "icons/Gear/", [], "gear-");
 
     let navObj = {};
@@ -5081,7 +5072,6 @@ function hideEmptyCell(id) {
 }
 
 function createTable(id, columns, colOffset, rows, rowOffset, tableNavigation, parent, reorder, type, imgLoc, skip, stringLangPrefix) {
-    console.log(id, parent)
     const newTable = document.createElement("table");
     newTable.className = "resource-table";
     newTable.id = id;
