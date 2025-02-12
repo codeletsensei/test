@@ -211,39 +211,33 @@
                         <img id="mood-Indoors" class="mood-icon"></img>
                     </div>
                 </div>
-                <div class="modal-content-section" id="content-16"
-                    style="width: 15%; min-width: 150px; display: flex; margin-top: 35px; margin-bottom:35px; justify-content: left;">
-                    <div class="content-section-wrapper" style="padding: 1% 10% 1% 1em;">
-                        <div>
-                            <br>
-                            <br>
-                            <input id="input_potentialmaxhp_current" type="number" class="two_digit_input">
-                            <br>
-                            HP
-                            <br>
-                            <input id="input_potentialmaxhp_target" type="number" class="two_digit_input">
-                        </div>
-                        <div>
-                            <b>LB</b>
-                            <p class="label-current">atm</p>
-                            <input id="input_potentialattack_current" type="number" class="two_digit_input">
-                            <br>
-                            ATK
-                            <br>
-                            <input id="input_potentialattack_target" type="number" class="two_digit_input">
-                            <p class="label-target">tgt</p>
-                        </div>
-                        <div>
-                            <br>
-                            <br>
-                            <input id="input_potentialhealpower_current" type="number" class="two_digit_input">
-                            <br>
-                            Heal
-                            <br>
-                            <input id="input_potentialhealpower_target" type="number" class="two_digit_input">
-                            <br>
-                        </div>
-                    </div>
+                <div class="modal-content-section" id="content-16" style="width: 15%; min-width: 150px; display: flex; margin-top: 35px; margin-bottom:35px; justify-content: left;">
+                    <table class="content-section-wrapper" style="padding: 1% 10% 1% 1em;">
+                        <tr>
+                            <td colspan=3 align="center"><b>Limit Break</b></td>
+                        </tr>
+                        <tr>
+                            <td colspan=3 align="center"><p class="label-current display-string" data-id="label-current"></p></td>
+                        </tr>
+                        <tr>
+                            <td><input id="input_potentialmaxhp_current" type="number" class="two_digit_input"></td>
+                            <td><input id="input_potentialattack_current" type="number" class="two_digit_input"></td>
+                            <td><input id="input_potentialhealpower_current" type="number" class="two_digit_input"></td>
+                        </tr>
+                        <tr>
+                            <td>HP</td>
+                            <td>ATK</td>
+                            <td>Heal</td>
+                        </tr>
+                        <tr>
+                            <td><input id="input_potentialmaxhp_target" type="number" class="two_digit_input"></td>
+                            <td><input id="input_potentialattack_target" type="number" class="two_digit_input"></td>
+                            <td><input id="input_potentialhealpower_target" type="number" class="two_digit_input"></td>
+                        </tr>
+                        <tr>
+                            <td colspan=3 align="center"><p class="label-current display-string" data-id="label-target"></p></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
             <div style="overflow-y: auto; overflow-x: clip; max-height: 45vh; height: 45vh;" class="scrollbar-styling">
