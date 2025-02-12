@@ -88,7 +88,7 @@ let bodyFrozen = false;
 
 let ignoreLB = false
 
-let ingameTierOrder = 1
+let useIngameTierOrder = 1
 
 const strNullImage = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
 
@@ -420,7 +420,7 @@ function init() {
     }
 
     let tierOrder = {}
-    if (ingameTierOrder) {
+    if (useIngameTierOrder) {
         tierOrder["gear"] = ["T2", "T3", "T4", "T5", "T6", "T7", "T8", "T9", "T10"]
     }
     else {
