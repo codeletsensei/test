@@ -411,7 +411,7 @@ function init() {
             giftsRows += 1
             giftsList[giftsRows] = []
         }
-        giftsList[giftsRows].push(5000+i)
+        giftsList[giftsRows].push(i+"_3")
     }
     for (let i = 0 ; i < giftsList.length ; i++) { 
         createTable( ("gifts-table"+i), giftsList[i] , 50, ["favor"] , 0, tableNavigation, document.getElementById("table-parent-8"), true, "resource", "icons/Gifts/", [], "gifts-");
