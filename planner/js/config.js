@@ -2480,7 +2480,6 @@ const inputValidation = {
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable",
-        "Right": "input-Workbook_potentialattack_3"
     },
     "potentialattack_3": {
         "id": "input-potentialattack_3",
@@ -2488,7 +2487,6 @@ const inputValidation = {
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable",
-        "Right": "input-Workbook_potentialmaxhp_3"
     },
     "potentialmaxhp_3": {
         "id": "input-potentialmaxhp_3",
@@ -2496,7 +2494,7 @@ const inputValidation = {
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable",
-        "Right": "input-Workbook_favor_0_3"
+        "Right": "input-favor_0_3"
     },
     "favor_0_3": {
         "id": "input-favor_0_3",
