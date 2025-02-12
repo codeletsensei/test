@@ -2498,254 +2498,263 @@ const inputValidation = {
     },
 
 
-"input-favor_0_3": {
+
+    "favor_0_3": {
         "id": "input-favor_0_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_1_3": {
+    "favor_1_3": {
         "id": "input-favor_1_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_2_3": {
+    "favor_2_3": {
         "id": "input-favor_2_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_3_3": {
+    "favor_3_3": {
         "id": "input-favor_3_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_4_3": {
+    "favor_4_3": {
         "id": "input-favor_4_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_5_3": {
+    "favor_5_3": {
         "id": "input-favor_5_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_6_3": {
+    "favor_6_3": {
         "id": "input-favor_6_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_7_3": {
+    "favor_7_3": {
         "id": "input-favor_7_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_8_3": {
+    "favor_8_3": {
         "id": "input-favor_8_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_9_3": {
+    "favor_9_3": {
         "id": "input-favor_9_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_10_3": {
+    "favor_10_3": {
         "id": "input-favor_10_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable",
-        "Right": "input-favor_11_3"
+        "Right": "input-favor_11_3",
+        "Down": "input-favor_11_3",
+        "Left": "input-favor_11_3",
+        "Up": "input-favor_11_3"
     },
-    "input-favor_11_3": {
+    "favor_11_3": {
         "id": "input-favor_11_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_12_3": {
+    "favor_12_3": {
         "id": "input-favor_12_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_13_3": {
+    "favor_13_3": {
         "id": "input-favor_13_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_14_3": {
+    "favor_14_3": {
         "id": "input-favor_14_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_15_3": {
+    "favor_15_3": {
         "id": "input-favor_15_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_16_3": {
+    "favor_16_3": {
         "id": "input-favor_16_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_17_3": {
+    "favor_17_3": {
         "id": "input-favor_17_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_18_3": {
+    "favor_18_3": {
         "id": "input-favor_18_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_19_3": {
+    "favor_19_3": {
         "id": "input-favor_19_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_20_3": {
+    "favor_20_3": {
         "id": "input-favor_20_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable",
-        "Right": "input-favor_21_3"
+        "Right": "input-favor_21_3",
+        "Down": "input-favor_21_3",
+        "Left": "input-favor_21_3",
+        "Up": "input-favor_21_3"
     },
-    "input-favor_21_3": {
+    "favor_21_3": {
         "id": "input-favor_21_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_22_3": {
+    "favor_22_3": {
         "id": "input-favor_22_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_23_3": {
+    "favor_23_3": {
         "id": "input-favor_23_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_24_3": {
+    "favor_24_3": {
         "id": "input-favor_24_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_25_3": {
+    "favor_25_3": {
         "id": "input-favor_25_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_26_3": {
+    "favor_26_3": {
         "id": "input-favor_26_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_27_3": {
+    "favor_27_3": {
         "id": "input-favor_27_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_28_3": {
+    "favor_28_3": {
         "id": "input-favor_28_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_29_3": {
+    "favor_29_3": {
         "id": "input-favor_29_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_30_3": {
+    "favor_30_3": {
         "id": "input-favor_30_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable",
-        "Right": "input-favor_31_3"
+        "Right": "input-favor_31_3",
+        "Down": "input-favor_31_3",
+        "Left": "input-favor_31_3",
+        "Up": "input-favor_31_3"
     },
-    "input-favor_31_3": {
+    "favor_31_3": {
         "id": "input-favor_31_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_32_3": {
+    "favor_32_3": {
         "id": "input-favor_32_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_33_3": {
+    "favor_33_3": {
         "id": "input-favor_33_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable"
     },
-    "input-favor_34_3": {
+    "favor_34_3": {
         "id": "input-favor_34_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
-        "navigation": "resourceTable",
-        "Right": "input-favor_0_3"
+        "navigation": "resourceTable"
     },
 
 
