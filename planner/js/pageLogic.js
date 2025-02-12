@@ -5896,7 +5896,7 @@ function toggleIgnoreLB(){
     for (let i = 0 ; i < imgEl.length ; i++) {
         if (ignoreLB == 1) imgEl.src = "icons/Misc/Koharu_censor_small.webp"
         else {
-            let id = parseInt(imgEl[i].parentElement.id)
+            let id = imgEl[i].parentElement.id.replace(/\D/g, "")
             imgEl.src = "icons/LimitBreak/" + matLookup.get(id) + ".webp"
         }
     }
