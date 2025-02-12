@@ -88,7 +88,7 @@ let bodyFrozen = false;
 
 let ignoreLB = false
 
-let ingameTierOrder = 0
+let ingameTierOrder = 1
 
 const strNullImage = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
 
