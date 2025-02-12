@@ -404,26 +404,14 @@ function init() {
     createTable("workbook-table", ["potentialhealpower_3","potentialattack_3","potentialmaxhp_3"] , 0,
         ["Workbook"], 10, tableNavigation, document.getElementById("table-parent-7"), true, "resource", "icons/LimitBreak/", [], "workbook-");
     
-    let usedGifts = []
-    for (let i in charlist) {
-        if (charlist[i].Gear) {
-            if (charlist[i].Gear.TierUpMaterial) {
-                for (let j in charlist[i].Gear.TierUpMaterial) {
-                    usedGifts.push(charlist[i].Gear.TierUpMaterial[j][0])
-                }
-            }
-        }
-    }
-    usedGifts = [...new Set(usedGifts)].sort((a,b)=>{return parseInt(a)-parseInt(b)})
-    let giftsList = []
-    giftsRows = 0
-    giftsList[0] = []
-    for (let i = 1 ; i < usedGifts.length ; i++) {
-        giftsList[giftsRows].push(matLookup.get(usedGifts[i-1]).replace("favor_","")) //If it works, it works desu...
-        if ( i != 0 && i%10 == 0) {
+    let giftsList = [[]]
+    giftsRows = -1
+    for (let i = 0 ; i <= 34 ; i++ ) {
+        if ( i%10 == 0) {
             giftsRows += 1
             giftsList[giftsRows] = []
         }
+        giftsList[giftsRows].push(5000+i)
     }
     for (let i = 0 ; i < giftsList.length ; i++) { 
         createTable( ("gifts-table"+i), giftsList[i] , 50, ["favor"] , 0, tableNavigation, document.getElementById("table-parent-8"), true, "resource", "icons/Gifts/", [], "gifts-");
@@ -6206,29 +6194,6 @@ function calculateRaidCoins() {
 }
 
 function switchResourceDisplay(displayType) {
-
-    // APRIL FOOLS
-    // if (displayType == "Owned") {
-    //     if (document.getElementById("switch-resource-owned").classList.contains("april-fools-button")) {
-    //         return;
-    //     }
-    // }
-    // else if (displayType == "Total") {
-    //     if (document.getElementById("switch-resource-total").classList.contains("april-fools-button")) {
-    //         return;
-    //     }
-    // }
-    // else if (displayType == "Remaining") {
-    //     if (document.getElementById("switch-resource-remaining").classList.contains("april-fools-button")) {
-    //         return;
-    //     }
-    // }
-    // else if (displayType == "Leftover") {
-    //     if (document.getElementById("switch-resource-leftover").classList.contains("april-fools-button")) {
-    //         return;
-    //     }
-    // }
-
 
     let btnOwned = document.getElementById("switch-resource-owned");
     let btnTotal = document.getElementById("switch-resource-total");

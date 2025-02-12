@@ -464,9 +464,6 @@ function updateInfoDisplay(charId, idInject, charData) {
     else {
         document.getElementById(charId + idInject + "-limitbreak-target").innerText = "";
     }
-
-
-    
 }
 
 function updateStarDisplay(id, charId, type, fromTemp, charData) {
