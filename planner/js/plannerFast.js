@@ -396,7 +396,7 @@ function createCharBox(charId, container, location, lazy) {
 }
 
 function updateInfoDisplay(charId, idInject, charData) {
-
+console.log(charId,idInject,charData)
     // var charData = data.characters[dataCharIndex[charId]];
 
     var skillCurrent = formatLevel("Ex", charData.current?.ex) + formatLevel("Other", charData.current?.basic) +
