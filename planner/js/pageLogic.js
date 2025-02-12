@@ -5887,11 +5887,11 @@ function calcPotentialCost(characterObj, skill, current, target, matDict) {
 }
 
 function toggleIgnoreLB(){
-    console.trace();
     ignoreLB = document.getElementById("checkboxIgnoreLB").checked
     for (var i = 0; i < data.characters.length; i++) {
         calculateCharResources(data.characters[i], false);
     }
+    populateCharResources(modalCharID)
 }
 
 
