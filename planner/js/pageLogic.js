@@ -391,7 +391,7 @@ function init() {
     let tableNavigation = [];
 
     // generate resource modal tables
-    createTable("school-mat-table", , 0,
+    createTable("school-mat-table", ["BD_4", "BD_3", "BD_2", "BD_1", "TN_4", "TN_3", "TN_2", "TN_1"], 0,
         ["Hyakkiyako", "Red Winter", "Trinity", "Gehenna", "Abydos", "Millennium", "Arius", "Shanhaijing", "Valkyrie"], 0,
         tableNavigation, document.getElementById("table-parent-1"), false, "resource", "icons/SchoolMat/", [], "school-");
     createTable("artifact-table-1", ["4", "3", "2", "1"], 0,
@@ -401,7 +401,7 @@ function init() {
         ["Totem", "Baghdad", "Fleece", "Okiku", "Colgante", "Atlantis", "RomanDice", "Quimbaya", "Rocket", "Mystery"], 9,
         tableNavigation, document.getElementById("table-parent-3"), true, "resource", "icons/Artifact/", [], "artifact-");
     
-    createTable("workbook-table", ["potentialmaxhp_3","potentialattack_3","potentialhealpower_3"] , 0,
+    createTable("workbook-table", ["potentialhealpower_3","potentialattack_3","potentialmaxhp_3"] , 0,
         ["Workbook"], 10, tableNavigation, document.getElementById("table-parent-7"), true, "resource", "icons/LimitBreak/", [], "workbook-");
     
     let giftsList = [[]]
@@ -416,6 +416,7 @@ function init() {
     for (let i = 0 ; i < giftsList.length ; i++) { 
         createTable( ("gifts-table"+i), giftsList[i] , 50, ["favor"] , 0, tableNavigation, document.getElementById("table-parent-8"), true, "resource", "icons/Gifts/", [], "gifts-");
     }
+
     let tierOrder = {}
     if (!ingameTierOrder) {
         tierOrder["gear"] = ["T2", "T3", "T4", "T5", "T6", "T7", "T8", "T9", "T10"]
