@@ -420,7 +420,7 @@ function init() {
     }
 
     let tierOrder = {}
-    if (!ingameTierOrder) {
+    if (ingameTierOrder) {
         tierOrder["gear"] = ["T2", "T3", "T4", "T5", "T6", "T7", "T8", "T9", "T10"]
     }
     else {
@@ -5081,6 +5081,7 @@ function hideEmptyCell(id) {
 }
 
 function createTable(id, columns, colOffset, rows, rowOffset, tableNavigation, parent, reorder, type, imgLoc, skip, stringLangPrefix) {
+    console.log(id, parent)
     const newTable = document.createElement("table");
     newTable.className = "resource-table";
     newTable.id = id;
