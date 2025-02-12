@@ -5893,11 +5893,18 @@ function toggleIgnoreLB(){
     }
     populateCharResources(modalCharID);
     let imgEl = document.getElementById("row-Workbook").getElementsByTagName("img");
+    console.log("ignore = " + ignoreLB)
+    console.log("imgEl")
+    console.log(imgEl)
     for (let i = 0 ; i < imgEl.length ; i++) {
-        if (ignoreLB == 1) imgEl.src = "icons/Misc/Koharu_censor_small.webp";
+        console.log(imgEl[i])
+        if (ignoreLB == 1) {
+            imgEl[i].src = "icons/Misc/Koharu_censor_small.webp";
+        }
         else {
             let id = imgEl[i].parentElement.id.replace(/\D/g, "");
-            imgEl.src = "icons/LimitBreak/" + matLookup.get(id) + ".webp";
+            console.log(id)
+            imgEl[i].src = "icons/LimitBreak/" + matLookup.get(id) + ".webp";
         }
     }
 }
