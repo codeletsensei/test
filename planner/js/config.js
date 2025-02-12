@@ -1905,14 +1905,16 @@ const inputValidation = {
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
-        "navigation": "resourceTable"
+        "navigation": "resourceTable",
+        "Right": "input-Phaistos_1"
     },
     "Phaistos_3": {
         "id": "input-Phaistos_3",
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
-        "navigation": "resourceTable"
+        "navigation": "resourceTable",
+        "Right": "input-Phaistos_2"
     },
     "Phaistos_4": {
         "id": "input-Phaistos_4",
@@ -1920,7 +1922,8 @@ const inputValidation = {
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable",
-        "Left": "input-Nebra_1"
+        "Left": "input-Nebra_1",
+        "Right": "input-Phaistos_3"
     },
     "Wolfsegg_1": {
         "id": "input-Wolfsegg_1",
