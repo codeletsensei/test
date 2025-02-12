@@ -2496,7 +2496,6 @@ const inputValidation = {
         "navigation": "resourceTable",
         "Right": "input-favor_0_3"
     },
-    {
     "favor_0_3": {
         "id": "input-favor_0_3",
         "location": "resourceModal",
