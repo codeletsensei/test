@@ -448,8 +448,7 @@ function init() {
 
     for (let i = 0 ; i <= giftsRows ; i++) colourTableRows("gifts-table"+i);
 
-
-    let currentVer = GetLanguageString("text-currentversion")
+    let currentVer = GetLanguageString("text-currentversion");
     if (currentVer.localeCompare(data.site_version ?? "0.0.0", undefined, { numeric: true, sensitivity: 'base' }) == 1) {
         Swal.fire({
             title: GetLanguageString("text-updatedversionprefix") + currentVer,
@@ -457,7 +456,7 @@ function init() {
             html: GetLanguageString("text-updatemessage")
         })
 
-        data.site_version = "1.4.11.25.2.10.2";
+        data.site_version = GetLanguageString("text-currentversion");
         saveToLocalStorage(false);
     }
 
