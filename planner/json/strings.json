@@ -1624,12 +1624,11 @@
         "CN": "网站已更新完成 版本号"
     },
     "text-updatemessage": {
-        "EN": "25.02.13<br>- Moved LB box in the student editor to the free space at the top-right<br>-Added a button to ignore LB mats when computing total mats<br>-Fixed owned mats table not tabbing properly<br>-Added a button to select all students when adding<br>-Reverted portraits to webp to use less data<br><br>25.02.10<br>- Added bondgear/LB to portraits.<br>- Sort students by bondgear or sum of LB levels<br>- Export/Import save options<br><br>BUT I fucked up last time and the default bondgear tier was set to 1 instead of 0, so if you used this tool before this patch, all of your students with unchanged BG will have theirs at T1 until you manually change them",
-        "KR": "",
-        "TH": "",
-        "ID": "",
-        "JP": "",
-        "CN": ""
+        "EN": "25.02.26<br>- Added Juri&Sena alts.<br>- Fixed resource mats tier order.<br>- Small fixes to exporting a save compatible with Justin's. <br><br>25.02.13<br>- Moved LB box in the student editor to the free space at the top-right<br>-Added a button to ignore LB mats when computing total mats<br>-Fixed owned mats table not tabbing properly<br>-Added a button to select all students when adding<br>-Reverted portraits to webp to use less data<br><br>25.02.10<br>- Added bondgear/LB to portraits.<br>- Sort students by bondgear or sum of LB levels<br>- Export/Import save options<br><br>BUT I fucked up last time and the default bondgear tier was set to 1 instead of 0, so if you used this tool before this patch, all of your students with unchanged BG will have theirs at T1 until you manually change them"
+    },
+
+    "text-updatemessage": {
+        "EN": "1.4.11.25.2.10.2"
     },
     "text-teamslimit": {
         "EN": "Can't add more than 25 teams",
