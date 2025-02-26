@@ -449,7 +449,7 @@ function init() {
     for (let i = 0 ; i <= giftsRows ; i++) colourTableRows("gifts-table"+i);
 
 
-    let currentVer = "1.4.11.25.2.10.2"
+    let currentVer = GetLanguageString("text-currentversion")
     if (currentVer.localeCompare(data.site_version ?? "0.0.0", undefined, { numeric: true, sensitivity: 'base' }) == 1) {
         Swal.fire({
             title: GetLanguageString("text-updatedversionprefix") + currentVer,
@@ -5881,17 +5881,12 @@ function toggleIgnoreLB(){
     }
     populateCharResources(modalCharID);
     let imgEl = document.getElementById("row-Workbook").getElementsByTagName("img");
-    console.log("ignore = " + ignoreLB)
-    console.log("imgEl")
-    console.log(imgEl)
     for (let i = 0 ; i < imgEl.length ; i++) {
-        console.log(imgEl[i])
         if (ignoreLB == 1) {
             imgEl[i].src = "icons/Misc/Koharu_censor_small.webp";
         }
         else {
             let id = imgEl[i].parentElement.id.replace(/\D/g, "");
-            console.log(id)
             imgEl[i].src = "icons/LimitBreak/" + matLookup.get(id) + ".webp";
         }
     }
