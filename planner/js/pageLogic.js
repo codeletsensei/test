@@ -6427,6 +6427,10 @@ function displayExportData(option) {
                     saveData.characters[i].current = Object.fromEntries(Object.entries(saveData.characters[i].current).filter(([k, v]) => k != j));
                     saveData.characters[i].target = Object.fromEntries(Object.entries(saveData.characters[i].target).filter(([k, v]) => k != j));
                 }
+                else if (j.includes("gear") && parseInt(saveData.characters[i].current[j]) > 9) {
+                    saveData.characters[i].current[j] = "9"
+                    saveData.characters[i].target[j] = "9"
+                }
             }
         }
         saveData = JSON.stringify(saveData)
@@ -6435,20 +6439,22 @@ function displayExportData(option) {
         title: GetLanguageString("text-exporteddata"),
         html: '<textarea style="width: 400px; height: 250px; resize: none;" readonly>' + saveData + '</textarea>'
     })
-    function downloadObjectAsJson(exportObj, exportName){
-        var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(exportObj);
-        var downloadAnchorNode = document.createElement('a');
-        downloadAnchorNode.setAttribute("href",     dataStr);
-        downloadAnchorNode.setAttribute("download", exportName + ".json");
-        document.body.appendChild(downloadAnchorNode); // required for firefox
-        downloadAnchorNode.click();
-        downloadAnchorNode.remove();
+    if (typeof option == "undefined"){
+        function downloadObjectAsJson(exportObj, exportName){
+            var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(exportObj);
+            var downloadAnchorNode = document.createElement('a');
+            downloadAnchorNode.setAttribute("href",     dataStr);
+            downloadAnchorNode.setAttribute("download", exportName + ".json");
+            document.body.appendChild(downloadAnchorNode); // required for firefox
+            downloadAnchorNode.click();
+            downloadAnchorNode.remove();
+        }
+        let date = new Date().getFullYear() + "." + ("0"+(parseInt(new Date().getMonth())+1)).slice(-2) + "." + ("0" + new Date().getDate()).slice(-2) + "." + ("0" + new Date().getHours()).slice(-2) + "" + ("0" + new Date().getMinutes()).slice(-2)
+        let filename = "bag_planner"
+        if (option == "justin") filename += "2justin"
+        filename += "_saveFile_" + date
+        downloadObjectAsJson( saveData , filename )
     }
-    let date = new Date().getFullYear() + "." + ("0"+(parseInt(new Date().getMonth())+1)).slice(-2) + "." + ("0" + new Date().getDate()).slice(-2) + "." + ("0" + new Date().getHours()).slice(-2) + "" + ("0" + new Date().getMinutes()).slice(-2)
-    let filename = "bag_planner"
-    if (option == "justin") filename += "2justin"
-    filename += "_saveFile_" + date
-    downloadObjectAsJson( saveData , filename )
 }
 
 async function getImportData() {
