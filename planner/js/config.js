@@ -2453,7 +2453,7 @@ const inputValidation = {
         "min": "0",
         "max": "9999",
         "navigation": "resourceTable",
-        "Right": "input-Workbook_potentialhealpower_3"
+        "Right": "input-Workbook_potentialmaxhp_3"
     },
     "Mystery_2": {
         "id": "input-Mystery_2",
