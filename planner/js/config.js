@@ -1305,79 +1305,79 @@ const inputValidation = {
         "Left": "bulk-input_gear2_target",
         "Down": "bulk-input_ue_level_current"
     },
-    "BD_1_Abydos": {
-        "id": "input-BD_1_Abydos",
+    "BD_4_Abydos": {
+        "id": "input-BD_4_Abydos",
         "location": "resourceModal",
         "min": "0",
         "max": "999",
         "navigation": "resourceTable",
-        "Right": "input-BD_4_Millennium"
+        "Right": "input-BD_1_Millennium"
     },
-    "BD_1_Gehenna": {
-        "id": "input-BD_1_Gehenna",
+    "BD_4_Gehenna": {
+        "id": "input-BD_4_Gehenna",
         "location": "resourceModal",
         "min": "0",
         "max": "999",
         "navigation": "resourceTable",
-        "Right": "input-BD_4_Abydos"
+        "Right": "input-BD_1_Abydos"
     },
-    "BD_1_Millennium": {
-        "id": "input-BD_1_Millennium",
+    "BD_4_Millennium": {
+        "id": "input-BD_4_Millennium",
         "location": "resourceModal",
         "min": "0",
         "max": "999",
         "navigation": "resourceTable",
-        "Right": "input-BD_4_Arius"
+        "Right": "input-BD_1_Arius"
     },
-    "BD_1_Trinity": {
-        "id": "input-BD_1_Trinity",
+    "BD_4_Trinity": {
+        "id": "input-BD_4_Trinity",
         "location": "resourceModal",
         "min": "0",
         "max": "999",
         "navigation": "resourceTable",
-        "Right": "input-BD_4_Gehenna"
+        "Right": "input-BD_1_Gehenna"
     },
-    "BD_1_Hyakkiyako": {
-        "id": "input-BD_1_Hyakkiyako",
+    "BD_4_Hyakkiyako": {
+        "id": "input-BD_4_Hyakkiyako",
         "location": "resourceModal",
         "min": "0",
         "max": "999",
         "navigation": "resourceTable",
         "Right": "input-BD_4_RedWinter",
-        "Up": "input-BD_2_Valkyrie"
+        "Up": "input-BD_1_Valkyrie"
     },
-    "BD_1_Shanhaijing": {
-        "id": "input-BD_1_Shanhaijing",
+    "BD_4_Shanhaijing": {
+        "id": "input-BD_4_Shanhaijing",
         "location": "resourceModal",
         "min": "0",
         "max": "999",
         "navigation": "resourceTable",
-        "Right": "input-BD_4_Valkyrie"
+        "Right": "input-BD_1_Valkyrie"
     },
-    "BD_1_Arius": {
-        "id": "input-BD_1_Arius",
+    "BD_4_Arius": {
+        "id": "input-BD_4_Arius",
         "location": "resourceModal",
         "min": "0",
         "max": "999",
         "navigation": "resourceTable",
-        "Right": "input-BD_4_Shanhaijing"
+        "Right": "input-BD_1_Shanhaijing"
     },
-    "BD_1_RedWinter": {
-        "id": "input-BD_1_RedWinter",
+    "BD_4_RedWinter": {
+        "id": "input-BD_4_RedWinter",
         "location": "resourceModal",
         "min": "0",
         "max": "999",
         "navigation": "resourceTable",
-        "Right": "input-BD_4_Trinity"
+        "Right": "input-BD_1_Trinity"
     },
-    "BD_1_Valkyrie": {
-        "id": "input-BD_1_Valkyrie",
+    "BD_4_Valkyrie": {
+        "id": "input-BD_4_Valkyrie",
         "location": "resourceModal",
         "min": "0",
         "max": "999",
         "navigation": "resourceTable",
-        "Right": "input-TN_4_Hyakkiyako",
-        "Down": "input-TN_4_Hyakkiyako"
+        "Right": "input-TN_1_Hyakkiyako",
+        "Down": "input-TN_1_Hyakkiyako"
     },
     "BD_2_Abydos": {
         "id": "input-BD_2_Abydos",
