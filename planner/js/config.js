@@ -1352,7 +1352,6 @@ const inputValidation = {
         "max": "999",
         "navigation": "resourceTable",
         "Right": "input-BD_4_RedWinter",
-        "Up": "input-BD_2_Highlander"
     },
     "BD_1_Shanhaijing": {
         "id": "input-BD_1_Shanhaijing",
@@ -1384,8 +1383,8 @@ const inputValidation = {
         "min": "0",
         "max": "999",
         "navigation": "resourceTable",
-        "Right": "input-TN_4_Highlander",
-        "Down": "input-TN_4_Highlander"
+        "Right": "input-BD_4_Highlander",
+        "Down": "input-BD_4_Highlander"
     },
     "BD_1_Highlander": {
         "id": "input-BD_1_Highlander",
@@ -1466,7 +1465,6 @@ const inputValidation = {
         "min": "0",
         "max": "999",
         "navigation": "resourceTable",
-        "Down": "input-BD_1_Hyakkiyako"
     },
     "BD_3_Abydos": {
         "id": "input-BD_3_Abydos",
@@ -1531,7 +1529,6 @@ const inputValidation = {
         "min": "0",
         "max": "999",
         "navigation": "resourceTable",
-        "Down": "input-BD_2_Highlander"
     },
     "BD_3_Highlander": {
         "id": "input-BD_3_Highlander",
@@ -1539,7 +1536,6 @@ const inputValidation = {
         "min": "0",
         "max": "999",
         "navigation": "resourceTable",
-        "Down": "input-BD_2_Hyakkiyako"
     },
     "BD_4_Abydos": {
         "id": "input-BD_4_Abydos",
@@ -1611,7 +1607,6 @@ const inputValidation = {
         "max": "999",
         "navigation": "resourceTable",
         "Left": "input-BD_1_Shanhaijing",
-        "Down": "input-BD_3_Highlander"
     },
     "BD_4_Highlander": {
         "id": "input-BD_4_Highlander",
@@ -1619,8 +1614,7 @@ const inputValidation = {
         "min": "0",
         "max": "999",
         "navigation": "resourceTable",
-        "Left": "input-BD_1_Valkyrie",
-        "Down": "input-BD_3_Hyakkiyako"
+        "Left": "input-BD_1_Valkyrie"
     },
     "TN_1_Abydos": {
         "id": "input-TN_1_Abydos",
@@ -1775,8 +1769,7 @@ const inputValidation = {
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
-        "navigation": "resourceTable",
-        "Down": "input-TN_1_Hyakkiyako"
+        "navigation": "resourceTable"
     },
     "TN_3_Abydos": {
         "id": "input-TN_3_Abydos",
@@ -1848,8 +1841,7 @@ const inputValidation = {
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
-        "navigation": "resourceTable",
-        "Down": "input-TN_2_Hyakkiyako"
+        "navigation": "resourceTable"
     },
     "TN_4_Abydos": {
         "id": "input-TN_4_Abydos",
@@ -1932,7 +1924,6 @@ const inputValidation = {
         "max": "9999",
         "navigation": "resourceTable",
         "Left": "input-TN_1_Valkyrie",
-        "Down": "input-TN_3_Hyakkiyako"
     },
     "Nebra_1": {
         "id": "input-Nebra_1",
