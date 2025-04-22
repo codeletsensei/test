@@ -1615,7 +1615,8 @@ const inputValidation = {
         "min": "0",
         "max": "999",
         "navigation": "resourceTable",
-        "Left": "input-BD_1_Valkyrie"
+        "Left": "input-BD_1_Valkyrie",
+        "Right": "input-BD_3_Highlander"
     },
     "TN_1_Abydos": {
         "id": "input-TN_1_Abydos",
