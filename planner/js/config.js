@@ -1464,6 +1464,7 @@ const inputValidation = {
         "min": "0",
         "max": "999",
         "navigation": "resourceTable",
+        "Right": "input-BD_1_Highlander",
     },
     "BD_3_Abydos": {
         "id": "input-BD_3_Abydos",
@@ -1535,6 +1536,7 @@ const inputValidation = {
         "min": "0",
         "max": "999",
         "navigation": "resourceTable",
+        "Right": "input-BD_2_Highlander"
     },
     "BD_4_Abydos": {
         "id": "input-BD_4_Abydos",
@@ -1768,7 +1770,8 @@ const inputValidation = {
         "location": "resourceModal",
         "min": "0",
         "max": "9999",
-        "navigation": "resourceTable"
+        "navigation": "resourceTable",
+        "Right": "input-TN_1_Highlander"
     },
     "TN_3_Abydos": {
         "id": "input-TN_3_Abydos",
