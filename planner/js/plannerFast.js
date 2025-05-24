@@ -463,7 +463,8 @@ function updateInfoDisplay(charId, idInject, charData) {
     }
     else {
         if (limitbreakCurrent =! "0 0 0") document.getElementById(charId + idInject + "-limitbreak-current").innerText = limitbreakCurrent;
-        //document.getElementById(charId + idInject + "-limitbreak-target").innerText = "";
+        else document.getElementById(charId + idInject + "-limitbreak-current").innerText = "";
+        document.getElementById(charId + idInject + "-limitbreak-target").innerText = "";
     }
 }
 
