@@ -276,9 +276,9 @@ label {
 }
 
 .limitbreak-bar {
-    top: 1%;
+    top: 5%;
     width: fit-content;
-    right: 13%;
+    right: 15%;
     padding-right: 2%;
     padding-left: 1%;
 }
