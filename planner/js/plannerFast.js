@@ -462,7 +462,7 @@ function updateInfoDisplay(charId, idInject, charData) {
         document.getElementById(charId + idInject + "-limitbreak-target").innerText = limitbreakTarget;
     }
     else {
-        if (limitbreakCurrent =! "0 0 0") document.getElementById(charId + idInject + "-limitbreak-current").innerText = limitbreakCurrent;
+        if (limitbreakCurrent != "0 0 0") document.getElementById(charId + idInject + "-limitbreak-current").innerText = limitbreakCurrent;
         else document.getElementById(charId + idInject + "-limitbreak-current").innerText = "";
         document.getElementById(charId + idInject + "-limitbreak-target").innerText = "";
     }
