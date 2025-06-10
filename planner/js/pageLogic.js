@@ -1417,7 +1417,7 @@ async function openModal(e) {
         let charSelected = charNames.get(charId);
 
         let elephId = charId
-        let elephIcon = await fetch("icons/Eleph/Eleph_" + charId + ".png")
+        let elephIcon = await fetch("icons/Eleph/Eleph_" + elephId + ".png")
         if (!elephIcon.ok) elephId =  "XXXXX"
         document.getElementById('char-eleph').src = "icons/Eleph/Eleph_" + elephId + ".png";
         document.getElementById('char-eleph-needed-icon').src = "icons/Eleph/Eleph_" + elephId + ".png";
