@@ -2358,6 +2358,7 @@ const inputValidation = {
         "location": "resourceModal",
         "min": "0",
         "max": "99999",
+        "navigation": "resourceTable",
         "Right": "input-Colgante_1"
     },
     "Colgante_1": {
