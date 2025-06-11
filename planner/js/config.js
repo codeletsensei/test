@@ -1389,7 +1389,8 @@ const inputValidation = {
         "location": "resourceModal",
         "min": "0",
         "max": "99999",
-        "navigation": "resourceTable"
+        "navigation": "resourceTable",
+        "Right": "input-BD_2_Highlander"
     },
     "BD_2_Abydos": {
         "id": "input-BD_2_Abydos",
@@ -1532,7 +1533,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-BD_2_Highlander"
+        "Right": "input-BD_4_Highlander"
     },
     "BD_4_Abydos": {
         "id": "input-BD_4_Abydos",
@@ -1613,6 +1614,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
+        "Left": "input-BD_4_Valkyrie",
         "Right": "input-TN_1_Hyakkiyako",
         "Down": "input-TN_1_Hyakkiyako"
     },
@@ -1932,8 +1934,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-Phaistos_4",
-        "Up": "input-Haniwa_2"
+        "Up": "input-TN_4_Highlander"
     },
     "Nebra_2": {
         "id": "input-Nebra_2",
@@ -1941,7 +1942,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Up": "input-Haniwa_3"
+        "Up": "input-Haniwa_1"
     },
     "Nebra_3": {
         "id": "input-Nebra_3",
@@ -1949,7 +1950,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Up": "input-Haniwa_4"
+        "Up": "input-Haniwa_2"
     },
     "Nebra_4": {
         "id": "input-Nebra_4",
@@ -1957,7 +1958,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Up": "input-TN_1_Highlander"
+        "Right": "input-Phaistos_1"
     },
     "Phaistos_1": {
         "id": "input-Phaistos_1",
