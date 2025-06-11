@@ -1461,7 +1461,8 @@ const inputValidation = {
         "location": "resourceModal",
         "min": "0",
         "max": "99999",
-        "navigation": "resourceTable"
+        "navigation": "resourceTable",
+        "Right": "input-BD_3_Highlander",
     },
     "BD_3_Abydos": {
         "id": "input-BD_3_Abydos",
