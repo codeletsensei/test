@@ -3513,7 +3513,8 @@ const inputValidation = {
         "location": "gearModal",
         "min": "0",
         "max": "99999",
-        "navigation": "gearTable"
+        "navigation": "gearTable",
+        "Right": "input-T1_Spring"
     },
     "GXP_4": {
         "id": "input-GXP_4",
@@ -3692,6 +3693,7 @@ const inputValidation = {
         "max": "999",
         "navigation": "direct",
         "Left": "input-T3_Needle",
+        "Right": "input-T2_Hat",
         "Up": "input-T4_Barrel"
     },
     "T3_Needle": {
