@@ -1966,21 +1966,24 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Left": "input-Nebra_4"
+        "Left": "input-Nebra_4",
+        "Right": "input-Phaistos_2"
     },
     "Phaistos_2": {
         "id": "input-Phaistos_2",
         "location": "resourceModal",
         "min": "0",
         "max": "99999",
-        "navigation": "resourceTable"
+        "navigation": "resourceTable",
+        "Right": "input-Phaistos_3"
     },
     "Phaistos_3": {
         "id": "input-Phaistos_3",
         "location": "resourceModal",
         "min": "0",
         "max": "99999",
-        "navigation": "resourceTable"
+        "navigation": "resourceTable",
+        "Right": "input-Phaistos_4"
     },
     "Phaistos_4": {
         "id": "input-Phaistos_4",
