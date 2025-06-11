@@ -2888,8 +2888,8 @@ const inputValidation = {
         "min": "0",
         "max": "1000000000000",
         "navigation": "direct",
-        "Right": "input-XP_4",
-        "Down": "input-XP_4"
+        "Right": "input-XP_1",
+        "Down": "input-XP_1"
     },
     "Secret": {
         "id": "input-Secret",
@@ -2897,8 +2897,8 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "direct",
-        "Left": "input-XP_4",
-        "Up": "input-XP_4"
+        "Left": "input-XP_1",
+        "Up": "input-XP_1"
     },
     "XP_4": {
         "id": "input-XP_4",
@@ -2906,10 +2906,10 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "direct",
-        "Right": "input-XP_3",
-        "Left": "input-Credit",
+        "Right": "input-Secret",
+        "Left": "input-XP_3",
         "Up": "input-Credit",
-        "Down": "input-XP_3"
+        "Down": "input-Secret"
     },
     "XP_3": {
         "id": "input-XP_3",
@@ -2917,10 +2917,10 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "direct",
-        "Right": "input-XP_2",
-        "Left": "input-XP_4",
+        "Right": "input-XP_4",
+        "Left": "input-XP_2",
         "Up": "input-Credit",
-        "Down": "input-XP_2"
+        "Down": "input-XP_4"
     },
     "XP_2": {
         "id": "input-XP_2",
@@ -2928,10 +2928,10 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "direct",
-        "Right": "input-XP_1",
-        "Left": "input-XP_3",
+        "Right": "input-XP_3",
+        "Left": "input-XP_1",
         "Up": "input-Credit",
-        "Down": "input-XP_1"
+        "Down": "input-XP_3"
     },
     "XP_1": {
         "id": "input-XP_1",
@@ -2939,10 +2939,10 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "direct",
-        "Right": "input-Secret",
-        "Left": "input-XP_2",
+        "Right": "input-XP_2",
+        "Left": "input-Credit",
         "Up": "input-Credit",
-        "Down": "input-Secret"
+        "Down": "input-XP_2"
     },
     "T2_Hat": {
         "id": "input-T2_Hat",
@@ -3517,8 +3517,8 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "direct",
-        "Right": "input-GXP_3",
-        "Down": "input-GXP_3"
+        "Left": "input-GXP_3",
+        "Up": "input-GXP_3"
     },
     "GXP_3": {
         "id": "input-GXP_3",
@@ -3526,10 +3526,10 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "direct",
-        "Right": "input-GXP_2",
-        "Left": "input-GXP_4",
-        "Down": "input-GXP_2",
-        "Up": "input-GXP_4"
+        "Right": "input-GXP_4",
+        "Left": "input-GXP_2",
+        "Down": "input-GXP_4",
+        "Up": "input-GXP_2"
     },
     "GXP_2": {
         "id": "input-GXP_2",
@@ -3537,10 +3537,10 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "direct",
-        "Right": "input-GXP_1",
-        "Left": "input-GXP_3",
-        "Down": "input-GXP_1",
-        "Up": "input-GXP_3"
+        "Right": "input-GXP_3",
+        "Left": "input-GXP_1",
+        "Down": "input-GXP_3",
+        "Up": "input-GXP_1"
     },
     "GXP_1": {
         "id": "input-GXP_1",
@@ -3548,59 +3548,59 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "direct",
-        "Left": "input-GXP_2",
-        "Up": "input-GXP_2"
+        "Right": "input-GXP_2",
+        "Down": "input-GXP_2"
     },
     "T4_Spring": {
         "id": "input-T4_Spring",
         "location": "gearModal",
         "min": "0",
-        "max": "99999",
+        "max": "999",
         "navigation": "direct",
-        "Right": "input-T3_Spring",
-        "Down": "input-T4_Hammer"
+        "Left": "input-T3_Spring",
+        "Right": "input-T1_Hammer",
+        "Down": "input-T4_Hammer",
+        "Up": "input-T3_Needle"
     },
     "T3_Spring": {
         "id": "input-T3_Spring",
         "location": "gearModal",
         "min": "0",
-        "max": "99999",
+        "max": "9999",
         "navigation": "direct",
-        "Left": "input-T4_Spring",
-        "Right": "input-T2_Spring",
+        "Left": "input-T2_Spring",
+        "Right": "input-T4_Spring",
         "Down": "input-T3_Hammer",
-        "Up": "input-T4_Needle"
+        "Up": "input-T2_Needle"
     },
     "T2_Spring": {
         "id": "input-T2_Spring",
         "location": "gearModal",
         "min": "0",
-        "max": "99999",
+        "max": "9999",
         "navigation": "direct",
-        "Left": "input-T3_Spring",
-        "Right": "input-T1_Spring",
+        "Left": "input-T1_Spring",
+        "Right": "input-T3_Spring",
         "Down": "input-T2_Hammer",
-        "Up": "input-T3_Needle"
+        "Up": "input-T1_Needle"
     },
     "T1_Spring": {
         "id": "input-T1_Spring",
         "location": "gearModal",
         "min": "0",
-        "max": "99999",
+        "max": "9999",
         "navigation": "direct",
-        "Left": "input-T2_Spring",
-        "Right": "input-T4_Hammer",
-        "Down": "input-T1_Hammer",
-        "Up": "input-T2_Needle"
+        "Right": "input-T2_Spring",
+        "Down": "input-T1_Hammer"
     },
     "T4_Hammer": {
         "id": "input-T4_Hammer",
         "location": "gearModal",
         "min": "0",
-        "max": "99999",
+        "max": "999",
         "navigation": "direct",
-        "Left": "input-T1_Spring",
-        "Right": "input-T3_Hammer",
+        "Left": "input-T3_Hammer",
+        "Right": "input-T1_Barrel",
         "Down": "input-T4_Barrel",
         "Up": "input-T4_Spring"
     },
@@ -3608,10 +3608,10 @@ const inputValidation = {
         "id": "input-T3_Hammer",
         "location": "gearModal",
         "min": "0",
-        "max": "99999",
+        "max": "9999",
         "navigation": "direct",
-        "Left": "input-T4_Hammer",
-        "Right": "input-T2_Hammer",
+        "Left": "input-T2_Hammer",
+        "Right": "input-T4_Hammer",
         "Down": "input-T3_Barrel",
         "Up": "input-T3_Spring"
     },
@@ -3619,10 +3619,10 @@ const inputValidation = {
         "id": "input-T2_Hammer",
         "location": "gearModal",
         "min": "0",
-        "max": "99999",
+        "max": "9999",
         "navigation": "direct",
-        "Left": "input-T3_Hammer",
-        "Right": "input-T1_Hammer",
+        "Left": "input-T1_Hammer",
+        "Right": "input-T3_Hammer",
         "Down": "input-T2_Barrel",
         "Up": "input-T2_Spring"
     },
@@ -3630,10 +3630,10 @@ const inputValidation = {
         "id": "input-T1_Hammer",
         "location": "gearModal",
         "min": "0",
-        "max": "99999",
+        "max": "9999",
         "navigation": "direct",
-        "Left": "input-T2_Hammer",
-        "Right": "input-T4_Barrel",
+        "Left": "input-T4_Spring",
+        "Right": "input-T2_Hammer",
         "Down": "input-T1_Barrel",
         "Up": "input-T1_Spring"
     },
@@ -3641,10 +3641,10 @@ const inputValidation = {
         "id": "input-T4_Barrel",
         "location": "gearModal",
         "min": "0",
-        "max": "99999",
+        "max": "999",
         "navigation": "direct",
-        "Left": "input-T1_Hammer",
-        "Right": "input-T3_Barrel",
+        "Left": "input-T3_Barrel",
+        "Right": "input-T1_Needle",
         "Down": "input-T4_Needle",
         "Up": "input-T4_Hammer"
     },
@@ -3652,10 +3652,10 @@ const inputValidation = {
         "id": "input-T3_Barrel",
         "location": "gearModal",
         "min": "0",
-        "max": "99999",
+        "max": "9999",
         "navigation": "direct",
-        "Left": "input-T4_Barrel",
-        "Right": "input-T2_Barrel",
+        "Left": "input-T2_Barrel",
+        "Right": "input-T4_Barrel",
         "Down": "input-T3_Needle",
         "Up": "input-T3_Hammer"
     },
@@ -3663,10 +3663,10 @@ const inputValidation = {
         "id": "input-T2_Barrel",
         "location": "gearModal",
         "min": "0",
-        "max": "99999",
+        "max": "9999",
         "navigation": "direct",
-        "Left": "input-T3_Barrel",
-        "Right": "input-T1_Barrel",
+        "Left": "input-T1_Barrel",
+        "Right": "input-T3_Barrel",
         "Down": "input-T2_Needle",
         "Up": "input-T2_Hammer"
     },
@@ -3674,10 +3674,10 @@ const inputValidation = {
         "id": "input-T1_Barrel",
         "location": "gearModal",
         "min": "0",
-        "max": "99999",
+        "max": "9999",
         "navigation": "direct",
-        "Left": "input-T2_Barrel",
-        "Right": "input-T4_Needle",
+        "Left": "input-T4_Hammer",
+        "Right": "input-T2_Barrel",
         "Down": "input-T1_Needle",
         "Up": "input-T1_Hammer"
     },
@@ -3685,49 +3685,49 @@ const inputValidation = {
         "id": "input-T4_Needle",
         "location": "gearModal",
         "min": "0",
-        "max": "99999",
+        "max": "999",
         "navigation": "direct",
-        "Left": "input-T1_Barrel",
-        "Right": "input-T3_Needle",
-        "Down": "input-T3_Spring",
+        "Left": "input-T3_Needle",
         "Up": "input-T4_Barrel"
     },
     "T3_Needle": {
         "id": "input-T3_Needle",
         "location": "gearModal",
         "min": "0",
-        "max": "99999",
+        "max": "9999",
         "navigation": "direct",
-        "Left": "input-T4_Needle",
-        "Right": "input-T2_Needle",
-        "Down": "input-T2_Spring",
+        "Left": "input-T2_Needle",
+        "Right": "input-T4_Needle",
+        "Down": "input-T4_Spring",
         "Up": "input-T3_Barrel"
     },
     "T2_Needle": {
         "id": "input-T2_Needle",
         "location": "gearModal",
         "min": "0",
-        "max": "99999",
+        "max": "9999",
         "navigation": "direct",
-        "Left": "input-T3_Needle",
-        "Right": "input-T1_Needle",
-        "Down": "input-T1_Spring",
+        "Left": "input-T1_Needle",
+        "Right": "input-T3_Needle",
+        "Down": "input-T3_Spring",
         "Up": "input-T2_Barrel"
     },
     "T1_Needle": {
         "id": "input-T1_Needle",
         "location": "gearModal",
         "min": "0",
-        "max": "99999",
+        "max": "9999",
         "navigation": "direct",
-        "Left": "input-T2_Needle",
+        "Left": "input-T4_Barrel",
+        "Right": "input-T2_Needle",
+        "Down": "input-T2_Spring",
         "Up": "input-T1_Barrel"
     },
     "Eleph_Owned": {
         "id": "input_eleph_owned",
         "location": "characterModal",
         "min": "0",
-        "max": "99999"
+        "max": "999"
     },
     "Eleph_Cost": {
         "id": "input_eleph_cost",
