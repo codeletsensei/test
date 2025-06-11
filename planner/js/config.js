@@ -1698,7 +1698,7 @@ const inputValidation = {
         "max": "99999",
         "navigation": "resourceTable",
         "Left": "input-TN_4_Valkyrie",
-        "Down": "input-TN_2_Hyakkiyako"
+        "Right": "input-TN_2_Highlander"
     },
     "TN_2_Abydos": {
         "id": "input-TN_2_Abydos",
@@ -1771,7 +1771,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-TN_1_Highlander"
+        "Right": "input-TN_3_Highlander"
     },
     "TN_3_Abydos": {
         "id": "input-TN_3_Abydos",
@@ -1844,7 +1844,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-TN_2_Highlander",
+        "Right": "input-TN_4_Highlander",
     },
     "TN_4_Abydos": {
         "id": "input-TN_4_Abydos",
