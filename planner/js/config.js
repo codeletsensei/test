@@ -2882,7 +2882,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-BD_4_Hyakkiyako",
+        "Right": "input-BD_1_Hyakkiyako",
         "Left": "input-favor_33_3"
     },
     "Credit": {
