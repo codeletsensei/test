@@ -1607,7 +1607,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-BD_1_Highlanger"
+        "Right": "input-BD_1_Highlander"
     },
     "BD_4_Highlander": {
         "id": "input-BD_4_Highlander",
@@ -1764,7 +1764,6 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Down": "input-TN_1_Highlander"
     },
     "TN_2_Highlander": {
         "id": "input-TN_2_Highlander",
@@ -1967,23 +1966,21 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-Wolfsegg_4"
+        "Left": "input-Nebra_4"
     },
     "Phaistos_2": {
         "id": "input-Phaistos_2",
         "location": "resourceModal",
         "min": "0",
         "max": "99999",
-        "navigation": "resourceTable",
-        "Right": "input-Phaistos_1"
+        "navigation": "resourceTable"
     },
     "Phaistos_3": {
         "id": "input-Phaistos_3",
         "location": "resourceModal",
         "min": "0",
         "max": "99999",
-        "navigation": "resourceTable",
-        "Right": "input-Phaistos_2"
+        "navigation": "resourceTable"
     },
     "Phaistos_4": {
         "id": "input-Phaistos_4",
@@ -1991,8 +1988,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Left": "input-Nebra_1",
-        "Right": "input-Phaistos_3"
+        "Right": "input-Wolfsegg_1"
     },
     "Wolfsegg_1": {
         "id": "input-Wolfsegg_1",
@@ -2000,7 +1996,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-Nimrud_4"
+        "Left": "input-Phaistos_4"
     },
     "Wolfsegg_2": {
         "id": "input-Wolfsegg_2",
@@ -2022,7 +2018,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Left": "input-Phaistos_1"
+        "Right": "input-Nimrud_1"
     },
     "Nimrud_1": {
         "id": "input-Nimrud_1",
@@ -2030,7 +2026,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-Mandragora_4"
+        "Left": "input-Wolfsegg_4"
     },
     "Nimrud_2": {
         "id": "input-Nimrud_2",
@@ -2052,7 +2048,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Left": "input-Wolfsegg_1"
+        "Right": "input-Mandragora_1"
     },
     "Mandragora_1": {
         "id": "input-Mandragora_1",
@@ -2060,7 +2056,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-Rohonc_4"
+        "Left": "input-Nimrud_4"
     },
     "Mandragora_2": {
         "id": "input-Mandragora_2",
@@ -2082,7 +2078,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Left": "input-Nimrud_1"
+        "Right": "input-Rohonc_1"
     },
     "Rohonc_1": {
         "id": "input-Rohonc_1",
@@ -2090,7 +2086,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-Aether_4"
+        "Left": "input-Mandragora_4"
     },
     "Rohonc_2": {
         "id": "input-Rohonc_2",
@@ -2112,7 +2108,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Left": "input-Mandragora_1"
+        "Right": "input-Aether_1"
     },
     "Aether_1": {
         "id": "input-Aether_1",
@@ -2120,7 +2116,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-Antikythera_4"
+        "Left": "input-Rohonc_4"
     },
     "Aether_2": {
         "id": "input-Aether_2",
@@ -2142,7 +2138,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Left": "input-Rohonc_1"
+        "Right": "input-Antikythera_1"
     },
     "Antikythera_1": {
         "id": "input-Antikythera_1",
@@ -2150,7 +2146,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-Voynich_4"
+        "Left": "input-Aether_4"
     },
     "Antikythera_2": {
         "id": "input-Antikythera_2",
@@ -2172,7 +2168,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Left": "input-Aether_1",
+        "Right": "input-Voynich_1"
     },
     "Voynich_1": {
         "id": "input-Voynich_1",
@@ -2180,7 +2176,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-Haniwa_4"
+        "Left": "input-Antikythera_4"
     },
     "Voynich_2": {
         "id": "input-Voynich_2",
@@ -2202,7 +2198,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Left": "input-Antikythera_1"
+        "Right": "input-Haniwa_1"
     },
     "Haniwa_1": {
         "id": "input-Haniwa_1",
@@ -2210,8 +2206,8 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-Totem_4",
-        "Down": "input-Totem_4"
+        "Left": "input-Voynich_4",
+        "Down": "input-Nebra_2"
     },
     "Haniwa_2": {
         "id": "input-Haniwa_2",
@@ -2219,7 +2215,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Down": "input-Nebra_1"
+        "Down": "input-Nebra_3"
     },
     "Haniwa_3": {
         "id": "input-Haniwa_3",
@@ -2227,7 +2223,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Down": "input-Nebra_2"
+        "Down": "input-Nebra_4"
     },
     "Haniwa_4": {
         "id": "input-Haniwa_4",
@@ -2235,18 +2231,17 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Down": "input-Nebra_3",
-        "Left": "input-Voynich_1"
+        "Down": "input-Totem_1",
+        "Right": "input-Totem_1"
     },
-
     "Totem_1": {
         "id": "input-Totem_1",
         "location": "resourceModal",
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-Baghdad_4",
-        "Up": "input-Quimbaya_2"
+        "Left": "input-Haniwa_4",
+        "Up": "input-Haniwa_4"
     },
     "Totem_2": {
         "id": "input-Totem_2",
@@ -2254,7 +2249,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Up": "input-Quimbaya_3"
+        "Up": "input-Mystery_1"
     },
     "Totem_3": {
         "id": "input-Totem_3",
@@ -2262,7 +2257,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Up": "input-Quimbaya_4"
+        "Up": "input-Mystery_2"
     },
     "Totem_4": {
         "id": "input-Totem_4",
@@ -2270,8 +2265,8 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Left": "input-Haniwa_1",
-        "Up": "input-Haniwa_1"
+        "Right": "input-Baghdad_1",
+        "Up": "input-Mystery_3"
     },
     "Baghdad_1": {
         "id": "input-Baghdad_1",
@@ -2279,7 +2274,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-Fleece_4"
+        "Left": "input-Totem_4"
     },
     "Baghdad_2": {
         "id": "input-Baghdad_2",
@@ -2301,7 +2296,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Left": "input-Totem_1"
+        "Right": "input-Fleece_1"
     },
     "Fleece_1": {
         "id": "input-Fleece_1",
@@ -2309,7 +2304,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-Okiku_4"
+        "Left": "input-Baghdad_4"
     },
     "Fleece_2": {
         "id": "input-Fleece_2",
@@ -2331,7 +2326,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Left": "input-RomanDice_1"
+        "Right": "input-Okiku_1"
     },
     "Okiku_1": {
         "id": "input-Okiku_1",
@@ -2339,7 +2334,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-Colgante_4"
+        "Left": "input-Fleece_4"
     },
     "Okiku_2": {
         "id": "input-Okiku_2",
@@ -2360,8 +2355,7 @@ const inputValidation = {
         "location": "resourceModal",
         "min": "0",
         "max": "99999",
-        "navigation": "resourceTable",
-        "Left": "input-Mystery_1"
+        "Right": "input-Colgante_1"
     },
     "Colgante_1": {
         "id": "input-Colgante_1",
@@ -2369,7 +2363,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-Atlantis_4"
+        "Left": "input-Okiku_4"
     },
     "Colgante_2": {
         "id": "input-Colgante_2",
@@ -2391,7 +2385,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Left": "input-Baghdad_1"
+        "Right": "input-Atlantis_1"
     },
     "Atlantis_1": {
         "id": "input-Atlantis_1",
@@ -2399,7 +2393,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-RomanDice_4"
+        "Left": "input-Colgante_4"
     },
     "Atlantis_2": {
         "id": "input-Atlantis_2",
@@ -2421,7 +2415,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Left": "input-Okiku_1"
+        "Right": "input-RomanDice_1"
     },
     "RomanDice_1": {
         "id": "input-RomanDice_1",
@@ -2429,7 +2423,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-Quimbaya_4"
+        "Left": "input-Atlantis_4"
     },
     "RomanDice_2": {
         "id": "input-RomanDice_2",
@@ -2451,7 +2445,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Left": "input-Atlantis_1"
+        "Right": "input-Quimbaya_1"
     },
     "Quimbaya_1": {
         "id": "input-Quimbaya_1",
@@ -2459,7 +2453,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-Rocket_4"
+        "Left": "input-RomanDice_4"
     },
     "Quimbaya_2": {
         "id": "input-Quimbaya_2",
@@ -2483,8 +2477,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Down": "input-Totem_3",
-        "Left": "input-Rocket_1"
+        "Right": "input-Rocket_1"
     },
     "Rocket_1": {
         "id": "input-Rocket_1",
@@ -2492,7 +2485,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-Mystery_4"
+        "Left": "input-Quimbaya_4"
     },
     "Rocket_2": {
         "id": "input-Rocket_2",
@@ -2514,7 +2507,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Left": "input-Fleece_1"
+        "Right": "input-Mystery_1"
     },
     "Mystery_1": {
         "id": "input-Mystery_1",
@@ -2522,7 +2515,8 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-Workbook_potentialmaxhp_3"
+        "Left": "input-Rocket_4",
+        "Down": "input-Totem_2"
     },
     "Mystery_2": {
         "id": "input-Mystery_2",
@@ -2544,7 +2538,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Left": "input-Colgante_1"
+        "Right": "input-Workbook_potentialmaxhp_3"
     },
     "Workbook_potentialhealpower_3": {
         "id": "input-Workbook_potentialhealpower_3",
