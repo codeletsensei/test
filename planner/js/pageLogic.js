@@ -6593,6 +6593,7 @@ async function GetGroupScreenshot(src = "teamsContainer") {
         options["windowHeight"] = 1000 
     }
     else {
+      // Setting filters to show only the active students (there's probably a better way to do this...)
         if (!document.getElementById("selected")) {
             toggleViewFilters()
             toggleViewFilters()
