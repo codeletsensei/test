@@ -6580,17 +6580,21 @@ function getOffset(el) {
     };
 }
 
-function GetGroupScreenshot() {
+function GetGroupScreenshot(src = "teamsContainer") {
 
     if (currentGroup == "") {
         basicAlert(GetLanguageString("text-selectgroup"));
         return;
     }
-
+    opts = { "logging": false, "scale": 1 }
+    if (src == "teamsContainer") {
+        opts["windowWidth"] = 2000
+        opts["windowHeight"] = 1000 
+    }
     document.getElementById("background-blur-container").style.display = '';
     document.getElementById("button-save-image").style.display = "none";
 
-    html2canvas(document.getElementById("teamsContainer"), { "logging": false, "windowWidth": 2000, "windowHeight": 1000, "scale": 1 })
+    html2canvas(document.getElementById(src), )
         .then(canvas => {
             document.getElementById("popup-screenshot").appendChild(canvas); document.getElementById("text-creating-image").style.display = "none";
             document.getElementById("button-save-image").style.display = "";
