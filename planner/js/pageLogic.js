@@ -6582,14 +6582,17 @@ function getOffset(el) {
 
 function GetGroupScreenshot(src = "teamsContainer") {
 
-    if (currentGroup == "") {
-        basicAlert(GetLanguageString("text-selectgroup"));
-        return;
-    }
     opts = { "logging": false, "scale": 1 }
     if (src == "teamsContainer") {
+        if (currentGroup == "") {
+            basicAlert(GetLanguageString("text-selectgroup"));
+            return;
+        }
         opts["windowWidth"] = 2000
         opts["windowHeight"] = 1000 
+    }
+    else {
+        if (document.getElementById("deselected").checked) document.getElementById("deselected").click()
     }
     document.getElementById("background-blur-container").style.display = '';
     document.getElementById("button-save-image").style.display = "none";
