@@ -6580,10 +6580,9 @@ function getOffset(el) {
     };
 }
 
-function GetGroupScreenshot(src = "teamsContainer") {
+async function GetGroupScreenshot(src = "teamsContainer") {
 
     options = { "logging": false, "scale": 1 }
-    toggleViewFilters()
     let visibilityChange = null
     if (src == "teamsContainer") {
         if (currentGroup == "") {
@@ -6594,6 +6593,7 @@ function GetGroupScreenshot(src = "teamsContainer") {
         options["windowHeight"] = 1000 
     }
     else {
+        if ($('div#viewFilters').css("display") == "none") toggleViewFilters()
         if (!document.getElementById("selected").checked && !document.getElementById("deselected").checked) {
             document.getElementById("selected").click()
             visibilityChange = "selected"
@@ -6602,8 +6602,8 @@ function GetGroupScreenshot(src = "teamsContainer") {
             document.getElementById("deselected").click()
             visibilityChange = "deselected"
         }
+        toggleViewFilters()
     }
-    toggleViewFilters()
     document.getElementById("background-blur-container").style.display = '';
     document.getElementById("button-save-image").style.display = "none";
 
