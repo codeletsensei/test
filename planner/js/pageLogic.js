@@ -6583,6 +6583,7 @@ function getOffset(el) {
 function GetGroupScreenshot(src = "teamsContainer") {
 
     options = { "logging": false, "scale": 1 }
+    let visibilityChange = null
     if (src == "teamsContainer") {
         if (currentGroup == "") {
             basicAlert(GetLanguageString("text-selectgroup"));
@@ -6592,8 +6593,14 @@ function GetGroupScreenshot(src = "teamsContainer") {
         options["windowHeight"] = 1000 
     }
     else {
-        if (!document.getElementById("selected").checked && !document.getElementById("deselected").checked) document.getElementById("selected").click()
-        else if (document.getElementById("deselected").checked) document.getElementById("deselected").click()
+        if (!document.getElementById("selected").checked && !document.getElementById("deselected").checked) {
+            document.getElementById("selected").click()
+            visibilityChange = "selected"
+        }
+        else if (document.getElementById("deselected").checked) {
+            document.getElementById("deselected").click()
+            visibilityChange = "deselected"
+        }
     }
     document.getElementById("background-blur-container").style.display = '';
     document.getElementById("button-save-image").style.display = "none";
@@ -6602,6 +6609,7 @@ function GetGroupScreenshot(src = "teamsContainer") {
         .then(canvas => {
             document.getElementById("popup-screenshot").appendChild(canvas); document.getElementById("text-creating-image").style.display = "none";
             document.getElementById("button-save-image").style.display = "";
+            if (visibilityChange) document.getElementById(visibilityChange).click()
         });
 }
 
