@@ -6583,6 +6583,7 @@ function getOffset(el) {
 function GetGroupScreenshot(src = "teamsContainer") {
 
     options = { "logging": false, "scale": 1 }
+    toggleViewFilters()
     let visibilityChange = null
     if (src == "teamsContainer") {
         if (currentGroup == "") {
@@ -6602,6 +6603,7 @@ function GetGroupScreenshot(src = "teamsContainer") {
             visibilityChange = "deselected"
         }
     }
+    toggleViewFilters()
     document.getElementById("background-blur-container").style.display = '';
     document.getElementById("button-save-image").style.display = "none";
 
@@ -6609,7 +6611,11 @@ function GetGroupScreenshot(src = "teamsContainer") {
         .then(canvas => {
             document.getElementById("popup-screenshot").appendChild(canvas); document.getElementById("text-creating-image").style.display = "none";
             document.getElementById("button-save-image").style.display = "";
-            if (visibilityChange) document.getElementById(visibilityChange).click()
+            if (visibilityChange) {
+                toggleViewFilters()
+                document.getElementById(visibilityChange).click()
+                toggleViewFilters()
+            }
         });
 }
 
