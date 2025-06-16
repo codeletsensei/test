@@ -6582,14 +6582,14 @@ function getOffset(el) {
 
 function GetGroupScreenshot(src = "teamsContainer") {
 
-    opts = { "logging": false, "scale": 1 }
+    options = { "logging": false, "scale": 1 }
     if (src == "teamsContainer") {
         if (currentGroup == "") {
             basicAlert(GetLanguageString("text-selectgroup"));
             return;
         }
-        opts["windowWidth"] = 2000
-        opts["windowHeight"] = 1000 
+        options["windowWidth"] = 2000
+        options["windowHeight"] = 1000 
     }
     else {
         if (!document.getElementById("selected").checked && !document.getElementById("deselected").checked) document.getElementById("selected").click()
@@ -6598,7 +6598,7 @@ function GetGroupScreenshot(src = "teamsContainer") {
     document.getElementById("background-blur-container").style.display = '';
     document.getElementById("button-save-image").style.display = "none";
 
-    html2canvas(document.getElementById(src), )
+    html2canvas(document.getElementById(src), options )
         .then(canvas => {
             document.getElementById("popup-screenshot").appendChild(canvas); document.getElementById("text-creating-image").style.display = "none";
             document.getElementById("button-save-image").style.display = "";
