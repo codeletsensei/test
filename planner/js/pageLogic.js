@@ -6615,7 +6615,8 @@ function GetGroupScreenshot(src = "teamsContainer") {
 
     html2canvas(document.getElementById(src), options )
         .then(canvas => {
-            document.getElementById("popup-screenshot").appendChild(canvas); document.getElementById("text-creating-image").style.display = "none";
+            document.getElementById("popup-screenshot").appendChild(canvas);
+            document.getElementById("text-creating-image").style.display = "none";
             document.getElementById("button-save-image").style.display = "";
             if (visibilityChange[0]) {
                 visibilityChange.forEach(id=>{document.getElementById(id).click()})
