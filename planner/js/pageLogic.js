@@ -6580,7 +6580,7 @@ function getOffset(el) {
     };
 }
 
-async function GetGroupScreenshot(src = "teamsContainer") {
+function GetGroupScreenshot(src = "teamsContainer") {
 
     options = { "logging": false, "scale": 1 }
     let visibilityChange = []
@@ -6593,7 +6593,6 @@ async function GetGroupScreenshot(src = "teamsContainer") {
         options["windowHeight"] = 1000 
     }
     else {
-      // Setting filters to show only the active students (there's probably a better way to do this...)
         if (!document.getElementById("selected")) {
             toggleViewFilters()
             toggleViewFilters()
@@ -6614,31 +6613,15 @@ async function GetGroupScreenshot(src = "teamsContainer") {
     document.getElementById("background-blur-container").style.display = '';
     document.getElementById("button-save-image").style.display = "none";
 
-    let imeji = await domtoimage.toPng(document.getElementById(src))
-    img = new Image();
-    img.src = imeji;
-    document.getElementById("popup-screenshot").appendChild(img);
-    document.getElementById("text-creating-image").style.display = "none";
-    document.getElementById("button-save-image").style.display = "";
-    if (visibilityChange[0]) {
-        visibilityChange.forEach(id=>{document.getElementById(id).click()})
-    }
-    /*
-    html2canvas( document.getElementById(src), options )
-    .then(canvas => {
-        canvas.toBlob((blob) => {
-            // fuck me, too lazy to unnest this.
-            const img = document.createElement("img");
-            const url = URL.createObjectURL(blob);
-            document.getElementById("popup-screenshot").appendChild(img);
+    html2canvas(document.getElementById(src), options )
+        .then(canvas => {
+            document.getElementById("popup-screenshot").appendChild(canvas);
             document.getElementById("text-creating-image").style.display = "none";
             document.getElementById("button-save-image").style.display = "";
             if (visibilityChange[0]) {
                 visibilityChange.forEach(id=>{document.getElementById(id).click()})
             }
         });
-    });
-    */
 }
 
 function ClearScreenshot() {
