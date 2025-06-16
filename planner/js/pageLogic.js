@@ -6580,10 +6580,10 @@ function getOffset(el) {
     };
 }
 
-async function GetGroupScreenshot(src = "teamsContainer") {
+function GetGroupScreenshot(src = "teamsContainer") {
 
     options = { "logging": false, "scale": 1 }
-    let visibilityChange = null
+    let visibilityChange = []
     if (src == "teamsContainer") {
         if (currentGroup == "") {
             basicAlert(GetLanguageString("text-selectgroup"));
@@ -6593,16 +6593,22 @@ async function GetGroupScreenshot(src = "teamsContainer") {
         options["windowHeight"] = 1000 
     }
     else {
-        if ($('div#viewFilters').css("display") == "none") toggleViewFilters()
+        if (!document.getElementById("selected")) {
+            toggleViewFilters()
+            toggleViewFilters()
+        }
         if (!document.getElementById("selected").checked && !document.getElementById("deselected").checked) {
             document.getElementById("selected").click()
-            visibilityChange = "selected"
+            visibilityChange.push("selected")
         }
         else if (document.getElementById("deselected").checked) {
             document.getElementById("deselected").click()
-            visibilityChange = "deselected"
+            visibilityChange.push("deselected")
+            if (!document.getElementById("selected").checked) {
+                document.getElementById("selected").click()
+                visibilityChange.push("selected")
+            }
         }
-        toggleViewFilters()
     }
     document.getElementById("background-blur-container").style.display = '';
     document.getElementById("button-save-image").style.display = "none";
@@ -6611,10 +6617,8 @@ async function GetGroupScreenshot(src = "teamsContainer") {
         .then(canvas => {
             document.getElementById("popup-screenshot").appendChild(canvas); document.getElementById("text-creating-image").style.display = "none";
             document.getElementById("button-save-image").style.display = "";
-            if (visibilityChange) {
-                toggleViewFilters()
-                document.getElementById(visibilityChange).click()
-                toggleViewFilters()
+            if (visibilityChange[0]) {
+                visibilityChange.forEach(id=>{document.getElementById(id).click()})
             }
         });
 }
