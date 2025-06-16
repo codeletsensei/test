@@ -6580,7 +6580,7 @@ function getOffset(el) {
     };
 }
 
-function GetGroupScreenshot(src = "teamsContainer") {
+async function GetGroupScreenshot(src = "teamsContainer") {
 
     options = { "logging": false, "scale": 1 }
     let visibilityChange = []
