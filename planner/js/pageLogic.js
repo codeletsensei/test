@@ -6592,7 +6592,7 @@ function GetGroupScreenshot(src = "teamsContainer") {
         opts["windowHeight"] = 1000 
     }
     else {
-        if (document.getElementById("deselected").checked) document.getElementById("deselected").click()
+        if (document.getElementById("deselected").checked || (!document.getElementById("selected").checked && !document.getElementById("deselected").checked) ) document.getElementById("deselected").click()
     }
     document.getElementById("background-blur-container").style.display = '';
     document.getElementById("button-save-image").style.display = "none";
