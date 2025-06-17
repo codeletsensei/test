@@ -6411,7 +6411,7 @@ function switchGearDisplay(displayType) {
 function displayExportData(option) {
     var saveData = localStorage.getItem('save-data')
     if (option == "justin") {
-        let extraChars = [20044, 10116, 16017, 10118, 10117, 20045, 20046, 10119, 10120]
+        let extraChars = [10116, 16017, 10118, 10117, 20045, 20046, 10119, 10120]
         let extraProps = ["bondgear", "potentialmaxhp", "potentialattack", "potentialhealpower"]
         saveData = JSON.parse(saveData)
         for (let i in extraChars) {
