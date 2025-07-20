@@ -3,7 +3,7 @@
 var curID = 0;
 var modalCharID = 0;
 var modalStars = { "star": 0, "star_target": 0, "ue": 0, "ue_target": 0 };
-const ueStarCap = 3;
+const ueStarCap = 4;
 const globalMaxWorld = 27;
 const cnMaxWorld = 17;
 
@@ -4415,7 +4415,7 @@ function starClicked(type, mode, pos) {
         }
     }
 
-    if (modalStars.ue >= 4) {
+    if (modalStars.ue >= 3) {
 
         let terrain = charInfoObj.Weapon.AdaptationType;
         let boostAmt = charInfoObj.Weapon.AdaptationValue;
