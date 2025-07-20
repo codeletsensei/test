@@ -4415,7 +4415,7 @@ function starClicked(type, mode, pos) {
         }
     }
 
-    if (modalStars.ue >= 3) {
+    if (modalStars.ue >= 4) {
 
         let terrain = charInfoObj.Weapon.AdaptationType;
         let boostAmt = charInfoObj.Weapon.AdaptationValue;
