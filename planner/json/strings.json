@@ -776,6 +776,14 @@
         "JP": "ヴァルキューレ",
         "CN": "瓦尔基里"
     },
+    "school-srt": {
+        "EN": "SRT",
+        "KR": "SRT",
+        "TH": "SRT",
+        "ID": "SRT",
+        "JP": "SRT",
+        "CN": "SRT"
+    },
     "school-highlander": {
         "EN": "Highlander",
         "KR": "Highlander",
@@ -784,13 +792,13 @@
         "JP": "Highlander",
         "CN": "Highlander"
     },
-    "school-srt": {
-        "EN": "SRT",
-        "KR": "SRT",
-        "TH": "SRT",
-        "ID": "SRT",
-        "JP": "SRT",
-        "CN": "SRT"
+    "school-WildHunt": {
+        "EN": "Wild Hunt",
+        "KR": "Wild Hunt",
+        "TH": "Wild Hunt",
+        "ID": "Wild Hunt",
+        "JP": "Wild Hunt",
+        "CN": "Wild Hunt"
     },
     "school-etc": {
         "EN": "ETC",
