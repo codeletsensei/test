@@ -6418,8 +6418,8 @@ function switchGearDisplay(displayType) {
 function displayExportData(option) {
     var saveData = localStorage.getItem('save-data')
     if (option == "justin") {
-        let extraChars = [10116, 16017, 10118, 10117, 20045, 20046, 10119, 10120]
-        let extraProps = ["bondgear", "potentialmaxhp", "potentialattack", "potentialhealpower"]
+        let extraChars = []
+        let extraProps = ["bondgear", "potentialmaxhp", "potentialattack", "potentialhealpower", "WildHunt"]
         saveData = JSON.parse(saveData)
         for (let i in extraChars) {
             saveData.characters = saveData.characters.filter((a)=>{ return a.id != extraChars[i] })
@@ -6432,9 +6432,9 @@ function displayExportData(option) {
                     saveData.characters[i].current = Object.fromEntries(Object.entries(saveData.characters[i].current).filter(([k, v]) => k != j));
                     saveData.characters[i].target = Object.fromEntries(Object.entries(saveData.characters[i].target).filter(([k, v]) => k != j));
                 }
-                else if (j.includes("gear") && parseInt(saveData.characters[i].current[j]) > 9) {
-                    saveData.characters[i].current[j] = "9"
-                    saveData.characters[i].target[j] = "9"
+                else if (j.includes("gear") && parseInt(saveData.characters[i].current[j]) > 10) {
+                    saveData.characters[i].current[j] = "10"
+                    saveData.characters[i].target[j] = "10"
                 }
             }
         }
