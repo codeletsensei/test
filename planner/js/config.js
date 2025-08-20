@@ -139,10 +139,10 @@ const matLookup = new TwoWayMap({
     3091: "BD_2_Highlander",
     3092: "BD_3_Highlander",
     3093: "BD_4_Highlander",
-    3100: "BD_1_WildHunt",
-    3101: "BD_2_WildHunt",
-    3102: "BD_3_WildHunt",
-    3103: "BD_4_WildHunt",
+    3100: "BD_1_Wildhunt",
+    3101: "BD_2_Wildhunt",
+    3102: "BD_3_Wildhunt",
+    3103: "BD_4_Wildhunt",
 
     4000: "TN_1_Hyakkiyako",
     4001: "TN_2_Hyakkiyako",
@@ -184,10 +184,10 @@ const matLookup = new TwoWayMap({
     4091: "TN_2_Highlander",
     4092: "TN_3_Highlander",
     4093: "TN_4_Highlander",
-    4100: "TN_1_WildHunt",
-    4101: "TN_2_WildHunt",
-    4102: "TN_3_WildHunt",
-    4103: "TN_4_WildHunt",
+    4100: "TN_1_Wildhunt",
+    4101: "TN_2_Wildhunt",
+    4102: "TN_3_Wildhunt",
+    4103: "TN_4_Wildhunt",
 
     5000: "favor_0_3",
     5001: "favor_1_3",
@@ -240,7 +240,7 @@ const gearLookup = ["T2_Hat", "T2_Gloves", "T2_Shoes", "T2_Bag", "T2_Badge", "T2
 
 var rowColours = {
     "Abydos": "#9ce4fc66", "Gehenna": "#ec7d7966", "Millennium": "#9ebdfa66", "Trinity": "#fcd19c66", "Hyakkiyako": "#f0a8c466", "Arius": "#dbdad85e",
-    "Shanhaijing": "#b4feca66", "Red Winter": "#d98c9e66", "Valkyrie": "#a1a9e166", "Highlander": "#5A5770", "WildHunt": "#5A5A46", "Nebra": "#99919466", "Phaistos": "#fdf7e766", "Wolfsegg": "#93a5f266",
+    "Shanhaijing": "#b4feca66", "Red Winter": "#d98c9e66", "Valkyrie": "#a1a9e166", "Highlander": "#5A5770", "Wildhunt": "#5A5A46", "Nebra": "#99919466", "Phaistos": "#fdf7e766", "Wolfsegg": "#93a5f266",
     "Nimrud": "#67e4ef66", "Mandragora": "#a1ede566", "Rohonc": "#c9ab9366", "Aether": "#ca96e066", "Antikythera": "#f7e28866",
     "Voynich": "#84b28066", "Haniwa": "#e7bef466", "Baghdad": "#d179a066", "Totem": "#b77e6166", "Fleece": "#fdf76966", "Okiku": "#ff88294a", "Atlantis": "#ecff2933",
     "Colgante": "#c2cdfe70", "Mystery": "#305c894a", "RomanDice": "#71bec566", "Quimbaya": "#e3df7466", "Rocket": "#c0f2f366", "Workbook": "#c2cdfe70", "favor": "#fdf7e766",
@@ -252,7 +252,7 @@ const propertyColours = {
     "LightArmor": "#ec242487", "HeavyArmor": "#fff10099", "Unarmed": "#1070a5c2", "ElasticArmor": "#c246d79e",
     "Striker": "#cc1a2587", "Special": "#006aff87",
     "Abydos": "#9ce4fc66", "Gehenna": "#ec7d7966", "Millennium": "#9ebdfa66", "Trinity": "#fcd19c66", "Hyakkiyako": "#f0a8c466",
-    "Arius": "#dbdad85e", "Shanhaijing": "#b4feca66", "RedWinter": "#d98c9e66", "Valkyrie": "#a1a9e166", "Highlander": "#5A5770", "WildHunt": "#5A5A46"
+    "Arius": "#dbdad85e", "Shanhaijing": "#b4feca66", "RedWinter": "#d98c9e66", "Valkyrie": "#a1a9e166", "Highlander": "#5A5770", "Wildhunt": "#5A5A46"
 }
 
 const exportDataVersion = 2;
@@ -1408,13 +1408,13 @@ const inputValidation = {
         "navigation": "resourceTable",
         "Right": "input-BD_2_Highlander"
     },
-    "BD_1_WildHunt": {
-        "id": "input-BD_1_WildHunt",
+    "BD_1_Wildhunt": {
+        "id": "input-BD_1_Wildhunt",
         "location": "resourceModal",
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-BD_2_WildHunt"
+        "Right": "input-BD_2_Wildhunt"
     },
     "BD_2_Abydos": {
         "id": "input-BD_2_Abydos",
@@ -1450,7 +1450,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Up": "input-BD_3_WildHunt"
+        "Up": "input-BD_3_Wildhunt"
     },
     "BD_2_Shanhaijing": {
         "id": "input-BD_2_Shanhaijing",
@@ -1488,13 +1488,13 @@ const inputValidation = {
         "navigation": "resourceTable",
         "Right": "input-BD_3_Highlander",
     },
-    "BD_2_WildHunt": {
-        "id": "input-BD_2_WildHunt",
+    "BD_2_Wildhunt": {
+        "id": "input-BD_2_Wildhunt",
         "location": "resourceModal",
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-BD_3_WildHunt",
+        "Right": "input-BD_3_Wildhunt",
     },
     "BD_3_Abydos": {
         "id": "input-BD_3_Abydos",
@@ -1530,7 +1530,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Up": "input-BD_4_WildHunt"
+        "Up": "input-BD_4_Wildhunt"
     },
     "BD_3_Shanhaijing": {
         "id": "input-BD_3_Shanhaijing",
@@ -1568,13 +1568,13 @@ const inputValidation = {
         "navigation": "resourceTable",
         "Right": "input-BD_4_Highlander"
     },
-    "BD_3_WildHunt": {
-        "id": "input-BD_3_WildHunt",
+    "BD_3_Wildhunt": {
+        "id": "input-BD_3_Wildhunt",
         "location": "resourceModal",
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-BD_4_WildHunt"
+        "Right": "input-BD_4_Wildhunt"
     },
     "BD_4_Abydos": {
         "id": "input-BD_4_Abydos",
@@ -1655,10 +1655,10 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-BD_1_WildHunt",
+        "Right": "input-BD_1_Wildhunt",
     },
-    "BD_4_WildHunt": {
-        "id": "input-BD_4_WildHunt",
+    "BD_4_Wildhunt": {
+        "id": "input-BD_4_Wildhunt",
         "location": "resourceModal",
         "min": "0",
         "max": "99999",
@@ -1705,8 +1705,8 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Left": "input-BD_4_WildHunt",
-        "Up": "input-BD_4_WildHunt"
+        "Left": "input-BD_4_Wildhunt",
+        "Up": "input-BD_4_Wildhunt"
     },
     "TN_1_Shanhaijing": {
         "id": "input-TN_1_Shanhaijing",
@@ -1749,14 +1749,14 @@ const inputValidation = {
         "Left": "input-TN_4_Valkyrie",
         "Right": "input-TN_2_Highlander"
     },
-    "TN_1_WildHunt": {
-        "id": "input-TN_1_WildHunt",
+    "TN_1_Wildhunt": {
+        "id": "input-TN_1_Wildhunt",
         "location": "resourceModal",
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
         "Left": "input-TN_4_Highlander",
-        "Right": "input-TN_2_WildHunt"
+        "Right": "input-TN_2_Wildhunt"
     },
     "TN_2_Abydos": {
         "id": "input-TN_2_Abydos",
@@ -1792,7 +1792,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Up": "input-TN_3_WildHunt"
+        "Up": "input-TN_3_Wildhunt"
     },
     "TN_2_Shanhaijing": {
         "id": "input-TN_2_Shanhaijing",
@@ -1830,13 +1830,13 @@ const inputValidation = {
         "navigation": "resourceTable",
         "Right": "input-TN_3_Highlander"
     },
-    "TN_2_WildHunt": {
-        "id": "input-TN_2_WildHunt",
+    "TN_2_Wildhunt": {
+        "id": "input-TN_2_Wildhunt",
         "location": "resourceModal",
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-TN_3_WildHunt"
+        "Right": "input-TN_3_Wildhunt"
     },
     "TN_3_Abydos": {
         "id": "input-TN_3_Abydos",
@@ -1872,7 +1872,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Up": "input-TN_4_WildHunt"
+        "Up": "input-TN_4_Wildhunt"
     },
     "TN_3_Shanhaijing": {
         "id": "input-TN_3_Shanhaijing",
@@ -1911,13 +1911,13 @@ const inputValidation = {
         "navigation": "resourceTable",
         "Right": "input-TN_4_Highlander",
     },
-    "TN_3_WildHunt": {
-        "id": "input-TN_3_WildHunt",
+    "TN_3_Wildhunt": {
+        "id": "input-TN_3_Wildhunt",
         "location": "resourceModal",
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-TN_4_WildHunt",
+        "Right": "input-TN_4_Wildhunt",
     },
     "TN_4_Abydos": {
         "id": "input-TN_4_Abydos",
@@ -1958,7 +1958,7 @@ const inputValidation = {
         "max": "99999",
         "navigation": "resourceTable",
         "Right": "input-TN_1_RedWinter",
-        "Up": "input-TN_3_WildHunt"
+        "Up": "input-TN_3_Wildhunt"
     },
     "TN_4_Shanhaijing": {
         "id": "input-TN_4_Shanhaijing",
@@ -1998,10 +1998,10 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Right": "input-TN_1_WildHunt",
+        "Right": "input-TN_1_Wildhunt",
     },
-    "TN_4_WildHunt": {
-        "id": "input-TN_4_WildHunt",
+    "TN_4_Wildhunt": {
+        "id": "input-TN_4_Wildhunt",
         "location": "resourceModal",
         "min": "0",
         "max": "99999",
@@ -2015,7 +2015,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "resourceTable",
-        "Up": "input-TN_4_WildHunt"
+        "Up": "input-TN_4_Wildhunt"
     },
     "Nebra_2": {
         "id": "input-Nebra_2",
