@@ -26,7 +26,7 @@ if (data == null) {
 
 let charBoxSize = localStorage.getItem("character_box_size") ?? "5";
 var dummy = Date.parse(new Date())/1000
-await fetch('json/students.min.json?q='+dummy).then((response) => response.json()).then((json) => {
+fetch('json/students.min.json?q='+dummy).then((response) => response.json()).then((json) => {
     charlist = json;
     if (nameReady && (data.language == "EN" || data.language == "Id")) {
         ShowNames(charlist);
@@ -444,7 +444,7 @@ function updateInfoDisplay(charId, idInject, charData) {
         document.getElementById(charId + idInject + "-bond-target").innerText = "";
     }
     
-    if ( charlist[charId].Gear.TierUpMaterial ) {
+    if ( bondgear_characters.includes(parseInt(charId)) ) {
         document.getElementById("bondgearPortraitHeart"+ charId).style.display = ""
         document.getElementById(charId + idInject + "-bondgear-current").innerText = "T"+ charData.current?.bondgear;
         if (charData.current?.bondgear != charData.target?.bondgear) {
