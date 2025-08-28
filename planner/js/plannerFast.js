@@ -26,7 +26,7 @@ if (data == null) {
 
 let charBoxSize = localStorage.getItem("character_box_size") ?? "5";
 var dummy = Date.parse(new Date())/1000
-fetch('json/students.min.json?q='+dummy).then((response) => response.json()).then((json) => {
+await fetch('json/students.min.json?q='+dummy).then((response) => response.json()).then((json) => {
     charlist = json;
     if (nameReady && (data.language == "EN" || data.language == "Id")) {
         ShowNames(charlist);
