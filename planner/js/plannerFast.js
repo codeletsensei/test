@@ -444,7 +444,7 @@ function updateInfoDisplay(charId, idInject, charData) {
         document.getElementById(charId + idInject + "-bond-target").innerText = "";
     }
     
-    if ( bondgear_characters.includes(parseInt(charId)) ) {
+    if ( charlist[charId].Gear.TierUpMaterial ) {
         document.getElementById("bondgearPortraitHeart"+ charId).style.display = ""
         document.getElementById(charId + idInject + "-bondgear-current").innerText = "T"+ charData.current?.bondgear;
         if (charData.current?.bondgear != charData.target?.bondgear) {
