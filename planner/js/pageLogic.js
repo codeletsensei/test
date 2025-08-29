@@ -6571,10 +6571,8 @@ function formatLevel(type, level) {
         }
     }
     else if (type == "Gear") {
-        let int = parseInt(level)
-        if (int >= 10 && int <= 12) {
-            let roman = ["Ⅹ","Ⅺ","Ⅻ"]
-            return roman[int-10];
+        if (level == "10" || level == 10) {
+            return "X";
         }
     }
 
