@@ -6570,6 +6570,13 @@ function formatLevel(type, level) {
             return "M";
         }
     }
+    else if (type == "Gear") {
+        let int = parseInt(level)
+        if (int >= 10 && int <= 12) {
+            let roman = ["Ⅹ","Ⅺ","Ⅻ"]
+            return roman[int-10];
+        }
+    }
 
     if (level != undefined) {
         return level.toString();
