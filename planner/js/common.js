@@ -665,17 +665,3 @@ function basicAlert(alertText) {
         timer: 1500
     })
 }
-
-function leaveSite(){
-    Swal.fire({
-        icon: "warning",
-        title: "You're about to access another website...",
-        html: "The website linked seems useful, but its code does not seem to be open source, nor do I know of its background. So access it at your own risk."
-        showCancelButton: true,
-        confirmButtonText: "Proceed anyways.",
-    })
-    .then((result) => {
-      if (result.isConfirmed) return 1
-      else if (result.isDenied) return null
-    })
-}
