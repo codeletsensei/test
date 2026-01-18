@@ -1244,6 +1244,9 @@
         "JP": "貫通",
         "CN": "贯通"
     },
+    "atktype-decomposition": {
+        "EN": "Decomposition"
+    },
     "atktype-mystic": {
         "EN": "Mystic",
         "KR": "신비",
@@ -1272,6 +1275,9 @@
         "ID": "Heavy",
         "JP": "重装甲",
         "CN": "重型装甲"
+    },
+    "deftype-compositearmor": {
+        "EN": "Composite"
     },
     "deftype-unarmed": {
         "EN": "Special",
