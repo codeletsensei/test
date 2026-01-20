@@ -7529,7 +7529,7 @@ function SortStudents(students, sortType) {
         "Millennium": 6, "Arius": 5, "Shanhaijing": 4, "Valkyrie": 3, "SRT": 2, "ETC": 1, "Tokiwadai": 0
     }
     let bulletOrder = {
-        "Sonic": 5, "Mystic": 4, "Decomposition": 3, "Explosion": 2, "Pierce": 1
+        "Sonic": 5, "Mystic": 4, "Chemical": 3, "Explosion": 2, "Pierce": 1
     }
     let armourOrder = {
         "ElasticArmor": 5, "Unarmed": 4, "CompositeArmor": 3, "HeavyArmor": 2, "LightArmor": 1

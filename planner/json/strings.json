@@ -1244,8 +1244,8 @@
         "JP": "貫通",
         "CN": "贯通"
     },
-    "atktype-decomposition": {
-        "EN": "Decomposition"
+    "atktype-chemical": {
+        "EN": "Chemical"
     },
     "atktype-mystic": {
         "EN": "Mystic",
