@@ -491,6 +491,7 @@ function init() {
             event.target.parentElement.classList.add("focused");
         })
         xpInputs[i].addEventListener('focusout', (event) => {
+            console.log("focusout1")
             event.target.className = "resource-input";
             event.target.parentElement.classList.remove("focused");
         })
@@ -668,10 +669,7 @@ function init() {
     })
 
     setInterval(() => {
-        if (resourceDisplay == "Owned" || gearDisplay == "Owned") {
-            console.log("skip")
-            return
-        }
+        if (resourceDisplay == "Owned" || gearDisplay == "Owned") return
         if (saveTime != 0) {
             if (Date.now() > saveTime) {
                 saveTime = 0
@@ -3333,7 +3331,6 @@ function getTextFormattedGroup(monospaced) {
 
 async function saveToLocalStorage(notify) {
 
-    console.log("saving")
     saveTime = 0;
 
     localStorage.setItem("save-data", JSON.stringify(data));
@@ -5178,6 +5175,7 @@ function createTable(id, columns, colOffset, rows, rowOffset, tableNavigation, p
                     event.target.parentElement.classList.add("focused");
                 })
                 newInput.addEventListener('focusout', (event) => {
+            console.log("focusout2")
                     event.target.className = "resource-input";
                     event.target.parentElement.classList.remove("focused");
                 })
@@ -6207,7 +6205,6 @@ function calculateRaidCoins() {
 }
 
 function switchResourceDisplay(displayType) {
-    let saveLater = resourceDisplay == "Owned"
 
     let btnOwned = document.getElementById("switch-resource-owned");
     let btnTotal = document.getElementById("switch-resource-total");
@@ -6290,9 +6287,6 @@ function switchResourceDisplay(displayType) {
         }
     }
 
-    console.log(resourceDisplay)
-    if (saveLater) saveToLocalStorage(true)
-
     hideEmpty();
 
 }
@@ -6334,8 +6328,6 @@ function switchGearDisplay(displayType) {
     //         return;
     //     }
     // }
-
-    let saveLater = gearDisplay == "Owned"
 
     let btnOwned = document.getElementById("switch-gear-owned");
     let btnTotal = document.getElementById("switch-gear-total");
@@ -6401,8 +6393,6 @@ function switchGearDisplay(displayType) {
         displayText.innerText = GetLanguageString("label-leftover");
         updateCells(leftoverMatDict, false, 'gear-count-text', 'misc-gear');
     }
-    console.log(gearDisplay)
-    if (saveLater) saveToLocalStorage(true)
 
     hideEmptyGear();
 
