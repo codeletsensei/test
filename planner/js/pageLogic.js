@@ -491,6 +491,7 @@ function init() {
             event.target.parentElement.classList.add("focused");
         })
         xpInputs[i].addEventListener('focusout', (event) => {
+            data.owned_materials = ownedMatDict
             saveToLocalStorage(true)
             event.target.className = "resource-input";
             event.target.parentElement.classList.remove("focused");
@@ -523,6 +524,7 @@ function init() {
             event.target.parentElement.classList.add("focused");
         })
         ueInputs[i].addEventListener('focusout', (event) => {
+            data.owned_materials = ownedMatDict
             saveToLocalStorage(true)
             event.target.classList.remove("focused");
             event.target.parentElement.classList.remove("focused");
@@ -5176,6 +5178,7 @@ function createTable(id, columns, colOffset, rows, rowOffset, tableNavigation, p
                     event.target.parentElement.classList.add("focused");
                 })
                 newInput.addEventListener('focusout', (event) => {
+                    data.owned_materials = ownedMatDict
                     saveToLocalStorage(true)
                     event.target.className = "resource-input";
                     event.target.parentElement.classList.remove("focused");
