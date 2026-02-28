@@ -668,6 +668,10 @@ function init() {
     })
 
     setInterval(() => {
+        if (resourceDisplay == "Owned" || gearDisplay == "Owned") {
+            console.log("skip")
+            return
+        }
         if (saveTime != 0) {
             if (Date.now() > saveTime) {
                 saveTime = 0
@@ -3328,10 +3332,7 @@ function getTextFormattedGroup(monospaced) {
 }
 
 async function saveToLocalStorage(notify) {
-    if (resourceDisplay == "Owned" || gearDisplay == "Owned") {
-        console.log("skip")
-        return
-    }
+
     console.log("saving")
     saveTime = 0;
 
@@ -6295,6 +6296,7 @@ function switchResourceDisplay(displayType) {
         }
     }
 
+    console.log(resourceDisplay)
     if (saveLater) saveToLocalStorage(true)
 
     hideEmpty();
@@ -6405,7 +6407,7 @@ function switchGearDisplay(displayType) {
         displayText.innerText = GetLanguageString("label-leftover");
         updateCells(leftoverMatDict, false, 'gear-count-text', 'misc-gear');
     }
-
+    console.log(gearDisplay)
     if (saveLater) saveToLocalStorage(true)
 
     hideEmptyGear();
