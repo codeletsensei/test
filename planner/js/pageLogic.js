@@ -3328,6 +3328,8 @@ function getTextFormattedGroup(monospaced) {
 }
 
 async function saveToLocalStorage(notify) {
+    if (resourceDisplay == "Owned" || gearDisplay == "Owned") return
+
     saveTime = 0;
 
     localStorage.setItem("save-data", JSON.stringify(data));
@@ -4794,6 +4796,8 @@ function updateMatDisplay(matName, matValue, editable, type) {
 
 function closeResourceModal() {
 
+    saveToLocalStorage(true)
+
     freezeBody(false);
 
     HidePopup();
@@ -4801,6 +4805,9 @@ function closeResourceModal() {
     var modal = document.getElementById("resourceModal");
 
     modal.style.visibility = "hidden";
+
+    if (resourceDisplay == "Owned") saveToLocalStorage(true)
+    resourceDisplay = "Remaining"
 
     modalOpen = "";
 
@@ -4825,6 +4832,9 @@ function closeGearModal() {
     var modal = document.getElementById("gearModal");
 
     modal.style.visibility = "hidden";
+
+    if (gearDisplay == "Owned") saveToLocalStorage(true)
+    gearDisplay = "Remaining"
 
     modalOpen = "";
 
@@ -6198,6 +6208,7 @@ function calculateRaidCoins() {
 }
 
 function switchResourceDisplay(displayType) {
+    if (resourceDisplay == "Owned") saveToLocalStorage(true)
 
     let btnOwned = document.getElementById("switch-resource-owned");
     let btnTotal = document.getElementById("switch-resource-total");
@@ -6300,7 +6311,6 @@ function CalculateLeftoverGearXp() {
 }
 
 function switchGearDisplay(displayType) {
-
     // APRIL FOOLS
     // if (displayType == "Owned") {
     //     if (document.getElementById("switch-gear-owned").classList.contains("april-fools-button")) {
@@ -6322,6 +6332,8 @@ function switchGearDisplay(displayType) {
     //         return;
     //     }
     // }
+
+    if (gearDisplay == "Owned") saveToLocalStorage(true)
 
     let btnOwned = document.getElementById("switch-gear-owned");
     let btnTotal = document.getElementById("switch-gear-total");
