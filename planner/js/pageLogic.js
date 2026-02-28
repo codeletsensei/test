@@ -4799,7 +4799,7 @@ function updateMatDisplay(matName, matValue, editable, type) {
 }
 
 function closeResourceModal() {
-    if (resourceDisplay == "Owned") {switchResourceDisplay("Remaining")
+    if (resourceDisplay == "Owned") switchResourceDisplay("Remaining")
 
     freezeBody(false);
 
