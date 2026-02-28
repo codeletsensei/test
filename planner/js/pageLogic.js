@@ -3328,8 +3328,11 @@ function getTextFormattedGroup(monospaced) {
 }
 
 async function saveToLocalStorage(notify) {
-    if (resourceDisplay == "Owned" || gearDisplay == "Owned") return
-
+    if (resourceDisplay == "Owned" || gearDisplay == "Owned") {
+        console.log("skip")
+        return
+    }
+    console.log("saving")
     saveTime = 0;
 
     localStorage.setItem("save-data", JSON.stringify(data));
@@ -4795,8 +4798,10 @@ function updateMatDisplay(matName, matValue, editable, type) {
 }
 
 function closeResourceModal() {
-
-    saveToLocalStorage(true)
+    if (resourceDisplay == "Owned") {
+        switchResourceDisplay("Remaining")
+        saveToLocalStorage(true)
+    }
 
     freezeBody(false);
 
@@ -4806,8 +4811,6 @@ function closeResourceModal() {
 
     modal.style.visibility = "hidden";
 
-    if (resourceDisplay == "Owned") saveToLocalStorage(true)
-    resourceDisplay = "Remaining"
 
     modalOpen = "";
 
@@ -4823,6 +4826,10 @@ function closeResourceModal() {
 }
 
 function closeGearModal() {
+    if (gearDisplay == "Owned") {
+        switchResourceDisplay("Remaining")
+        saveToLocalStorage(true)
+    }
 
     freezeBody(false);
 
@@ -4832,9 +4839,6 @@ function closeGearModal() {
     var modal = document.getElementById("gearModal");
 
     modal.style.visibility = "hidden";
-
-    if (gearDisplay == "Owned") saveToLocalStorage(true)
-    gearDisplay = "Remaining"
 
     modalOpen = "";
 
