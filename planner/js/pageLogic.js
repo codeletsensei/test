@@ -670,12 +670,12 @@ function init() {
     })
 
     setInterval(() => {
-        if (resourceDisplay == "Owned" || gearDisplay == "Owned") {
-            console.log("skip")
-            return
-        }
         if (saveTime != 0) {
             if (Date.now() > saveTime) {
+                if (resourceDisplay == "Owned" || gearDisplay == "Owned") {
+                    console.log("skip")
+                    return
+                }
                 saveTime = 0
                 data.owned_materials = ownedMatDict;
                 saveToLocalStorage(true);
