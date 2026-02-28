@@ -4799,10 +4799,7 @@ function updateMatDisplay(matName, matValue, editable, type) {
 }
 
 function closeResourceModal() {
-    if (resourceDisplay == "Owned") {
-        switchResourceDisplay("Remaining")
-        saveToLocalStorage(true)
-    }
+    if (resourceDisplay == "Owned") {switchResourceDisplay("Remaining")
 
     freezeBody(false);
 
@@ -4827,10 +4824,7 @@ function closeResourceModal() {
 }
 
 function closeGearModal() {
-    if (gearDisplay == "Owned") {
-        switchResourceDisplay("Remaining")
-        saveToLocalStorage(true)
-    }
+    if (gearDisplay == "Owned") switchResourceDisplay("Remaining")
 
     freezeBody(false);
 
