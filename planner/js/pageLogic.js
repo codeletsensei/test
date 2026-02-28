@@ -491,7 +491,7 @@ function init() {
             event.target.parentElement.classList.add("focused");
         })
         xpInputs[i].addEventListener('focusout', (event) => {
-            console.log("focusout1")
+            saveToLocalStorage()
             event.target.className = "resource-input";
             event.target.parentElement.classList.remove("focused");
         })
@@ -523,6 +523,7 @@ function init() {
             event.target.parentElement.classList.add("focused");
         })
         ueInputs[i].addEventListener('focusout', (event) => {
+            saveToLocalStorage()
             event.target.classList.remove("focused");
             event.target.parentElement.classList.remove("focused");
         })
@@ -669,7 +670,10 @@ function init() {
     })
 
     setInterval(() => {
-        if (resourceDisplay == "Owned" || gearDisplay == "Owned") return
+        if (resourceDisplay == "Owned" || gearDisplay == "Owned") {
+            console.log("skip")
+            return
+        }
         if (saveTime != 0) {
             if (Date.now() > saveTime) {
                 saveTime = 0
@@ -3330,7 +3334,7 @@ function getTextFormattedGroup(monospaced) {
 }
 
 async function saveToLocalStorage(notify) {
-
+console.log('saving')
     saveTime = 0;
 
     localStorage.setItem("save-data", JSON.stringify(data));
@@ -5175,7 +5179,7 @@ function createTable(id, columns, colOffset, rows, rowOffset, tableNavigation, p
                     event.target.parentElement.classList.add("focused");
                 })
                 newInput.addEventListener('focusout', (event) => {
-            console.log("focusout2")
+                    saveToLocalStorage()
                     event.target.className = "resource-input";
                     event.target.parentElement.classList.remove("focused");
                 })
