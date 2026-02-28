@@ -6212,7 +6212,7 @@ function calculateRaidCoins() {
 }
 
 function switchResourceDisplay(displayType) {
-    if (resourceDisplay == "Owned") saveToLocalStorage(true)
+    let saveLater = resourceDisplay == "Owned"
 
     let btnOwned = document.getElementById("switch-resource-owned");
     let btnTotal = document.getElementById("switch-resource-total");
@@ -6295,6 +6295,8 @@ function switchResourceDisplay(displayType) {
         }
     }
 
+    if (saveLater) saveToLocalStorage(true)
+
     hideEmpty();
 
 }
@@ -6337,7 +6339,7 @@ function switchGearDisplay(displayType) {
     //     }
     // }
 
-    if (gearDisplay == "Owned") saveToLocalStorage(true)
+    let saveLater = gearDisplay == "Owned"
 
     let btnOwned = document.getElementById("switch-gear-owned");
     let btnTotal = document.getElementById("switch-gear-total");
@@ -6403,6 +6405,8 @@ function switchGearDisplay(displayType) {
         displayText.innerText = GetLanguageString("label-leftover");
         updateCells(leftoverMatDict, false, 'gear-count-text', 'misc-gear');
     }
+
+    if (saveLater) saveToLocalStorage(true)
 
     hideEmptyGear();
 
