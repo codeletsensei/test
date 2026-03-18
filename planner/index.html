@@ -20,7 +20,7 @@
     <title>/bag/ Resource Planner - a fork of Justin163's planner</title>
     <style id="toggleViewStyle" class="modifyable"></style>
     <script src="packages/jquery/jquery.min.js"></script>
-    <script src="js/plannerFast.js?q=25"></script>
+    <script src="js/plannerFast.js?q=26"></script>
     <link href="packages/sweetalert2/minimal.css" rel="stylesheet">
     <link href="packages/sweetalert2/dark.css" rel="stylesheet">
     <script src="packages/sweetalert2/sweetalert2.min.js" defer></script>
@@ -96,7 +96,7 @@
                     data-id="label-charactersize"></label>
                 <input id="character-size" type="range" min="1" max="5" value="5" oninput="ChangeCharSizes(this, false)"
                     onchange="ChangeCharSizes(this, true)">
-                <img src="icons/UI/chiaki_l2d_cropped.png" title="Screenshot your active students.&#013;I suggest sorting by Name first, so anons can find your students." onclick="GetGroupScreenshot('charsContainer')" style="height:5vh; margin: 10px;"></img>
+                <img src="icons/UI/chiaki_l2d_cropped.png" title="Screenshot your active students.&#013;I suggest sorting by Name first, so anons can find your students." onclick="GetGroupScreenshot('charsContainer')" style="height:5vh; margin: 10px; outline:5px solid lightgrey; border-radius:5px"></img>
             </div>
             <div id="charsContainer" class="docked">
             </div>
@@ -1472,6 +1472,7 @@
     <div class="footer-wrapper">
         <div class="footer-resource">
             <div class="footer-buttons-wrapper">
+                <input type="text" id="studentSearchBar" contenteditable="true" onchange="searchStudentBox(this.value)" ;="" oninput="searchStudentBox(this.value)" style="width: 300px; height: 40px; font-size: 20px; background-color: white; text-align: center;" placeholder="FIND A STUDENT!">
                 <div id="button-resources" class="footer-button" onclick="openResourceModal()"
                     style="display: flex; align-items: center;">
                     <img draggable="false" src="icons/UI/resourceBtn.png">
@@ -1491,6 +1492,7 @@
             </div>
         </div>
     </div>
+    </input>
 </body>
 
 </html>
