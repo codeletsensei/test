@@ -3619,7 +3619,7 @@ function populateCharModal(charId) {
         document.getElementById("option-eligma").checked = charData.eleph?.use_eligma;
         document.getElementById("option-shop").checked = charData.eleph?.use_shop;
 
-        document.getElementById("student-notes-textbox").innerHTML = charData.notes;
+        if (charData.notes) document.getElementById("student-notes-textbox").innerHTML = charData.notes;
 
         /*gtag('event', 'character_viewed', {
             'event_label': charName,
