@@ -7896,9 +7896,3 @@ document.addEventListener("keydown", function(ev) {
         openSearchBox()
     }
 })
-
-
-function addStudentNote(el) {
-    const text = el.textContent
-    data[]
-}
