@@ -292,6 +292,7 @@ function init() {
             if (!data.characters[i].target.potentialattack) data.characters[i].target.potentialattack = 0
             if (!data.characters[i].current.potentialhealpower) data.characters[i].current.potentialhealpower = 0
             if (!data.characters[i].target.potentialhealpower) data.characters[i].target.potentialhealpower = 0
+            if (!data.characters[i].notes) data.characters[i].notes = ""
         }
         // if (!data.level_cap) {
         //     data.level_cap = 90;
