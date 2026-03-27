@@ -730,6 +730,9 @@ function validateData() {
 
 function handleKeydown(e, keyPressed) {
 
+    let ignoreIds = ["student-notes-textbox"]
+    if (ignoreIds.includes(e.target.id)) return
+
     let keycount = Object.keys(keyPressed).length;
 
     if (focusedInput) {
@@ -4025,14 +4028,15 @@ function charDataFromModal(charId) {
     charData.eleph.use_shop = document.getElementById("option-shop").checked;
 
     charData.notes = document.getElementById("student-notes-textbox").innerHTML;
-
     return charData;
 
 }
 
 function isCharModalDirty() {
     let charData = data.characters.find(obj => { return obj.id == modalCharID });
+    charData.current.notes = charData.notes || ""
     let modalData = charDataFromModal();
+    modalData.current.notes = modalData.notes
     if (!charData) {
         Swal.fire({
             icon: 'error',
