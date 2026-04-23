@@ -5471,10 +5471,83 @@ function HideStagesPopup() {
     closableAfter = 0;
 }
 
+function dumpUniversalBlueprintsOnHighestTier() {
+    let ubp_rates = misc_data.universal_blueprint_rates
+    let ubp_exchange = misc_data.universal_blueprint_exchange
+    let stage_drops = misc_data.gear_rates
+    const regions = ["JP", "Global"];
+
+    const ratesByRegion = {
+        JP: ubp_rates.JP,
+        Global: ubp_rates.Global
+    };
+
+    const exchByRegion = {};
+
+    for (const r of regions) {
+        const src = ubp_exchange[r];
+        const map = {};
+        for (const k in src) map[+k.slice(1)] = src[k];
+        exchByRegion[r] = map;
+    }
+
+    const out = {};
+
+    for (const stage in stage_drops) {
+
+        const data = stage_drops[stage];
+
+        const jpBP = ratesByRegion.JP?.[stage];
+        const glBP = ratesByRegion.Global?.[stage];
+
+        const jpEx = exchByRegion.JP;
+        const glEx = exchByRegion.Global;
+
+        const copy = new Array(data.length);
+
+        for (let j = 0; j < data.length; j++) {
+
+            const entry = data[j];
+
+            const jpRates = entry.Rates.slice();
+            var glRates = null
+            if (entry.OldRates) glRates = entry.OldRates.slice();
+            else glRates = entry.Rates.slice();
+            if (j === 0) {
+
+                const tier = +entry.Tier;
+
+                const jpX = jpEx[tier];
+                if (jpX && jpBP) {
+                    for (let i = 0; i < jpRates.length; i++) {
+                        jpRates[i] += (jpBP[i] ?? 0) / jpX;
+                    }
+                }
+
+                const glX = glEx[tier];
+                if (glX && glBP) {
+                    for (let i = 0; i < glRates.length; i++) {
+                        glRates[i] += (glBP[i] ?? 0) / glX;
+                    }
+                }
+            }
+
+            copy[j] = {
+                Tier: entry.Tier,
+                Rates: jpRates,
+                OldRates: glRates
+            };
+        }
+
+        out[stage] = copy;
+    }
+
+    return out;
+}
 
 function GenerateModelVariables(multiplier) {
     let rates = misc_data.gear_rates;
-    console.log(rates)
+    rates = dumpUniversalBlueprintsOnHighestTier(rates)
     let areas = Object.keys(rates);
 
     let drops = misc_data.gear_drops;
