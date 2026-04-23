@@ -5403,8 +5403,15 @@ function DisplayStageRuns() {
     disclaimerP2.innerText = GetLanguageString("text-farmenergyinfo2");
     disclaimerP2.style.marginTop = "15px";
 
+    disclaimerP3 = document.createElement('p')
+    disclaimerP3.innerHTML = "All universal blueprints acquired on that stage will be dumped on the highest tier of each blueprint type.<br>Example: 29-2's T10 rates = 0.344 (Hairpin) and 0.258 for the other slots.<br>It also drops 15 hairpin UBPs and 11.25 for the others.<br>50 UBPs = 1 T10.<br>29-2's \"actual\" rates = 0.644 (0.344 + 15/50) for hairpin and 0.483 (0.258 + 11.25/50) for the other 2."
+    disclaimerP3.style.marginTop = "15px";
+    disclaimerP3.style.fontWeight = "bold";
+    disclaimerP3.style.color = "red";
+
     disclaimerDiv.appendChild(disclaimerP);
     disclaimerDiv.appendChild(disclaimerP2);
+    disclaimerDiv.appendChild(disclaimerP3);
     wrapperDiv.appendChild(disclaimerDiv);
 
     for (let i = 0; i < OptimalStageRuns.length; i++) {
