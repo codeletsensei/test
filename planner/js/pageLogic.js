@@ -5403,15 +5403,8 @@ function DisplayStageRuns() {
     disclaimerP2.innerText = GetLanguageString("text-farmenergyinfo2");
     disclaimerP2.style.marginTop = "15px";
 
-    disclaimerP3 = document.createElement('p')
-    disclaimerP3.innerHTML = "OUTDATED due to universal blueprints.<br>You might need less runs than stated."
-    disclaimerP3.style.marginTop = "15px";
-    disclaimerP3.style.fontWeight = "bold";
-    disclaimerP3.style.color = "red";
-
     disclaimerDiv.appendChild(disclaimerP);
     disclaimerDiv.appendChild(disclaimerP2);
-    disclaimerDiv.appendChild(disclaimerP3);
     wrapperDiv.appendChild(disclaimerDiv);
 
     for (let i = 0; i < OptimalStageRuns.length; i++) {
