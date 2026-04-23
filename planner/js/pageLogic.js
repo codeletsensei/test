@@ -5404,7 +5404,7 @@ function DisplayStageRuns() {
     disclaimerP2.style.marginTop = "15px";
 
     disclaimerP3 = document.createElement('p')
-    disclaimerP3.innerHTML = "All universal blueprints acquired on that stage will be dumped on the highest tier of each blueprint type.<br>Example: 29-2's T10 rates = 0.344 (Hairpin) and 0.258 for the other slots.<br>It also drops 15 hairpin UBPs and 11.25 for the others.<br>50 UBPs = 1 T10.<br>29-2's \"actual\" T10 rates = 0.644 (0.344 + 15/50) for hairpin and 0.483 (0.258 + 11.25/50) for the other 2. 29's T8 and T7 rates stay unchanged."
+    disclaimerP3.innerHTML = "Read changelog 26.04.23 to know how Universal Blueprints were used."
     disclaimerP3.style.marginTop = "15px";
     disclaimerP3.style.color = "red";
 
