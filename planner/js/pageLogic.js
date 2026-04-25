@@ -424,7 +424,7 @@ function init() {
 
     let gearNavigation = [];
     createTable("gear-table", ["UBP", "T2", "T3", "T4", "T5", "T6", "T7", "T8", "T9", "T10"], 0, ["Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"],
-        0, gearNavigation, document.getElementById('table-parent-4'), false, "gear", "icons/Gear/", [], "gear-");
+        0, gearNavigation, document.getElementById('table-parent-4'), false, "gear", "icons/Gear/", [], "gear-", true);
 
     let navObj = {};
     for (let x in tableNavigation) {
@@ -771,11 +771,11 @@ function handleKeydown(e, keyPressed) {
         }
     }
 
-    if (keycount == 2 && ((keyPressed.Control == true && keyPressed.ArrowLeft == true) || (keyPressed.Shift == true && keyPressed.Tab == true))) {
+    if ((keycount == 2 && keyPressed.Control == true && keyPressed.ArrowLeft == true) || (keyPressed.Tab == true && e.shiftKey)) {
         inputNavigate('Left')
         keyPressed = {};
     }
-    else if ((keycount == 2 && keyPressed.Control == true && keyPressed.ArrowRight == true) || (keycount == 1 && keyPressed.Tab == true)) {
+    else if ((keycount == 2 && keyPressed.Control == true && keyPressed.ArrowRight == true) || (keyPressed.Tab == true && !e.shiftKey)) {
         inputNavigate('Right')
         keyPressed = {};
     }
@@ -5105,10 +5105,24 @@ function hideEmptyCell(id) {
     }
 }
 
-function createTable(id, columns, colOffset, rows, rowOffset, tableNavigation, parent, reorder, type, imgLoc, skip, stringLangPrefix) {
+function createTable(id, columns, colOffset, rows, rowOffset, tableNavigation, parent, reorder, type, imgLoc, skip, stringLangPrefix, showColumnHeaders) {
     const newTable = document.createElement("table");
     newTable.className = "resource-table";
     newTable.id = id;
+
+    if (showColumnHeaders) {
+        const newThead = document.createElement("thead");
+        const newHeadRow = document.createElement("tr");
+        // Empty cell for the row-label column
+        newHeadRow.appendChild(document.createElement("th"));
+        for (let c = 0; c < columns.length; c++) {
+            const newTh = document.createElement("th");
+            newTh.innerText = columns[c];
+            newHeadRow.appendChild(newTh);
+        }
+        newThead.appendChild(newHeadRow);
+        newTable.appendChild(newThead);
+    }
 
     const newTbody = document.createElement("tbody");
 
