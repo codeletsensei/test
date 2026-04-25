@@ -5567,7 +5567,11 @@ function GenerateModelVariables(multiplier) {
             let stage = world + "-" + s;
             let newVariable = {};
 
-            // Direct gear drops (unchanged)
+            // Direct gear drops: only include coefficients for gear the player
+            // actually needs. The solver no-ops unconstrained coefficients in
+            // loadJson anyway, so omitting them upfront reduces object size and
+            // the number of keys the solver has to iterate per variable.
+            newVariable["AP"] = 10;
             for (let gr = 0; gr < rates[world].length; gr++) {
 
                 let tier = rates[world][gr].Tier;
@@ -5577,14 +5581,13 @@ function GenerateModelVariables(multiplier) {
                     rateArray = rates[world][gr].OldRates;
                 }
 
-                newVariable["T" + tier + "_" + drops[stage][0]] = rateArray[0] * multiplier;
-                newVariable["T" + tier + "_" + drops[stage][1]] = rateArray[1] * multiplier;
-                newVariable["T" + tier + "_" + drops[stage][2]] = rateArray[2] * multiplier;
-                newVariable["AP"] = 10;
-
-                availableGear["T" + tier + "_" + drops[stage][0]] = true;
-                availableGear["T" + tier + "_" + drops[stage][1]] = true;
-                availableGear["T" + tier + "_" + drops[stage][2]] = true;
+                for (let gi = 0; gi < 3; gi++) {
+                    const gearKey = "T" + tier + "_" + drops[stage][gi];
+                    availableGear[gearKey] = true;
+                    if (neededMatDict[gearKey] > 0) {
+                        newVariable[gearKey] = rateArray[gi] * multiplier;
+                    }
+                }
             }
 
             // UBP exchange variables: one per (gear-type index, target tier).
