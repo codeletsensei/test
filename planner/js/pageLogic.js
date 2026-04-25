@@ -5403,14 +5403,8 @@ function DisplayStageRuns() {
     disclaimerP2.innerText = GetLanguageString("text-farmenergyinfo2");
     disclaimerP2.style.marginTop = "15px";
 
-    disclaimerP3 = document.createElement('p')
-    disclaimerP3.innerHTML = "Read changelog 26.04.23 to know how Universal Blueprints were used."
-    disclaimerP3.style.marginTop = "15px";
-    disclaimerP3.style.color = "red";
-
     disclaimerDiv.appendChild(disclaimerP);
     disclaimerDiv.appendChild(disclaimerP2);
-    disclaimerDiv.appendChild(disclaimerP3);
     wrapperDiv.appendChild(disclaimerDiv);
 
     for (let i = 0; i < OptimalStageRuns.length; i++) {
@@ -5721,8 +5715,11 @@ async function SolveGearFarm() {
     let speed = await Swal.fire({
         icon: "question",
         title: "Select Calculation Method",
-        html: "Slow: Uses Ultimate Blueprints acquired on whichever tier is still needed. Or so it should, blame AronaGPT if it doesn't. More precise, but the more students activated you have, the longer it'll take.<br><br>Fast: Uses UBPs acquired from a stage on the highest tier from that stage. This will tell you to run more stages than you need, because when farming 29-2 for Hairpins and Watches, you may not need T10 shoes anymore and could use those shoes UBPs on lower tiers, but this mode uses all shoes UBPs on T10.",
-        showCancelButton: true
+        html: "Slow: More accurate. It tries to use the acquired Ultimate Blueprints on whichever tiers are still needed. The more blueprints you need, the longer the page will remain frozen while it calcs.<br><br>Fast: Uses UBPs acquired from a stage on the highest tier from that stage. This will tell you to run more stages than you truly need, because when farming 29-2 for Hairpins and Watches, you may not need T10 shoes anymore and could use those shoes UBPs on lower tiers, but this mode used all shoes UBPs on excess T10...",
+        color: alertColour,
+        showCancelButton: true,
+        confirmButtonText: "Slow",
+        cancelButtonText: "Fast",
     })
 
     if (await speed.isConfirmed) GenerateModelVariables(campaignMultiplier)
