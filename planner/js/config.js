@@ -236,7 +236,8 @@ const gearLookup = ["T2_Hat", "T2_Gloves", "T2_Shoes", "T2_Bag", "T2_Badge", "T2
     "T7_Hat", "T7_Gloves", "T7_Shoes", "T7_Bag", "T7_Badge", "T7_Hairpin", "T7_Charm", "T7_Watch", "T7_Necklace",
     "T8_Hat", "T8_Gloves", "T8_Shoes", "T8_Bag", "T8_Badge", "T8_Hairpin", "T8_Charm", "T8_Watch", "T8_Necklace",
     "T9_Hat", "T9_Gloves", "T9_Shoes", "T9_Bag", "T9_Badge", "T9_Hairpin", "T9_Charm", "T9_Watch", "T9_Necklace",
-    "T10_Hat", "T10_Gloves", "T10_Shoes", "T10_Bag", "T10_Badge", "T10_Hairpin", "T10_Charm", "T10_Watch", "T10_Necklace"]
+    "T10_Hat", "T10_Gloves", "T10_Shoes", "T10_Bag", "T10_Badge", "T10_Hairpin", "T10_Charm", "T10_Watch", "T10_Necklace",
+    "UBP_Hat", "UBP_Gloves", "UBP_Shoes", "UBP_Bag", "UBP_Badge", "UBP_Hairpin", "UBP_Charm", "UBP_Watch", "UBP_Necklace"]
 
 var rowColours = {
     "Abydos": "#9ce4fc66", "Gehenna": "#ec7d7966", "Millennium": "#9ebdfa66", "Trinity": "#fcd19c66", "Hyakkiyako": "#f0a8c466", "Arius": "#dbdad85e",
@@ -3591,6 +3592,69 @@ const inputValidation = {
     },
     "T10_Necklace": {
         "id": "input-T10_Necklace",
+        "location": "gearModal",
+        "min": "0",
+        "max": "99999",
+        "navigation": "gearTable"
+    },
+    "UBP_Hat": {
+        "id": "input-UBP_Hat",
+        "location": "gearModal",
+        "min": "0",
+        "max": "99999",
+        "navigation": "gearTable"
+    },
+    "UBP_Gloves": {
+        "id": "input-UBP_Gloves",
+        "location": "gearModal",
+        "min": "0",
+        "max": "99999",
+        "navigation": "gearTable"
+    },
+    "UBP_Shoes": {
+        "id": "input-UBP_Shoes",
+        "location": "gearModal",
+        "min": "0",
+        "max": "99999",
+        "navigation": "gearTable"
+    },
+    "UBP_Bag": {
+        "id": "input-UBP_Bag",
+        "location": "gearModal",
+        "min": "0",
+        "max": "99999",
+        "navigation": "gearTable"
+    },
+    "UBP_Badge": {
+        "id": "input-UBP_Badge",
+        "location": "gearModal",
+        "min": "0",
+        "max": "99999",
+        "navigation": "gearTable"
+    },
+    "UBP_Hairpin": {
+        "id": "input-UBP_Hairpin",
+        "location": "gearModal",
+        "min": "0",
+        "max": "99999",
+        "navigation": "gearTable"
+    },
+    "UBP_Charm": {
+        "id": "input-UBP_Charm",
+        "location": "gearModal",
+        "min": "0",
+        "max": "99999",
+        "navigation": "gearTable"
+    },
+    "UBP_Watch": {
+        "id": "input-UBP_Watch",
+        "location": "gearModal",
+        "min": "0",
+        "max": "99999",
+        "navigation": "gearTable"
+    },
+    "UBP_Necklace": {
+        "id": "input-UBP_Necklace",
         "location": "gearModal",
         "min": "0",
         "max": "99999",

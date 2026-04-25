@@ -423,7 +423,7 @@ function init() {
     }
 
     let gearNavigation = [];
-    createTable("gear-table", ["T2", "T3", "T4", "T5", "T6", "T7", "T8", "T9", "T10"], 0, ["Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"],
+    createTable("gear-table", ["T2", "T3", "T4", "T5", "T6", "T7", "T8", "T9", "T10", "UBP"], 0, ["Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"],
         0, gearNavigation, document.getElementById('table-parent-4'), false, "gear", "icons/Gear/", [], "gear-");
 
     let navObj = {};
@@ -5544,6 +5544,35 @@ function dumpUniversalBlueprintsOnHighestTier() {
     return out;
 }
 
+// Adds LP variables for gear blueprints the player already owns.
+// Each gear type has a shared pool bounded by the owned count; exchange
+// variables draw from it to satisfy any needed tier of that type at 0 AP.
+function addOwnedUbpVariables(exchSrc) {
+    const gearTypes = ["Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"];
+    for (const gt of gearTypes) {
+        const owned = parseInt(ownedMatDict["UBP_" + gt] ?? 0);
+        if (owned <= 0) continue;
+
+        // Pool constraint: spending reduces the balance; it may not go below -owned.
+        const poolKey = "owned_ubp_pool_" + gt;
+        ubpCapConstraints[poolKey] = { min: -owned };
+
+        for (const tierStr in exchSrc) {
+            const tier    = +tierStr.slice(1);
+            const gearKey = "T" + tier + "_" + gt;
+            if (!(neededMatDict[gearKey] > 0)) continue;
+
+            const cost = exchSrc[tierStr];
+            modelVariables["OWNED_UBP_" + gt + "_T" + tier] = {
+                [gearKey]: 1 / cost,
+                [poolKey]: -1,
+                AP:         0
+            };
+            availableGear[gearKey] = true;
+        }
+    }
+}
+
 function GenerateModelVariables(multiplier) {
     let rates = misc_data.gear_rates;
     let areas = Object.keys(rates);
@@ -5649,6 +5678,7 @@ function GenerateModelVariables(multiplier) {
         }
     }
 
+    addOwnedUbpVariables(exchSrc);
     return;
 }
 
@@ -5696,6 +5726,10 @@ function GenerateModelVariablesFast(multiplier) {
             modelVariables[stage] = newVariable;
         }
     }
+
+    const ubp_exchange_fast = misc_data.universal_blueprint_exchange;
+    const region_fast = data.server == "Global" ? "Global" : "JP";
+    addOwnedUbpVariables(ubp_exchange_fast[region_fast]);
     return;
 }
 
@@ -6515,7 +6549,8 @@ function CalculateLeftoverGearXp() {
 
     let matKeys = Object.keys(leftoverMatDict);
     for (let i = 0; i < matKeys.length; i++) {
-        if (gearLookup.includes(matKeys[i])) {
+        // UBP_* keys are in gearLookup but don't have a tier XP value
+        if (gearLookup.includes(matKeys[i]) && matKeys[i].startsWith("T")) {
             let tier = matKeys[i].substring(0, matKeys[i].indexOf("_"));
             totalLeftover += leftoverMatDict[matKeys[i]] * misc_data.gear_bp_value[tier];
         }
