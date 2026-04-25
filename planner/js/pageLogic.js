@@ -72,6 +72,10 @@ let modelVariables, availableGear, ubpCapConstraints;
 let campaignMultiplier = 1;
 let OptimalStageRuns = [];
 
+// True whenever owned inputs have changed since the last SolveGearFarm() run.
+// Starts true so the first switch to Remaining always triggers a solve.
+let gearOwnedDirty = true;
+
 let docScrollTop = 0;
 
 let bugsNotified = {};
@@ -4669,7 +4673,8 @@ function openGearModal() {
         updateCells(ownedMatDict, true, 'ue-count-text', 'abrakadabra');
         updateUeXP();
         document.getElementById("leftover-xp").innerText = commafy(CalculateLeftoverGearXp());
-
+        
+        gearOwnedDirty = true;
         SolveGearFarm();
 
         modal.onclick = function (event) {
@@ -5291,6 +5296,7 @@ function updatedResource() {
     }
 
     saveTime = Date.now() + (1000 * 5);
+    gearOwnedDirty = true;
 }
 
 function DisplayMatUsers(mat) {
@@ -5721,11 +5727,10 @@ function SetMultiplier(multi) {
 }
 
 async function SolveGearFarm() {
-
     let speed = await Swal.fire({
         icon: "question",
         title: "Select Calculation Method",
-        html: "Slow: More accurate. It tries to use the acquired Ultimate Blueprints on whichever tiers are still needed. The more blueprints you need, the longer the page will remain frozen while it calcs.<br><br>Fast: Uses UBPs acquired from a stage on the highest tier from that stage. This will tell you to run more stages than you truly need, because when farming 29-2 for Hairpins and Watches, you may not need T10 shoes anymore and could use those shoes UBPs on lower tiers, but this mode used all shoes UBPs on excess T10...",
+        html: "Slow: More accurate. It tries to use the acquired Ultimate Blueprints on whichever tiers are still needed. <a style='color:red'>The more blueprints you need, the longer the page will remain frozen while it calcs</a>.<br><br>Fast (Not recommended): Uses UBPs acquired from a stage on the highest tier from that stage. This will tell you to run more stages than you truly need, because when farming 29-2 for Hairpins and Watches, you may not need T10 shoes anymore and could use those shoes UBPs on lower tiers, but this mode uses all shoes UBPs on excess T10...",
         color: alertColour,
         showCancelButton: true,
         confirmButtonText: "Slow",
@@ -5751,7 +5756,6 @@ async function SolveGearFarm() {
     }
 
     OptimalStageRuns.sort((a, b) => b.runs - a.runs);
-
     document.getElementById("gear-farm-energy").innerText = commafy(totalAP);
 }
 
@@ -6578,7 +6582,10 @@ function switchGearDisplay(displayType) {
         leftoverDisplay.parentElement.style.display = "none";
         displayText.innerText = GetLanguageString("label-remainingneeded");
         updateCells(neededMatDict, false, 'gear-count-text', 'misc-gear');
-        SolveGearFarm();
+        if (gearOwnedDirty) {
+            gearOwnedDirty = false;
+            SolveGearFarm();
+        }
     }
     else if (displayType == "Total") {
         gearDisplay = "Total";
