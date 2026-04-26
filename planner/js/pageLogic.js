@@ -5801,19 +5801,42 @@ function SetMultiplier(multi) {
     SolveGearFarm();
 }
 
-async function SolveGearFarm() {
-    let speed = await Swal.fire({
-        icon: "question",
-        title: "Select AP Calculation Method",
-        html: "Slow: More accurate. It tries to use the acquired Ultimate Blueprints on whichever tiers are still needed. <a style='color:red'>The more blueprints you need, the longer the page will remain frozen while it calcs</a>.<br><br>Fast (Not recommended): Uses UBPs acquired from a stage on the highest tier from that stage. This will tell you to run more stages than you truly need, because when farming 29-2 for Hairpins and Watches, you may not need T10 shoes anymore and could use those shoes UBPs on lower tiers, but this mode uses all shoes UBPs on excess T10...",
-        color: alertColour,
-        showCancelButton: true,
-        confirmButtonText: "Slow",
-        cancelButtonText: "Fast",
-    })
-
-    if (await speed.isConfirmed) GenerateModelVariables(campaignMultiplier)
+async function SolveGearFarm(apCalc = data.apCalc) {
+   if (!apCalc || gearOwnedDirty) {
+        apCalc = await Swal.fire({
+            icon: "question",
+            title: "Select AP Calculation Method",
+            html: "Slow: More accurate. It tries to use the acquired Ultimate Blueprints on whichever tiers are still needed. <a style='color:red'>The more blueprints you need, the longer the page will remain frozen while it calcs</a>.<br><br>Fast (Not recommended): Uses UBPs acquired from a stage on the highest tier from that stage. This will tell you to run more stages than you truly need, because when farming 29-2 for Hairpins and Watches, you may not need T10 shoes anymore and could use those shoes UBPs on lower tiers, but this mode uses all shoes UBPs on excess T10...<br><br>ESC = Fast.<br>Space / Wait / click outside this box = Slow",
+            color: alertColour,
+            showCancelButton: true,
+            confirmButtonText: "Slow",
+            cancelButtonText: "Fast",
+            animation: false,
+            timer: 1500,
+            timerProgressBar: true,
+        })
+        console.log(apCalc)
+        if (await apCalc.isConfirmed || apCalc.dismiss == "backdrop" || apCalc.dismiss == "timer") {
+            apCalc = "Slow"
+            data.apCalc = "Slow"
+        }
+        else {
+            apCalc = "Fast"
+            data.apCalc = "Fast"
+        }
+    }
+    if (apCalc == "Slow") {
+        await Swal.fire({
+            title: "This might take a while...",
+            toast: true,
+            timer: 10,
+            animation: false, 
+            showConfirmButton: false
+        })
+        GenerateModelVariables(campaignMultiplier)
+    }
     else GenerateModelVariablesFast(campaignMultiplier)
+    saveToLocalStorage()
 
     let solution = solver.Solve(GenerateGearLinearModel());
     let solKeys = Object.keys(solution);
