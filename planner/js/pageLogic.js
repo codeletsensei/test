@@ -423,8 +423,8 @@ function init() {
     }
 
     let gearNavigation = [];
-    createTable("gear-table", ["UBP", "T2", "T3", "T4", "T5", "T6", "T7", "T8", "T9", "T10"], 0, ["Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"],
-        0, gearNavigation, document.getElementById('table-parent-4'), false, "gear", "icons/Gear/", [], "gear-", true);
+    createTable("gear-table", ["UBP", "T2", "T3", "T4", "T5", "T6", "T7", "T8", "T9", "T10"], 0, ["SLC", "Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"],
+        0, gearNavigation, document.getElementById('table-parent-4'), false, "gear", "icons/Gear/", ["UBP_SLC"], "gear-", true);
 
     let navObj = {};
     for (let x in tableNavigation) {
@@ -771,11 +771,11 @@ function handleKeydown(e, keyPressed) {
         }
     }
 
-    if ((keycount == 2 && keyPressed.Control == true && keyPressed.ArrowLeft == true) || (keyPressed.Tab == true && e.shiftKey)) {
+    if (keycount == 2 && ((keyPressed.Control == true && keyPressed.ArrowLeft == true) || (keyPressed.Shift == true && keyPressed.Tab == true))) {
         inputNavigate('Left')
         keyPressed = {};
     }
-    else if ((keycount == 2 && keyPressed.Control == true && keyPressed.ArrowRight == true) || (keyPressed.Tab == true && !e.shiftKey)) {
+    else if ((keycount == 2 && keyPressed.Control == true && keyPressed.ArrowRight == true) || (keycount == 1 && keyPressed.Tab == true)) {
         inputNavigate('Right')
         keyPressed = {};
     }
@@ -5113,7 +5113,6 @@ function createTable(id, columns, colOffset, rows, rowOffset, tableNavigation, p
     if (showColumnHeaders) {
         const newThead = document.createElement("thead");
         const newHeadRow = document.createElement("tr");
-        // Empty cell for the row-label column
         newHeadRow.appendChild(document.createElement("th"));
         for (let c = 0; c < columns.length; c++) {
             const newTh = document.createElement("th");
@@ -5587,6 +5586,32 @@ function addOwnedUbpVariables(exchSrc) {
     }
 }
 
+// Adds LP variables for Selector (SLC) items the player already owns.
+// Each SLC tier has a pool bounded by the owned count; exchange variables
+// draw from it to satisfy any needed gear type of that tier at 0 AP, 1:1.
+function addOwnedSlcVariables() {
+    const gearTypes = ["Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"];
+    for (let tier = 2; tier <= 10; tier++) {
+        const owned = parseInt(ownedMatDict["T" + tier + "_SLC"] ?? 0);
+        if (owned <= 0) continue;
+
+        const poolKey = "owned_slc_pool_T" + tier;
+        ubpCapConstraints[poolKey] = { min: -owned };
+
+        for (const gt of gearTypes) {
+            const gearKey = "T" + tier + "_" + gt;
+            if (!(neededMatDict[gearKey] > 0)) continue;
+
+            modelVariables["OWNED_SLC_T" + tier + "_" + gt] = {
+                [gearKey]: 1,  // 1:1 exchange
+                [poolKey]: -1,
+                AP:         0
+            };
+            availableGear[gearKey] = true;
+        }
+    }
+}
+
 function GenerateModelVariables(multiplier) {
     let rates = misc_data.gear_rates;
     let areas = Object.keys(rates);
@@ -5693,6 +5718,7 @@ function GenerateModelVariables(multiplier) {
     }
 
     addOwnedUbpVariables(exchSrc);
+    addOwnedSlcVariables();
     return;
 }
 
@@ -5744,6 +5770,7 @@ function GenerateModelVariablesFast(multiplier) {
     const ubp_exchange_fast = misc_data.universal_blueprint_exchange;
     const region_fast = data.server == "Global" ? "Global" : "JP";
     addOwnedUbpVariables(ubp_exchange_fast[region_fast]);
+    addOwnedSlcVariables();
     return;
 }
 
@@ -6564,7 +6591,7 @@ function CalculateLeftoverGearXp() {
     let matKeys = Object.keys(leftoverMatDict);
     for (let i = 0; i < matKeys.length; i++) {
         // UBP_* keys are in gearLookup but don't have a tier XP value
-        if (gearLookup.includes(matKeys[i]) && matKeys[i].startsWith("T")) {
+        if (gearLookup.includes(matKeys[i]) && matKeys[i].startsWith("T") && !matKeys[i].endsWith("_SLC")) {
             let tier = matKeys[i].substring(0, matKeys[i].indexOf("_"));
             totalLeftover += leftoverMatDict[matKeys[i]] * misc_data.gear_bp_value[tier];
         }
