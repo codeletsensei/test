@@ -1060,6 +1060,9 @@
         "JP": "ネックレス",
         "CN": "项链"
     },
+    "gear-slc": {
+        "EN": "Selector"
+    },
     "type-striker": {
         "EN": "Striker",
         "KR": "스트라이커",

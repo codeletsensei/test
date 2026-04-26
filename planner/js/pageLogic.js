@@ -771,11 +771,11 @@ function handleKeydown(e, keyPressed) {
         }
     }
 
-    if (keycount == 2 && ((keyPressed.Control == true && keyPressed.ArrowLeft == true) || (keyPressed.Shift == true && keyPressed.Tab == true))) {
+    if ((keycount == 2 && keyPressed.Control == true && keyPressed.ArrowLeft == true) || (keyPressed.Tab == true && e.shiftKey)) {
         inputNavigate('Left')
         keyPressed = {};
     }
-    else if ((keycount == 2 && keyPressed.Control == true && keyPressed.ArrowRight == true) || (keycount == 1 && keyPressed.Tab == true)) {
+    else if ((keycount == 2 && keyPressed.Control == true && keyPressed.ArrowRight == true) || (keyPressed.Tab == true && !e.shiftKey)) {
         inputNavigate('Right')
         keyPressed = {};
     }
@@ -4811,6 +4811,14 @@ function updateMatDisplay(matName, matValue, editable, type) {
         else {
             textElement.parentElement.classList.remove("editable")
         }
+        // UBP and SLC cells are always visually empty on non-Owned tables
+        // (they have no Remaining/Total/Leftover values to display).
+        const alwaysEmpty = !editable && (matName.startsWith("UBP_") || matName.endsWith("_SLC"));
+        if (alwaysEmpty || matValue == 0) {
+            textElement.parentElement.classList.add("empty-resource");
+        } else {
+            textElement.parentElement.classList.remove("empty-resource");
+        }
     }
 }
 
@@ -5586,9 +5594,6 @@ function addOwnedUbpVariables(exchSrc) {
     }
 }
 
-// Adds LP variables for Selector (SLC) items the player already owns.
-// Each SLC tier has a pool bounded by the owned count; exchange variables
-// draw from it to satisfy any needed gear type of that tier at 0 AP, 1:1.
 function addOwnedSlcVariables() {
     const gearTypes = ["Hat", "Gloves", "Shoes", "Bag", "Badge", "Hairpin", "Charm", "Watch", "Necklace"];
     for (let tier = 2; tier <= 10; tier++) {
@@ -5603,7 +5608,7 @@ function addOwnedSlcVariables() {
             if (!(neededMatDict[gearKey] > 0)) continue;
 
             modelVariables["OWNED_SLC_T" + tier + "_" + gt] = {
-                [gearKey]: 1,  // 1:1 exchange
+                [gearKey]: 1,
                 [poolKey]: -1,
                 AP:         0
             };
@@ -5802,7 +5807,7 @@ function SetMultiplier(multi) {
 }
 
 async function SolveGearFarm(apCalc = data.apCalc) {
-   if (!apCalc || gearOwnedDirty) {
+    if (!apCalc || gearOwnedDirty) {
         apCalc = await Swal.fire({
             icon: "question",
             title: "Select AP Calculation Method",
@@ -5815,7 +5820,6 @@ async function SolveGearFarm(apCalc = data.apCalc) {
             timer: 1500,
             timerProgressBar: true,
         })
-        console.log(apCalc)
         if (await apCalc.isConfirmed || apCalc.dismiss == "backdrop" || apCalc.dismiss == "timer") {
             apCalc = "Slow"
             data.apCalc = "Slow"

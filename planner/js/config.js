@@ -3175,7 +3175,7 @@ const inputValidation = {
         "max": "99999",
         "navigation": "gearTable",
         "Left": "input-UBP_Watch",
-        "Right": "input-T1_Spring"
+        "Right": "input-T2_Hat"
     },
     "T2_Hat": {
         "id": "input-T2_Hat",
@@ -3183,7 +3183,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "gearTable",
-        "Left": "input-T4_Needle"
+        "Left": "input-UBP_Necklace"
     },
     "T2_Gloves": {
         "id": "input-T2_Gloves",
@@ -3841,7 +3841,7 @@ const inputValidation = {
         "min": "0",
         "max": "99999",
         "navigation": "direct",
-        "Left": "input-UBP_Necklace",
+        "Left": "input-T4_Needle",
         "Right": "input-T2_Spring",
         "Down": "input-T1_Hammer"
     },
@@ -3940,7 +3940,7 @@ const inputValidation = {
         "max": "99999",
         "navigation": "direct",
         "Left": "input-T3_Needle",
-        "Right": "input-T2_Hat",
+        "Right": "input-T1_Spring",
         "Up": "input-T4_Barrel"
     },
     "T3_Needle": {
