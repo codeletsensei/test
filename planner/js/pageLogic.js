@@ -5827,7 +5827,7 @@ async function SolveGearFarm(apCalc = data.apCalc) {
     }
     if (apCalc == "Slow") {
         await Swal.fire({
-            title: "This might take a while...",
+            title: "Calculating...",
             toast: true,
             timer: 10,
             animation: false, 
