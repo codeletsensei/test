@@ -5403,6 +5403,71 @@ function DisplayMatUsers(mat) {
 
 }
 
+function DisplayUeMatUsers(type) {
+
+    const xpKey = type + "_Xp";
+    let matUsers = [];
+
+    for (let key in charMatDicts) {
+        if (!disabledChars.includes(key) && charMatDicts[key][xpKey] > 0) {
+            matUsers.push({ charId: key, matCount: charMatDicts[key][xpKey] });
+        }
+    }
+
+    if (matUsers.length == 0) {
+        return;
+    }
+
+    matUsers.sort((a, b) => b.matCount - a.matCount);
+
+    let wrapperDiv = document.getElementById('popup-wrapper');
+    while (wrapperDiv.children.length > 0) {
+        wrapperDiv.children[0].remove();
+    }
+
+    for (let i = 0; i < matUsers.length; i++) {
+        let charDiv = document.createElement('div');
+        charDiv.className = "char-row-mats";
+
+        let charImg = document.createElement('img');
+        charImg.src = "icons/Portrait/Icon_" + matUsers[i].charId + ".webp";
+
+        let matAmount = document.createElement('p');
+        matAmount.innerText = commafy(matUsers[i].matCount);
+
+        charDiv.appendChild(charImg);
+        charDiv.appendChild(matAmount);
+        wrapperDiv.appendChild(charDiv);
+    }
+
+    // Anchor the popup to the type's aggregate icon (spring-all, hammer-all, barrel-all)
+    let element = document.getElementById(type.toLowerCase() + "-all");
+    if (!element) {
+        element = document.getElementById("row-" + type + "-needed");
+    }
+    let matOffset = getOffset(element);
+
+    if (matOffset.left > (window.innerWidth / 2)) {
+        wrapperDiv.style.right = (window.innerWidth - Math.round(matOffset.left) - 10) + "px";
+        wrapperDiv.style.left = "";
+    } else {
+        wrapperDiv.style.left = (20 + Math.round(matOffset.left)) + "px";
+        wrapperDiv.style.right = "";
+    }
+
+    if (matOffset.top > (window.innerHeight / 2)) {
+        wrapperDiv.style.bottom = (document.body.clientHeight - Math.round(matOffset.top) - docScrollTop) + "px";
+        wrapperDiv.style.top = "";
+    } else {
+        wrapperDiv.style.top = (20 + Math.round(matOffset.top) + docScrollTop) + "px";
+        wrapperDiv.style.bottom = "";
+    }
+
+    HideStagesPopup();
+    wrapperDiv.style.display = "";
+    closableAfter = Date.now() + 200;
+}
+
 function HidePopup() {
     document.getElementById('popup-wrapper').style.display = 'none';
     closableAfter = 0;
