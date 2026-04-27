@@ -5519,8 +5519,15 @@ function DisplayStageRuns() {
     disclaimerP2.innerText = GetLanguageString("text-farmenergyinfo2");
     disclaimerP2.style.marginTop = "15px";
 
+    let disclaimerP3 = document.createElement('p');
+    disclaimerP3.innerHTML = "Click \"Fix UBP\" to improve this result.<br>Read changelogs 26.04.23 to 27 for more info."
+    disclaimerP3.style.marginTop = "15px";
+    disclaimerP3.style.color = "red";
+    disclaimerP3.style.fontWeight = "bold";
+
     disclaimerDiv.appendChild(disclaimerP);
     disclaimerDiv.appendChild(disclaimerP2);
+    disclaimerDiv.appendChild(disclaimerP3);
     wrapperDiv.appendChild(disclaimerDiv);
 
     for (let i = 0; i < OptimalStageRuns.length; i++) {

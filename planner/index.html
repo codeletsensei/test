@@ -30,9 +30,9 @@
     <script src="packages/javascript-lp-solver/solver.js" defer></script>
     <script src="packages/html2canvas/html2canvas.js" defer></script>
     <link rel="stylesheet" href="packages/tippyjs/light.css" />
-    <script src="js/config.js?q=33" defer></script>
+    <script src="js/config.js?q=34" defer></script>
     <script src="js/common.js?q=19" defer></script>
-    <script src="js/pageLogic.js?q=165" defer></script>
+    <script src="js/pageLogic.js?q=166" defer></script>
     <script src="js/filters.js?q=7" defer></script>
     <script src="js/lzma_worker.js?q=1" defer></script>
     <!--<script src="js/cloudAPI.js?q=6" defer></script>-->
@@ -504,7 +504,7 @@
                                 <p id="hm-server-toggle" class="server-toggle" onclick="serverToggle()"></p>
                             </div>
                             <div style="position: absolute; left: 0; bottom: 0; padding: 5px">
-                                <p id="hm-apCalcSlow" class="server-toggle" onclick="event.stopPropagation(); SolveGearFarm('Slow')">Fix UBP</p>
+                                <p id="hm-apCalcSlow" class="server-toggle" onclick="event.stopPropagation(); HideStagesPopup(); SolveGearFarm('Slow')">Fix UBP</p>
                             </div>
                         </div>
                     </div>
@@ -1009,7 +1009,7 @@
                         <p id="nm-server-toggle" class="server-toggle" onclick="serverToggle(event)"></p>
                     </div>
                     <div style="position: absolute; left: 0; bottom: 0; padding: 5px">
-                        <p id="nm-apCalcSlow" class="server-toggle" onclick="event.stopPropagation(); SolveGearFarm('Slow')">Fix UBP</p>
+                        <p id="nm-apCalcSlow" class="server-toggle" onclick="event.stopPropagation(); HideStagesPopup(); SolveGearFarm('Slow')">Fix UBP</p>
                     </div>
                 </div>
                 <div id="leftover-gxp-display-wrapper" class="resource-box" style="display: none;">
