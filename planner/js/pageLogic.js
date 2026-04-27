@@ -655,6 +655,17 @@ function init() {
         theme: 'light'
     })
 
+    tippy('#hm-apCalcSlow', {
+        content: GetLanguageString("ap-calculation-method"),
+        theme: 'light'
+    })
+
+    tippy('#nm-apCalcSlow', {
+        content: GetLanguageString("ap-calculation-method"),
+        theme: 'light'
+    })
+
+
     tippy('#char-delete', {
         content: GetLanguageString("tooltip-chardelete"),
         theme: 'light'
