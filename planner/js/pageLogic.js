@@ -5200,7 +5200,7 @@ function createTable(id, columns, colOffset, rows, rowOffset, tableNavigation, p
                 }
 
                 newCell.addEventListener('click', (event) => {
-                    DisplayMatUsers(event.currentTarget.id);
+                    DisplayMatUsers(event.currentTarget.id, newImg.src);
                 })
 
                 const newInput = document.createElement("input");
@@ -5320,7 +5320,7 @@ function updatedResource() {
     gearOwnedDirty = true;
 }
 
-function DisplayMatUsers(mat) {
+function DisplayMatUsers(mat, iconUrl) {
 
     if (resourceDisplay == "Owned" && modalOpen == "resourceModal" || gearDisplay == "Owned" && modalOpen == "gearModal") {
         return;
@@ -5349,6 +5349,14 @@ function DisplayMatUsers(mat) {
     while (wrapperChildren.length > 0) {
         wrapperChildren[0].remove();
     }
+
+    let typeIcon = document.createElement("img");
+    if (iconUrl) typeIcon.src = iconUrl
+    else {
+        typeIcon.src = "icons/Gifts/" + matLookup.get(mat.replace("mat-","")) + "_small.webp"
+    }
+    typeIcon.className = "char-row-mats";
+    wrapperDiv.appendChild(typeIcon);
 
     for (let i = 0; i < matUsers.length; i++) {
 
@@ -5424,6 +5432,11 @@ function DisplayUeMatUsers(type) {
     while (wrapperDiv.children.length > 0) {
         wrapperDiv.children[0].remove();
     }
+
+    let typeIcon = document.createElement("img");
+    typeIcon.src = "icons/LevelPart/" + type + "_All.png";
+    typeIcon.className = "char-row-mats";
+    wrapperDiv.appendChild(typeIcon);
 
     for (let i = 0; i < matUsers.length; i++) {
         let charDiv = document.createElement('div');
