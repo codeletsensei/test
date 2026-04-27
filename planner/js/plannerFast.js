@@ -2,6 +2,7 @@ let data;
 let fastLanguage = "En";
 let fastAprilFools = false;
 const fastDefaultGroups = { "Binah": [], "Chesed": [], "Hod": [], "ShiroKuro": [], "Perorodzilla": [], "Goz": [], "Hieronymous": [], "Kaiten": [] }
+const fastDefaultLbaGroups = { "Set": [], "Chokmah": [], "Tiphareth": [] }
 let dataCharIndex = {};
 let disabledChars = [];
 let charlist, chartranslate, language_strings, skillbuffnames = {};
@@ -20,7 +21,7 @@ try {
 }
 
 if (data == null) {
-    data = { exportVersion: 2, characters: [], character_order: [], disabled_characters: [], owned_materials: {}, groups: fastDefaultGroups, language: "EN", level_cap: 90 };
+    data = { exportVersion: 2, characters: [], character_order: [], disabled_characters: [], owned_materials: {}, groups: fastDefaultGroups, lba_groups: fastDefaultLbaGroups, language: "EN", level_cap: 90 };
     localStorage.setItem("save-data", JSON.stringify(data));
 }
 
