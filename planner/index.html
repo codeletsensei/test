@@ -504,7 +504,7 @@
                                 <p id="hm-server-toggle" class="server-toggle" onclick="serverToggle()"></p>
                             </div>
                             <div style="position: absolute; left: 0; bottom: 0; padding: 5px">
-                                <p id="hm-apCalcSlow" class="server-toggle" onclick="SolveGearFarm('Slow')">Fix UBP</p>
+                                <p id="hm-apCalcSlow" class="server-toggle" onclick="event.stopPropagation(); SolveGearFarm('Slow')">Fix UBP</p>
                             </div>
                         </div>
                     </div>
@@ -1009,7 +1009,7 @@
                         <p id="nm-server-toggle" class="server-toggle" onclick="serverToggle(event)"></p>
                     </div>
                     <div style="position: absolute; left: 0; bottom: 0; padding: 5px">
-                        <p id="nm-apCalcSlow" class="server-toggle" onclick="SolveGearFarm('Slow')">Fix UBP</p>
+                        <p id="nm-apCalcSlow" class="server-toggle" onclick="event.stopPropagation(); SolveGearFarm('Slow')">Fix UBP</p>
                     </div>
                 </div>
                 <div id="leftover-gxp-display-wrapper" class="resource-box" style="display: none;">

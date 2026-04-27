@@ -1991,7 +1991,7 @@
         "CN": "切换国际服/日服的可扫荡次数"
     },
     "ap-calculation-method": {
-        "EN": "Calculates with more precision, using Universal Blueprints on whichever tier you need, instead of that stage's tier"
+        "EN": "Click to calculate with more precision, using Universal Blueprints on whichever tier you need, instead using it on that stage's highest tier. Since it's slow, it's deactivated by default."
     },
     "tooltip-chardelete": {
         "EN": "Delete character",
