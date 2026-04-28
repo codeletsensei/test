@@ -486,8 +486,6 @@ function updateInfoDisplay(charId, idInject, charData) {
         document.getElementById(charId + idInject + "-limitbreak-target").innerText = "";
     }
 
-    document.getElementById(charId + idInject + "-atkColor").style.backgroundColor = propertyColours[charlist[charId].BulletType]
-    document.getElementById(charId + idInject + "-defColor").style.backgroundColor = propertyColours[charlist[charId].ArmorType]
 }
 
 function updateStarDisplay(id, charId, type, fromTemp, charData) {
@@ -590,6 +588,9 @@ function ShowNames(source) {
             nameBars[i].children[0].innerText = charName;
         }
     }
+
+    document.getElementById(charId + idInject + "-atkColor").style.backgroundColor = propertyColours[source[charId].BulletType]
+    document.getElementById(charId + idInject + "-defColor").style.backgroundColor = propertyColours[source[charId].ArmorType]
 }
 
 function updateUiLanguage() {
