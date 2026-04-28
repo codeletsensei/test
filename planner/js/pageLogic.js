@@ -28,6 +28,11 @@ let groupSpecialBorrows = [];
 let groupEditMode = "Move";
 let currentGroup = "";
 let currentGroupIsLba = false;
+
+function updateAddTeamButtons() {
+    document.getElementById("btn-addteam").style.display    = currentGroupIsLba ? "none" : "";
+    document.getElementById("btn-addlbateam").style.display = currentGroupIsLba ? ""     : "none";
+}
 let borrowed = false;
 
 let bulkMode = false;
@@ -2019,6 +2024,7 @@ function teamsToggle() {
             clearTeams();
             borrowed = false;
             currentGroupIsLba = data.lba_groups && data.lba_groups.hasOwnProperty(currentGroup);
+            updateAddTeamButtons();
             loadGroup(currentGroup);
         }
     }
@@ -2454,6 +2460,7 @@ async function addNewGroup() {
 
         currentGroup = groupName;
         currentGroupIsLba = false;
+        updateAddTeamButtons();
         addNewTeam([null, null, null, null, null, null], false);
         borrowed = false;
 
@@ -2491,6 +2498,7 @@ async function addNewLbaGroup() {
 
         currentGroup = groupName;
         currentGroupIsLba = true;
+        updateAddTeamButtons();
         addNewTeam([null,null,null,null,null,null,null,null,null,null], true);
         borrowed = false;
 
@@ -2844,6 +2852,7 @@ function groupSelected() {
 
         currentGroup = groupName;
         currentGroupIsLba = data.lba_groups && data.lba_groups.hasOwnProperty(groupName);
+        updateAddTeamButtons();
         borrowed = false;
         loadGroup(groupName);
     }
@@ -2912,6 +2921,7 @@ function deleteGroup() {
 
             currentGroup = "";
             currentGroupIsLba = false;
+            updateAddTeamButtons();
 
             rebuildGroups();
         }
@@ -3092,6 +3102,7 @@ function rebuildGroups() {
     selectElement.value = "blankselect";
     currentGroup = "";
     currentGroupIsLba = false;
+    updateAddTeamButtons();
     clearTeams();
 }
 
