@@ -2814,6 +2814,10 @@ function saveGroup() {
         data.groups = {};
     }
 
+    if (data.lba_groups == null) {
+        data.lba_groups = {};
+    }
+
     let teams = getCharsInGroup();
 
     const groupStore = currentGroupIsLba ? data.lba_groups : data.groups;
