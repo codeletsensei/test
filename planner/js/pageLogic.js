@@ -3324,88 +3324,138 @@ function getTextFormattedGroup(monospaced) {
     let group = getCharsInGroup();
     let textOutput = "";
 
-    let names = [];
-    let levels = [];
+    // Each entry is an object with one property per column so we can
+    // measure column widths independently for monospaced alignment.
+    let rows = [];
 
     for (let i = 0; i < group.length; i++) {
 
-        names.push("Team " + (i + 1));
-        levels.push("");
+        rows.push({ teamLabel: "Team " + (i + 1) });
 
         for (let c = 0; c < group[i].length; c++) {
 
-            if (group[i][c] != null) {
+            if (group[i][c] == null) continue;
 
-                let charDataString = "";
-                let charId;
-                if (typeof (group[i][c]) == "object") {
-                    charId = group[i][c].id;
-                    names.push(charNames.get(charId));
-                    levels.push("(Borrowed)");
-                    continue;
-                }
-                else {
-                    charId = group[i][c];
-                }
-
-                let charData = data.characters.find(obj => { return obj.id == charId });
-
-                names.push(charNames.get(charId));
-
-                if (charData.current.ue > 0) {
-                    charDataString += "UE" + charData.current.ue + "★  ";
-                }
-                else {
-                    charDataString += charData.current.star + "★  ";
-                    if (monospaced) {
-                        charDataString += "  ";
-                    }
-                }
-                charDataString += charData.current.level + "  ";
-                if (charData.current.level.length == 1 && monospaced) {
-                    charDataString += " ";
-                }
-                charDataString += formatLevel("Ex", charData.current.ex) + formatLevel("Other", charData.current.basic) +
-                    formatLevel("Other", charData.current.passive) + formatLevel("Other", charData.current.sub) + "  ";
-                charDataString += charData.current.gear1 + charData.current.gear2 + charData.current.gear3 + "  ";
-                if (charData.current.ue_level != "0") {
-                    charDataString += charData.current.ue_level;
-                }
-
-                levels.push(charDataString);
-            }
-
-        }
-    }
-
-    let longest = 0;
-    for (let i = 0; i < names.length; i++) {
-        if (names[i].length > longest) {
-            longest = names[i].length;
-        }
-    }
-
-    if (monospaced) {
-        textOutput += "Name" + " ".repeat(longest - 4) + " Star  Lvl Skill Gear UE\n";
-    }
-    else {
-        textOutput += "Name   Star Lvl Skill Gear UE\n";
-    }
-
-    for (let i = 0; i < names.length; i++) {
-        if (names[i].substring(0, 5) == "Team ") {
-            if (i != 0) {
-                textOutput += "\n";
-            }
-            textOutput += names[i] + "\n";
-        }
-        else {
-            if (monospaced) {
-                textOutput += names[i] + " ".repeat(longest - names[i].length + 1) + levels[i] + "\n";
+            let charId;
+            if (typeof (group[i][c]) == "object") {
+                charId = group[i][c].id;
+                rows.push({ name: charNames.get(charId), borrowed: true });
+                continue;
             }
             else {
-                textOutput += names[i] + " " + levels[i] + "\n";
+                charId = group[i][c];
             }
+
+            let charData = data.characters.find(obj => { return obj.id == charId });
+            let cur = charData.current;
+
+            // ── Name ───────────────────────────────────────────────────────
+            let name = charNames.get(charId);
+
+            // ── Lvl ────────────────────────────────────────────────────────
+            let lvl = cur.level;
+
+            // ── Star ───────────────────────────────────────────────────────
+            let star;
+            if (cur.ue > 0 && cur.ue_level > 0) {
+                star = "UE" + cur.ue + "★" + cur.ue_level;
+            }
+            else if (cur.ue > 0) {
+                star = "UE" + cur.ue + "★";
+            }
+            else {
+                star = cur.star + "★";
+            }
+
+            // ── Skill ──────────────────────────────────────────────────────
+            let skill = formatLevel("Ex", cur.ex) +
+                        formatLevel("Other", cur.basic) +
+                        formatLevel("Other", cur.passive) +
+                        formatLevel("Other", cur.sub);
+
+            // ── Gear ───────────────────────────────────────────────────────
+            let gear = cur.gear1 + "/" + cur.gear2 + "/" + cur.gear3;
+
+            // ── ♥ Bond ────────────────────────────────────────────────────
+            let bond = cur.bond ?? "";
+
+            // ── BG Bond Gear ──────────────────────────────────────────────
+            let bg;
+            if (!bondgear_characters.includes(parseInt(charId))) {
+                bg = "-";
+            }
+            else {
+                let bgVal = parseInt(cur.bondgear ?? 0);
+                bg = bgVal > 0 ? "T" + bgVal : "0";
+            }
+
+            // ── LB Potential ──────────────────────────────────────────────
+            let lb = "";
+            if (cur.ue > 0) {
+                let hp  = parseInt(cur.potentialmaxhp   ?? 0);
+                let atk = parseInt(cur.potentialattack  ?? 0);
+                let hea = parseInt(cur.potentialhealpower ?? 0);
+                if (hp > 0 || atk > 0 || hea > 0) {
+                    lb = hp + "/" + atk + "/" + hea;
+                }
+            }
+
+            rows.push({ name, lvl, star, skill, gear, bond, bg, lb });
+        }
+    }
+
+    // ── Column widths for monospaced mode ──────────────────────────────────
+    const cols = ["name", "lvl", "star", "skill", "gear", "bond", "bg", "lb"];
+    const headers = { name: "Name", lvl: "Lvl", star: "Star", skill: "Skill",
+                      gear: "Gear", bond: "♥", bg: "BG", lb: "LB" };
+
+    let widths = {};
+    for (let col of cols) {
+        widths[col] = headers[col].length;
+    }
+    for (let row of rows) {
+        if (row.teamLabel || row.borrowed) continue;
+        for (let col of cols) {
+            let val = String(row[col] ?? "");
+            if (val.length > widths[col]) widths[col] = val.length;
+        }
+    }
+
+    function pad(val, col) {
+        let s = String(val ?? "");
+        return s + " ".repeat(widths[col] - s.length);
+    }
+
+    function formatRow(row) {
+        if (monospaced) {
+            return cols.map(col => pad(row[col] ?? "", col)).join("  ");
+        }
+        else {
+            return cols.map(col => String(row[col] ?? "")).join("  ");
+        }
+    }
+
+    // ── Header ────────────────────────────────────────────────────────────
+    if (monospaced) {
+        textOutput += cols.map(col => pad(headers[col], col)).join("  ") + "\n";
+    }
+    else {
+        textOutput += cols.map(col => headers[col]).join("  ") + "\n";
+    }
+
+    // ── Body ──────────────────────────────────────────────────────────────
+    let firstTeam = true;
+    for (let row of rows) {
+        if (row.teamLabel) {
+            if (!firstTeam) textOutput += "\n";
+            textOutput += row.teamLabel + "\n";
+            firstTeam = false;
+        }
+        else if (row.borrowed) {
+            textOutput += row.name + "  (Borrowed)\n";
+        }
+        else {
+            textOutput += formatRow(row) + "\n";
         }
     }
 
