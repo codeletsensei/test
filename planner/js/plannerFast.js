@@ -282,12 +282,12 @@ function createCharBox(charId, container, location, lazy) {
         newBondContainerBG.appendChild(newBondgearP2);
 
         let colorContainerAtk = document.createElement("span")
-        colorContainerAtk.style.backgroundColor = propertyColours[charlist[charId].BulletType]
+        colorContainerAtk.id = charId + idInject + "-atkColor";
         colorContainerAtk.className = "atk-container";
         colorContainerAtk.innerText = "A"
         let colorContainerDef = document.createElement("span")
+        colorContainerDef.id = charId + idInject + "-defColor";
         colorContainerDef.className = "def-container";
-        colorContainerDef.style.backgroundColor = propertyColours[charlist[charId].ArmorType]
         colorContainerDef.innerText = "D"
 
         for (i = 0; i < 5; i++) {
@@ -485,6 +485,9 @@ function updateInfoDisplay(charId, idInject, charData) {
         if (limitbreakCurrent != "0 0 0") document.getElementById(charId + idInject + "-limitbreak-current").innerText = limitbreakCurrent;
         document.getElementById(charId + idInject + "-limitbreak-target").innerText = "";
     }
+
+    document.getElementById(charId + idInject + "-atkColor").style.backgroundColor = propertyColours[charlist[charId].BulletType]
+    document.getElementById(charId + idInject + "-defColor").style.backgroundColor = propertyColours[charlist[charId].ArmorType]
 }
 
 function updateStarDisplay(id, charId, type, fromTemp, charData) {
