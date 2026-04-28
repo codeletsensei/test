@@ -119,10 +119,10 @@
                     data-id="button-renamegroup"></button>
                 <button class="teamEditorButton display-string" onclick="deleteGroup()"
                     data-id="button-deletegroup"></button>
-                <button class="teamEditorButton display-string" onclick="addNewTeam([null,null,null,null,null,null])"
+                <button id="btn-addteam" class="teamEditorButton display-string" onclick="addNewTeam([null,null,null,null,null,null])"
                     data-id="button-addteam"></button>
-                <button class="teamEditorButton display-string" onclick="addNewLbaTeam()"
-                    data-id="button-addlbateam"></button>
+                <button id="btn-addlbateam" class="teamEditorButton display-string" onclick="addNewLbaTeam()"
+                    data-id="button-addlbateam" style="display:none;"></button>
                 <button id="group-move-mode" class="teamEditorButton display-string" onclick="groupEditorMode('Move')"
                     data-id="button-add/movemode"></button>
                 <button id="group-remove-mode" class="teamEditorButton display-string"
