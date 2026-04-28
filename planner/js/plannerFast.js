@@ -281,11 +281,11 @@ function createCharBox(charId, container, location, lazy) {
         newBondContainerBG.appendChild(newBondgearP);
         newBondContainerBG.appendChild(newBondgearP2);
 
-        let colorContainerAtk = document.createElement("span")
+        const colorContainerAtk = document.createElement("span")
         colorContainerAtk.id = charId + idInject + "-atkColor";
         colorContainerAtk.className = "atk-container";
         colorContainerAtk.innerText = "A"
-        let colorContainerDef = document.createElement("span")
+        const colorContainerDef = document.createElement("span")
         colorContainerDef.id = charId + idInject + "-defColor";
         colorContainerDef.className = "def-container";
         colorContainerDef.innerText = "D"
