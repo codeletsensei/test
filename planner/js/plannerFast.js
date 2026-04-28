@@ -281,7 +281,14 @@ function createCharBox(charId, container, location, lazy) {
         newBondContainerBG.appendChild(newBondgearP);
         newBondContainerBG.appendChild(newBondgearP2);
 
-
+        let colorContainerAtk = document.createElement("span")
+        colorContainerAtk.style.backgroundColor = propertyColours[charlist[charId].BulletType]
+        colorContainerAtk.className = "atk-container";
+        colorContainerAtk.innerText = "A"
+        let colorContainerDef = document.createElement("span")
+        colorContainerDef.className = "def-container";
+        colorContainerDef.style.backgroundColor = propertyColours[charlist[charId].ArmorType]
+        colorContainerDef.innerText = "D"
 
         for (i = 0; i < 5; i++) {
             const newStar = document.createElement("img");
@@ -383,6 +390,8 @@ function createCharBox(charId, container, location, lazy) {
         newDiv.appendChild(newUEContainer);
         newDiv.appendChild(newBondContainer);
         newDiv.appendChild(newBondContainerBG);
+        newDiv.appendChild(colorContainerAtk);
+        newDiv.appendChild(colorContainerDef);
     }
     if (location == "main") {
         newDiv.onclick = openModal

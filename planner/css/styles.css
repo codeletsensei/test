@@ -164,6 +164,24 @@
     /*z-index: 1;*/
 }
 
+.atk-container {
+    display: flex;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    /*width: 100%;*/
+    /*z-index: 1;*/
+}
+
+.def-container {
+    display: flex;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    /*width: 100%;*/
+    /*z-index: 1;*/
+}
+
 .display-star {
     width: 15%;
     height: intrinsic;
