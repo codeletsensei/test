@@ -233,6 +233,8 @@ function createCharBox(charId, container, location, lazy) {
     let newUEContainer;
     let newBondContainer;
     let newBondContainerBG;
+    let colorContainerAtk;
+    let colorContainerDef;
 
     let char = data.characters[dataCharIndex[charId]]; //.find(obj => { return obj.id == charId });
 
@@ -281,14 +283,14 @@ function createCharBox(charId, container, location, lazy) {
         newBondContainerBG.appendChild(newBondgearP);
         newBondContainerBG.appendChild(newBondgearP2);
 
-        const colorContainerAtk = document.createElement("span")
+        colorContainerAtk = document.createElement("span");
         colorContainerAtk.id = charId + idInject + "-atkColor";
         colorContainerAtk.className = "atk-container";
-        colorContainerAtk.innerText = "A"
-        const colorContainerDef = document.createElement("span")
+        colorContainerAtk.innerText = "A";
+        colorContainerDef = document.createElement("span");
         colorContainerDef.id = charId + idInject + "-defColor";
         colorContainerDef.className = "def-container";
-        colorContainerDef.innerText = "D"
+        colorContainerDef.innerText = "D";
 
         for (i = 0; i < 5; i++) {
             const newStar = document.createElement("img");
@@ -589,8 +591,8 @@ function ShowNames(source) {
         }
     }
 
-    document.getElementById(charId + idInject + "-atkColor").style.backgroundColor = propertyColours[source[charId].BulletType]
-    document.getElementById(charId + idInject + "-defColor").style.backgroundColor = propertyColours[source[charId].ArmorType]
+    document.getElementById(charId + idInject + "-atkColor").style.backgroundColor = propertyColours[source[charId].BulletType];
+    document.getElementById(charId + idInject + "-defColor").style.backgroundColor = propertyColours[source[charId].ArmorType];
 }
 
 function updateUiLanguage() {
