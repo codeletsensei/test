@@ -1,7 +1,7 @@
 let data;
 let fastLanguage = "En";
 let fastAprilFools = false;
-const fastDefaultGroups = { "Binah": [], "Chesed": [], "Hod": [], "ShiroKuro": [], "Perorodzilla": [], "Goz": [], "Hieronymous": [], "Kaiten": [] }
+const fastDefaultGroups = { "Binah": [], "Chesed": [], "Hod": [], "ShiroKuro": [], "Perorodzilla": [], "Geburah": [], "Goz": [], "Gregorius": [], "Hieronymous": [], "Hovercraft": [], "Kaiten": [], "Kurokage": [], "Yesod": [] }
 const fastDefaultLbaGroups = { "Set": [], "Chokmah": [], "Tiphareth": [] }
 let dataCharIndex = {};
 let disabledChars = [];
