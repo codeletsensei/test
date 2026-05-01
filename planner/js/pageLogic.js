@@ -6055,8 +6055,8 @@ async function SolveGearFarm(apCalc = "Fast") {
         document.getElementById("nm-apCalcSlow").style.display = "none"
         await Swal.fire({
             title: "Calculating...",
-            toast: true,
-            timer: 10,
+            imageUrl: "icons/Stickers/calculating_" + Math.floor(Math.random() * 8) + ".png",
+            timer: 150,
             animation: false, 
             showConfirmButton: false
         })
@@ -6087,6 +6087,22 @@ async function SolveGearFarm(apCalc = "Fast") {
     gearOwnedDirty = false;
     OptimalStageRuns.sort((a, b) => b.runs - a.runs);
     document.getElementById("gear-farm-energy").innerText = commafy(totalAP);
+
+    if (apCalc == "Slow") {
+        let random = Math.floor(Math.random() * 7)
+        let url = "icons/Stickers/result_"
+        if (totalAP < 150000) url += "good"
+        else url += "bad"
+        url += "_" + random + ".png"
+        await Swal.fire({
+            imageUrl: url,
+            timer: 1500,
+            imageHeight: 450,
+            backdrop: false,
+            position: "top-end",
+            showConfirmButton: false
+        })
+    }
 }
 
 function updateXP() {
