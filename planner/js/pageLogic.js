@@ -2999,7 +2999,7 @@ async function renameGroup() {
                 currentGroup = groupName;
                 currentGroupIsLba = !!renameStore && renameStore.hasOwnProperty(groupName) ? currentGroupIsLba : false;
                 document.getElementById('select-groups').value = groupName;
-                updateAddTeamButtons();
+                groupSelected()
 
                 saveTime = Date.now() + (1000 * 5);
             }
