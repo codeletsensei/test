@@ -6055,7 +6055,7 @@ async function SolveGearFarm(apCalc = "Fast") {
         await Swal.fire({
             title: "Calculating...",
             imageUrl: "icons/Stickers/calculating_" + Math.floor(Math.random() * 8) + ".png",
-            timer: 150,
+            timer: 200,
             animation: false, 
             showConfirmButton: false
         })
