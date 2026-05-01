@@ -3477,7 +3477,6 @@ function getTextFormattedGroup(monospaced) {
 }
 
 async function saveToLocalStorage(notify) {
-    console.log('saving')
     saveTime = 0;
 
     localStorage.setItem("save-data", JSON.stringify(data));
