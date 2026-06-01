@@ -6989,38 +6989,46 @@ function switchGearDisplay(displayType) {
 function displayExportData(option) {
     var saveData = localStorage.getItem('save-data')
 
-    const forkToJustinFieldMap = {
-        "bondgear":         "bond_gear",
-        "potentialmaxhp":   "book_hp",
-        "potentialattack":  "book_atk",
-        "potentialhealpower": "book_heal"
-    };
-    saveData = JSON.parse(saveData)
-
+    let JustinPropNames = {
+        bondgear: "bond_gear",
+        potentialmaxhp: "book_hp",
+        potentialattack: "book_atk",
+        potentialhealpower: "book_heal"
+    }
     for (let i in saveData.characters) {
-        let char = saveData.characters[i];
-
-        for (const scope of ["current", "target"]) {
-            let obj = char[scope];
-            if (!obj) continue;
-
-            for (const [forkKey, justinKey] of Object.entries(forkToJustinFieldMap)) {
-                if (forkKey in obj) {
-                    obj[justinKey] = obj[forkKey];
-                    delete obj[forkKey];
-                }
-            }
-
-            for (const key in obj) {
-                if (key.includes("gear") && parseInt(obj[key]) > 10) {
-                    obj[key] = "10";
+        for ( const scope of ["current", "target"] ) {
+            for (const [forkKey, justinKey] of Object.entries(JustinPropNames)) {
+                if (forkKey in saveData.characters[i][scope]) {
+                  saveData.characters[i][scope][justinKey] = saveData.characters[i][scope][forkKey];
+                  delete saveData.characters[i][scope][forkKey];
                 }
             }
         }
     }
 
-    saveData = JSON.stringify(saveData)
-
+    if (option == "justin") {
+        let extraChars = [  ]
+        let extraProps = [ ]
+        saveData = JSON.parse(saveData)
+        for (let i in extraChars) {
+            saveData.characters = saveData.characters.filter((a)=>{ return a.id != extraChars[i] })
+            saveData.disabled_characters = saveData.disabled_characters.filter((a)=>{ return a != extraChars[i] })
+            saveData.character_order = saveData.character_order.filter((a)=>{ return a != extraChars[i] })
+        }
+        for (let i in saveData.characters) {
+            for (let j in saveData.characters[i].current) {
+                if (extraProps.includes(j)) {
+                    saveData.characters[i].current = Object.fromEntries(Object.entries(saveData.characters[i].current).filter(([k, v]) => k != j));
+                    saveData.characters[i].target = Object.fromEntries(Object.entries(saveData.characters[i].target).filter(([k, v]) => k != j));
+                }
+                else if (j.includes("gear") && parseInt(saveData.characters[i].current[j]) > 10) {
+                    saveData.characters[i].current[j] = "10"
+                    saveData.characters[i].target[j] = "10"
+                }
+            }
+        }
+        saveData = JSON.stringify(saveData)
+    }
     Swal.fire({
         title: GetLanguageString("text-exporteddata"),
         html: '<textarea style="width: 400px; height: 250px; resize: none;" readonly>' + saveData + '</textarea>'
@@ -7036,7 +7044,9 @@ function displayExportData(option) {
             downloadAnchorNode.remove();
         }
         let date = new Date().getFullYear() + "." + ("0"+(parseInt(new Date().getMonth())+1)).slice(-2) + "." + ("0" + new Date().getDate()).slice(-2) + "." + ("0" + new Date().getHours()).slice(-2) + "" + ("0" + new Date().getMinutes()).slice(-2)
-        let filename = "bag_planner_saveFile_" + date
+        let filename = "bag_planner"
+        if (option == "justin") filename += "2justin"
+        filename += "_saveFile_" + date
         downloadObjectAsJson( saveData , filename )
     }
 }
@@ -7072,23 +7082,19 @@ async function getImportData() {
                 return false;
             }
 
-            const justinToForkFieldMap = {
-                "bond_gear":  "bondgear",
-                "book_hp":    "potentialmaxhp",
-                "book_atk":   "potentialattack",
-                "book_heal":  "potentialhealpower"
-            };
+            let JustinPropNames = {
+                bondgear: "bond_gear",
+                potentialmaxhp: "book_hp",
+                potentialattack: "book_atk",
+                potentialhealpower: "book_heal"
+            }
 
-            if (tempData.characters) {
-                for (const char of tempData.characters) {
-                    for (const scope of ["current", "target"]) {
-                        const obj = char[scope];
-                        if (!obj) continue;
-                        for (const [justinKey, forkKey] of Object.entries(justinToForkFieldMap)) {
-                            if (justinKey in obj) {
-                                obj[forkKey] = obj[justinKey];
-                                delete obj[justinKey];
-                            }
+            for (let i in tempData.characters) {
+                for ( const scope of ["current", "target"] ) {
+                    for (const [forkKey, justinKey] of Object.entries(JustinPropNames)) {
+                        if (forkKey in tempData.characters[i][scope]) {
+                          tempData.characters[i][scope][forkKey] = tempData.characters[i][scope][];
+                          delete tempData.characters[i][scope][justinKey];
                         }
                     }
                 }
