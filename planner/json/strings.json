@@ -691,7 +691,7 @@
         "CN": "导出"
     },
     "saving-exportbutton-justin": {
-        "EN": "Export file compatible with Justin.\nNo bondgear/LB/datamined data."
+        "EN": "Export file compatible with Justin. Cuts stuff it doesn't have (newer students)."
     },
     "saving-importFileInput": {
         "EN": "Click to select the Import file...\nOr Drag & Drop the json file to import."
