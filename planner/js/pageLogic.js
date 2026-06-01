@@ -6986,7 +6986,7 @@ function switchGearDisplay(displayType) {
 
 // }
 
-function displayExportData(option) {
+async function displayExportData(option) {
     var saveData = localStorage.getItem('save-data')
 
     const forkToJustinFieldMap = {
@@ -6996,7 +6996,7 @@ function displayExportData(option) {
         "potentialhealpower": "book_heal"
     };
 
-    const justinExcludeChars     = [];                // character ids to strip for justin
+    let justinExcludeChars     = [];                // character ids to strip for justin
     const justinExcludeCharProps = ["notes"];         // per-character current/target props to strip for justin
     const justinExcludeTopLevel  = ["apCalc"];        // top-level save keys to strip for justin
     const justinGearCap          = 10;                // justin's maximum gear level
@@ -7004,6 +7004,14 @@ function displayExportData(option) {
     saveData = JSON.parse(saveData)
 
     if (option == "justin") {
+
+        let justinChars = await fetch("https://raw.githubusercontent.com/JustinL163/BA-Resource-Planner/refs/heads/main/planner/json/skillinfo/jp.json")
+        justinChars = await justinChars.json()
+        justinChars = Object.keys(justinChars)
+        let forkChars = saveData.characters.map(a=>{return a.id})
+
+        justinExcludeChars = forkChars.filter((e) => !justinChars.includes(e));
+
         saveData.characters          = saveData.characters.filter(a => !justinExcludeChars.includes(a.id));
         saveData.disabled_characters = saveData.disabled_characters.filter(a => !justinExcludeChars.includes(a));
         saveData.character_order     = saveData.character_order.filter(a => !justinExcludeChars.includes(a));
