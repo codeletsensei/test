@@ -6989,46 +6989,67 @@ function switchGearDisplay(displayType) {
 function displayExportData(option) {
     var saveData = localStorage.getItem('save-data')
 
-    let JustinPropNames = {
-        bondgear: "bond_gear",
-        potentialmaxhp: "book_hp",
-        potentialattack: "book_atk",
-        potentialhealpower: "book_heal"
+    const forkToJustinFieldMap = {
+        "bondgear":           "bond_gear",
+        "potentialmaxhp":     "book_hp",
+        "potentialattack":    "book_atk",
+        "potentialhealpower": "book_heal"
+    };
+
+    const justinExcludeChars     = [];                // character ids to strip for justin
+    const justinExcludeCharProps = ["notes"];         // per-character current/target props to strip for justin
+    const justinExcludeTopLevel  = ["apCalc"];        // top-level save keys to strip for justin
+    const justinGearCap          = 10;                // justin's maximum gear level
+
+    saveData = JSON.parse(saveData)
+
+    if (option == "justin") {
+        saveData.characters          = saveData.characters.filter(a => !justinExcludeChars.includes(a.id));
+        saveData.disabled_characters = saveData.disabled_characters.filter(a => !justinExcludeChars.includes(a));
+        saveData.character_order     = saveData.character_order.filter(a => !justinExcludeChars.includes(a));
     }
+
     for (let i in saveData.characters) {
-        for ( const scope of ["current", "target"] ) {
-            for (const [forkKey, justinKey] of Object.entries(JustinPropNames)) {
-                if (forkKey in saveData.characters[i][scope]) {
-                  saveData.characters[i][scope][justinKey] = saveData.characters[i][scope][forkKey];
-                  delete saveData.characters[i][scope][forkKey];
+        let char = saveData.characters[i];
+
+        for (const scope of ["current", "target"]) {
+            let obj = char[scope];
+            if (!obj) continue;
+
+            for (const [forkKey, justinKey] of Object.entries(forkToJustinFieldMap)) {
+                if (forkKey in obj) {
+                    obj[justinKey] = obj[forkKey];
+                    delete obj[forkKey];
                 }
+            }
+
+            if (option == "justin") {
+                for (const prop of justinExcludeCharProps) {
+                    delete obj[prop];
+                }
+                for (const key in obj) {
+                    if (key.includes("gear") && parseInt(obj[key]) > justinGearCap) {
+                        obj[key] = String(justinGearCap);
+                    }
+                }
+            }
+        }
+
+        if (option == "justin") {
+            for (const prop of justinExcludeCharProps) {
+                delete char[prop];
             }
         }
     }
 
     if (option == "justin") {
-        let extraChars = [  ]
-        let extraProps = [ ]
-        saveData = JSON.parse(saveData)
-        for (let i in extraChars) {
-            saveData.characters = saveData.characters.filter((a)=>{ return a.id != extraChars[i] })
-            saveData.disabled_characters = saveData.disabled_characters.filter((a)=>{ return a != extraChars[i] })
-            saveData.character_order = saveData.character_order.filter((a)=>{ return a != extraChars[i] })
+        for (const key of justinExcludeTopLevel) {
+            delete saveData[key];
         }
-        for (let i in saveData.characters) {
-            for (let j in saveData.characters[i].current) {
-                if (extraProps.includes(j)) {
-                    saveData.characters[i].current = Object.fromEntries(Object.entries(saveData.characters[i].current).filter(([k, v]) => k != j));
-                    saveData.characters[i].target = Object.fromEntries(Object.entries(saveData.characters[i].target).filter(([k, v]) => k != j));
-                }
-                else if (j.includes("gear") && parseInt(saveData.characters[i].current[j]) > 10) {
-                    saveData.characters[i].current[j] = "10"
-                    saveData.characters[i].target[j] = "10"
-                }
-            }
-        }
-        saveData = JSON.stringify(saveData)
     }
+
+    saveData = JSON.stringify(saveData)
+
     Swal.fire({
         title: GetLanguageString("text-exporteddata"),
         html: '<textarea style="width: 400px; height: 250px; resize: none;" readonly>' + saveData + '</textarea>'
@@ -7082,21 +7103,26 @@ async function getImportData() {
                 return false;
             }
 
-            let JustinPropNames = {
-                bondgear: "bond_gear",
-                potentialmaxhp: "book_hp",
-                potentialattack: "book_atk",
-                potentialhealpower: "book_heal"
-            }
+            const justinToForkFieldMap = {
+                "bond_gear":  "bondgear",
+                "book_hp":    "potentialmaxhp",
+                "book_atk":   "potentialattack",
+                "book_heal":  "potentialhealpower"
+            };
 
-            for (let i in tempData.characters) {
-                for ( const scope of ["current", "target"] ) {
-                    for (const [forkKey, justinKey] of Object.entries(JustinPropNames)) {
-                        if (forkKey in tempData.characters[i][scope]) {
-                          tempData.characters[i][scope][forkKey] = tempData.characters[i][scope][];
-                          delete tempData.characters[i][scope][justinKey];
+            if (tempData.characters) {
+                for (const char of tempData.characters) {
+                    for (const scope of ["current", "target"]) {
+                        const obj = char[scope];
+                        if (!obj) continue;
+                        for (const [justinKey, forkKey] of Object.entries(justinToForkFieldMap)) {
+                            if (justinKey in obj) {
+                                obj[forkKey] = obj[justinKey];
+                                delete obj[justinKey];
+                            }
                         }
                     }
+                    if (!("notes" in char)) char.notes = "";
                 }
             }
 
