@@ -7003,6 +7003,11 @@ async function displayExportData(option) {
 
     saveData = JSON.parse(saveData)
 
+    for (let i in saveData.characters) {
+        if (saveData.characters[i].current.bondgear == 1 && saveData.characters[i].current.bond < 15) saveData.characters[i].current.bond = "15"
+        else if (saveData.characters[i].current.bondgear == 2 && saveData.characters[i].current.bond < 20) saveData.characters[i].current.bond = "20"
+    }
+
     if (option == "justin") {
 
         let justinChars = await fetch("https://raw.githubusercontent.com/JustinL163/BA-Resource-Planner/refs/heads/main/planner/json/skillinfo/jp.json")
