@@ -79,7 +79,7 @@ else {
 
 delete imgStyle;
 
-$(document).ready(function () {
+$(document).ready(async function () {
 
     document.getElementById("charsContainer").classList.add("size-" + charBoxSize);
     document.getElementById("character-size").value = charBoxSize;
@@ -107,11 +107,42 @@ $(document).ready(function () {
             }
         }
 
-        if (data.characters) {
+        // Valid if characters is an array that is either empty or has objects with a name string.
+        const charsValid = Array.isArray(data.characters)
+            && (data.characters.length === 0 || typeof data.characters[0]?.name === "string");
+
+        if (charsValid) {
             DupeCheck();
 
             for (let i = 0; i < data.characters.length; i++) {
                 dataCharIndex[data.characters[i].id] = i;
+            }
+        }
+        else {
+            const backupStr = localStorage.getItem("data-backup");
+            let backupData = null;
+            try { backupData = JSON.parse(backupStr); } catch (e) {}
+            const backupValid = backupData != null
+                && Array.isArray(backupData.characters)
+                && (backupData.characters.length === 0 || typeof backupData.characters[0]?.name === "string");
+            if (backupValid) {
+                data = backupData;
+                localStorage.setItem("save-data", backupStr);
+                await Swal.fire({
+                    title: "Backup restored<br>It seems your save was corrupted... So your save has been rolled back.",
+                })
+                location.reload();
+            } else {
+                // Backup is also missing or corrupt - reset to empty state to avoid reload loop
+                data.characters = [];
+                data.character_order = data.character_order ?? [];
+                data.disabled_characters = data.disabled_characters ?? [];
+                data.owned_materials = data.owned_materials ?? {};
+                localStorage.setItem("save-data", JSON.stringify(data));
+                await Swal.fire({
+                    title: "Save data corrupted",
+                    text: "Your save data was invalid and no valid backup was found. Character data has been reset.",
+                })
             }
         }
 
