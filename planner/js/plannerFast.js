@@ -17,6 +17,7 @@ try {
         data = tryJSON;
     }
 } catch (e) {
+    data = {}
     console.log(e);
 }
 
@@ -129,10 +130,11 @@ $(document).ready(async function () {
                 data = backupData;
                 localStorage.setItem("save-data", backupStr);
                 await Swal.fire({
-                    title: "Backup restored<br>It seems your save was corrupted... So your save has been rolled back.",
+                    title: "Save data corrupted. Backup restored.",
                 })
                 location.reload();
-            } else {
+            }
+            else {
                 // Backup is also missing or corrupt - reset to empty state to avoid reload loop
                 data.characters = [];
                 data.character_order = data.character_order ?? [];
@@ -140,8 +142,7 @@ $(document).ready(async function () {
                 data.owned_materials = data.owned_materials ?? {};
                 localStorage.setItem("save-data", JSON.stringify(data));
                 await Swal.fire({
-                    title: "Save data corrupted",
-                    text: "Your save data was invalid and no valid backup was found. Character data has been reset.",
+                    title: "Save data corrupted. Your save data was invalid and no valid backup was found. Character data has been reset.",
                 })
             }
         }
