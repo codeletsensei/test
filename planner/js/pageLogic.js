@@ -5473,7 +5473,12 @@ function DisplayMatUsers(mat, iconUrl) {
     let matUsers = [];
 
     for (key in charMatDicts) {
-        if (!disabledChars.includes(key) && charMatDicts[key][matId] > 0) {
+
+        let filtered = 0
+        if (mainDisplay == "Teams") filtered = !document.getElementById("char_teams_" + key)
+        else filtered = document.getElementById("char_" + key).classList.contains("filtered-out")
+
+        if (!disabledChars.includes(key) && charMatDicts[key][matId] > 0 && !filtered) {
             matUsers.push({ "charId": key, "matCount": charMatDicts[key][matId] });
         }
     }
@@ -6678,7 +6683,13 @@ function updateAggregateCount() {
     neededMatDict = {};
 
     for (charId in charMatDicts) {
-        if (!disabledChars.includes(charId)) {
+        let filtered = 0
+        if (mainDisplay == "Teams") {
+            filtered = !document.getElementById("char_teams_" + charId)
+        }
+        else filtered = document.getElementById("char_" + charId).classList.contains("filtered-out")
+
+        if (!disabledChars.includes(charId) && !filtered) {
             for (matName in charMatDicts[charId]) {
 
                 if (matName == "Xp") {
