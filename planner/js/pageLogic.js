@@ -3266,7 +3266,7 @@ function charsFromGroup(group, groupType) {
 
 }
 
-function charactersToggle(value) {
+async function charactersToggle(value) {
 
     // APRIL FOOLS
     // if (value == "enable" && document.getElementById("button-enableall").classList.contains("april-fools-button")) {
@@ -3277,6 +3277,16 @@ function charactersToggle(value) {
     // }
 
     disabledChars = [];
+
+    if (["disable", "enable"].includes(value)) {
+        response = await Swal.fire({
+          title: value.toUpperCase() + " ALL students?",
+          showCancelButton: true,
+        });
+        if (!response.isConfirmed) {
+            return null
+        }
+    }
 
     for (let i in data.characters) {
 
