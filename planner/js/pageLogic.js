@@ -7498,7 +7498,8 @@ async function getImportData() {
         };
 
         let alertData = {
-            title: "Are you sure you want to IMPORT this?<br>It will REPLACE your current data!",
+            title: "IMPORT data?",
+            html: "<a style='color:red;background-color:yellow;font-weight:bold;font-size:20px'>It will REPLACE your current data.<br>Download a backup of your current data before pressing OK.</a>",
             color: alertColour,
             showCancelButton: true
         }
